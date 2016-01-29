@@ -25,7 +25,16 @@ build:
     image_tag: latest
     pull: false
     options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
-
+    
+integrations:
+  notifications:
+        - integrationName: 
+          type: email
+          recipients:
+            - ankul@shippable.com
+          on_start: always 
+          on_success: always
+          on_failure: always
   ci:
     - ps -eax
     - ls -al
