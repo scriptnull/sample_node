@@ -32,7 +32,7 @@ build:
     - ls -al
 
   post_ci:
-    - echo "post ci stage. Finished !"
+    - echo "post ci stage. Finished ! yo"
 
   smoke_test:
     - sudo ls /
