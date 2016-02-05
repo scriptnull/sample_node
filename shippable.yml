@@ -31,7 +31,7 @@ build:
     - ls -al
 
   post_ci:
-    - echo "true"
+    - echo "post ci stage"
 
   smoke_test:
     - sudo ls /
