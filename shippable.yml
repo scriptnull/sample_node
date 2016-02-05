@@ -19,6 +19,7 @@ env:
 build:
   pre_ci:
     - echo "pre ci stage. Hello there."
+    - echo "testing"
 
   pre_ci_boot:
     image_name: kanthchandra/sample_node
