@@ -19,6 +19,7 @@ env:
 build:
   pre_ci:
     - echo "Good morning 2"
+    - echo "branch is check-2"
     - echo "testing"
 
   pre_ci_boot:
