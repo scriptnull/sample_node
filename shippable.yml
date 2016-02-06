@@ -18,7 +18,7 @@ env:
 
 build:
   pre_ci:
-    - echo "pre ci stage. Hello there. good eve. hope you are doing good !"
+    - echo "Fresh Start"
     - echo "testing"
 
   pre_ci_boot:
