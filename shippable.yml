@@ -18,7 +18,7 @@ env:
 
 build:
   pre_ci:
-    - echo "Fresh Start"
+    - echo "Good morning 1"
     - echo "testing"
 
   pre_ci_boot:
