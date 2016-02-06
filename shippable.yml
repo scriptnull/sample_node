@@ -6,6 +6,10 @@ language: node_js
 node_js:
   - 0.12
 
+branches:
+  only:
+    - master
+
 env:
   global:
     - FOO=FUBU
@@ -19,6 +23,7 @@ env:
 build:
   pre_ci:
     - echo "Good morning 2"
+    - echo "branch is check-2"
     - echo "testing"
 
   pre_ci_boot:
