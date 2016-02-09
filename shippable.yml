@@ -22,7 +22,7 @@ build:
     - echo "testing"
 
   pre_ci_boot:
-    image_name: kanthchandra/sample_node
+    image_name: scriptnull/invalid_image
     image_tag: latest
     pull: false
     options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
