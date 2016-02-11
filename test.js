@@ -1,7 +1,8 @@
 var superagent = require("superagent"),
     chai = require("chai"),
     expect = chai.expect,
-    should = require("should");
+    should = require("should"),
+    assert = require('assert');
 
 describe("Index", function () {
   it("renders HTML", function (done) {
@@ -11,5 +12,8 @@ describe("Index", function () {
         res.text.should.equal("Hey buddy!");
         done();
       });
+  });
+  it("run fake test", function() {
+    assert.ok(1 == 2);
   });
 });
