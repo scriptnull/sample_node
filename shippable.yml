@@ -13,6 +13,7 @@ env:
 before_script:
   - mkdir -p shippable/testresults
   - mkdir -p shippable/codecoverage
+  - npm install
 
 # Running the tests with grunt
 script:
