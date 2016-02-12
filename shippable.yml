@@ -33,11 +33,8 @@ build:
 
   post_ci:
     - echo "post ci stage. Finished ! yo"
-
-  smoke_test:
-    - sudo ls /
-
-deploy:
-  pre_build:
-    - ls
-    - ls -al
+    - docker push scriptnull/sample_node:check
+    
+integrations:
+    - integrationName: ship-docker
+      type: docker
