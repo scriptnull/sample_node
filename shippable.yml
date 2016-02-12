@@ -20,11 +20,11 @@ build:
     - echo "Good morning 2"
     - echo "testing"
 
-  # pre_ci_boot:
-  #   image_name: scriptnull/sample_node
-  #   image_tag: latest
-  #   pull: false
-  #   options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
+  pre_ci_boot:
+    image_name: scriptnull/sample_node
+    image_tag: latest
+    pull: false
+    options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
 
   ci:
     - ps -eax
@@ -32,7 +32,7 @@ build:
 
   post_ci:
     - echo "post ci stage. Finished ! yo"
-    - docker push scriptnull/sample_node
+    #- docker push scriptnull/sample_node
     
 integrations:
     - integrationName: ship-docker
