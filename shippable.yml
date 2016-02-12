@@ -14,7 +14,6 @@ env:
 
   matrix:
     - M1=ONE
-    - M2=TWO
 
 build:
   pre_ci:
@@ -39,3 +38,7 @@ build:
 integrations:
     - integrationName: ship-docker
       type: docker
+      branches:
+        only:
+          - master
+
