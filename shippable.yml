@@ -33,7 +33,7 @@ build:
 
   post_ci:
     - echo "post ci stage. Finished ! yo"
-    - docker push scriptnull/sample_node:latest
+    - docker push scriptnull/sample_node
     
 integrations:
     - integrationName: ship-docker
