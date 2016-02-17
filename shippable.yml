@@ -21,12 +21,6 @@ build:
     - echo "Good morning 2"
     - echo "testing"
 
-  pre_ci_boot:
-    image_name: kanthchandra/sample_node
-    image_tag: latest
-    pull: false
-    options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
-
   ci:
     - ps -eax
     - ls -al
@@ -34,10 +28,3 @@ build:
   post_ci:
     - echo "post ci stage. Finished ! yo"
 
-  smoke_test:
-    - sudo ls /
-
-deploy:
-  pre_build:
-    - ls
-    - ls -al
