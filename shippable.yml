@@ -15,10 +15,10 @@ env:
   matrix:
     - M1=ONE
     - M2=TWO
-    
-cache: true
 
 build:
+  cache: true
+  
   pre_ci:
     - echo "Good morning 2"
     - echo "testing"
