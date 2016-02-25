@@ -13,8 +13,8 @@ env:
     - BOO=GUBU
 
   matrix:
-    - M1=ONE
-    - M2=TWO
+    - M=1
+    - M=2
     # - M3=THREE
     # - M4=FOUR
     # - M5=FIVE
@@ -27,7 +27,7 @@ build:
   ci:
     - ps -eax
     - ls -al
-    - sleep 30
+    - sleep `expr 30 \* "$M"`
 
   post_ci:
     - echo "post ci stage. Finished ! yo"
