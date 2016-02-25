@@ -15,7 +15,7 @@ env:
   matrix:
     - M1=ONE
     - M2=TWO
-    - M3=THREE
+    # - M3=THREE
     # - M4=FOUR
     # - M5=FIVE
 
@@ -27,7 +27,7 @@ build:
   ci:
     - ps -eax
     - ls -al
-    - sleep 60
+    - sleep 30
 
   post_ci:
     - echo "post ci stage. Finished ! yo"
