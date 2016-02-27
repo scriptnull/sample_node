@@ -5,7 +5,11 @@ language: node_js
 # Version number
 node_js:
   - 0.12
-
+  
+branches:
+  except:
+    - master
+    
 env:
   global:
     - FOO=FUBU
