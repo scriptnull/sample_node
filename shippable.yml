@@ -28,3 +28,11 @@ build:
   post_ci:
     - echo "post ci stage. Finished ! yo"
 
+integrations:
+    notifications:
+      - integrationName: email
+        type: email
+        recipients:
+          - vishnu@shippable.com
+        on_success: always
+        on_failure: always 
