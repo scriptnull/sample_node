@@ -8,8 +8,9 @@ node_js:
 
 env:
   global:
-    - secure: 08I2liOHfIfvqJjFFlZleemq6GZxQ2b+FsB0Wcd2DUvZAY+WWao/X8yn8uYPqBRj9Ds68sgCM3v715C5FdkEsX85UqcxYeydUtfj2fT7lL6fjVZ6HpuvflvdkYUpwQgD8gOGP0/LiaMKUgP2NqQRQ/Fra3203EAWTNRTycecDYsPlHN7/WacpFXlX4fYOf9PgQOmG4rgI8JD+5YasadQXqWm4L0fdxrUiQzdkCJfteL0ROgWnMtE4aYqosCop/3te2cwpoBKhHHkNO3nieHiiubruvsVPfH/tLW81JfvkhmviL66mUs7FIm/v3cusb72paiQ7HlNTCsrxrApPFlXkQ==
-    
+    - secure: JryuObaE3BdpDTsqP6lAEB4EJvaBHriF8BaJjVu6rPc20YKl/nQ6nS/ny4IapuCvzr4vFchjeKiaBj6LLuMwRrfFjadVhO51N8BjguPxNcbY+WrRAwCDGqZ/rn4wlpZkOJ8hcty5A6WqpxwwgT0yhhiQYUDwVSiUiO3BB4RFDnoB9HZ95UnLKnQ0L/LoVA2qpm10Fm+l2Y4uQlzMGYhBh1AppvYVnhYMHu/VL0eHs1IFIzCXzAFR33q196yOYM71XtjofW0Kl5oToS/V5BwG9lr6cMaU3otsnzRcLFb2/+Y3chIVlDpYVSPLiqXoqV+n2yXJ3q8xdSbljeJKYvpO6Q==    
+# below var is for BETa  
+#    - secure: 08I2liOHfIfvqJjFFlZleemq6GZxQ2b+FsB0Wcd2DUvZAY+WWao/X8yn8uYPqBRj9Ds68sgCM3v715C5FdkEsX85UqcxYeydUtfj2fT7lL6fjVZ6HpuvflvdkYUpwQgD8gOGP0/LiaMKUgP2NqQRQ/Fra3203EAWTNRTycecDYsPlHN7/WacpFXlX4fYOf9PgQOmG4rgI8JD+5YasadQXqWm4L0fdxrUiQzdkCJfteL0ROgWnMtE4aYqosCop/3te2cwpoBKhHHkNO3nieHiiubruvsVPfH/tLW81JfvkhmviL66mUs7FIm/v3cusb72paiQ7HlNTCsrxrApPFlXkQ=
     
 build:
   pre_ci:
