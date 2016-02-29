@@ -7,6 +7,7 @@ node_js:
   - 0.12
 
 env:
+  secure: 08I2liOHfIfvqJjFFlZleemq6GZxQ2b+FsB0Wcd2DUvZAY+WWao/X8yn8uYPqBRj9Ds68sgCM3v715C5FdkEsX85UqcxYeydUtfj2fT7lL6fjVZ6HpuvflvdkYUpwQgD8gOGP0/LiaMKUgP2NqQRQ/Fra3203EAWTNRTycecDYsPlHN7/WacpFXlX4fYOf9PgQOmG4rgI8JD+5YasadQXqWm4L0fdxrUiQzdkCJfteL0ROgWnMtE4aYqosCop/3te2cwpoBKhHHkNO3nieHiiubruvsVPfH/tLW81JfvkhmviL66mUs7FIm/v3cusb72paiQ7HlNTCsrxrApPFlXkQ==
   global:
     - FOO=FUBU
     - FO1=BUBU
@@ -35,4 +36,5 @@ integrations:
         recipients:
           - vishnu@shippable.com
         on_success: always
-        on_failure: always 
+        on_failure: always
+    
