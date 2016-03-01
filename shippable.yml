@@ -35,7 +35,7 @@ node_js:
   #   - echo "post ci stage. Finished ! yo"
   #   - docker push scriptnull/sample_node:latest
     
-integrations:
-    - integrationName: ship-docker
-      type: docker
+# integrations:
+#     - integrationName: ship-docker
+#       type: docker
 
