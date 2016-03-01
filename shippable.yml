@@ -19,7 +19,7 @@ build:
   pre_ci:
     - echo "Good morning 2"
     - echo "testing"
-    - docker pull scriptnull/sample_node:latest
+    # - docker pull scriptnull/sample_node:latest
 
   # pre_ci_boot:
   #   image_name: scriptnull/sample_node
