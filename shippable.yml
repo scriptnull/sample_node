@@ -6,19 +6,19 @@ language: node_js
 node_js:
   - 0.12
 
-env:
-  global:
-    - FOO=FUBU
-    - FO1=BUBU
-    - BOO=GUBU
+# env:
+#   global:
+#     - FOO=FUBU
+#     - FO1=BUBU
+#     - BOO=GUBU
 
-  matrix:
-    - M1=ONE
+#   matrix:
+#     - M1=ONE
 
-build:
-  pre_ci:
-    - echo "Good morning 2"
-    - echo "testing"
+# build:
+  # pre_ci:
+  #   - echo "Good morning 2"
+  #   - echo "testing"
     # - docker pull scriptnull/sample_node:latest
 
   # pre_ci_boot:
@@ -27,9 +27,9 @@ build:
   #   pull: false
   #   options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
 
-  ci:
-    - ps -eax
-    - ls -al
+  # ci:
+  #   - ps -eax
+  #   - ls -al
 
   # post_ci:
   #   - echo "post ci stage. Finished ! yo"
@@ -38,7 +38,4 @@ build:
 integrations:
     - integrationName: ship-docker
       type: docker
-      branches:
-        only:
-          - master
 
