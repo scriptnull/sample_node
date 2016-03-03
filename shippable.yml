@@ -37,12 +37,16 @@ integrations:
   hub:
     - integrationName: "my-docker"
       type: "docker"
+      agent_only: true
       
     - integrationName: "my-ecr"
       type: "ecr"
+      agent_only: true
       
     - integrationName: "my-quay"
       type: "quay.io"
+      agent_only: true
       
     - integrationName: "my-gcr"
       type: "gcr"
+      agent_only: true
