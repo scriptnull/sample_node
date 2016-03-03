@@ -23,11 +23,13 @@ build:
     - echo "post ci stage. Finished ! yo"
     - docker build -t="scriptnull/sample_node:test.push.$BUILD_NUMBER" .
     - docker build -t="480971114143.dkr.ecr.us-east-1.amazonaws.com/sample_node:test.push.$BUILD_NUMBER" .
+    - docker build -t="quay.io/shippablequay/sample_node_02:test.push.$BUILD_NUMBER" .
     
   push:
     - echo "push will happen here"
     - docker push scriptnull/sample_node:test.push.$BUILD_NUMBER
     - docker push 480971114143.dkr.ecr.us-east-1.amazonaws.com/sample_node:test.push.$BUILD_NUMBER
+    - docker push quay.io/shippablequay/sample_node_02:test.push.$BUILD_NUMBER
 
 integrations:
   hub:
@@ -36,4 +38,6 @@ integrations:
       
     - integrationName: "my-ecr"
       type: "ecr"
-
+      
+    - integrationName: "my-quay"
+      type: "quay.io"
