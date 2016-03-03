@@ -21,7 +21,7 @@ build:
 
   post_ci:
     - echo "post ci stage. Finished ! yo"
-    - docker build scriptnull/sample_node:test.push.$BUILD_NUMBER .
+    - docker build -t="scriptnull/sample_node:test.push.$BUILD_NUMBER" .
     
   push:
     - echo "push will happen here"
