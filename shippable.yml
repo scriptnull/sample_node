@@ -31,3 +31,7 @@ integrations:
   hub:
     - integrationName: "my-docker"
       type: "docker"
+      
+    - integrationName: "my-ecr"
+      type: "ecr"
+
