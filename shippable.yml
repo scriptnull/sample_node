@@ -35,18 +35,34 @@ build:
 
 integrations:
   hub:
-    - integrationName: "my-docker"
+    - integrationName: "Vishnu's Docker"
       type: "docker"
       # agent_only: true
       
-    - integrationName: "my-ecr"
+    - integrationName: "Vishnu's ECR"
       type: "ecr"
       # agent_only: true
       
-    - integrationName: "my-quay"
+    - integrationName: "Vishnu's Quay"
       type: "quay.io"
       # agent_only: false
       
-    - integrationName: "my-gcr"
+    - integrationName: "Vishnu's GCR"
       type: "gcr"
       # agent_only: true
+      
+    # - integrationName: "my-docker"
+    #   type: "docker"
+    #   # agent_only: true
+      
+    # - integrationName: "my-ecr"
+    #   type: "ecr"
+    #   # agent_only: true
+      
+    # - integrationName: "my-quay"
+    #   type: "quay.io"
+    #   # agent_only: false
+      
+    # - integrationName: "my-gcr"
+    #   type: "gcr"
+    #   # agent_only: true
