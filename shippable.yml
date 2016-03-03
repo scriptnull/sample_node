@@ -9,23 +9,11 @@ node_js:
 env:
   global:
     - FOO=FUBU
-    - FO1=BUBU
-    - BOO=GUBU
-
-  matrix:
-    - M1=ONE
-    - M2=TWO
 
 build:
   pre_ci:
     - echo "Good morning 2"
     - echo "testing"
-
-  pre_ci_boot:
-    image_name: kanthchandra/sample_node
-    image_tag: latest
-    pull: false
-    options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
 
   ci:
     - ps -eax
@@ -33,11 +21,6 @@ build:
 
   post_ci:
     - echo "post ci stage. Finished ! yo"
-
-  smoke_test:
-    - sudo ls /
-
-deploy:
-  pre_build:
-    - ls
-    - ls -al
+    
+  push:
+    - echo "push will happen here"
