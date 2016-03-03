@@ -26,3 +26,8 @@ build:
   push:
     - echo "push will happen here"
     - docker push scriptnull/sample_node:test.push.$BUILD_NUMBER
+
+integrations:
+  hub:
+    - integrationName: "my-docker"
+      type: "docker"
