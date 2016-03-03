@@ -49,4 +49,4 @@ integrations:
       
     - integrationName: "my-gcr"
       type: "gcr"
-      agent_only: true
+      # agent_only: true
