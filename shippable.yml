@@ -21,34 +21,34 @@ build:
 
   post_ci:
     - echo "post ci stage. Finished ! yo"
-    - docker build -t="scriptnull/sample_node:test.push.$BUILD_NUMBER" .
-    - docker build -t="480971114143.dkr.ecr.us-east-1.amazonaws.com/sample_node:test.push.$BUILD_NUMBER" .
-    - docker build -t="quay.io/shippablequay/sample_node_02:test.push.$BUILD_NUMBER" .
-    - docker build -t="gcr.io/vidya-project/sample_node:test.push.$BUILD_NUMBER" .
+    # - docker build -t="scriptnull/sample_node:test.push.$BUILD_NUMBER" .
+    # - docker build -t="480971114143.dkr.ecr.us-east-1.amazonaws.com/sample_node:test.push.$BUILD_NUMBER" .
+    # - docker build -t="quay.io/shippablequay/sample_node_02:test.push.$BUILD_NUMBER" .
+    # - docker build -t="gcr.io/vidya-project/sample_node:test.push.$BUILD_NUMBER" .
     
   push:
     - echo "push will happen here"
-    - docker push scriptnull/sample_node:test.push.$BUILD_NUMBER
-    - docker push 480971114143.dkr.ecr.us-east-1.amazonaws.com/sample_node:test.push.$BUILD_NUMBER
-    - docker push quay.io/shippablequay/sample_node_02:test.push.$BUILD_NUMBER
-    - docker push gcr.io/vidya-project/sample_node:test.push.$BUILD_NUMBER
+    # - docker push scriptnull/sample_node:test.push.$BUILD_NUMBER
+    # - docker push 480971114143.dkr.ecr.us-east-1.amazonaws.com/sample_node:test.push.$BUILD_NUMBER
+    # - docker push quay.io/shippablequay/sample_node_02:test.push.$BUILD_NUMBER
+    # - docker push gcr.io/vidya-project/sample_node:test.push.$BUILD_NUMBER
 
 integrations:
   hub:
-    - integrationName: "Vishnu's Docker"
-      type: "docker"
+    # - integrationName: "Vishnu's Docker"
+    #   type: "docker"
       # agent_only: true
       
     - integrationName: "Vishnu's ECR"
       type: "ecr"
       # agent_only: true
       
-    - integrationName: "Vishnu's Quay"
-      type: "quay.io"
+    # - integrationName: "Vishnu's Quay"
+    #   type: "quay.io"
       # agent_only: false
       
-    - integrationName: "Vishnu's GCR"
-      type: "gcr"
+    # - integrationName: "Vishnu's GCR"
+    #   type: "gcr"
       # agent_only: true
       
     # - integrationName: "my-docker"
