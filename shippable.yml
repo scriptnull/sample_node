@@ -15,6 +15,12 @@ build:
     - echo "Good morning 2"
     - echo "testing"
 
+  pre_ci_boot:
+    image_name: "shippable/minv2"
+    image_tag: "latest"
+    pull: true
+    options: --privileged=true
+
   ci:
     - ps -eax
     - ls -al
