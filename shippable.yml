@@ -32,4 +32,7 @@ integrations:
   hub:
     - integrationName: "Vishnu's Docker"
       type: docker
+      branches:
+        only:
+          - integrations-branch-except
       
