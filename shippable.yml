@@ -33,5 +33,5 @@ integrations:
         on_success: always
         on_failure: always
         branches:
-          except:
+          only:
             - one-build
