@@ -32,6 +32,6 @@ integrations:
     - integrationName: "Vishnu's Docker"
       type: docker
       branches:
-        except:
+        only:
           - integrations-branch-except
       
