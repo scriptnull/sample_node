@@ -11,11 +11,7 @@ env:
     - FOO=FUBU
     - FO1=BUBU
     - BOO=GUBU
-
-  matrix:
-    - M1=ONE
-    - M2=TWO
-
+    
 build:
   pre_ci:
     - echo "Good morning 2"
