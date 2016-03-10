@@ -36,3 +36,13 @@ integrations:
         exclude:
           - integrations-branch-except
       
+  notifications:
+    - integrationName: email
+      type: email
+      recipients:
+        - vishnu@shippable.com
+      on_success: always
+      on_failure: always
+      branches:
+        exclude:
+          - integrations-branch-except
