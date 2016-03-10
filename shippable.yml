@@ -23,15 +23,15 @@ build:
 
   post_ci:
     - echo "post ci stage. Finished ! yo"
+    - docker build -t="scriptnull/sample_node:int.execept.check" .
+    
+  push:
+    - docker push scriptnull/sample_node:int.execept.check
 
 integrations:
-    notifications:
-      - integrationName: email
-        type: email
-        recipients:
-          - vishnu@shippable.com
-        on_success: always
-        on_failure: always
-        branches:
-          except:
-            - one-build
+    - integrationName: "Vishnu's Docker"
+      type: docker
+      branches:
+        except:
+          - integrations-branch-except
+      
