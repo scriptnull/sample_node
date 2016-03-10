@@ -29,7 +29,7 @@ build:
     - docker push scriptnull/sample_node:int.execept.check
 
 integrations:
-  - hub:
+  hub:
     - integrationName: "Vishnu's Docker"
       type: docker
       
