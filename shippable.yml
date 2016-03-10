@@ -31,4 +31,7 @@ integrations:
         recipients:
           - vishnu@shippable.com
         on_success: always
-        on_failure: always 
+        on_failure: always
+        branches:
+          except:
+            - one-build
