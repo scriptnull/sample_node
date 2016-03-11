@@ -44,6 +44,6 @@ integrations:
       on_success: always
       on_failure: always
       branches:
-        exclude:
+        except:
           - integrations-branch-except
       
