@@ -32,9 +32,6 @@ integrations:
   hub:
     - integrationName: "Vishnu's Docker"
       type: docker
-      branches:
-        exclude:
-          - integrations-branch-except
           
   notifications:
     - integrationName: email
