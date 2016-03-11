@@ -25,16 +25,14 @@ build:
     - echo "post ci stage. Finished ! yo"
     - docker build -t="scriptnull/sample_node:int.execept.check" .
     
-  push:
-    - docker push scriptnull/sample_node:int.execept.check
+  # push:
+  #   - docker push scriptnull/sample_node:int.execept.check
 
 integrations:
   hub:
     - integrationName: "Vishnu's Docker"
       type: docker
-      branches:
-        exclude:
-          - integrations-branch-except
+
       
   notifications:
     - integrationName: email
