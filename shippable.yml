@@ -30,7 +30,7 @@ integrations:
       type: aws
       target: ebs_paas
       platform: "Node.js"
-      application_name: amazing-app
+      application_name: sample-app-vb
       s3_bucket_name: amazing-bucket
-      env_name: amazing-app-dev
+      env_name: sample-app-vb-localhost
       region: us-east-1
