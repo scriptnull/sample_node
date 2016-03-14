@@ -44,3 +44,6 @@ integrations:
       s3_bucket_name: amazing-bucket
       env_name: sample-app-vb-dev
       region: us-east-1
+      branches:
+        only:
+          - eb-deploy-dev
