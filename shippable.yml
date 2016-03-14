@@ -28,7 +28,7 @@ integrations:
   deploy:
     - integrationName: "Vishnu's AWS"
       type: aws
-      target: ebs_docker
+      target: ebs_paas
       application_name: amazing-app
       s3_bucket_name: amazing-bucket
       env_name: amazing-app-dev
