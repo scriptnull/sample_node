@@ -23,6 +23,7 @@ build:
 
   post_ci:
     - echo "post ci stage. Finished ! yo"
+    - pip install awsebcli
 
 integrations:
   deploy:
