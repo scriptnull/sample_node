@@ -3,7 +3,7 @@ var express = require("express"),
     app = express();
 
 app.get("/", function (req, res) {
-  res.send("Hey buddy!");
+  res.send("Hey buddy! branch is eb-deploy");
 });
 
 app.listen(process.env.PORT || 3000 , function () {
