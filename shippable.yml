@@ -23,7 +23,6 @@ build:
 
   post_ci:
     - echo "post ci stage. Finished ! yo"
-    - pip install awsebcli
 
 integrations:
   deploy:
@@ -35,9 +34,9 @@ integrations:
       s3_bucket_name: amazing-bucket
       env_name: sample-app-vb-localhost
       region: us-east-1
-      branches:
-        except:
-        - eb-deploy-dev
+      # branches:
+      #   except:
+      #   - eb-deploy-dev
 
     - integrationName: "Vishnu's AWS"
       type: aws
@@ -47,6 +46,6 @@ integrations:
       s3_bucket_name: amazing-bucket
       env_name: sample-app-vb-dev
       region: us-east-1
-      branches:
-        only:
-          - eb-deploy-dev
+      # branches:
+      #   only:
+      #     - eb-deploy-dev
