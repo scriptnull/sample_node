@@ -35,3 +35,12 @@ integrations:
       s3_bucket_name: amazing-bucket
       env_name: sample-app-vb-localhost
       region: us-east-1
+
+    - integrationName: "Vishnu's AWS"
+      type: aws
+      target: ebs_paas
+      platform: "Node.js"
+      application_name: sample-app-vb
+      s3_bucket_name: amazing-bucket
+      env_name: sample-app-vb-dev
+      region: us-east-1
