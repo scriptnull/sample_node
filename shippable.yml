@@ -33,8 +33,3 @@ integrations:
       s3_bucket_name: amazing-bucket
       env_name: amazing-app-dev
       region: us-east-1
-      branches:
-        only:
-          - master
-        except:
-          - test
