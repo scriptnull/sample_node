@@ -1,4 +1,7 @@
-FROM drydock/u14nod:prod
+FROM readytalk/nodejs
 
-RUN mkdir -p /tmp/logs
-ADD . /src
+WORKDIR /app
+ADD . /app
+RUN npm install
+EXPOSE 80
+ENTRYPOINT ["/nodejs/bin/npm", "start"]
