@@ -34,7 +34,7 @@ integrations:
       env_name: sample-app-vb-localhost
       region: us-east-1
       branches:
-        except:
+        only:
           - eb-deploy
   # deploy:
   #   - integrationName: "Vishnu's AWS"
