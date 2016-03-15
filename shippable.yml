@@ -34,9 +34,6 @@ integrations:
       application_name: error-in-app-name
       env_name: sample-app-vb-localhost
       region: us-east-1
-      branches:
-        only:
-          - eb-deploy
 
     # - integrationName: "Vishnu's AWS"
     #   type: aws
