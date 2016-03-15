@@ -1,11 +1,6 @@
 # Language setting
 language: node_js
 
-
-# Version number
-node_js:
-  - 0.12
-
 env:
   global:
     - FOO=FUBU
@@ -30,8 +25,8 @@ integrations:
     - integrationName: "Vishnu's AWS"
       type: aws
       target: ebs_docker
-      application_name: vb-docker-app
+      application_name: "vb-docker-app"
       env_name: localhost
-      bucket_name: elasticbeanstalk-us-west-2-480971114143
-      region: us-west-2
-      image_name: scriptnull/vb-docker-app-img:latest
+      bucket_name: "elasticbeanstalk-us-west-2-480971114143"
+      region: "us-west-2"
+      image_name: "scriptnull/vb-docker-app-img:latest"
