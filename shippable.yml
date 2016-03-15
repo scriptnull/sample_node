@@ -31,7 +31,7 @@ integrations:
       type: aws
       target: ebs_paas
       platform: "Node.js"
-      application_name: sample-app-vb
+      application_name: error-in-app-name
       env_name: sample-app-vb-localhost
       region: us-east-1
       branches:
