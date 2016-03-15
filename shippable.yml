@@ -1,0 +1,36 @@
+# Language setting
+language: node_js
+
+
+# Version number
+node_js:
+  - 0.12
+
+env:
+  global:
+    - FOO=FUBU
+    - FO1=BUBU
+    - BOO=GUBU
+    
+build:
+  pre_ci:
+    - echo "Good morning 2"
+    - echo "testing"
+
+  ci:
+    - ps -eax
+    - ls -al
+
+  post_ci:
+    - echo "post ci stage. Finished ! yo"
+    # - pip install awsebcli
+
+integrations:
+  deploy:
+    - integrationName: "Vishnu's AWS"
+      type: aws
+      target: ebs_docker
+      application_name: vb-docker-app
+      env_name: localhost
+      region: us-west-2
+      image_name: scriptnull/vb-docker-app-img:latest
