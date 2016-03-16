@@ -27,7 +27,8 @@ integrations:
       target: eb_docker
       application_name: "vb-docker-app"
       env_name: localhost
-      bucket_name: "invalid bucket"
-      #bucket_name: "elasticbeanstalk-us-west-2-480971114143"
+      # bucket_name: "invalid bucket"
+      bucket_name: "elasticbeanstalk-us-west-2-480971114143"
+      container_port: 80
       region: "us-west-2"
       image_name: "scriptnull/vb-docker-app-img:latest"
