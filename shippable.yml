@@ -35,6 +35,7 @@ integrations:
       bucket_name: "elasticbeanstalk-us-west-2-480971114143"
       region: "us-west-2"
       image_name: "480971114143.dkr.ecr.us-east-1.amazonaws.com/sample_node:$BRANCH.$BUILD_NUMBER"
+      container_port: 80
 
     - integrationName: "Vishnu's AWS"
       type: aws
@@ -44,6 +45,7 @@ integrations:
       bucket_name: "elasticbeanstalk-us-west-2-480971114143"
       region: "us-west-2"
       image_name: "quay.io/shippablequay/sample_node_01:$BRANCH.$BUILD_NUMBER"
+      container_port: 80
       
     - integrationName: "Vishnu's AWS"
       type: aws
@@ -53,6 +55,7 @@ integrations:
       bucket_name: "elasticbeanstalk-us-west-2-480971114143"
       region: "us-west-2"
       image_name: "gcr.io/vidya-project/sample_node:$BRANCH.$BUILD_NUMBER"
+      container_port: 80
       
     - integrationName: "Vishnu's AWS"
       type: aws
@@ -62,6 +65,7 @@ integrations:
       bucket_name: "elasticbeanstalk-us-west-2-480971114143"
       region: "us-west-2"
       image_name: "scriptnull/vb-docker-app-img:latest"
+      container_port: 80
 
   hub:
     - integrationName: "Vishnu's ECR"
