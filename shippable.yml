@@ -24,7 +24,7 @@ integrations:
   deploy:
     - integrationName: "Vishnu's AWS"
       type: aws
-      target: ebs_docker
+      target: eb_docker
       application_name: "vb-docker-app"
       env_name: localhost
       bucket_name: "elasticbeanstalk-us-west-2-480971114143"
