@@ -45,7 +45,7 @@ integrations:
       region: "us-west-2"
       image_name: "quay.io/shippablequay/sample_node_01:$BRANCH.$BUILD_NUMBER"
       
-    - integrationName: "Vishnu's GCR"
+    - integrationName: "Vishnu's AWS"
       type: aws
       target: eb_docker
       application_name: "vb-docker-app"
