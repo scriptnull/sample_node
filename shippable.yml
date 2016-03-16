@@ -20,7 +20,7 @@ build:
     - docker build -t="scriptnull/vb-docker-app-img:latest" .
     - docker tag scriptnull/vb-docker-app-img:latest 480971114143.dkr.ecr.us-east-1.amazonaws.com/sample_node:$BRANCH.$BUILD_NUMBER
     - docker tag scriptnull/vb-docker-app-img:latest quay.io/shippablequay/sample_node_01:$BRANCH.$BUILD_NUMBER
-    - dokcer tag scriptnull/vb-docker-app-img:latest gcr.io/vidya-project/sample_node:$BRANCH.$BUILD_NUMBER
+    - docker tag scriptnull/vb-docker-app-img:latest gcr.io/vidya-project/sample_node:$BRANCH.$BUILD_NUMBER
     - docker push 480971114143.dkr.ecr.us-east-1.amazonaws.com/sample_node:$BRANCH.$BUILD_NUMBER
     - docker push quay.io/shippablequay/sample_node_01:$BRANCH.$BUILD_NUMBER
     - docker push gcr.io/vidya-project/sample_node:$BRANCH.$BUILD_NUMBER
