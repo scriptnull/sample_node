@@ -18,10 +18,10 @@ build:
 
   post_ci:
     - echo "post ci stage. Finished ! yo"
-    # - docker build -t="scriptnull/vb-docker-app-img:$BRANCH.$BUILD_NUMBER" .
-    # - docker push scriptnull/vb-docker-app-img:$BRANCH.$BUILD_NUMBER
+    - docker build -t="480971114143.dkr.ecr.us-east-1.amazonaws.com/sample_node:$BRANCH.$BUILD_NUMBER" .
+    - docker push 480971114143.dkr.ecr.us-east-1.amazonaws.com/sample_node:$BRANCH.$BUILD_NUMBER
     # - pip install awsebcli
-
+    
 integrations:
   deploy:
     - integrationName: "Vishnu's AWS"
@@ -31,7 +31,7 @@ integrations:
       env_name: localhost
       bucket_name: "elasticbeanstalk-us-west-2-480971114143"
       region: "us-west-2"
-      image_name: "scriptnull/vb-docker-app-img:eb-docker-private.1"
+      image_name: "480971114143.dkr.ecr.us-east-1.amazonaws.com/sample_node:$BRANCH.$BUILD_NUMBER"
   hub:
-    - integrationName: "Vishnu's Docker"
-      type: docker
+    - integrationName: "Vishnu's ECR"
+      type: ecr
