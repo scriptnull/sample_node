@@ -18,8 +18,8 @@ build:
 
   post_ci:
     - echo "post ci stage. Finished ! yo"
-    - docker build -t="scriptnull/vb-docker-app-img:$BRANCH.$BUILD_NUMBER" .
-    - docker push scriptnull/vb-docker-app-img:$BRANCH.$BUILD_NUMBER
+    # - docker build -t="scriptnull/vb-docker-app-img:$BRANCH.$BUILD_NUMBER" .
+    # - docker push scriptnull/vb-docker-app-img:$BRANCH.$BUILD_NUMBER
     # - pip install awsebcli
 
 integrations:
@@ -31,7 +31,7 @@ integrations:
       env_name: localhost
       bucket_name: "elasticbeanstalk-us-west-2-480971114143"
       region: "us-west-2"
-      image_name: "scriptnull/vb-docker-app-img:$BRANCH.$BUILD_NUMBER"
+      image_name: "scriptnull/vb-docker-app-img:eb-docker-private.1"
   hub:
     - integrationName: "Vishnu's Docker"
       type: docker
