@@ -9,7 +9,6 @@ env:
     
 build:
   pre_ci:
-    - echo "Good morning 2"
     - echo "testing"
 
   ci:
@@ -18,22 +17,24 @@ build:
 
   post_ci:
     - echo "post ci stage. Finished ! yo"
-    #- docker build -t="480971114143.dkr.ecr.us-east-1.amazonaws.com/sample_node:$BRANCH.$BUILD_NUMBER" .
-    #- docker push 480971114143.dkr.ecr.us-east-1.amazonaws.com/sample_node:$BRANCH.$BUILD_NUMBER
-    - docker build -t="quay.io/shippablequay/sample_node_01:$BRANCH.$BUILD_NUMBER" .
+    - docker build -t="scriptnull/vb-docker-app-img:latest" .
+    - docker tag scriptnull/vb-docker-app-img:latest 480971114143.dkr.ecr.us-east-1.amazonaws.com/sample_node:$BRANCH.$BUILD_NUMBER
+    - docker tag scriptnull/vb-docker-app-img:latest quay.io/shippablequay/sample_node_01:$BRANCH.$BUILD_NUMBER
+    - dokcer tag scriptnull/vb-docker-app-img:latest gcr.io/vidya-project/sample_node:$BRANCH.$BUILD_NUMBER
+    - docker push 480971114143.dkr.ecr.us-east-1.amazonaws.com/sample_node:$BRANCH.$BUILD_NUMBER
     - docker push quay.io/shippablequay/sample_node_01:$BRANCH.$BUILD_NUMBER
-    # - pip install awsebcli
+    - docker push gcr.io/vidya-project/sample_node:$BRANCH.$BUILD_NUMBER
     
 integrations:
   deploy:
-    # - integrationName: "Vishnu's AWS"
-    #   type: aws
-    #   target: eb_docker
-    #   application_name: "vb-docker-app"
-    #   env_name: localhost
-    #   bucket_name: "elasticbeanstalk-us-west-2-480971114143"
-    #   region: "us-west-2"
-    #   image_name: "480971114143.dkr.ecr.us-east-1.amazonaws.com/sample_node:$BRANCH.$BUILD_NUMBER"
+    - integrationName: "Vishnu's AWS"
+      type: aws
+      target: eb_docker
+      application_name: "vb-docker-app"
+      env_name: localhost
+      bucket_name: "elasticbeanstalk-us-west-2-480971114143"
+      region: "us-west-2"
+      image_name: "480971114143.dkr.ecr.us-east-1.amazonaws.com/sample_node:$BRANCH.$BUILD_NUMBER"
 
     - integrationName: "Vishnu's AWS"
       type: aws
@@ -43,9 +44,30 @@ integrations:
       bucket_name: "elasticbeanstalk-us-west-2-480971114143"
       region: "us-west-2"
       image_name: "quay.io/shippablequay/sample_node_01:$BRANCH.$BUILD_NUMBER"
+      
+    - integrationName: "Vishnu's GCR"
+      type: aws
+      target: eb_docker
+      application_name: "vb-docker-app"
+      env_name: "gcr-env"
+      bucket_name: "elasticbeanstalk-us-west-2-480971114143"
+      region: "us-west-2"
+      image_name: "gcr.io/vidya-project/sample_node:$BRANCH.$BUILD_NUMBER"
+      
+    - integrationName: "Vishnu's AWS"
+      type: aws
+      target: eb_docker
+      application_name: "vb-docker-app"
+      env_name: sample
+      bucket_name: "elasticbeanstalk-us-west-2-480971114143"
+      region: "us-west-2"
+      image_name: "scriptnull/vb-docker-app-img:latest"
 
   hub:
     - integrationName: "Vishnu's ECR"
       type: ecr
     - integrationName: "Vishnu's Quay"
       type: quay.io
+    - integrationName: "Vishnu's GCR"
+      type: gcr
+      # No integration for docker hub , as it is a public repo
