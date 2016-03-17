@@ -34,7 +34,7 @@ integrations:
     #   image_tag: "eb-docker-all.125"
     #   docker_config: "credentials/$AWS_EB_APPLICATION_NAME.dockerconfig"
 
-    - integrationName: "Vishnu's AWS"
+    - integrationName: "Vishnu's ECR"
       type: aws
       target: eb_docker
       application_name: "vb-docker-app"
