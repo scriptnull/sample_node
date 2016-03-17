@@ -18,7 +18,7 @@ build:
 
   post_ci:
     - echo "post ci stage. Finished ! yo"
-    - docker build -t="quay.io/shippablequay/sample_node_01:$BRANCH.$BUILD_NUMBER" 
+    - docker build -t="quay.io/shippablequay/sample_node_01:$BRANCH.$BUILD_NUMBER" .
     - docker push quay.io/shippablequay/sample_node_01:$BRANCH.$BUILD_NUMBER
     
 integrations:
