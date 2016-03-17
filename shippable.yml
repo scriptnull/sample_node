@@ -30,4 +30,4 @@ integrations:
       bucket_name: "elasticbeanstalk-us-west-2-480971114143"
       region: "us-west-2"
       image_name: "scriptnull/vb-docker-app-img"
-      image_tag: "$BRANCH.$BUILD_NUMBER"
+      image_tag: "latest"
