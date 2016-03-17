@@ -44,3 +44,7 @@ integrations:
       image_name: "quay.io/shippablequay/sample_node_01"
       image_tag: "$BRANCH.$BUILD_NUMBER"
       docker_config: "credentials/$AWS_EB_APPLICATION_NAME.dockerconfig"
+      
+  hub:
+    - integrationName: "Vishnu's Quay"
+      type: quay.io
