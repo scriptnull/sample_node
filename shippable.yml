@@ -41,10 +41,4 @@ integrations:
       region: "us-west-2"
       image_name: "quay.io/shippablequay/sample_node_01"
       image_tag: "eb-docker-all.125"
-      docker_config:"credentials/$AWS_EB_APPLICATION_NAME.dockerconfig"
-
-  # hub:
-  #   - integrationName: "Vishnu's ECR"
-  #     type: ecr
-  #   - integrationName: "Vishnu's Quay"
-  #     type: quay.io
+      docker_config: "credentials/$AWS_EB_APPLICATION_NAME.dockerconfig"
