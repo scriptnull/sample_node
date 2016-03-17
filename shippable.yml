@@ -29,4 +29,5 @@ integrations:
       env_name: localhost
       bucket_name: "elasticbeanstalk-us-west-2-480971114143"
       region: "us-west-2"
-      image_name: "scriptnull/vb-docker-app-img:latest"
+      image_name: "scriptnull/vb-docker-app-img"
+      image_tag: "$BRANCH.$BUILD_NUMBER"
