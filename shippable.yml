@@ -18,8 +18,8 @@ build:
 
   post_ci:
     - echo "post ci stage. Finished ! yo"
-    - docker build -t="quay.io/shippablequay/sample_node_01:$BRANCH.$BUILD_NUMBER" .
-    - docker push quay.io/shippablequay/sample_node_01:$BRANCH.$BUILD_NUMBER
+    - docker build -t="480971114143.dkr.ecr.us-east-1.amazonaws.com/sample_node:$BRANCH.$BUILD_NUMBER" .
+    - docker push 480971114143.dkr.ecr.us-east-1.amazonaws.com/sample_node:$BRANCH.$BUILD_NUMBER
     
 integrations:
   deploy:
@@ -38,13 +38,23 @@ integrations:
       type: aws
       target: eb_docker
       application_name: "vb-docker-app"
-      env_name: quay
+      env_name: localhost
       bucket_name: "elasticbeanstalk-us-west-2-480971114143"
       region: "us-west-2"
-      image_name: "quay.io/shippablequay/sample_node_01"
+      image_name: "480971114143.dkr.ecr.us-east-1.amazonaws.com/sample_node"
       image_tag: "$BRANCH.$BUILD_NUMBER"
-      docker_config: "credentials/$AWS_EB_APPLICATION_NAME.dockerconfig"
+
+    # - integrationName: "Vishnu's AWS"
+    #   type: aws
+    #   target: eb_docker
+    #   application_name: "vb-docker-app"
+    #   env_name: quay
+    #   bucket_name: "elasticbeanstalk-us-west-2-480971114143"
+    #   region: "us-west-2"
+    #   image_name: "quay.io/shippablequay/sample_node_01"
+    #   image_tag: "$BRANCH.$BUILD_NUMBER"
+    #   docker_config: "credentials/$AWS_EB_APPLICATION_NAME.dockerconfig"
       
   hub:
-    - integrationName: "Vishnu's Quay"
-      type: quay.io
+    - integrationName: "Vishnu's AWS"
+      type: ecr
