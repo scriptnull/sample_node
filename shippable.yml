@@ -18,28 +18,14 @@ build:
 
   post_ci:
     - echo "post ci stage. Finished ! yo"
-    #- docker build -t="480971114143.dkr.ecr.us-east-1.amazonaws.com/sample_node:$BRANCH.$BUILD_NUMBER" .
-    #- docker push 480971114143.dkr.ecr.us-east-1.amazonaws.com/sample_node:$BRANCH.$BUILD_NUMBER
-    # - docker build -t="quay.io/shippablequay/sample_node_01:$BRANCH.$BUILD_NUMBER" .
-    # - docker push quay.io/shippablequay/sample_node_01:$BRANCH.$BUILD_NUMBER
-    # - pip install awsebcli
     
 integrations:
   deploy:
-    # - integrationName: "Vishnu's AWS"
-    #   type: aws
-    #   target: eb_docker
-    #   application_name: "vb-docker-app"
-    #   env_name: localhost
-    #   bucket_name: "elasticbeanstalk-us-west-2-480971114143"
-    #   region: "us-west-2"
-    #   image_name: "480971114143.dkr.ecr.us-east-1.amazonaws.com/sample_node:$BRANCH.$BUILD_NUMBER"
-    
     - integrationName: "Vishnu's AWS"
       type: aws
       target: eb_docker
       application_name: "vb-docker-app"
-      env_name: gcr-env
+      env_name: "gcr-env"
       bucket_name: "elasticbeanstalk-us-west-2-480971114143"
       region: "us-west-2"
       image_name: "gcr.io/vidya-project/sample_node"
