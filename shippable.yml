@@ -10,11 +10,8 @@ env:
     - FOO=FUBU
     - FO1=BUBU
     - BOO=GUBU
-
-  matrix:
     - USERNAME=ONE
-    - USERNAME=TWO
-
+    
 build:
   pre_ci:
     - echo "this is pre ci"
