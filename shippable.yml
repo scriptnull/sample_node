@@ -12,57 +12,15 @@ env:
     - BOO=GUBU
 
   matrix:
-    - M1=ONE
-    - M2=TWO
+    - USERNAME=ONE
+    - USERNAME=TWO
 
 build:
   pre_ci:
-    - echo "true"
-
-  pre_ci_boot:
-    image_name: kanthchandra/sample_node
-    image_tag: latest
-    pull: false
-    options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
+    - echo "this is pre ci"
 
   ci:
-    - ps -eax
-    - ls -al
-
-  post_ci:
-    - echo "true"
-
-  smoke_test:
-    - sudo ls /
-
-deploy:
-  pre_build:
-    - ls
-    - ls -al
-
-integrations:
-  notification:
-    - integrationName: "chandrakanth-slack"
-      type: slack
-      recipients:
-        - slacktestck
-      branches:
-        only:
-          - master
-      on_start: never
-      on_success: change
-      on_failure: always
-      on_pull_request: always
+   - echo "this is ci $USERNAME"
   
-  hub:
-    - integrationName: "kanthchandra-docker"
-      type: docker
-      branches:
-        only:
-          - master
-  deploy:
-    - integrationName: aws-avi
-      type: aws
-      branches:
-        only:
-          - master
+  post_ci:
+    - echo "this is post ci"
