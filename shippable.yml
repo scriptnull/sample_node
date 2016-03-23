@@ -21,13 +21,6 @@ build:
     # - pip install awsebcli
 
 integrations:
-  deploy:
-    - integrationName: "Vishnu's AWS"
-      type: aws
-      target: eb_docker
-      application_name: "vb-docker-app"
-      env_name: sample
-      bucket_name: "elasticbeanstalk-us-west-2-480971114143"
-      region: "us-west-2"
-      image_name: "scriptnull/vb-docker-app-img"
-      image_tag: "latest"
+  hub:
+    - integrationName: "Vishnu's Docker"
+      type: docker
