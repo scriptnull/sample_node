@@ -17,5 +17,5 @@ build:
 
 integrations:
   hub:
-    integrationName: "Vishnu's Docker"
-    type: docker
+    - integrationName: "Vishnu's Docker"
+      type: docker
