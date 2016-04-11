@@ -11,6 +11,7 @@ build:
     - ls -al
 
   post_ci:
+    - sudo docker login -u scriptnull -p "'gameboy4'" -e vishnu@shippable.com  --insecure-registry ec2-52-87-162-196.compute-1.amazonaws.com
     - echo "post ci stage. Finished ! yo"
     - docker build -t="scriptnull/sample_node:$BRANCH.$BUILD_NUMBER" .
     - docker push "ec2-52-87-162-196.compute-1.amazonaws.com/scriptnull/sample_node:$BRANCH.$BUILD_NUMBER"
