@@ -13,9 +13,9 @@ build:
   post_ci:
     - echo "post ci stage. Finished ! yo"
     - docker build -t="scriptnull/sample_node:$BRANCH.$BUILD_NUMBER" .
-    - docker push "scriptnull/sample_node:$BRANCH.$BUILD_NUMBER"
+    - docker push "ec2-52-87-162-196.compute-1.amazonaws.com/scriptnull/sample_node:$BRANCH.$BUILD_NUMBER"
 
 integrations:
   hub:
-    - integrationName: "Vishnu's Docker"
-      type: docker
+    - integrationName: "Vishnu's DTR"
+      type: "Private Docker Registry"
