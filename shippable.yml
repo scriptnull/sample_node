@@ -12,8 +12,8 @@ build:
 
   post_ci:
     - echo "post ci stage. Finished ! yo"
-    - docker build -t="scriptnull/sample_node:$BRANCH.$BUILD_NUMBER" .
-    - docker push "ship-dtr.in/scriptnull/sample_node:$BRANCH.$BUILD_NUMBER"
+    - docker build -t="ship-dtr.in/scriptnull/sample_node:beta.$BRANCH.$BUILD_NUMBER" .
+    - docker push "ship-dtr.in/scriptnull/sample_node:beta.$BRANCH.$BUILD_NUMBER"
 
 integrations:
   hub:
