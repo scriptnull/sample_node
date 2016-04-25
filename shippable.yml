@@ -24,3 +24,9 @@ integrations:
       branches:
         only:
           - post_ci_trigger_default_values
+          
+  notifications:
+    - integrationName: email
+      type: email
+      recipients:
+        - vishnu@shippable.com
