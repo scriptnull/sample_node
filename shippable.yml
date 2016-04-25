@@ -11,20 +11,6 @@ build:
     - ls -al
 
 integrations:
-  post_ci_trigger:
-    - integrationName: vishnu-project-trigger
-      type: project_trigger
-      payload:
-        - NEXT_PROJECT=true
-        - BUILD_NUM=$SHIPPABLE_JOB_NUMBER
-        - API_URL=$SHIPPABLE_API_URL
-        - CONTAINER_NAME=$SHIPPABLE_CONTAINER_NAME
-        - FOO=bar
-        - FIZZ=buzz
-      branches:
-        only:
-          - post_ci_trigger_default_values
-          
   notifications:
     - integrationName: email
       type: email
