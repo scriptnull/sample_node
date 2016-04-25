@@ -9,6 +9,7 @@ build:
   ci:
     - ps -eax
     - ls -al
+    - abc fail
 
 integrations:
   post_ci_trigger:
