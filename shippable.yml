@@ -17,6 +17,6 @@ integrations:
       recipients:
         - vishnu@shippable.com
       on_start: 'always'
-      on_success: 'never'
+      on_success: 'always '
       on_pull_request: 'always'
-      on_failure: 'hello'
+      on_failure: 'always'
