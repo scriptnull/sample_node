@@ -9,7 +9,6 @@ build:
   ci:
     - ps -eax
     - ls -al
-    - abc fail
 
 integrations:
   post_ci_trigger:
@@ -31,3 +30,7 @@ integrations:
       type: email
       recipients:
         - vishnu@shippable.com
+      on_start: 'always'
+      on_success: 'never'
+      on_pull_request: 'always'
+      on_failure: 'hello'
