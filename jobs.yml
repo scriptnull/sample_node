@@ -12,3 +12,4 @@ jobs:
       steps:
         - GET resource1
         - GET resource2
+        - GET resource4
