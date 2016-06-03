@@ -11,10 +11,3 @@ jobs:
       type: manifest
       steps:
         - GET resource2
-
-  - job:
-      name : "spaced job"
-      type: manifest
-      steps:
-        - GET resource4
-        - GET resource1
