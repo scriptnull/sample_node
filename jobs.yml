@@ -17,3 +17,4 @@ jobs:
       type: manifest
       steps:
         - GET resource4
+        - GET resource1
