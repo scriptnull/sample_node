@@ -18,15 +18,13 @@ jobs:
         - GET resource1
         
   - job:
-    name : job4
-    type: manifest
-    steps:
-      - GET resource1
+      name : job4
+      type: manifest
+      steps:
+        - GET resource1
 
   - job:
       name : job5
       type: manifest
       steps:
         - GET resource1
-
-
