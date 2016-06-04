@@ -1,6 +1,6 @@
 jobs:
   - job:
-      name : job4
+      name : job1
       type: manifest
       steps:
         - GET resource2
