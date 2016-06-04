@@ -3,4 +3,4 @@ jobs:
       name : job3
       type: manifest
       steps:
-        - GET resource1
+        - GET resource2
