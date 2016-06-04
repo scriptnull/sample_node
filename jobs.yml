@@ -11,4 +11,3 @@ jobs:
       steps:
         - GET resource2
         - PUT resource2
-        - ACT resource2
