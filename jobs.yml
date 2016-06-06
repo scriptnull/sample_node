@@ -3,3 +3,4 @@ jobs
     type : manifest
     steps :
       - GET resource1
+      - PUT resource1
