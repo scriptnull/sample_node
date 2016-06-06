@@ -3,8 +3,3 @@ jobs:
     type : manifest
     steps :
       - GET resource1
-
-  - name : job2
-    type : manifest
-    steps :
-      - GET resource1
