@@ -1,4 +1,4 @@
-jobs
+jobs :
   - name : job1
     type : manifest
     steps :
