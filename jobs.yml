@@ -1,4 +1,5 @@
-- name : job1
-  type : manifest
-  steps :
-    - GET resource1
+jobs
+  - name : job1
+    type : manifest
+    steps :
+      - GET resource1
