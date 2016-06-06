@@ -1,6 +1,6 @@
 jobs :
   - name : job1
-    type : manifest
+    type : build
     steps :
       - GET resource1
       - PUT resource1
