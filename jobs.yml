@@ -13,3 +13,8 @@ jobs:
     type: manifest
     steps:
       - GET resource2
+
+  - name : resource2
+    type: manifest
+    steps:
+      - GET resource2
