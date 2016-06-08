@@ -7,7 +7,7 @@ resources:
       isPull: false
       tag: latest
   
-  - name: myEcsCluster
+  - name: scriptnull-ecs-cluster
     type: ecsCluster
     integration: scriptnull-ecs
     source:
