@@ -8,6 +8,12 @@ jobs:
     type: manifest
     steps:
       - GET scriptnull-busybox
+      
+  - name : joby
+    type: manifest
+    steps:
+      - GET scriptnull-busybox
+      - GET scriptnull-busybox
 
   - name : scriptnull-busybox
     type: manifest
