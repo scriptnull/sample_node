@@ -2,4 +2,4 @@ jobs:
   - name : jobx
     type: manifest
     steps:
-      - GET sample-node-image
+      - GET scriptnull-busybox
