@@ -1,0 +1,8 @@
+resources:
+  - name: scriptnull-busybox
+    type: image
+    integration: Vishnu's Docker
+    source:
+      name: "busybox"
+      isPull: false
+      tag: latest
