@@ -23,4 +23,9 @@ jobs:
     type: manifest
     steps:
       - GET scriptnull-busybox
+      
+  - name : scriptnull-busybox
+    type: manifest
+    steps:
+      - GET scriptnull-busybox
 
