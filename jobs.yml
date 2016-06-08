@@ -2,16 +2,4 @@ jobs:
   - name : jobx
     type: manifest
     steps:
-      - GET resource2
-
-  - name : joby
-    type: manifest
-    steps:
-      - GET resource2
-
-  - name : resource2
-    type: manifest
-    steps:
-      - GET resource2
-
-# hello
+      - GET sample-node-image
