@@ -1,8 +1,15 @@
 resources:
   - name: scriptnull-busybox
     type: image
-    integration: Vishnu's Docker
+    integration: scriptnull-docker
     source:
       name: "busybox"
       isPull: false
       tag: latest
+  
+  - name: myEcsCluster
+    type: ecsCluster
+    integration: scriptnull-ecs
+    source:
+      name : "default"
+      region: "us-west-2"
