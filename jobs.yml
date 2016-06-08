@@ -1,32 +1,11 @@
 jobs:
-  - name : jobx
+  - name: generate-manifest
     type: manifest
     steps:
       - GET scriptnull-busybox
 
-  - name : joby
-    type: manifest
+  - name: deploy-service
+    type: ecsDeploy
     steps:
-      - GET scriptnull-busybox
-      
-  - name : jobz
-    type: manifest
-    steps:
-      - GET scriptnull-busybox
-      
-  - name : jobxx
-    type: manifest
-    steps:
-      - GET scriptnull-busybox
-
-  - name : scriptnull-busybox
-    type: manifest
-    steps:
-      - GET scriptnull-busybox
-      
-  - name : scriptnull-busybox
-    type: manifest
-    steps:
-      - GET scriptnull-busybox
-
-####
+      - GET generate-manifest
+      - GET scriptnull-ecs-cluster
