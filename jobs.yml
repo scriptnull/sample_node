@@ -9,7 +9,7 @@ jobs:
     steps:
       - GET scriptnull-busybox
       
-  - name : joby
+  - name : jobz
     type: manifest
     steps:
       - GET scriptnull-busybox
