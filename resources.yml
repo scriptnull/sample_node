@@ -9,9 +9,9 @@ resources:
   
   - name: scriptnull-ecs-cluster
     type: ecsCluster
-    integration: scriptnull-ecs
+    integration: scriptnull-aws
     source:
-      name : "default"
+      name : "testCL"
       region: "us-west-2"
 
   - name: small-container
