@@ -3,7 +3,6 @@ jobs:
     type: manifest
     steps:
       - GET scriptnull-busybox
-      - GET small-container
       - GET large-container
       - PUT scriptnull-busybox
 
