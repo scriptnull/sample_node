@@ -34,7 +34,7 @@ resources:
   - name: large-container
     type: dockerOptions
     source:
-      memory: 500
+      memory: 400
       cpu-shares: 0
       net: "host"
       volumes: # [host-src:]container-dest[:<options>]
