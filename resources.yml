@@ -36,7 +36,7 @@ resources:
     source:
       memory: 500
       cpu-shares: 0
-      net: "xxx"
+      net: "host"
       volumes: # [host-src:]container-dest[:<options>]
         - "name:/usr/bin:rw"
         - "/test/vol:/"
