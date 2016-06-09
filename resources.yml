@@ -30,3 +30,18 @@ resources:
       links:
         - CONTAINER:ALIAS
         - shippablemongodb:db
+
+  - name: large-container
+    type: dockerOptions
+    source:
+      memory: 500
+      cpu-shares: 0
+      net: "xxx"
+      volumes: # [host-src:]container-dest[:<options>]
+        - "name:/usr/bin:rw"
+        - "/test/vol:/"
+      portMappings: # format: ip:hostPort:containerPort | ip::containerPort | hostPort:containerPort | containerPort
+        - 80:3888 
+      links:
+        - CONTAINER:ALIAS
+        - shippablemongodb:db
