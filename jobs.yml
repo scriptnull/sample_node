@@ -5,7 +5,6 @@ jobs:
       - GET scriptnull-busybox
       - GET small-container
       - GET large-container
-      - PUT large-container
 
   # - name: deploy-service
   #   type: ecsDeploy
