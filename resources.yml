@@ -34,4 +34,4 @@ resources:
   - name: large-container
     type: dockerOptions
     source:
-      memory: 500
+      memory: 400
