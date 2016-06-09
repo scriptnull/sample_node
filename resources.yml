@@ -14,7 +14,7 @@ resources:
       name : "default"
       region: "us-west-2"
 
-  - name: 
+  - name: small-container
     type: dockerOptions
     source:
       memory: 400 # in MB
