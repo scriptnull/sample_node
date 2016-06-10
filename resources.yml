@@ -20,3 +20,5 @@ resources:
     source:
       memory: 500
       cpu-shares: 2
+      portMappings:
+        - 8080:8081
