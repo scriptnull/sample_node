@@ -16,7 +16,6 @@ resources:
 
   - name: large-container
     type: dockerOptions
-    integration: scriptnull-aws
     source:
       memory: 400 # in MB
       cpu-shares: 0
