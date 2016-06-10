@@ -18,8 +18,7 @@ resources:
     type: dockerOptions
     integration: scriptnull-aws
     source:
-      memory: 500
-      cpu-shares: 2
+      memory: 400
+      cpu-shares: 1
       portMappings:
-        - 8082:8083
-        - 8084
+        - 8083:80
