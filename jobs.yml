@@ -2,7 +2,7 @@ jobs:
   - name: generate-manifest
     type: manifest
     steps:
-      - GET scriptnull-busybox
+      - GET scriptnull-sample-node
       - GET large-container
 
   - name: deploy-service
