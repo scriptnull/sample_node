@@ -23,3 +23,14 @@ resources:
         - 80:3000 
         - 5672:5672
         - 443:50000
+
+  - name: xxx-container
+    type: dockerOptions
+    integration: invalid
+    source:
+      memory: 400 # in MB
+      cpu-shares: 0
+      portMappings: # format: ip:hostPort:containerPort | ip::containerPort | hostPort:containerPort | containerPort
+        - 80:3000 
+        - 5672:5672
+        - 443:50000
