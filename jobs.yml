@@ -3,7 +3,7 @@ jobs:
     type: manifest
     steps:
       - GET scriptnull-busybox
-      - GET large-container
+      # - GET large-container
       # - PUT scriptnull-busybox
 
   - name: deploy-service
