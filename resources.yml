@@ -22,3 +22,4 @@ resources:
       cpu-shares: 2
       portMappings:
         - 8082:8083
+        - 8084
