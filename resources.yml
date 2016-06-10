@@ -19,3 +19,4 @@ resources:
     integration: scriptnull-aws
     source:
       memory: 500
+      cpu-shares: 2
