@@ -5,9 +5,9 @@ jobs:
       - GET scriptnull-busybox
       - GET large-container
 
-  # - name: deploy-service
-  #   type: ecsDeploy
-  #   steps:
-  #     - GET generate-manifest
-  #     - GET scriptnull-ecs-cluster
+  - name: deploy-service
+    type: ecsDeploy
+    steps:
+      - GET generate-manifest
+      - GET scriptnull-ecs-cluster
   
