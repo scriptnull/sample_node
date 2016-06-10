@@ -28,6 +28,6 @@ resources:
     integration: scriptnull-aws
     source:
       memory: 400
-      cpu-shares: 1
+      cpu-shares: 2
       portMappings:
-        - 8083:80
+        - 8084:80
