@@ -14,24 +14,8 @@ resources:
       name : "testCL"
       region: "us-west-2"
 
-  - name: small-container
-    type: dockerOptions
-    source:
-      memory: 300
-      cpu-shares: 0
-      net: "host"
-      volumes: # [host-src:]container-dest[:<options>]
-        - "name:/usr/bin:rw"
-        - "/test/vol:/"
-      portMappings: # format: ip:hostPort:containerPort | ip::containerPort | hostPort:containerPort | containerPort
-        - 80:3000 
-        - 5672:5672
-        - 443:50000
-      links:
-        - CONTAINER:ALIAS
-        - shippablemongodb:db
-
   - name: large-container
     type: dockerOptions
+    integration: scriptnull-aws
     source:
       memory: 400
