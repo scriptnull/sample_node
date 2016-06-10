@@ -9,7 +9,7 @@ resources:
   
   - name: scriptnull-ecs-cluster
     type: ecsCluster
-    integration: scriptnull-aws
+    integration: scriptnull-different-aws
     source:
       name : "testCL"
       region: "us-west-2"
