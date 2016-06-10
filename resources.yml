@@ -6,6 +6,15 @@ resources:
       name: "busybox"
       isPull: false
       tag: latest
+
+  - name: scriptnull-sample-node
+    type: image
+    integration: scriptnull-docker
+    source:
+      name: "scriptnull/sample_node"
+      isPull: false
+      tag: "dc.pipeline.3"
+  
   
   - name: scriptnull-ecs-cluster
     type: ecsCluster
@@ -19,3 +28,6 @@ resources:
     integration: scriptnull-aws
     source:
       memory: 400
+      cpu-shares: 1
+      portMappings:
+        - 8083:80
