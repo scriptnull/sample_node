@@ -3,8 +3,8 @@ jobs:
     type: manifest
     steps:
       - GET scriptnull-busybox
-      - GET large-container
-      - PUT scriptnull-busybox
+      # - GET large-container
+      # - PUT scriptnull-busybox
 
   - name: deploy-service
     type: ecsDeploy
