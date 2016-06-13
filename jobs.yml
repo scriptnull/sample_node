@@ -3,13 +3,13 @@ jobs:
     type: manifest
     steps:
       # - GET scriptnull-sample-node
-      - GET scriptnull-busybox
-      - GET large-container
+      - GET: scriptnull-busybox
+      - GET: large-container
       # - PUT scriptnull-busybox
 
   - name: deploy-service
     type: ecsDeploy
     steps:
-      - GET generate-manifest
-      - GET scriptnull-ecs-cluster
+      - GET: generate-manifest
+      - GET: scriptnull-ecs-cluster
   
