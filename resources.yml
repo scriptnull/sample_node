@@ -31,18 +31,18 @@ resources:
       portMappings:
         - 8084:80
 
-  - name: small-container
-    type: dockerOptions
-    source:
-      memory: 500
-      cpu-shares: 2
-      portMappings:
-        - 8084:80
+  # - name: small-container
+  #   type: dockerOptions
+  #   source:
+  #     memory: 500
+  #     cpu-shares: 2
+  #     portMappings:
+  #       - 8084:80
         
-  - name: medium-container
-    type: dockerOptions
-    source:
-      memory: 500
-      cpu-shares: 2
-      portMappings:
-        - 8084:80
+  # - name: medium-container
+  #   type: dockerOptions
+  #   source:
+  #     memory: 500
+  #     cpu-shares: 2
+  #     portMappings:
+  #       - 8084:80
