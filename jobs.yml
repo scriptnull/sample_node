@@ -2,12 +2,12 @@ jobs:
   - name: generate-manifest
     type: manifest
     steps:
-      - GET scriptnull-busybox
-      - GET large-container
+      - GET: scriptnull-busybox
+      - GET: large-container
 
   - name: deploy-service
     type: ecsDeploy
     steps:
-      - GET generate-manifest
-      - GET scriptnull-ecs-cluster
+      - GET: generate-manifest
+      - GET: scriptnull-ecs-cluster
   
