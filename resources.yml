@@ -1,1 +1,8 @@
-
+resources:
+  - name: dv-image
+    type: image
+    integration: ric03uec-dh
+    source:
+      name: "library/nginx"
+      isPull: false
+      tag: latest
