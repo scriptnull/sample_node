@@ -3,7 +3,7 @@ resources:
     type: image
     integration: scriptnull-docker
     source:
-      name: "scriptnull/sample_node"
+      name: "library/nginx"
       isPull: false
       tag: "dc.pipeline.3"
 
