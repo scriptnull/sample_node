@@ -5,3 +5,10 @@ jobs:
       - GET: dv-image
       - GET: dv-opts
       - GET: dv-params
+
+  - name: dv-man-delete
+    type: manifest
+    steps:
+      - GET: dv-image
+      - GET: dv-opts
+      - GET: dv-params
