@@ -47,6 +47,11 @@ resources:
       name : "testCL"
       region: "us-west-2"
 
+  - name: box-scaler
+    type: replicas
+    source:
+      count: 1
+
   - name: box-opts
     type: dockerOptions
     source:
@@ -59,8 +64,3 @@ resources:
     source:
       name : "testCL"
       region: "us-west-2"
-
-  - name: box-scaler
-    type: replicas
-    source:
-      count: 1
