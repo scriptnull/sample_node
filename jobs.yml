@@ -1,1 +1,7 @@
-
+jobs:
+  - name: dv-man
+    type: manifest
+    steps:
+      - GET: dv-image
+      - GET: dv-opts
+      - GET: dv-params
