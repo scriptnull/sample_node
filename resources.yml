@@ -5,7 +5,7 @@ resources:
     source:
       name: "library/nginx"
       isPull: false
-      tag: "dc.pipeline.3"
+      tag: "latest"
 
   - name: dv-opts
     type: dockerOptions
