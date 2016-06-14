@@ -21,6 +21,3 @@ resources:
       params:
         MONGO_API_URL: "localhost:28017"
         
-        
-        
-        
