@@ -1,5 +1,5 @@
 resources:
-                - name: scriptnull-busybox
+  - name: scriptnull-busybox
     type: image
     integration: scriptnull-docker
     source:
