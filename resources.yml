@@ -7,19 +7,19 @@ resources:
       isPull: false
       tag: dc.pipeline.3
   
-  - name: scriptnull-ecs-cluster
-    type: ecsCluster
-    integration: scriptnull-aws
-    source:
-      name : "testCL"
-      region: "us-west-2"
+  # - name: scriptnull-ecs-cluster
+  #   type: ecsCluster
+  #   integration: scriptnull-aws
+  #   source:
+  #     name : "testCL"
+  #     region: "us-west-2"
 
-  - name: large-container
-    type: dockerOptions
-    source:
-      memory: 400 # in MB
-      cpu-shares: 0
-      portMappings: # format: ip:hostPort:containerPort | ip::containerPort | hostPort:containerPort | containerPort
-        - 80:3000 
-        - 5672:5672
-        - 443:50000
+  # - name: large-container
+  #   type: dockerOptions
+  #   source:
+  #     memory: 400 # in MB
+  #     cpu-shares: 0
+  #     portMappings: # format: ip:hostPort:containerPort | ip::containerPort | hostPort:containerPort | containerPort
+  #       - 80:3000 
+  #       - 5672:5672
+  #       - 443:50000
