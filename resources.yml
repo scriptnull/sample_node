@@ -14,3 +14,9 @@ resources:
       cpu-shares: 256
       portMappings:
         - 80:80
+
+  - name: dv-params
+    type: params
+    source:
+      params:
+        MONGO_API_URL: "localhost:28017"
