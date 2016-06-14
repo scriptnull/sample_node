@@ -44,3 +44,9 @@ jobs:
     steps:
       - GET: box-man
       - GET: env-test
+      
+  - name: box-prod
+    type: ecsDeploy
+    steps:
+      - GET: box-man
+      - GET: env-prod
