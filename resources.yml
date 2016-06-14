@@ -40,18 +40,18 @@ resources:
         DB_PASSWORD: "aye0aye"
         ENVIRONMENT: "test-aws"
 
-  - name: box-opts
-    type: dockerOptions
-    source:
-      memory: 64
-      cpu-shares: 512
-
   - name: env-prod
     type: ecsCluster
     integration: scriptnull-aws
     source:
       name : "testCL"
       region: "us-west-2"
+
+  - name: box-opts
+    type: dockerOptions
+    source:
+      memory: 64
+      cpu-shares: 512
 
   - name: env-test
     type: ecsCluster
@@ -64,3 +64,5 @@ resources:
     type: replicas
     source:
       count: 1
+
+
