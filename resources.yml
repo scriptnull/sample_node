@@ -1,1 +1,9 @@
-
+resources:
+  - name : x-res-1
+    type : image
+    integration : scriptnull-docker
+    source :
+      name : "nginx"
+      isPull : false
+      tag : latest
+      
