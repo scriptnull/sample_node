@@ -1,16 +1,1 @@
-resources:
-  - name : x-res-2
-    type : image
-    integration : scriptnull-docker
-    source :
-      name : "busybox"
-      isPull : false
-      tag : latest
 
-  - name : x-res-1
-    type : image
-    integration : scriptnull-docker
-    source :
-      name : "nginx"
-      isPull : false
-      tag : latest
