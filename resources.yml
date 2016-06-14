@@ -6,4 +6,3 @@ resources:
       name : "nginx"
       isPull : false
       tag : latest
-      
