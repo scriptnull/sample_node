@@ -6,3 +6,11 @@ resources:
       name: "library/nginx"
       isPull: false
       tag: latest
+
+  - name: dv-opts
+    type: dockerOptions
+    source:
+      memory: 64
+      cpu-shares: 256
+      portMappings:
+        - 80:80
