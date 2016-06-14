@@ -3,9 +3,9 @@ resources:
     type: image
     integration: scriptnull-docker
     source:
-      name: "library/nginx"
+      name: "scriptnull/sample_node"
       isPull: false
-      tag: latest
+      tag: "dc.pipeline.3"
 
   - name: dv-opts
     type: dockerOptions
