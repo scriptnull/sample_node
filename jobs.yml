@@ -49,4 +49,3 @@ jobs:
     type: ecsDeploy
     steps:
       - GET: box-man
-      - GET: env-prod
