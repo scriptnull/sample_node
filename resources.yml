@@ -1,0 +1,9 @@
+
+resources:
+  - name: dv-image-1
+    type: image
+    integration: scriptnull-docker
+    source:
+      name: "library/nginx"
+      isPull: false
+      tag: latest
