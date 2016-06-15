@@ -1,0 +1,5 @@
+jobs:
+  - name: dv-man-1
+    type: manifest
+    steps:
+      - GET: dv-image-1
