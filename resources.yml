@@ -4,4 +4,7 @@ resources:
     source:
       memory : 400
 
-
+  - name: small-container
+    type: dockerOptions
+    source:
+      memory : 100
