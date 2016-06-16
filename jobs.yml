@@ -10,6 +10,7 @@ jobs:
     steps:
       - GET: scriptnull-nginx
       - GET: scriptnull-params
+      - GET: box-scaler
 
   - name: scriptnull-deploy
     type: dclDeploy
