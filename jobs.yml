@@ -11,6 +11,12 @@ jobs:
       - GET: generate-manifest
       - GET: scriptnull-dcl-cluster
 
+  - name: scriptnull-params
+    type: dclDeploy
+    steps:
+      - GET: generate-manifest
+      - GET: scriptnull-dcl-cluster      
+
   - name: hello
     type: manifest
     steps:
