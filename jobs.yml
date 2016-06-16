@@ -48,3 +48,8 @@ jobs:
       - GET: my-ecs-manifest
       - GET: scriptnull-ecs-cluster
 
+  - name: chain-deploy
+    type: dclDeploy
+    steps:
+      - GET: my-ecs-deploy
+      - GET: scriptnull-dcl-cluster
