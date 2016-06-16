@@ -7,4 +7,4 @@ jobs:
   - name : error-job
     type : manifest
     steps :
-      - GET: xxx-container
+      - GET: ultra-small-container
