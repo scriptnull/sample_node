@@ -12,3 +12,4 @@ resources:
     integration: scriptnull-dcl
     source:
       name : "sid-test-cluster"
+
