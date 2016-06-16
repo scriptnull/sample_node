@@ -12,3 +12,9 @@ resources:
     integration: scriptnull-dcl
     source:
       name: "sid-test-cluster"
+
+ -  name: scriptnull-params
+    type: params
+    source:
+      params:
+        MYVAR: "hello"
