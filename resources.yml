@@ -33,4 +33,4 @@ resources:
     type: params
     source:
       params:
-        MYVAR: "hello"
+        MYVAR: "hi"
