@@ -1,0 +1,5 @@
+resources:
+  - name: super-container
+    type: dockerOptions
+    source:
+      memory : 400
