@@ -3,6 +3,13 @@ jobs:
     type: manifest
     steps:
       - GET: scriptnull-busybox
+      - GET: scriptnull-params
+
+  - name: scriptnull-deploy
+    type: dclDeploy
+    steps:
+      - GET: generate-manifest
+      - GET: scriptnull-dcl-cluster
 
   - name: hello
     type: manifest
