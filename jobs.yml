@@ -3,11 +3,13 @@ jobs:
     type : manifest
     steps :
       - GET: super-container
+      - GET: ultra-small-container
 
   - name : error-job
     type : manifest
     steps :
       - GET: ultra-small-container
+      - GET: hello
 
   - name : sorry-job
     type : manifest
