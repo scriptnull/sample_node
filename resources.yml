@@ -40,6 +40,12 @@ resources:
     source:
       name : "testCL"
       region: "us-west-2"
+      
+  - name: scriptnull-ecs-params
+    type: params
+    source:
+      params:
+        MYENV: "ecs"
 
   - name: scriptnull-params
     type: params
