@@ -3,3 +3,8 @@ jobs:
     type : manifest
     steps :
       - GET: super-container
+
+  - name : error-job
+    type : manifest
+    steps :
+      - GET: xxx-container
