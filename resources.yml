@@ -20,6 +20,14 @@ resources:
     integration: scriptnull-dcl
     source:
       name: "sid-test-cluster"
+      
+  - name: scriptnull-nginx
+    type: image
+    integration: scriptnull-docker
+    source:
+      name: "nginx"
+      isPull: false
+      tag: "latest"
 
   - name: scriptnull-params
     type: params
