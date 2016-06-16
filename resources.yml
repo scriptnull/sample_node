@@ -6,10 +6,3 @@ resources:
       name: "busybox"
       isPull: false
       tag: latest
-  
-  - name: scriptnull-ecs-cluster
-    type: ecsCluster
-    integration: scriptnull-ecs
-    source:
-      name : "default"
-      region: "us-west-2"
