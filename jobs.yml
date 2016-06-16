@@ -2,4 +2,4 @@ jobs:
   - name: generate-manifest
     type: manifest
     steps:
-      - GET scriptnull-busybox
+      - GET: scriptnull-busybox
