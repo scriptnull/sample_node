@@ -6,3 +6,9 @@ resources:
       name: "busybox"
       isPull: false
       tag: latest
+      
+  - name: scriptnull-dcl-cluster
+    type: dclCluster
+    integration: scriptnull-dcl
+    source:
+      name: "sid-test-cluster"
