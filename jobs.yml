@@ -8,3 +8,8 @@ jobs:
     type : manifest
     steps :
       - GET: ultra-small-container
+
+  - name : sorry-job
+    type : manifest
+    steps :
+      - GET: yo-container
