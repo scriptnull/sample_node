@@ -2,4 +2,4 @@ jobs:
   - name : super-job
     type : manifest
     steps :
-      - GET: xx
+      - GET: super-container
