@@ -29,6 +29,11 @@ resources:
       isPull: false
       tag: "latest"
 
+  - name: box-scaler
+    type: replicas
+    source:
+      count: 2
+
   - name: scriptnull-params
     type: params
     source:
