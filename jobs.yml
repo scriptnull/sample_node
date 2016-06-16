@@ -36,6 +36,12 @@ jobs:
       - GET: scriptnull-deploy-nginx
       - GET: scriptnull-dcl-cluster
 
+  - name: my-ecs-manifest
+    type: manifest
+    steps:
+      - GET: scriptnull-nginx
+      - GET: scriptnull-ecs-params
+
   - name: hello
     type: manifest
     steps:
