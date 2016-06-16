@@ -1,0 +1,14 @@
+resources:
+  - name: my-docker-image
+    type: image
+    integraton: scriptnull-docker
+    source:
+      name : "scriptnull/sample_node"
+      isPull : false
+      tag : "dc.pipeline.3"
+      
+  - name: my-dcl-cluster
+    type: dclCluster
+    integration: scriptnull-dcl
+    source:
+      name : "sid-test-cluster"
