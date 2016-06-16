@@ -29,6 +29,12 @@ jobs:
     steps:
       - GET: nginx-manifest
       - GET: scriptnull-dcl-cluster
+  
+  - name: xx-deploy
+    type: dclDeploy
+    steps:
+      - GET: scriptnull-deploy-nginx
+      - GET: scriptnull-dcl-cluster
 
   - name: hello
     type: manifest
