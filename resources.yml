@@ -45,7 +45,7 @@ resources:
     type: params
     source:
       params:
-        MYENV: "ecs"
+        MYENV: "dcl"
 
   - name: scriptnull-params
     type: params
