@@ -32,7 +32,14 @@ resources:
   - name: box-scaler
     type: replicas
     source:
-      count: 3
+      count: 2
+  
+  - name: scriptnull-ecs-cluster
+    type: ecsCluster
+    integration: scriptnull-aws
+    source:
+      name : "testCL"
+      region: "us-west-2"
 
   - name: scriptnull-params
     type: params
