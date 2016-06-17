@@ -39,6 +39,12 @@ jobs:
       - GET: local-manifest-1
       - GET: local-manifest-2
       - GET: scriptnull-dcl-cluster
+  
+  - name: local-dup
+    type: dclDeploy
+    steps:
+      - GET: local-manifest-1
+      - GET: scriptnull-dcl-cluster
 
   # - name: generate-manifest
   #   type: manifest
