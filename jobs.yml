@@ -59,3 +59,10 @@ jobs:
     type: manifest
     steps:
       - GET: ov-do-1
+
+  - name: ov-deploy-1
+    type: dclDeploy
+    steps:
+      - GET: ov-manifest-1
+      - GET: scriptnull-dcl-cluster
+      - GET: ov-do-2
