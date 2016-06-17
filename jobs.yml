@@ -29,7 +29,8 @@ jobs:
   - name: local-manifest-2
     type: manifest
     steps:
-      - GET: inner-replica
+      - GET: scriptnull-nginx
+      - GET: outer-params
       
   - name: local-deploy
     type: dclDeploy
