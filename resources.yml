@@ -35,10 +35,27 @@ resources:
       isPull: false
       tag: "latest"
 
-  # - name: box-scaler
-  #   type: replicas
-  #   source:
-  #     count: 2
+  - name: outer-replica
+    type: replicas
+    source:
+      count: 1
+      
+  - name: inner-replica
+    type: replicas
+    source:
+      count: 2
+  
+  - name: "outer-params"
+    type: params
+    source:
+      params:
+        MYENV: "outer"
+  
+  - name: "inner-params"
+    type: params
+    source:
+      params:
+        MYENV: "inner"  
   
   # - name: scriptnull-ecs-cluster
   #   type: ecsCluster
