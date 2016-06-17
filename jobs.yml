@@ -30,7 +30,6 @@ jobs:
     steps:
       - GET: nginx-manifest
       - GET: scriptnull-dcl-cluster
-      - GET: small-scaler
   
   - name: xx-deploy
     type: dclDeploy
