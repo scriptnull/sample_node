@@ -3,17 +3,22 @@ jobs:
     type: manifest
     steps:
       - GET: scriptnull-nginx
-      - GET: scriptnull-dcl-do
+      - GET: inner-replica
+      # - GET: scriptnull-dcl-do
       # - GET: scriptnull-node
-
+  
+  - name: awesome-manifest
+    type: manifest
+    steps:
+      - GET: inner-replica
       
   - name: scriptnull-dcl-deploy
     type: dclDeploy
     steps:
       - GET: node-manifest
       - GET: scriptnull-dcl-cluster
-      - GET: outer-params
-      - GET: outer-replica
+      # - GET: outer-params
+      # - GET: outer-replica
       # - GET: scriptnull-dcl-three
 
 
