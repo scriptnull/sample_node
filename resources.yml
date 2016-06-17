@@ -1,12 +1,10 @@
 resources:
-  - name: scriptnull-busybox
-    type: image
-    integration: scriptnull-docker
+  - name: scriptnull-dcl-cluster
+    type: dclCluster
+    integration: scriptnull-dcl
     source:
-      name: "busybox"
-      isPull: false
-      tag: latest
-    
+      name: "sid-test-cluster"
+
   - name: scriptnull-node
     type: image
     integration: scriptnull-docker
@@ -14,41 +12,44 @@ resources:
       name: "scriptnull/sample_node"
       isPull: false
       tag: "dc.pipeline.3"
-      
-  - name: scriptnull-dcl-cluster
-    type: dclCluster
-    integration: scriptnull-dcl
-    source:
-      name: "sid-test-cluster"
-      
-  - name: scriptnull-nginx
-    type: image
-    integration: scriptnull-docker
-    source:
-      name: "nginx"
-      isPull: false
-      tag: "latest"
 
-  - name: box-scaler
-    type: replicas
-    source:
-      count: 2
+
+  # - name: scriptnull-busybox
+  #   type: image
+  #   integration: scriptnull-docker
+  #   source:
+  #     name: "busybox"
+  #     isPull: false
+  #     tag: latest
+
+  # - name: scriptnull-nginx
+  #   type: image
+  #   integration: scriptnull-docker
+  #   source:
+  #     name: "nginx"
+  #     isPull: false
+  #     tag: "latest"
+
+  # - name: box-scaler
+  #   type: replicas
+  #   source:
+  #     count: 2
   
-  - name: scriptnull-ecs-cluster
-    type: ecsCluster
-    integration: scriptnull-aws
-    source:
-      name : "testCL"
-      region: "us-west-2"
+  # - name: scriptnull-ecs-cluster
+  #   type: ecsCluster
+  #   integration: scriptnull-aws
+  #   source:
+  #     name : "testCL"
+  #     region: "us-west-2"
       
-  - name: scriptnull-ecs-params
-    type: params
-    source:
-      params:
-        MYENV: "dcl"
+  # - name: scriptnull-ecs-params
+  #   type: params
+  #   source:
+  #     params:
+  #       MYENV: "dcl"
 
-  - name: scriptnull-params
-    type: params
-    source:
-      params:
-        MYVAR: "hi"
+  # - name: scriptnull-params
+  #   type: params
+  #   source:
+  #     params:
+  #       MYVAR: "hi"
