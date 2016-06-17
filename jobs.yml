@@ -2,7 +2,7 @@ jobs:
   - name: node-manifest
     type: manifest
     steps:
-      - GET: scriptnull-node
+      - GET: scriptnull-nginx
       
   - name: scriptnull-dcl-deploy
     type: dclDeploy
