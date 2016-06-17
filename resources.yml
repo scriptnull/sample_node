@@ -12,6 +12,7 @@ resources:
       name: "scriptnull/sample_node"
       isPull: false
       tag: "dc.pipeline.3"
+      
 
 
   # - name: scriptnull-busybox
@@ -22,13 +23,13 @@ resources:
   #     isPull: false
   #     tag: latest
 
-  # - name: scriptnull-nginx
-  #   type: image
-  #   integration: scriptnull-docker
-  #   source:
-  #     name: "nginx"
-  #     isPull: false
-  #     tag: "latest"
+  - name: scriptnull-nginx
+    type: image
+    integration: scriptnull-docker
+    source:
+      name: "nginx"
+      isPull: false
+      tag: "latest"
 
   # - name: box-scaler
   #   type: replicas
