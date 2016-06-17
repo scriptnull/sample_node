@@ -13,7 +13,7 @@ jobs:
     steps:
       - GET: node-manifest
       - GET: scriptnull-dcl-cluster
-      # - GET: outer-params
+      - GET: outer-params
 
 
   # - name: generate-manifest
