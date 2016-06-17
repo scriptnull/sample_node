@@ -59,6 +59,7 @@ jobs:
     type: manifest
     steps:
       - GET: scriptnull-node
+      - GET: box-scaler
       
   - name: ov-manifest-2
     type: manifest
