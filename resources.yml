@@ -19,6 +19,8 @@ resources:
     source:
       memory: 200
       cpu-shares: 2
+      portMappings: # format: ip:hostPort:containerPort | ip::containerPort | hostPort:containerPort | containerPort
+        - 3000:80 
 
   # - name: scriptnull-busybox
   #   type: image
