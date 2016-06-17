@@ -1,55 +1,67 @@
 jobs:
-  - name: generate-manifest
+  - name: node-manifest
     type: manifest
     steps:
       - GET: scriptnull-node
-      - GET: scriptnull-params
       
-  - name: nginx-manifest
-    type: manifest
-    steps:
-      - GET: scriptnull-nginx
-      - GET: scriptnull-params
-      - GET: box-scaler
-
-  - name: scriptnull-deploy
+  - name: scriptnull-dcl-deploy
     type: dclDeploy
     steps:
-      - GET: generate-manifest
+      - GET: node-manifest
       - GET: scriptnull-dcl-cluster
 
-  - name: scriptnull-deploy-params
-    type: dclDeploy
-    steps:
-      - GET: generate-manifest
-      - GET: scriptnull-dcl-cluster      
 
-  - name: scriptnull-deploy-nginx
-    type: dclDeploy
-    steps:
-      - GET: nginx-manifest
-      - GET: scriptnull-dcl-cluster
+  # - name: generate-manifest
+  #   type: manifest
+  #   steps:
+  #     - GET: scriptnull-node
+  #     - GET: scriptnull-params
+      
+  # - name: nginx-manifest
+  #   type: manifest
+  #   steps:
+  #     - GET: scriptnull-nginx
+  #     - GET: scriptnull-params
+  #     - GET: box-scaler
+
+  # - name: scriptnull-deploy
+  #   type: dclDeploy
+  #   steps:
+  #     - GET: generate-manifest
+  #     - GET: scriptnull-dcl-cluster
+
+  # - name: scriptnull-deploy-params
+  #   type: dclDeploy
+  #   steps:
+  #     - GET: generate-manifest
+  #     - GET: scriptnull-dcl-cluster      
+
+  # - name: scriptnull-deploy-nginx
+  #   type: dclDeploy
+  #   steps:
+  #     - GET: nginx-manifest
+  #     - GET: scriptnull-dcl-cluster
   
-  - name: xx-deploy
-    type: dclDeploy
-    steps:
-      - GET: scriptnull-deploy-nginx
-      - GET: scriptnull-dcl-cluster
+  # - name: xx-deploy
+  #   type: dclDeploy
+  #   steps:
+  #     - GET: scriptnull-deploy-nginx
+  #     - GET: scriptnull-dcl-cluster
 
-  - name: my-ecs-manifest
-    type: manifest
-    steps:
-      - GET: scriptnull-nginx
-      - GET: scriptnull-ecs-params
+  # - name: my-ecs-manifest
+  #   type: manifest
+  #   steps:
+  #     - GET: scriptnull-nginx
+  #     - GET: scriptnull-ecs-params
   
-  - name: my-ecs-deploy
-    type: ecsDeploy
-    steps:
-      - GET: my-ecs-manifest
-      - GET: scriptnull-ecs-cluster
+  # - name: my-ecs-deploy
+  #   type: ecsDeploy
+  #   steps:
+  #     - GET: my-ecs-manifest
+  #     - GET: scriptnull-ecs-cluster
 
-  - name: chain-deploy
-    type: dclDeploy
-    steps:
-      - GET: my-ecs-deploy
-      - GET: scriptnull-dcl-cluster
+  # - name: chain-deploy
+  #   type: dclDeploy
+  #   steps:
+  #     - GET: my-ecs-deploy
+  #     - GET: scriptnull-dcl-cluster
