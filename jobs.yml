@@ -54,3 +54,8 @@ jobs:
     steps:
       - GET: my-ecs-deploy
       - GET: scriptnull-dcl-cluster
+  
+  - name: ov-manifest-1
+    type: manifest
+    steps:
+      - GET: ov-do-1
