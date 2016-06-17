@@ -59,7 +59,6 @@ jobs:
     type: manifest
     steps:
       - GET: scriptnull-node
-      - GET: ov-do-1
       
   - name: ov-manifest-2
     type: manifest
