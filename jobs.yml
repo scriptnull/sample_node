@@ -3,7 +3,6 @@ jobs:
     type: manifest
     steps:
       - GET: scriptnull-nginx
-      - GET: inner-replica
       # - GET: scriptnull-node
       # - GET: scriptnull-dcl-do
 
