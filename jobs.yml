@@ -30,8 +30,13 @@ jobs:
     type: manifest
     steps:
       - GET: inner-replica
-
-
+      
+  - name: local-deploy
+    type: dclDeploy
+    steps:
+      - GET: local-manifest-1
+      - GET: local-manifest-2
+      - GET: scriptnull-dcl-cluster
 
   # - name: generate-manifest
   #   type: manifest
