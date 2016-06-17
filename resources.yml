@@ -34,6 +34,11 @@ resources:
     source:
       count: 2
   
+  - name: small-scaler
+    type: replicas
+    source:
+      count: 1
+  
   - name: scriptnull-ecs-cluster
     type: ecsCluster
     integration: scriptnull-aws
@@ -52,3 +57,4 @@ resources:
     source:
       params:
         MYVAR: "hi"
+  
