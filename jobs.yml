@@ -20,6 +20,17 @@ jobs:
       - GET: outer-params
       # - GET: outer-replica
       # - GET: scriptnull-dcl-three
+      
+  - name: local-manifest-1
+    type: manifest
+    steps:
+      - GET: scriptnull-nginx
+      
+  - name: local-manifest-2
+    type: manifest
+    steps:
+      - GET: inner-replica
+
 
 
   # - name: generate-manifest
