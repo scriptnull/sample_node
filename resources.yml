@@ -12,8 +12,12 @@ resources:
       name: "scriptnull/sample_node"
       isPull: false
       tag: "dc.pipeline.3"
-      
 
+
+  - name: scriptnull-dcl-do
+    type: dockerOptions
+    source:
+      memory: 200
 
   # - name: scriptnull-busybox
   #   type: image
