@@ -31,7 +31,7 @@ jobs:
     type: manifest
     steps:
       - GET: scriptnull-nginx
-      - GET: inner-params
+      - GET: outer-params
       
   - name: local-deploy
     type: dclDeploy
