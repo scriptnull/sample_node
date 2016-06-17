@@ -18,6 +18,7 @@ resources:
     type: dockerOptions
     source:
       memory: 200
+      cpu-shares: 1
 
   # - name: scriptnull-busybox
   #   type: image
