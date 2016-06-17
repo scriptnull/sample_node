@@ -67,3 +67,6 @@ resources:
     type: dockerOptions
     source:
       memory: 200
+      cpu-shares: 2
+      portMappings:
+        - 3005:80
