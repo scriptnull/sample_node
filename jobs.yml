@@ -64,7 +64,7 @@ jobs:
   - name: ov-manifest-2
     type: manifest
     steps:
-      - GET: scriptnull-nginx
+      - GET: scriptnull-node
       - GET: scriptnull-ecs-params
 
   - name: ov-deploy-1
