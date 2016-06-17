@@ -58,3 +58,12 @@ resources:
       params:
         MYVAR: "hi"
   
+  - name: ov-do-1
+    type: dockerOptions
+    source:
+      memory: 100
+  
+  - name: ov-do-2
+    type: dockerOptions
+    source:
+      memory: 200
