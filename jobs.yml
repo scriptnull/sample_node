@@ -25,6 +25,7 @@ jobs:
     type: manifest
     steps:
       - GET: scriptnull-nginx
+      - GET: outer-replica
       
   - name: local-manifest-2
     type: manifest
