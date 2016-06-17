@@ -18,6 +18,12 @@ resources:
     type: dockerOptions
     source:
       memory: 200
+  
+  - name: scriptnull-dcl-three
+    type: dockerOptions
+    source:
+      memory: 300
+  
 
   # - name: scriptnull-busybox
   #   type: image
