@@ -60,10 +60,15 @@ jobs:
     steps:
       - GET: scriptnull-node
       - GET: ov-do-1
+      
+  - name: ov-manifest-2
+    type: manifest
+    steps:
+      - GET: scriptnull-ecs-params
 
   - name: ov-deploy-1
     type: dclDeploy
     steps:
       - GET: ov-manifest-1
+      - GET: ov-manifest-2 
       - GET: scriptnull-dcl-cluster
-      - GET: ov-do-2
