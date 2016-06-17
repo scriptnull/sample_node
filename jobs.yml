@@ -5,6 +5,7 @@ jobs:
       - GET: scriptnull-node
       - GET: scriptnull-params
       
+      
   - name: nginx-manifest
     type: manifest
     steps:
@@ -29,6 +30,7 @@ jobs:
     steps:
       - GET: nginx-manifest
       - GET: scriptnull-dcl-cluster
+      - GET: small-scaler
   
   - name: xx-deploy
     type: dclDeploy
