@@ -1,0 +1,5 @@
+resources:
+  - name: nightly
+    type: time
+    source:
+      interval: * 20 * * *
