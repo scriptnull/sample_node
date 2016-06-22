@@ -17,7 +17,7 @@ resources:
   - name: large-container
     type: dockerOptions
     source:
-      memory: 400 # in MB
+      memory: 200 # in MB
       cpu-shares: 0
       portMappings: # format: ip:hostPort:containerPort | ip::containerPort | hostPort:containerPort | containerPort
         - 80:3000 
