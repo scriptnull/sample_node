@@ -1,13 +1,13 @@
 jobs:
-  - name: generate-manifest
+  - name: xx-generate-manifest
     type: manifest
     steps:
       - GET: scriptnull-busybox
       - GET: large-container
 
-  - name: deploy-service
+  - name: xx-deploy-service
     type: ecsDeploy
     steps:
-      - GET: generate-manifest
+      - GET: xx-generate-manifest
       - GET: scriptnull-ecs-cluster
   
