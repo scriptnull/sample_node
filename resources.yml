@@ -2,4 +2,4 @@ resources:
   - name: nightly
     type: time
     source:
-      interval: * 20 * * *
+      interval: "* 20 * * *"
