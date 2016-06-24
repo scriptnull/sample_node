@@ -9,3 +9,4 @@ jobs:
     steps:
       - GET: tri-manifest
       - GET: tri-cluster
+    
