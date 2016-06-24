@@ -1,0 +1,11 @@
+jobs:
+  - name: tri-manifest
+    type: manifest
+    steps:
+      - GET: tri-nginx
+
+   - name: tri-deploy
+     type: tripubDeploy
+     steps:
+        - GET: tri-manifest
+        - GET: tri-cluster
