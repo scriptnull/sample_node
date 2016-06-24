@@ -1,0 +1,14 @@
+resources:
+  - name: nginx-image
+    type: image
+    integration: scriptnull-docker
+    source:
+      name: "library/nginx"
+      isPull: false
+      tag: latest
+
+  - name: triton-cluster
+    type: tripubCluster
+    integration: scriptnull-triton
+    source:
+      region: "us-east-1"
