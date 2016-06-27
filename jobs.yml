@@ -2,7 +2,7 @@ jobs:
   - name: tri-manifest
     type: manifest
     steps:
-      - GET: tri-sn
+      - GET: tri-nginx
       # - DO: tri-nginx
 
   - name: tri-deploy
