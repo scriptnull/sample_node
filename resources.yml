@@ -20,3 +20,4 @@ resources:
     integration: scriptnull-triton
     source:
       region: "us-east-1"
+
