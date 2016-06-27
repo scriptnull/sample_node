@@ -1,5 +1,5 @@
 resources:
-  - name: tri-nginx
+  - name: tri-nginx-1
     type: image
     integration: scriptnull-docker
     source:
@@ -7,7 +7,7 @@ resources:
       isPull: false
       tag: latest
       
-  - name: tri-sn
+  - name: tri-sn-1
     type: image
     integration: scriptnull-docker
     source:
@@ -15,7 +15,7 @@ resources:
       isPull: false
       tag: "dc.pipeline.3"
 
-  - name: tri-cluster
+  - name: tri-cluster-1
     type: tripubCluster
     integration: scriptnull-triton
     source:
