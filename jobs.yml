@@ -3,7 +3,7 @@ jobs:
     type: manifest
     steps:
       - GET: tri-nginx
-      - DO: tri-nginx
+      # - DO: tri-nginx
 
   - name: tri-deploy
     type: tripubDeploy
