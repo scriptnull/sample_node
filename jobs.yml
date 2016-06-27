@@ -9,5 +9,5 @@ jobs:
     type: tripubDeploy
     steps:
       - GET: tri-manifest
-      # - GET: tri-cluster
+      - GET: tri-cluster
     
