@@ -10,6 +10,7 @@ jobs:
     steps:
       - GET: tri-manifest
       - GET: tri-cluster
+      - GET: tri-ecs-deploy
     
   - name: tri-ecs-manifest
     type: manifest
