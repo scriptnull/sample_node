@@ -3,11 +3,11 @@ jobs:
     type: manifest
     steps:
       - GET: tri-sn-1
-      # - DO: tri-nginx
+      - GET: tri-two-scaler-1
+      - GET: tri-opts-1
 
   - name: tri-deploy-1
     type: tripubDeploy
     steps:
       - GET: tri-manifest-1
       - GET: tri-cluster-1
-    
