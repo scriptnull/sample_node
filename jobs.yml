@@ -3,8 +3,6 @@ jobs:
     type: manifest
     steps:
       - GET: tri-sn-1
-      - GET: tri-two-scaler-1
-      - GET: tri-opts-1
 
   - name: tri-manifest-2
     type: manifest
@@ -41,3 +39,9 @@ jobs:
     steps:
       - GET: tri-manifest-3
       - GET: tri-ecs-cluster-1
+      
+  - name: ecs-2-tri-deploy-in-tri
+    type: tripubDeploy
+    steps:
+      - GET: ecs-2-tri-deploy
+      - GET: tri-cluster-1
