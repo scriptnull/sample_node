@@ -22,3 +22,9 @@ jobs:
     steps:
       - GET: tri-ecs-manifest
       - GET: tri-ecs-cluster
+
+  - name: ecs-chain-from-tri
+    type: ecsDeploy
+    steps:
+      - GET: tri-deploy
+      - GET: tri-ecs-cluster
