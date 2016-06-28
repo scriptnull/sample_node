@@ -20,3 +20,10 @@ resources:
     integration: scriptnull-triton
     source:
       region: "us-east-1"
+
+  - name: tri-ecs-cluster
+    type: ecsCluster
+    integration: scriptnull-aws
+    source:
+      name : "testCL"
+      region: "us-west-2"
