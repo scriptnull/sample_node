@@ -11,3 +11,13 @@ jobs:
       - GET: tri-manifest
       - GET: tri-cluster
     
+  - name: tri-ecs-manifest
+    type: manifest
+    steps:
+      - GET tri-nginx
+
+  - name: tri-ecs-deploy
+    type:  ecsDeploy
+    steps:
+      - GET: tri-ecs-manifest
+      - GET: tri-ecs-cluster
