@@ -6,8 +6,20 @@ jobs:
       - GET: tri-two-scaler-1
       - GET: tri-opts-1
 
+  - name: tri-manifest-2
+    type: manifest
+    steps:
+      - GET: tri-sb-1
+      - GET: tri-params-1
+
   - name: tri-deploy-1
     type: tripubDeploy
     steps:
       - GET: tri-manifest-1
+      - GET: tri-cluster-1
+
+  - name: tri-params-deploy-1
+    type: tripubDeploy
+    steps:
+      - GET: tri-manifest-2
       - GET: tri-cluster-1
