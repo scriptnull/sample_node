@@ -21,3 +21,26 @@ resources:
     source:
       region: "us-east-1"
 
+  - name: tri-two-scaler-1
+    type: replicas
+    source:
+      count: 2
+      
+  - name: tri-params-1
+    type: params
+    source:
+      params:
+        yo : "man"
+        
+  - name: tri-opts-1
+    type: dockerOptions
+    source:
+      memory: 128
+      publishAllPorts : true
+
+  - name: tri-ecs-cluster-1
+    type: ecsCluster
+    integration: scriptnull-aws
+    source:
+      name : "testCL"
+      region: "us-west-2"
