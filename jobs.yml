@@ -12,6 +12,11 @@ jobs:
       - GET: tri-sb-1
       - GET: tri-params-1
 
+  - name: tri-manifest-3
+    type: manifest
+    steps:
+      - GET: tri-nginx-1
+
   - name: tri-deploy-1
     type: tripubDeploy
     steps:
@@ -23,3 +28,16 @@ jobs:
     steps:
       - GET: tri-manifest-2
       - GET: tri-cluster-1
+      
+
+  - name: tri-2-ecs-deploy
+    type:  ecsDeploy
+    steps:
+      - GET: tri-deploy-1
+      - GET: tri-ecs-cluster-1
+
+  - name: ecs-2-tri-deploy
+    type: ecsDeploy
+    steps:
+      - GET: tri-manifest-3
+      - GET: tri-ecs-cluster-1
