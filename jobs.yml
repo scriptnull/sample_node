@@ -1,6 +1,11 @@
-jobs :
-  - name : job1
-    type : build
-    steps :
-      - GET resource1
-      - PUT resource1
+jobs:
+  - name: ecs-man
+    type: manifest
+    steps:
+      - GET: ecs-sn
+  
+  - name: ecs-deploy
+    type: ecsDeploy
+    steps:
+      - GET: ecs-man
+      - GET: ecs-cluster
