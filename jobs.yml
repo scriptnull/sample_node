@@ -18,7 +18,7 @@ jobs:
       - GET: ecs-man
       - GET: ecs-cluster
 
-  - name: ecs-deploy-1
+  - name: ecs-deploy-2
     type: ecsDeploy
     options:
     steps:
