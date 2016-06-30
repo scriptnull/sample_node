@@ -1,0 +1,23 @@
+resources:
+  - name: ecs-nginx
+    type: image
+    integration: jatin-docker
+    source:
+      name: "library/nginx"
+      isPull: false
+      tag: latest
+      
+  - name: ecs-sn
+    type: image
+    integration: jatin-docker
+    source:
+      name: "scriptnull/sample_node"
+      isPull: false
+      tag: "dc.pipeline.3"
+
+  - name: ecs-cluster
+    type: ecsCluster
+    integration: jatin-aws
+    source:
+      name : "testCL"
+      region: "us-west-2"
