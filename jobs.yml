@@ -1,0 +1,11 @@
+jobs:
+  - name: ecs-man
+    type: manifest
+    steps:
+      - GET: ecs-sn
+  
+  - name: ecs-deploy
+    type: ecsDeploy
+    steps:
+      - GET: ecs-man
+      - GET: ecs-cluster
