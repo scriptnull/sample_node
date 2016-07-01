@@ -11,3 +11,16 @@ jobs:
     steps:
       - GET: ecs-man
       - GET: ecs-cluster
+      
+  - name: ecs-man-1
+    type: manifest
+    steps:
+      - GET: ecs-nginx
+  
+  - name: ecs-deploy-1
+    type: ecsDeploy
+    options:
+      deployMethod: green
+    steps:
+      - GET: ecs-man-1
+      - GET: ecs-cluster
