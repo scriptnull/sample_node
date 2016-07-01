@@ -2,7 +2,7 @@ jobs:
   - name: sn-ecs-man
     type: manifest
     steps:
-      - GET: sn-ecs-nginx
+      - GET: sn-ecs-sn
   
   - name: sn-ecs-deploy
     type: ecsDeploy
