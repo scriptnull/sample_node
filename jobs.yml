@@ -1,26 +1,11 @@
 jobs:
-  - name: ecs-man
+  - name: sn-ecs-man
     type: manifest
     steps:
-      - GET: ecs-nginx
+      - GET: sn-ecs-nginx
   
-  - name: ecs-deploy
+  - name: sn-ecs-deploy
     type: ecsDeploy
     steps:
-      - GET: ecs-man
-      - GET: ecs-cluster
-
-  - name: ecs-deploy-1
-    type: ecsDeploy
-    options:
-      deployMethod: "upgrade"
-    steps:
-      - GET: ecs-man
-      - GET: ecs-cluster
-
-  - name: ecs-deploy-2
-    type: ecsDeploy
-    options:
-    steps:
-      - GET: ecs-man
-      - GET: ecs-cluster
+      - GET: sn-ecs-man
+      - GET: sn-ecs-cluster
