@@ -7,7 +7,7 @@ jobs:
   - name: ecs-deploy
     type: ecsDeploy
     options:
-      deployMethod: upgrade
+      deployMethod: bluegreen
     steps:
       - GET: ecs-man
       - GET: ecs-cluster
