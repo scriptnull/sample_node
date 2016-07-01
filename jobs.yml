@@ -9,3 +9,14 @@ jobs:
     steps:
       - GET: sn-ecs-man
       - GET: sn-ecs-cluster
+
+  - name: sn-ecs-bg-man
+    type: manifest
+    steps:
+      - GET: sn-ecs-sn
+  
+  - name: sn-ecs-bg-deploy
+    type: ecsDeploy
+    steps:
+      - GET: sn-ecs-man
+      - GET: sn-ecs-cluster
