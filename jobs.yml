@@ -27,10 +27,10 @@ jobs:
       - GET: sn-ecs-man
       - GET: sn-ecs-cluster
 
-  # - name: sn-ecs-bg-deploy-1
-  #   type: ecsDeploy
-  #   options:
-  #     deployMethod: blueGreen
-  #   steps:
-  #     - GET: sn-ecs-bg-man
-  #     - GET: sn-ecs-cluster
+  - name: sn-ecs-bg-deploy-2
+    type: ecsDeploy
+    options:
+      deployMethod: blueGreen
+    steps:
+      - GET: sn-ecs-bg-man
+      - GET: sn-ecs-cluster
