@@ -21,6 +21,12 @@ jobs:
       - GET: sn-ecs-man
       - GET: sn-ecs-cluster
 
+  - name: xoxo
+    type: ecsDeploy
+    steps:
+      - GET: sn-ecs-man
+      - GET: sn-ecs-cluster
+
   # - name: sn-ecs-bg-deploy-1
   #   type: ecsDeploy
   #   options:
