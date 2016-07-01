@@ -1,5 +1,5 @@
 resources:
-  - name: ecs-nginx
+  - name: sn-ecs-nginx
     type: image
     integration: scriptnull-docker
     source:
@@ -7,7 +7,7 @@ resources:
       isPull: false
       tag: latest
       
-  - name: ecs-sn
+  - name: sn-ecs-sn
     type: image
     integration: scriptnull-docker
     source:
@@ -15,7 +15,7 @@ resources:
       isPull: false
       tag: "dc.pipeline.3"
 
-  - name: ecs-cluster
+  - name: sn-ecs-cluster
     type: ecsCluster
     integration: scriptnull-aws
     source:
