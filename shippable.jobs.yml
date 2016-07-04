@@ -1,0 +1,30 @@
+jobs:
+  - name: sn-ecs-bg-man
+    type: manifest
+    steps:
+      - GET: sn-ecs-nginx
+      
+  - name: sn-ecs-bg-deploy
+    type: ecsDeploy
+    options:
+      deployMethod: blueGreen
+    steps:
+      - GET: sn-ecs-bg-man
+      - GET: sn-ecs-cluster
+      
+# - name: sn-ecs-man
+#   type: manifest
+#   steps:
+#     - GET: sn-ecs-sn
+# 
+# - name: sn-ecs-deploy
+#   type: ecsDeploy
+#   steps:
+#     - GET: sn-ecs-man
+#     - GET: sn-ecs-cluster
+# 
+# - name: xoxo
+#   type: ecsDeploy
+#   steps:
+#     - GET: sn-ecs-man
+#     - GET: sn-ecs-cluster
