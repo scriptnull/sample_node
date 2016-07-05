@@ -2,7 +2,7 @@ jobs:
   - name: ecs-man
     type: manifest
     steps:
-      - GET: ecs-nginx
+      - GET: ecs-sn
 
   - name: ecs-jatin-bg-deploy
     type: ecsDeploy
