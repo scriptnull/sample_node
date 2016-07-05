@@ -4,13 +4,13 @@ jobs:
     steps:
       - GET: ecs-nginx
   
-  - name: ecs-deploy
-    type: ecsDeploy
-    options:
-      deployMethod: upgrade
-    steps:
-      - GET: ecs-man
-      - GET: ecs-cluster
+  # - name: ecs-deploy
+  #   type: ecsDeploy
+  #   options:
+  #     deployMethod: upgrade
+  #   steps:
+  #     - GET: ecs-man
+  #     - GET: ecs-cluster
   
   - name: ecs-jatin-bg-deploy
     type: ecsDeploy
