@@ -2,15 +2,15 @@ jobs:
   - name: sn-ecs-bg-man
     type: manifest
     steps:
-      - GET: sn-ecs-sn
+      - GET: sn-ecs-nginx
 
-  - name: sn-ecs-bg-deploy
-    type: ecsDeploy
-    options:
-      deployMethod: blueGreen
-    steps:
-      - GET: sn-ecs-bg-man
-      - GET: sn-ecs-cluster
+  # - name: sn-ecs-bg-deploy
+  #   type: ecsDeploy
+  #   options:
+  #     deployMethod: blueGreen
+  #   steps:
+  #     - GET: sn-ecs-bg-man
+  #     - GET: sn-ecs-cluster
       
   - name: sn-invalid-deploy-method
     type: ecsDeploy
