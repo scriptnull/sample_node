@@ -11,3 +11,11 @@ jobs:
     steps:
       - GET: ecs-man
       - GET: ecs-cluster
+  
+  - name: ecs-bluegreen-deploy
+    type: ecsDeploy
+    options:
+      deployMethod: bluegreen
+    steps:
+      - GET: ecs-man
+      - GET: ecs-cluster
