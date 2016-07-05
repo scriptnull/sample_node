@@ -12,10 +12,10 @@ jobs:
       - GET: ecs-man
       - GET: ecs-cluster
   
-  - name: ecs-bluegreen-deploy
+  - name: ecs-jatin-bg-deploy
     type: ecsDeploy
     options:
-      deployMethod: bluegreen
+      deployMethod: blueGreen
     steps:
       - GET: ecs-man
       - GET: ecs-cluster
