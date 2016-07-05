@@ -12,6 +12,14 @@ jobs:
       - GET: sn-ecs-bg-man
       - GET: sn-ecs-cluster
       
+  - name: sn-invalid-deploy-method
+    type: ecsDeploy
+    options:
+      deployMethod: invalid
+    steps:
+      - GET: sn-ecs-bg-man
+      - GET: sn-ecs-cluster
+      
 # - name: sn-ecs-man
 #   type: manifest
 #   steps:
