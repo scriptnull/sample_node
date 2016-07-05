@@ -2,8 +2,8 @@ jobs:
   - name: sn-ecs-bg-man
     type: manifest
     steps:
-      - GET: sn-ecs-nginx
-      
+      - GET: sn-ecs-sn
+
   - name: sn-ecs-bg-deploy
     type: ecsDeploy
     options:
