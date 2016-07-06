@@ -1,0 +1,22 @@
+resources:
+  - name: tri-nginx
+    type: image
+    integration: scriptnull-docker
+    source:
+      name: "library/nginx"
+      isPull: false
+      tag: latest
+      
+  - name: tri-sn
+    type: image
+    integration: scriptnull-docker
+    source:
+      name: "scriptnull/sample_node"
+      isPull: false
+      tag: "dc.pipeline.3"
+
+  - name: tri-cluster
+    type: tripubCluster
+    integration: scriptnull-triton
+    source:
+      region: "us-east-1"
