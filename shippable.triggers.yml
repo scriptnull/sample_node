@@ -7,7 +7,7 @@ triggers:
   - name: triggertest2
     type: trigger
     source:
-      counter: 14
+      counter: 15
       
   - name: triggertest3
     type: trigger
