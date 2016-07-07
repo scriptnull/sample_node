@@ -12,7 +12,6 @@ jobs:
     steps:
       - GET: sn-ecs-bg-man
       - GET: sn-ecs-cluster
-      - GET: triggertest2
       
   # - name: sn-invalid-deploy-method
   #   type: ecsDeploy
