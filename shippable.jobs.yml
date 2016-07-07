@@ -10,8 +10,10 @@ jobs:
     steps:
       - GET: tri-nginx
 
-  - name: tri-deploy
+  - name: tri-deploy-bg
     type: tripubDeploy
+    options:
+      deployMethod: blueGreen
     steps:
       - GET: tri-manifest-A
       - GET: tri-cluster
