@@ -15,6 +15,22 @@ resources:
       isPull: false
       tag: "dc.pipeline.3"
 
+  - name: tri-busybox-1
+    type: image
+    integration: scriptnull-docker
+    source:
+      name: "scriptnull/busybox"
+      isPull: false
+      tag: "nodeenv"
+
+  - name: tri-busybox-2
+    type: image
+    integration: scriptnull-docker
+    source:
+      name: "scriptnull/busybox"
+      isPull: false
+      tag: "nodeenv"
+
   - name: tri-cluster
     type: tripubCluster
     integration: scriptnull-triton
