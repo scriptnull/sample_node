@@ -2,7 +2,7 @@ jobs:
   - name: tri-manifest-A
     type: manifest
     steps:
-      - GET: tri-busybox-1
+      - GET: tri-busybox-2
       - GET: tri-trigger
 
   - name: tri-manifest-B
