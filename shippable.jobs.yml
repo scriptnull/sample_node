@@ -3,6 +3,7 @@ jobs:
     type: manifest
     steps:
       - GET: sn-ecs-sn
+      - GET: triggertest2
 
   - name: sn-ecs-bg-deploy
     type: ecsDeploy
@@ -11,6 +12,7 @@ jobs:
     steps:
       - GET: sn-ecs-bg-man
       - GET: sn-ecs-cluster
+      - GET: triggertest2
       
   # - name: sn-invalid-deploy-method
   #   type: ecsDeploy
