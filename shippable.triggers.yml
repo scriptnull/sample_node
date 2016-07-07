@@ -1,0 +1,15 @@
+triggers:
+  - name: triggertest1
+    type: trigger
+    source:
+      message: 'testing trigger in yml'
+      
+  - name: triggertest2
+    type: trigger
+    source:
+      counter: 1
+      
+  - name: triggertest3
+    type: trigger
+    source:
+      counter: 1
