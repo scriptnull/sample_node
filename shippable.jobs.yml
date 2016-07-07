@@ -3,6 +3,7 @@ jobs:
     type: manifest
     steps:
       - GET: tri-nginx
+      - GET: tri-trigger
 
   - name: tri-manifest-B
     type: manifest
