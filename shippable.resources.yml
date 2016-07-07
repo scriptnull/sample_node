@@ -1,13 +1,13 @@
 resources:
-  - name: sn-ecs-nginx
+  - name: x-nginx
     type: image
     integration: scriptnull-docker
     source:
       name: "library/nginx"
       isPull: false
       tag: latest
-      
-  - name: sn-ecs-sn
+
+  - name: x-sn
     type: image
     integration: scriptnull-docker
     source:
@@ -15,9 +15,15 @@ resources:
       isPull: false
       tag: "dc.pipeline.3"
 
-  - name: sn-ecs-cluster
+  - name: x-ecs-cluster
     type: ecsCluster
     integration: scriptnull-aws
     source:
       name : "testCL"
       region: "us-west-2"
+
+  - name: x-tri-cluster
+    type: tripubCluster
+    integration: scriptnull-triton
+    source:
+      region: "us-east-1"

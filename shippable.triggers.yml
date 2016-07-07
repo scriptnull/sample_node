@@ -1,15 +1,10 @@
 triggers:
-  - name: triggertest1
+  - name: x-ecs-trigger
     type: trigger
     source:
-      message: 'testing trigger in yml'
-      
-  - name: triggertest2
-    type: trigger
-    source:
-      counter: 13
-      
-  - name: triggertest3
+      counter: 1
+
+  - name: x-tripub-trigger
     type: trigger
     source:
       counter: 1

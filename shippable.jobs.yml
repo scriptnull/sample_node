@@ -1,39 +1,28 @@
 jobs:
-  - name: sn-ecs-bg-man
+  - name: x-tripub-manifest
     type: manifest
     steps:
-      - GET: sn-ecs-nginx
-      - GET: triggertest2
+      - GET: sn-nginx
+      - GET: x-tripub-trigger
 
-  - name: sn-ecs-bg-deploy
-    type: ecsDeploy
+  - name: x-tripub-deploy
+    type: tripubDeploy
     options:
-      deployMethod: blueGreen
+      deployMethod: upgrade
     steps:
-      - GET: sn-ecs-bg-man
-      - GET: sn-ecs-cluster
-      
-  # - name: sn-invalid-deploy-method
+      - GET: x-tripub-manifest
+      - GET: x-tripub-cluster
+
+  # - name: x-ecs-manifest
+  #   type: manifest
+  #   steps:
+  #     - GET: sn-ecs-nginx
+  #     - GET: x-ecs-trigger
+  #
+  # - name: x-ecs-deploy
   #   type: ecsDeploy
   #   options:
-  #     deployMethod: invalid
+  #     deployMethod: blueGreen
   #   steps:
-  #     - GET: sn-ecs-bg-man
-  #     - GET: sn-ecs-cluster
-      
-# - name: sn-ecs-man
-#   type: manifest
-#   steps:
-#     - GET: sn-ecs-sn
-# 
-# - name: sn-ecs-deploy
-#   type: ecsDeploy
-#   steps:
-#     - GET: sn-ecs-man
-#     - GET: sn-ecs-cluster
-# 
-# - name: xoxo
-#   type: ecsDeploy
-#   steps:
-#     - GET: sn-ecs-man
-#     - GET: sn-ecs-cluster
+  #     - GET: x-ecs-manifest
+  #     - GET: x-ecs-cluster
