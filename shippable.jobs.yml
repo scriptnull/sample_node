@@ -11,7 +11,7 @@ jobs:
       deployMethod: upgrade
     steps:
       - GET: x-tripub-manifest
-      - GET: x-tripub-cluster
+      - GET: x-tripub-super-cluster
 
   # - name: x-ecs-manifest
   #   type: manifest
