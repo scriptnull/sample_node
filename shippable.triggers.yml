@@ -7,7 +7,8 @@ triggers:
   - name: triggertest2
     type: trigger
     source:
-      counter: 2
+      steps:
+        - GET sn-ecs-bg-man
       
   - name: triggertest3
     type: trigger
