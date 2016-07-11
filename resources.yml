@@ -1,23 +1,7 @@
 resources:
-  - name: sn-ecs-nginx
-    type: image
-    integration: scriptnull-docker
+  - name: sample_node
+    type: syncRepo
+    integration: github
     source:
-      name: "library/nginx"
-      isPull: false
-      tag: latest
-      
-  - name: sn-ecs-sn
-    type: image
-    integration: scriptnull-docker
-    source:
-      name: "scriptnull/sample_node"
-      isPull: false
-      tag: "dc.pipeline.3"
-
-  - name: sn-ecs-cluster
-    type: ecsCluster
-    integration: scriptnull-aws
-    source:
-      name : "testCL"
-      region: "us-west-2"
+      name: scriptnull/sample_node
+      branch: v2-gke-new-sync
