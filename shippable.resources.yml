@@ -13,7 +13,7 @@ resources:
     source:
       name: "scriptnull/sample_node"
       isPull: false
-      tag: "dc.pipeline.3"
+      tag: "dc.pipeline.4"
 
   - name: env-gke
     type: gkeCluster
