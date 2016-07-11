@@ -15,9 +15,9 @@ resources:
       isPull: false
       tag: "dc.pipeline.3"
 
-  - name: sn-ecs-cluster
-    type: ecsCluster
-    integration: scriptnull-aws
+  - name: env-gke
+    type: gkeCluster
+    integration: scriptnull-gke
     source:
-      name : "testCL"
-      region: "us-west-2"
+      name: "pipeline-cluster" #name of the cluster we are deploying.
+      region: "us-east1-d"
