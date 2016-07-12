@@ -5,7 +5,7 @@ jobs:
       - GET: sn-nginx
       - GET: triggertest2
 
-  - name: x4-gke
+  - name: x5-gke
     type: gkeDeploy
     options:
       deployMethod: blueGreen
