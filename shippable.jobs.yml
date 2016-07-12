@@ -2,7 +2,7 @@ jobs:
   - name: sn-man
     type: manifest
     steps:
-      - GET: sn-nginx
+      - GET: sn-sn
       - GET: triggertest2
       
   - name: xx-gke
