@@ -1,6 +1,12 @@
 jobs:
-  - name: sn-ecs-bg-man
+  - name: sn-man
     type: manifest
     steps:
-      - GET: sn-ecs-sn
-      # - GET: triggertest2
+      - GET: sn-sn
+      - GET: triggertest2
+
+  - name: sn-gke-deploy
+    type: gkeDeploy
+    steps:
+      - GET: sn-man
+      - GET: sn-gke
