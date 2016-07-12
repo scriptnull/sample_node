@@ -3,7 +3,7 @@ jobs:
     type: manifest
     steps:
       - GET: sn-ecs-sn
-  
+
   - name: sn-ecs-deploy
     type: ecsDeploy
     steps:
@@ -20,7 +20,7 @@ jobs:
     type: manifest
     steps:
       - GET: sn-ecs-nginx
-      
+
   - name: sn-ecs-bg-deploy-2
     type: ecsDeploy
     options:
