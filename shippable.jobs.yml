@@ -5,8 +5,16 @@ jobs:
       - GET: sn-sn
       - GET: triggertest2
 
-  - name: sn-gke-deploy
+  # - name: sn-gke-deploy
+  #   type: gkeDeploy
+  #   steps:
+  #     - GET: sn-man
+  #     - GET: sn-gke
+
+  - name: bg-gke
     type: gkeDeploy
+    options:
+      deployMethod: blueGreen
     steps:
       - GET: sn-man
       - GET: sn-gke
