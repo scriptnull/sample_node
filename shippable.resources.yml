@@ -34,7 +34,7 @@ resources:
   - name: sn-opts
     type: dockerOptions
     source:
-      memory: 400
+      memory: 2000
 
   - name: sn-busy
     type: image
