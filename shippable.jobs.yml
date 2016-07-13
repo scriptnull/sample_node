@@ -2,7 +2,7 @@ jobs:
   - name: sn-man
     type: manifest
     steps:
-      - GET: sn-busy
+      - GET: sn-nginx
       - GET: triggertest2
 
   - name: micro-job

@@ -7,7 +7,15 @@ resources:
       isPull: false
       tag: latest
 
-  - name: sn-sn
+  - name: sn-sn-1
+    type: image
+    integration: scriptnull-docker
+    source:
+      name: "scriptnull/sample_node"
+      isPull: false
+      tag: "dc.pipeline.3"
+
+  - name: sn-sn-2
     type: image
     integration: scriptnull-docker
     source:
