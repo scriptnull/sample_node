@@ -5,13 +5,13 @@ jobs:
       - GET: sn-sn
       - GET: triggertest2
 
-  - name: specials.gke
+  - name: micro-job
     type: gkeDeploy
     options:
       deployMethod: blueGreen
     steps:
       - GET: sn-man
-      - GET: sn-gke
+      - GET: sn-micro-gke
 
 
   # - name: sn-gke-deploy

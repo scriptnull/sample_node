@@ -6,7 +6,7 @@ resources:
       name: "library/nginx"
       isPull: false
       tag: latest
-      
+
   - name: sn-sn
     type: image
     integration: scriptnull-docker
@@ -20,4 +20,11 @@ resources:
     integration: scriptnull-gke
     source:
       name: "pipeline-cluster" #name of the cluster we are deploying.
+      region: "us-east1-d"
+
+  - name: sn-micro-gke
+    type: gkeCluster
+    integration: scriptnull-gke
+    source:
+      name: "micro-cluster" #name of the cluster we are deploying.
       region: "us-east1-d"
