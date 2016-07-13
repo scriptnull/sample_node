@@ -34,7 +34,12 @@ resources:
   - name: sn-opts
     type: dockerOptions
     source:
-      memory: 2000
+      memory: 60000000
+
+  - name: sn-replicas
+    type: replicas
+    source:
+      count: 2
 
   - name: sn-busy
     type: image
