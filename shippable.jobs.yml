@@ -2,7 +2,7 @@ jobs:
   - name: sn-man
     type: manifest
     steps:
-      - GET: sn-sn-1
+      - GET: sn-not-exists
       - GET: triggertest2
 
   - name: micro-job
