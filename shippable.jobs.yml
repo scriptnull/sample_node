@@ -4,8 +4,8 @@ jobs:
     steps:
       - GET: sn-sn-1
       - GET: triggertest2
-      # - GET: sn-opts
-      # - GET: sn-replicas
+      - GET: sn-opts
+      - GET: sn-replicas
 
   - name: micro-job
     type: gkeDeploy
