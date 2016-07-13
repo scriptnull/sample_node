@@ -23,6 +23,14 @@ resources:
       isPull: false
       tag: "dc.pipeline.4"
 
+  - name: sn-not-exists
+    type: image
+    integration: scriptnull-docker
+    source:
+      name: "scriptnull/sample_node"
+      isPull: false
+      tag: "notexists"
+
   - name: sn-busy
     type: image
     integration: scriptnull-docker
