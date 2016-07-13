@@ -15,6 +15,14 @@ resources:
       isPull: false
       tag: "dc.pipeline.4"
 
+  - name: sn-busy
+    type: image
+    integration: scriptnull-docker
+    source:
+      name: "scriptnull/busybox"
+      isPull: false
+      tag: "nodeenv"
+
   - name: sn-gke
     type: gkeCluster
     integration: scriptnull-gke
