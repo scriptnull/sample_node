@@ -5,7 +5,7 @@ jobs:
       - GET: sn-sn
       - GET: triggertest2
 
-  - name: x5-gke
+  - name: spec-%-gke
     type: gkeDeploy
     options:
       deployMethod: blueGreen
