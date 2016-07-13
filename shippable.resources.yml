@@ -31,6 +31,11 @@ resources:
       isPull: false
       tag: "notexists"
 
+  - name: sn-opts
+    type: dockerOptions
+    source:
+      memory: 400
+
   - name: sn-busy
     type: image
     integration: scriptnull-docker

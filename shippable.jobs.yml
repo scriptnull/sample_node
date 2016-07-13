@@ -2,8 +2,9 @@ jobs:
   - name: sn-man
     type: manifest
     steps:
-      - GET: sn-sn-1
+      - GET: sn-sn-2
       - GET: triggertest2
+      - GET: sn-opts
 
   - name: micro-job
     type: gkeDeploy
