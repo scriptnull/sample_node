@@ -3,27 +3,10 @@ jobs:
     type: manifest
     steps:
       - GET: sn-sn
-      - GET: triggertest2
+      - GET: sn-trigger
 
-  - name: x5-gke
+  - name: x1-gke
     type: gkeDeploy
-    options:
-      deployMethod: blueGreen
     steps:
       - GET: sn-man
       - GET: sn-gke
-
-
-  # - name: sn-gke-deploy
-  #   type: gkeDeploy
-  #   steps:
-  #     - GET: sn-man
-  #     - GET: sn-gke
-
-  # - name: bg-gke
-  #   type: gkeDeploy
-  #   options:
-  #     deployMethod: blueGreen
-  #   steps:
-  #     - GET: sn-man
-  #     - GET: sn-gke

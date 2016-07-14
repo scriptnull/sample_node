@@ -2,22 +2,33 @@ resources:
   - name: sn-nginx
     type: image
     integration: scriptnull-docker
-    source:
-      name: "library/nginx"
+    pointer:
+      sourceName: "library/nginx"
       isPull: false
-      tag: latest
-      
+    initialVersion:
+      versionName: latest
+
   - name: sn-sn
     type: image
     integration: scriptnull-docker
-    source:
-      name: "scriptnull/sample_node"
+    pointer:
+      sourceName: "scriptnull/sample_node"
       isPull: false
-      tag: "dc.pipeline.4"
+    initialVersion:
+      versionName: "dc.pipeline.4"
+
+  - name: sn-bb
+    type: image
+    integration: scriptnull-docker
+    pointer:
+      sourceName: "scriptnull/busybox"
+      isPull: false
+    initialVersion:
+      versionName: "nodeenv"
 
   - name: sn-gke
     type: gkeCluster
     integration: scriptnull-gke
-    source:
-      name: "pipeline-cluster" #name of the cluster we are deploying.
+    pointer:
+      sourceName: "micro-cluster" #name of the cluster we are deploying.
       region: "us-east1-d"
