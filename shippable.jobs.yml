@@ -16,13 +16,13 @@ jobs:
   - name: b-ecs-man-1
     type: manifest
     steps:
-      - GET: sn-nginx
+      - GET: sn-sn
       - GET: ecs-trigger
 
   - name: b-ecs-man-2
     type: manifest
     steps:
-      - GET: sn-sn
+      - GET: sn-nginx
       - GET: ecs-trigger
 
   - name: ecs-deploy
@@ -30,4 +30,4 @@ jobs:
     steps:
       - GET: b-ecs-man-1
       - GET: b-ecs-man-2
-      - GET: sn-gke
+      - GET: sn-ecs
