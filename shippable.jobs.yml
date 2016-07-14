@@ -5,7 +5,7 @@ jobs:
       - GET: sn-sn
       - GET: sn-trigger
       - GET: sn-replicas
-      - GET: small-box
+      # - GET: small-box
 
   - name: loc-gke
     type: gkeDeploy
