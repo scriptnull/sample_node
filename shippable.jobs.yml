@@ -35,11 +35,11 @@ jobs:
   - name: b-tri-1-man
     type: manifest
     steps:
-      - GET: sn-nginx
+      - GET: sn-sn
       - GET: tri-trigger
 
   - name: b-tri-deploy
     type: tripubDeploy
     steps:
-      - GET: tri-1-man
+      - GET: b-tri-1-man
       - GET: sn-tri
