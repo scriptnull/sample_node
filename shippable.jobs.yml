@@ -21,8 +21,15 @@ jobs:
       # - GET: sn-opts
       # - GET: sn-replicas
 
+    - name: ecs-man-3
+      type: manifest
+      steps:
+        - GET: sn-nginx
+        - GET: ecs-trigger
+
   - name: loc-ecs-2
     type: ecsDeploy
     steps:
       - GET: ecs-man-2
+      - GET: ecs-man-3
       - GET: sn-ecs
