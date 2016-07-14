@@ -31,3 +31,15 @@ jobs:
       - GET: b-ecs-man-1
       - GET: b-ecs-man-2
       - GET: sn-ecs
+
+  - name: b-tri-1-man
+    type: manifest
+    steps:
+      - GET: sn-nginx
+      - GET: tri-trigger
+
+  - name: b-tri-deploy
+    type: tripubDeploy
+    steps:
+      - GET: tri-1-man
+      - GET: sn-tri

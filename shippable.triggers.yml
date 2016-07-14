@@ -8,3 +8,8 @@ triggers:
     type: trigger
     pointer:
       counter: 6
+
+  - name: tri-trigger
+    type: trigger
+    pointer:
+      counter: 1
