@@ -33,3 +33,24 @@ jobs:
       - GET: ecs-man-2
       - GET: ecs-man-3
       - GET: sn-ecs
+
+  - name: tri-1-man
+    type: manifest
+    steps:
+      - GET: sn-sn
+      - GET: tri-trigger
+      # - GET: sn-opts
+      # - GET: sn-replicas
+
+  - name: tri-2-man
+    type: manifest
+    steps:
+      - GET: sn-nginx
+      - GET: tri-trigger
+
+  - name: tri-deploy
+    type: tripubDeploy
+    steps:
+      - GET: tri-1-man
+      - GET: tri-2-man
+      - GET: sn-tri

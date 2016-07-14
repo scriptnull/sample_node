@@ -49,3 +49,9 @@ resources:
     pointer:
       sourceName : "testCL"
       region: "us-west-2"
+
+  - name: sn-tri
+    type: tripubCluster
+    integration: scriptnull-triton
+    pointer:
+      region: "us-east-1"
