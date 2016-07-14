@@ -4,8 +4,8 @@ jobs:
     steps:
       - GET: sn-nginx
       - GET: sn-trigger
-      - GET: sn-opts
-      - GET: sn-replicas
+      # - GET: sn-opts
+      # - GET: sn-replicas
 
   - name: loc-gke
     type: gkeDeploy
