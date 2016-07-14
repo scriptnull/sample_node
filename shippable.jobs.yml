@@ -2,7 +2,7 @@ jobs:
   - name: sn-man
     type: manifest
     steps:
-      - GET: sn-sn
+      - GET: sn-nginx
       - GET: sn-trigger
       # - GET: sn-opts
       # - GET: sn-replicas
