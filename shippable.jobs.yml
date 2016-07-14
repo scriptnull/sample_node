@@ -2,10 +2,10 @@ jobs:
   - name: sn-man
     type: manifest
     steps:
-      - GET: sn-sn
+      - GET: sn-nginx
       - GET: sn-trigger
       - GET: sn-replicas
-      # - GET: small-box
+      - GET: small-box
 
   - name: loc-gke
     type: gkeDeploy

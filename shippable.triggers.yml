@@ -2,7 +2,7 @@ triggers:
   - name: sn-trigger
     type: trigger
     pointer:
-      counter: 10
+      counter: 11
 
   - name: ecs-trigger
     type: trigger
