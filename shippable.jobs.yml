@@ -12,3 +12,17 @@ jobs:
     steps:
       - GET: sn-man
       - GET: sn-gke
+
+  - name: ecs-man
+    type: manifest
+    steps:
+      - GET: sn-nginx
+      - GET: ecs-trigger
+      # - GET: sn-opts
+      # - GET: sn-replicas
+
+  - name: loc-gke
+    type: gkeDeploy
+    steps:
+      - GET: ecs-man
+      - GET: sn-ecs
