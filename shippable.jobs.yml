@@ -4,6 +4,8 @@ jobs:
     steps:
       - GET: sn-sn
       - GET: sn-trigger
+      - GET: sn-opts
+      - GET: sn-replicas
 
   - name: x1-gke
     type: gkeDeploy
