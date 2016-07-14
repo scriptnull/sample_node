@@ -37,7 +37,7 @@ jobs:
   - name: tri-1-man
     type: manifest
     steps:
-      - GET: sn-sn
+      - GET: sn-nginx
       - GET: tri-trigger
       # - GET: sn-opts
       # - GET: sn-replicas
@@ -45,7 +45,7 @@ jobs:
   - name: tri-2-man
     type: manifest
     steps:
-      - GET: sn-nginx
+      - GET: sn-sn
       - GET: tri-trigger
 
   - name: tri-deploy
