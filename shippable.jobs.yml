@@ -12,3 +12,22 @@ jobs:
     steps:
       - GET: sn-man
       - GET: sn-gke
+
+  - name: b-ecs-man-1
+    type: manifest
+    steps:
+      - GET: sn-nginx
+      - GET: ecs-trigger
+
+  - name: b-ecs-man-2
+    type: manifest
+    steps:
+      - GET: sn-sn
+      - GET: ecs-trigger
+
+  - name: ecs-deploy
+    type: ecsDeploy
+    steps:
+      - GET: b-ecs-man-1
+      - GET: b-ecs-man-2
+      - GET: sn-gke

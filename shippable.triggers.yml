@@ -3,3 +3,8 @@ triggers:
     type: trigger
     pointer:
       counter: 5
+
+  - name: ecs-trigger
+    type: trigger
+    pointer:
+      counter: 5

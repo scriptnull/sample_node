@@ -42,3 +42,10 @@ resources:
     pointer:
       sourceName: "micro-cluster" #name of the cluster we are deploying.
       region: "us-east1-d"
+
+  - name: sn-ecs
+    type: ecsCluster
+    integration: scriptnull-aws
+    pointer:
+      sourceName : "testCL"
+      region: "us-west-2"
