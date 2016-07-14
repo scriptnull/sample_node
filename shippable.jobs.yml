@@ -3,7 +3,7 @@ jobs:
     type: manifest
     steps:
       - GET: sn-nginx
-      # - GET: sn-trigger
+      - GET: sn-trigger
       # - GET: sn-opts
       # - GET: sn-replicas
 
