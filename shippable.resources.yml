@@ -26,6 +26,16 @@ resources:
     initialVersion:
       versionName: "nodeenv"
 
+  - name: sn-opts
+    type: dockerOptions
+    pointer:
+      memory: 6000
+
+  - name: sn-replicas
+    type: replicas
+    pointer:
+      count: 2
+
   - name: sn-gke
     type: gkeCluster
     integration: scriptnull-gke
