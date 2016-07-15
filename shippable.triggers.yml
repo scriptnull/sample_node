@@ -9,6 +9,11 @@ triggers:
     pointer:
       counter: 3
 
+  - name: flsm-trigger
+    type: trigger
+    pointer:
+      counter: 1
+
   # - name: x-trigger
   #   type: trigger
   #   pointer:

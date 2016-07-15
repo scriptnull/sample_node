@@ -27,6 +27,18 @@ jobs:
       - GET: flbg-man
       - GET: sn-gke
 
+  - name: flsm-man
+    type: manifest
+    steps:
+      - GET: sn-nginx
+      - GET: flsm-trigger
+
+  - name: flsm-gke
+    type: gkeDeploy
+    steps:
+      - GET: flsm-man
+      - GET: sn-small-gke
+
   # - name: 1-man
   #   type: manifest
   #   steps:

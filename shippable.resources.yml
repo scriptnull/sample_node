@@ -44,6 +44,14 @@ resources:
     version:
       region: "us-east1-d"
 
+  - name: sn-small-gke
+    type: gkeCluster
+    integration: scriptnull-gke
+    pointer:
+      sourceName: "small-cluster" #name of the cluster we are deploying.
+    version:
+      region: "us-east1-d"
+
   # - name: sn-ecs
   #   type: ecsCluster
   #   integration: scriptnull-aws
