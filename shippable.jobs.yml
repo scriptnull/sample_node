@@ -30,7 +30,7 @@ jobs:
   - name: flsm-man
     type: manifest
     steps:
-      - GET: sn-nginx
+      - GET: sn-sn
       - GET: flsm-trigger
 
   - name: flsm-gke
