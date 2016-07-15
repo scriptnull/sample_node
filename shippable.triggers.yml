@@ -7,7 +7,7 @@ triggers:
   - name: flbg-trigger
     type: trigger
     pointer:
-      counter: 2
+      counter: 3
 
   # - name: x-trigger
   #   type: trigger
