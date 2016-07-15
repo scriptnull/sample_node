@@ -78,8 +78,8 @@ jobs:
     steps:
       - GET: sn-sn
       - GET: fbsm-trigger
-      - GET: sn-opts
-      - GET: sn-replicas
+      # - GET: sn-opts
+      # - GET: sn-replicas
 
   - name: fbsm-gke
     type: gkeDeploy
