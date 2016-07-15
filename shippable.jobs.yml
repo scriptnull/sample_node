@@ -50,7 +50,7 @@ jobs:
     steps:
       - GET: sn-nginx
       - GET: fb-trigger
-      # - GET: sn-replicas
+      - GET: sn-replicas
 
   - name: fb-gke
     type: gkeDeploy
