@@ -4,7 +4,12 @@ triggers:
     pointer:
       counter: 11
 
-  - name: x-trigger
+  - name: flbg-trigger
     type: trigger
     pointer:
-      counter: 2
+      counter: 1
+
+  # - name: x-trigger
+  #   type: trigger
+  #   pointer:
+  #     counter: 2

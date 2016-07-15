@@ -15,23 +15,35 @@ jobs:
       - GET: fl-man
       - GET: sn-gke
 
-  - name: 1-man
-    type: manifest
-    steps:
-      - GET: sn-sn
-      - GET: x-trigger
-
-  - name: 2-man
+  - name: flbg-man
     type: manifest
     steps:
       - GET: sn-nginx
-      - GET: x-trigger
+      - GET: flbg-trigger
 
-  - name: multi-gke
+  - name: flbg-gke
     type: gkeDeploy
-    options:
-      deployMethod: blueGreen
     steps:
-      - GET: 1-man
-      - GET: 2-man
+      - GET: flbg-man
       - GET: sn-gke
+
+  # - name: 1-man
+  #   type: manifest
+  #   steps:
+  #     - GET: sn-sn
+  #     - GET: x-trigger
+  #
+  # - name: 2-man
+  #   type: manifest
+  #   steps:
+  #     - GET: sn-nginx
+  #     - GET: x-trigger
+  #
+  # - name: multi-gke
+  #   type: gkeDeploy
+  #   options:
+  #     deployMethod: blueGreen
+  #   steps:
+  #     - GET: 1-man
+  #     - GET: 2-man
+  #     - GET: sn-gke
