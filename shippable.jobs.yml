@@ -1,4 +1,5 @@
 ##################### GKE Testing starts here
+jobs:
   - name: fl-man
     type: manifest
     steps:
