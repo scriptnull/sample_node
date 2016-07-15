@@ -32,6 +32,8 @@ jobs:
     steps:
       - GET: sn-sn
       - GET: flsm-trigger
+      - GET: sn-opts
+      - GET: sn-replicas
 
   - name: flsm-gke
     type: gkeDeploy
