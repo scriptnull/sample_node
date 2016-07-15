@@ -3,3 +3,8 @@ triggers:
     type: trigger
     pointer:
       counter: 11
+
+  - name: x-trigger
+    type: trigger
+    pointer:
+      counter: 1
