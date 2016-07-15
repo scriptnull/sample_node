@@ -1,15 +1,5 @@
 triggers:
-  - name: sn-trigger
+  - name: fl-trigger
     type: trigger
     pointer:
-      counter: 11
-
-  - name: ecs-trigger
-    type: trigger
-    pointer:
-      counter: 10
-
-  - name: tri-trigger
-    type: trigger
-    pointer:
-      counter: 2
+      counter: 1

@@ -1,56 +1,15 @@
-jobs:
-  - name: sn-man
+##################### GKE Testing starts here
+  - name: fl-man
     type: manifest
     steps:
-      - GET: sn-nginx
-      - GET: sn-trigger
+      - GET: sn-sn
+      - GET: fl-trigger
       - GET: sn-replicas
-      - GET: small-box
 
-  - name: loc-gke
+  - name: fl-gke
     type: gkeDeploy
+    options:
+      deployMethod: upgrade
     steps:
-      - GET: sn-man
+      - GET: fl-man
       - GET: sn-gke
-
-  - name: ecs-man-2
-    type: manifest
-    steps:
-      - GET: sn-sn
-      - GET: ecs-trigger
-      # - GET: sn-opts
-      # - GET: sn-replicas
-
-  - name: ecs-man-3
-    type: manifest
-    steps:
-      - GET: sn-nginx
-      - GET: ecs-trigger
-
-  - name: loc-ecs-2
-    type: ecsDeploy
-    steps:
-      - GET: ecs-man-2
-      - GET: ecs-man-3
-      - GET: sn-ecs
-
-  - name: tri-1-man
-    type: manifest
-    steps:
-      - GET: sn-nginx
-      - GET: tri-trigger
-      # - GET: sn-opts
-      # - GET: sn-replicas
-
-  - name: tri-2-man
-    type: manifest
-    steps:
-      - GET: sn-sn
-      - GET: tri-trigger
-
-  - name: tri-deploy
-    type: tripubDeploy
-    steps:
-      - GET: tri-1-man
-      - GET: tri-2-man
-      - GET: sn-tri
