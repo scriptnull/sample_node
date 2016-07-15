@@ -22,4 +22,4 @@ triggers:
   - name: fbbg-trigger
     type: trigger
     pointer:
-      counter: 1
+      counter: 2
