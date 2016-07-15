@@ -43,3 +43,18 @@ jobs:
     steps:
       - GET: b-tri-1-man
       - GET: sn-tri
+
+###################### GKE Testing starts here
+  - name: fb-man
+    type: manifest
+    steps:
+      - GET: sn-sn
+      - GET: fb-trigger
+
+  - name: fb-gke
+    type: gkeDeploy
+    options:
+      deployMethod: upgrade
+    steps:
+      - GET: fb-man
+      - GET: sn-gke

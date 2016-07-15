@@ -5,7 +5,7 @@ resources:
     pointer:
       sourceName: "library/nginx"
       isPull: false
-    initialVersion:
+    seed:
       versionName: latest
 
   - name: sn-sn
@@ -14,7 +14,7 @@ resources:
     pointer:
       sourceName: "scriptnull/sample_node"
       isPull: false
-    initialVersion:
+    seed:
       versionName: "dc.pipeline.4"
 
   - name: sn-bb
@@ -23,17 +23,17 @@ resources:
     pointer:
       sourceName: "scriptnull/busybox"
       isPull: false
-    initialVersion:
+    seed:
       versionName: "nodeenv"
 
   - name: sn-opts
     type: dockerOptions
-    pointer:
+    version:
       memory: 6000
 
   - name: sn-replicas
     type: replicas
-    pointer:
+    version:
       count: 2
 
   - name: sn-gke
@@ -41,6 +41,7 @@ resources:
     integration: scriptnull-gke
     pointer:
       sourceName: "micro-cluster" #name of the cluster we are deploying.
+    version:
       region: "us-east1-d"
 
   - name: sn-ecs
@@ -48,10 +49,13 @@ resources:
     integration: scriptnull-aws
     pointer:
       sourceName : "testCL"
+    version:
       region: "us-west-2"
 
   - name: sn-tri
     type: tripubCluster
     integration: scriptnull-triton
     pointer:
+      sourceName: "my-triton"
+    version:
       region: "us-east-1"

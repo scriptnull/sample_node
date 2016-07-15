@@ -13,3 +13,8 @@ triggers:
     type: trigger
     pointer:
       counter: 2
+
+  - name: fb-trigger
+    type: trigger
+    pointer:
+      counter: 0
