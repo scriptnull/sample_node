@@ -72,3 +72,9 @@ resources:
     type: params
     version:
       foo: "bar"
+
+  - name: good-params
+    type: params
+    version:
+      params:
+        yo: "bar"
