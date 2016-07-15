@@ -27,4 +27,4 @@ triggers:
   - name: fbsm-trigger
     type: trigger
     pointer:
-      counter: 5
+      counter: 6
