@@ -51,6 +51,7 @@ jobs:
       - GET: sn-sn
       - GET: fb-trigger
       - GET: gke-opts
+      - GET: gke-params
 
   - name: fb-gke
     type: gkeDeploy

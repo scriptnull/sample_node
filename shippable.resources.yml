@@ -67,3 +67,8 @@ resources:
       sourceName: "my-triton"
     version:
       region: "us-east-1"
+
+  - name: gke-params
+    type: params
+    version:
+      foo: "bar"
