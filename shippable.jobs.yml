@@ -48,9 +48,9 @@ jobs:
   - name: fb-man
     type: manifest
     steps:
-      - GET: sn-nginx
+      - GET: sn-sn
       - GET: fb-trigger
-      - GET: sn-replicas
+      - GET: gke-opts
 
   - name: fb-gke
     type: gkeDeploy

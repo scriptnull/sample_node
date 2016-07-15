@@ -36,6 +36,13 @@ resources:
     version:
       count: 2
 
+  - name: gke-opts
+    type: dockerOptions
+    version:
+      memory: 200
+      portMappings:
+        - "8081:80"
+
   - name: sn-gke
     type: gkeCluster
     integration: scriptnull-gke
