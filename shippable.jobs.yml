@@ -76,7 +76,7 @@ jobs:
   - name: fbsm-man
     type: manifest
     steps:
-      - GET: sn-nginx
+      - GET: sn-sn
       - GET: fbsm-trigger
       # - GET: sn-opts
       # - GET: sn-replicas
