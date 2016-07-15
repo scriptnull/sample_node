@@ -3,7 +3,7 @@ jobs:
   - name: fl-man
     type: manifest
     steps:
-      - GET: sn-nginx
+      - GET: sn-sn
       - GET: fl-trigger
       # - GET: sn-replicas
 
