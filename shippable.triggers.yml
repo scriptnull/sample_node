@@ -2,4 +2,4 @@ triggers:
   - name: fl-trigger
     type: trigger
     pointer:
-      counter: 2
+      counter: 3
