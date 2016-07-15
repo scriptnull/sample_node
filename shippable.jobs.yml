@@ -48,7 +48,7 @@ jobs:
   - name: fb-man
     type: manifest
     steps:
-      - GET: sn-sn
+      - GET: sn-nginx
       - GET: fb-trigger
       # - GET: sn-replicas
 
