@@ -5,7 +5,7 @@ jobs:
     steps:
       - GET: sn-nginx
       - GET: fl-trigger
-      # - GET: sn-replicas
+      - GET: sn-replicas
 
   - name: fl-gke
     type: gkeDeploy
