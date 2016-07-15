@@ -23,3 +23,8 @@ triggers:
     type: trigger
     pointer:
       counter: 2
+
+  - name: fbsm-trigger
+    type: trigger
+    pointer:
+      counter: 1

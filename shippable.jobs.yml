@@ -72,3 +72,17 @@ jobs:
     steps:
       - GET: fbbg-man
       - GET: sn-gke
+
+  - name: fbsm-man
+    type: manifest
+    steps:
+      - GET: sn-nginx
+      - GET: fbsm-trigger
+      - GET: sn-opts
+      - GET: sn-replicas
+
+  - name: fbsm-gke
+    type: gkeDeploy
+    steps:
+      - GET: fbsm-man
+      - GET: sn-small-gke
