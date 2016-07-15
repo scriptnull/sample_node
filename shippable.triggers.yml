@@ -18,3 +18,8 @@ triggers:
     type: trigger
     pointer:
       counter: 7
+
+  - name: fbbg-trigger
+    type: trigger
+    pointer:
+      counter: 1

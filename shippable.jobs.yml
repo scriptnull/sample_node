@@ -60,3 +60,15 @@ jobs:
     steps:
       - GET: fb-man
       - GET: sn-gke
+
+  - name: fbbg-man
+    type: manifest
+    steps:
+      - GET: sn-sn
+      - GET: fbbg-trigger
+
+  - name: fbbg-gke
+    type: gkeDeploy
+    steps:
+      - GET: fbbg-man
+      - GET: sn-gke
