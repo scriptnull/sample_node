@@ -18,7 +18,7 @@ jobs:
   - name: flbg-man
     type: manifest
     steps:
-      - GET: sn-nginx
+      - GET: sn-sn
       - GET: flbg-trigger
 
   - name: flbg-gke
