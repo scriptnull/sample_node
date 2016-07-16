@@ -38,25 +38,25 @@ jobs:
       - TASK: managed
         deployMethod: blueGreen
 
-  - name: slup-1-man
+  - name: x-slup-1-man
     type: manifest
     steps:
       - GET: sn-sn
       - GET: slup-trigger
       - TASK: managed
 
-  - name: slup-2-man
+  - name: x-slup-2-man
     type: manifest
     steps:
       - GET: sn-nginx
       - GET: slup-trigger
       - TASK: managed
 
-  - name: slup-gke
+  - name: x-slup-gke
     type: gkeDeploy
     steps:
-      - GET: slup-1-man
-      - GET: slup-2-man
+      - GET: x-slup-1-man
+      - GET: x-slup-2-man
       - GET: sn-gke
       - TASK: managed
         deployMethod: upgrade
