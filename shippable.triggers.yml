@@ -7,7 +7,7 @@ triggers:
   - name: slup-trigger
     type: trigger
     pointer:
-      counter: 9
+      counter: 10
 
   # - name: fl-trigger
   #   type: trigger
