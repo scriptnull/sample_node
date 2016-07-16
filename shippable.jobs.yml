@@ -18,14 +18,14 @@ jobs:
   - name: sl-1-man
     type: manifest
     steps:
-      - GET: sn-sn
+      - GET: sn-nginx
       - GET: sl-trigger
       - TASK: managed
 
   - name: sl-2-man
     type: manifest
     steps:
-      - GET: sn-nginx
+      - GET: sn-sn
       - GET: sl-trigger
       - TASK: managed
 

@@ -2,7 +2,7 @@ triggers:
   - name: sl-trigger
     type: trigger
     pointer:
-      counter: 3
+      counter: 4
 
   - name: fl-trigger
     type: trigger
