@@ -1,30 +1,5 @@
 triggers:
-  - name: sn-trigger
+  - name: sbup-trigger
     type: trigger
     pointer:
-      counter: 7
-
-  - name: ecs-trigger
-    type: trigger
-    pointer:
-      counter: 6
-
-  - name: tri-trigger
-    type: trigger
-    pointer:
-      counter: 2
-
-  - name: fb-trigger
-    type: trigger
-    pointer:
-      counter: 7
-
-  - name: fbbg-trigger
-    type: trigger
-    pointer:
-      counter: 2
-
-  - name: fbsm-trigger
-    type: trigger
-    pointer:
-      counter: 6
+      counter: 8

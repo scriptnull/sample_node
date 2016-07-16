@@ -1,88 +1,113 @@
+##################### GKE Testing starts here
 jobs:
-  - name: sn-man
+  # - name: fl-man
+  #   type: manifest
+  #   steps:
+  #     - GET: sn-nginx
+  #     - GET: fl-trigger
+  #     - TASK: managed
+  #
+  # - name: fl-gke
+  #   type: gkeDeploy
+  #   steps:
+  #     - GET: fl-man
+  #     - GET: sn-gke
+  #     - TASK: managed
+  #       deployMethod: upgrade
+
+  # - name: slbg-1-man
+  #   type: manifest
+  #   steps:
+  #     - GET: sn-nginx
+  #     - GET: slbg-trigger
+  #     - TASK: managed
+  #
+  # - name: slbg-2-man
+  #   type: manifest
+  #   steps:
+  #     - GET: sn-sn
+  #     - GET: slbg-trigger
+  #     - TASK: managed
+  #
+  # - name: slbg-gke
+  #   type: gkeDeploy
+  #   steps:
+  #     - GET: slbg-1-man
+  #     - GET: slbg-2-man
+  #     - GET: sn-gke
+  #     - TASK: managed
+  #       deployMethod: blueGreen
+
+  - name: sbup-1-man
     type: manifest
     steps:
       - GET: sn-sn
-      - GET: sn-trigger
-      # - GET: sn-opts
-      # - GET: sn-replicas
+      - GET: sbup-trigger
+      - TASK: managed
 
-  - name: x1-gke
-    type: gkeDeploy
-    steps:
-      - GET: sn-man
-      - GET: sn-gke
-
-  - name: b-ecs-man-1
-    type: manifest
-    steps:
-      - GET: sn-sn
-      - GET: ecs-trigger
-
-  - name: b-ecs-man-2
+  - name: sbup-2-man
     type: manifest
     steps:
       - GET: sn-nginx
-      - GET: ecs-trigger
+      - GET: sbup-trigger
+      - TASK: managed
 
-  - name: ecs-deploy
-    type: ecsDeploy
-    steps:
-      - GET: b-ecs-man-1
-      - GET: b-ecs-man-2
-      - GET: sn-ecs
-
-  - name: b-tri-1-man
-    type: manifest
-    steps:
-      - GET: sn-sn
-      - GET: tri-trigger
-
-  - name: b-tri-deploy
-    type: tripubDeploy
-    steps:
-      - GET: b-tri-1-man
-      - GET: sn-tri
-
-###################### GKE Testing starts here
-  - name: fb-man
-    type: manifest
-    steps:
-      - GET: sn-sn
-      - GET: fb-trigger
-      - GET: gke-opts
-      - GET: good-params
-
-  - name: fb-gke
+  - name: sbup-gke
     type: gkeDeploy
-    options:
-      deployMethod: upgrade
     steps:
-      - GET: fb-man
+      - GET: x-sbup-1-man
+      - GET: x-sbup-2-man
       - GET: sn-gke
+      - TASK: managed
+        deployMethod: upgrade
 
-  - name: fbbg-man
-    type: manifest
-    steps:
-      - GET: sn-nginx
-      - GET: fbbg-trigger
 
-  - name: fbbg-gke
-    type: gkeDeploy
-    steps:
-      - GET: fbbg-man
-      - GET: sn-gke
+  # - name: flbg-man
+  #   type: manifest
+  #   steps:
+  #     - GET: sn-nginx
+  #     - GET: flbg-trigger
+  #     - TASK: managed
+  #
+  # - name: flbg-gke
+  #   type: gkeDeploy
+  #   steps:
+  #     - GET: flbg-man
+  #     - GET: sn-gke
+  #     - TASK: managed
 
-  - name: fbsm-man
-    type: manifest
-    steps:
-      - GET: sn-nginx
-      - GET: fbsm-trigger
-      # - GET: sn-opts
-      # - GET: sn-replicas
+  # - name: flsm-man
+  #   type: manifest
+  #   steps:
+  #     - GET: sn-sn
+  #     - GET: flsm-trigger
+  #     - TASK: managed
+  #
+  # - name: flsm-gke
+  #   type: gkeDeploy
+  #   steps:
+  #     - GET: flsm-man
+  #     - GET: sn-small-gke
+  #     - TASK: managed
+  #       deployType: blueGreen
 
-  - name: fbsm-gke
-    type: gkeDeploy
-    steps:
-      - GET: fbsm-man
-      - GET: sn-small-gke
+  # - name: 1-man
+  #   type: manifest
+  #   steps:
+  #     - GET: sn-sn
+  #     - GET: x-trigger
+  #
+  # - name: 2-man
+  #   type: manifest
+  #   steps:
+  #     - GET: sn-nginx
+  #     - GET: x-trigger
+  #
+  # - name: multi-gke
+  #   type: gkeDeploy
+  #   options:
+  #     deployMethod: blueGreen
+  #   steps:
+  #     - GET: 1-man
+  #     - GET: 2-man
+  #     - GET: sn-gke

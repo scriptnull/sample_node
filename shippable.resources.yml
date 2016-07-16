@@ -36,20 +36,11 @@ resources:
     version:
       count: 2
 
-  - name: gke-opts
-    type: dockerOptions
-    version:
-      memory: 200
-      cpuShares: 2
-      portMappings:
-        - "8081:80"
-
   - name: sn-gke
     type: gkeCluster
     integration: scriptnull-gke
     pointer:
       sourceName: "micro-cluster" #name of the cluster we are deploying.
-    version:
       region: "us-east1-d"
 
   - name: sn-small-gke
@@ -57,32 +48,20 @@ resources:
     integration: scriptnull-gke
     pointer:
       sourceName: "small-cluster" #name of the cluster we are deploying.
-    version:
       region: "us-east1-d"
 
-  - name: sn-ecs
-    type: ecsCluster
-    integration: scriptnull-aws
-    pointer:
-      sourceName : "testCL"
-    version:
-      region: "us-west-2"
-
-  - name: sn-tri
-    type: tripubCluster
-    integration: scriptnull-triton
-    pointer:
-      sourceName: "my-triton"
-    version:
-      region: "us-east-1"
-
-  - name: gke-params
-    type: params
-    version:
-      foo: "bar"
-
-  - name: good-params
-    type: params
-    version:
-      params:
-        yo: "bar"
+  # - name: sn-ecs
+  #   type: ecsCluster
+  #   integration: scriptnull-aws
+  #   pointer:
+  #     sourceName : "testCL"
+  #   version:
+  #     region: "us-west-2"
+  #
+  # - name: sn-tri
+  #   type: tripubCluster
+  #   integration: scriptnull-triton
+  #   pointer:
+  #     sourceName: "my-triton"
+  #   version:
+  #     region: "us-east-1"
