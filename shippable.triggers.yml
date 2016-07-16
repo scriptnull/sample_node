@@ -2,4 +2,4 @@ triggers:
   - name: sbup-trigger
     type: trigger
     pointer:
-      counter: 9
+      counter: 10
