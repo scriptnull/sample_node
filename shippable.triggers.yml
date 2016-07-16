@@ -2,7 +2,7 @@ triggers:
   - name: slbg-trigger
     type: trigger
     pointer:
-      counter: 6
+      counter: 7
 
   # - name: fl-trigger
   #   type: trigger
