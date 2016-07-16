@@ -7,4 +7,4 @@ triggers:
   - name: x-sbbg-trigger
     type: trigger
     pointer:
-      counter: 12
+      counter: 13
