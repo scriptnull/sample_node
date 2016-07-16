@@ -55,8 +55,8 @@ jobs:
   - name: sbup-gke
     type: gkeDeploy
     steps:
-      - GET: x-sbup-1-man
-      - GET: x-sbup-2-man
+      - GET: sbup-1-man
+      - GET: sbup-2-man
       - GET: sn-gke
       - TASK: managed
         deployMethod: upgrade
