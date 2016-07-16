@@ -41,7 +41,6 @@ resources:
     integration: scriptnull-gke
     pointer:
       sourceName: "micro-cluster" #name of the cluster we are deploying.
-    version:
       region: "us-east1-d"
 
   - name: sn-small-gke
@@ -49,7 +48,6 @@ resources:
     integration: scriptnull-gke
     pointer:
       sourceName: "small-cluster" #name of the cluster we are deploying.
-    version:
       region: "us-east1-d"
 
   # - name: sn-ecs

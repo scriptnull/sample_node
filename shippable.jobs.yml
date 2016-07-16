@@ -5,41 +5,44 @@ jobs:
     steps:
       - GET: sn-nginx
       - GET: fl-trigger
-      - GET: sn-replicas
+      - TASK: managed
 
   - name: fl-gke
     type: gkeDeploy
-    options:
-      deployMethod: upgrade
     steps:
       - GET: fl-man
       - GET: sn-gke
+      - TASK: managed
+        deployMethod: upgrade
 
-  - name: flbg-man
-    type: manifest
-    steps:
-      - GET: sn-nginx
-      - GET: flbg-trigger
+  # - name: flbg-man
+  #   type: manifest
+  #   steps:
+  #     - GET: sn-nginx
+  #     - GET: flbg-trigger
+  #     - TASK: managed
+  #
+  # - name: flbg-gke
+  #   type: gkeDeploy
+  #   steps:
+  #     - GET: flbg-man
+  #     - GET: sn-gke
+  #     - TASK: managed
 
-  - name: flbg-gke
-    type: gkeDeploy
-    steps:
-      - GET: flbg-man
-      - GET: sn-gke
-
-  - name: flsm-man
-    type: manifest
-    steps:
-      - GET: sn-sn
-      - GET: flsm-trigger
-      - GET: sn-opts
-      - GET: sn-replicas
-
-  - name: flsm-gke
-    type: gkeDeploy
-    steps:
-      - GET: flsm-man
-      - GET: sn-small-gke
+  # - name: flsm-man
+  #   type: manifest
+  #   steps:
+  #     - GET: sn-sn
+  #     - GET: flsm-trigger
+  #     - TASK: managed
+  #
+  # - name: flsm-gke
+  #   type: gkeDeploy
+  #   steps:
+  #     - GET: flsm-man
+  #     - GET: sn-small-gke
+  #     - TASK: managed
+  #       deployType: blueGreen
 
   # - name: 1-man
   #   type: manifest
