@@ -41,14 +41,14 @@ jobs:
   - name: slup-1-man
     type: manifest
     steps:
-      - GET: sn-nginx
+      - GET: sn-sn
       - GET: slup-trigger
       - TASK: managed
 
   - name: slup-2-man
     type: manifest
     steps:
-      - GET: sn-sn
+      - GET: sn-nginx
       - GET: slup-trigger
       - TASK: managed
 
