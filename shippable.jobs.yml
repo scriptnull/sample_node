@@ -18,14 +18,14 @@ jobs:
   - name: slbg-1-man
     type: manifest
     steps:
-      - GET: sn-sn
+      - GET: sn-nginx
       - GET: slbg-trigger
       - TASK: managed
 
   - name: slbg-2-man
     type: manifest
     steps:
-      - GET: sn-nginx
+      - GET: sn-sn
       - GET: slbg-trigger
       - TASK: managed
 
