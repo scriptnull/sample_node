@@ -4,6 +4,11 @@ triggers:
     pointer:
       counter: 8
 
+  - name: slup-trigger
+    type: trigger
+    pointer:
+      counter: 8
+
   # - name: fl-trigger
   #   type: trigger
   #   pointer:
