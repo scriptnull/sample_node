@@ -41,14 +41,14 @@ jobs:
   - name: sbup-1-man
     type: manifest
     steps:
-      - GET: sn-nginx
+      - GET: sn-sn
       - GET: sbup-trigger
       - TASK: managed
 
   - name: sbup-2-man
     type: manifest
     steps:
-      - GET: sn-sn
+      - GET: sn-nginx
       - GET: sbup-trigger
       - TASK: managed
 
