@@ -15,28 +15,28 @@ jobs:
   #     - TASK: managed
   #       deployMethod: upgrade
 
-  - name: slbg-1-man
-    type: manifest
-    steps:
-      - GET: sn-nginx
-      - GET: slbg-trigger
-      - TASK: managed
-
-  - name: slbg-2-man
-    type: manifest
-    steps:
-      - GET: sn-sn
-      - GET: slbg-trigger
-      - TASK: managed
-
-  - name: slbg-gke
-    type: gkeDeploy
-    steps:
-      - GET: slbg-1-man
-      - GET: slbg-2-man
-      - GET: sn-gke
-      - TASK: managed
-        deployMethod: blueGreen
+  # - name: slbg-1-man
+  #   type: manifest
+  #   steps:
+  #     - GET: sn-nginx
+  #     - GET: slbg-trigger
+  #     - TASK: managed
+  #
+  # - name: slbg-2-man
+  #   type: manifest
+  #   steps:
+  #     - GET: sn-sn
+  #     - GET: slbg-trigger
+  #     - TASK: managed
+  #
+  # - name: slbg-gke
+  #   type: gkeDeploy
+  #   steps:
+  #     - GET: slbg-1-man
+  #     - GET: slbg-2-man
+  #     - GET: sn-gke
+  #     - TASK: managed
+  #       deployMethod: blueGreen
 
   - name: x-slup-1-man
     type: manifest
