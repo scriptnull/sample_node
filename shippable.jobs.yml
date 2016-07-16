@@ -29,14 +29,14 @@ jobs:
       - GET: sl-trigger
       - TASK: managed
 
-  - name: sl-gke
+  - name: slbg-gke
     type: gkeDeploy
     steps:
       - GET: sl-1-man
       - GET: sl-2-man
       - GET: sn-gke
       - TASK: managed
-        deployMethod: upgrade
+        deployMethod: blueGreen
 
   # - name: flbg-man
   #   type: manifest
