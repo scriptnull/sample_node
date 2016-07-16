@@ -1,4 +1,9 @@
 triggers:
+  - name: sl-trigger
+    type: trigger
+    pointer:
+      counter: 1
+
   - name: fl-trigger
     type: trigger
     pointer:

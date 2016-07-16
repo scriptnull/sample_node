@@ -1,16 +1,39 @@
 ##################### GKE Testing starts here
 jobs:
-  - name: fl-man
+  # - name: fl-man
+  #   type: manifest
+  #   steps:
+  #     - GET: sn-nginx
+  #     - GET: fl-trigger
+  #     - TASK: managed
+  #
+  # - name: fl-gke
+  #   type: gkeDeploy
+  #   steps:
+  #     - GET: fl-man
+  #     - GET: sn-gke
+  #     - TASK: managed
+  #       deployMethod: upgrade
+
+  - name: sl-1-man
     type: manifest
     steps:
       - GET: sn-nginx
-      - GET: fl-trigger
+      - GET: sl-trigger
       - TASK: managed
 
-  - name: fl-gke
+  - name: sl-2-man
+    type: manifest
+    steps:
+      - GET: sn-sn
+      - GET: sl-trigger
+      - TASK: managed
+
+  - name: sl-gke
     type: gkeDeploy
     steps:
-      - GET: fl-man
+      - GET: sl-1-man
+      - GET: sl-2-man
       - GET: sn-gke
       - TASK: managed
         deployMethod: upgrade
