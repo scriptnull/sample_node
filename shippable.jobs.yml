@@ -38,28 +38,28 @@ jobs:
   #     - TASK: managed
   #       deployMethod: blueGreen
 
-  - name: sbbg-1-man
+  - name: x-sbbg-1-man
     type: manifest
     steps:
       - GET: sn-sn
-      - GET: sbbg-trigger
+      - GET: x-sbbg-trigger
       - TASK: managed
 
-  - name: sbbg-2-man
+  - name: x-sbbg-2-man
     type: manifest
     steps:
       - GET: sn-nginx
-      - GET: sbbg-trigger
+      - GET: x-sbbg-trigger
       - TASK: managed
 
-  - name: sbbg-gke
+  - name: x-sbbg-gke
     type: gkeDeploy
     steps:
-      - GET: sbbg-1-man
-      - GET: sbbg-2-man
+      - GET: x-sbbg-1-man
+      - GET: x-sbbg-2-man
       - GET: sn-gke
       - TASK: managed
-        deployMethod: upgrade
+        deployMethod: blueGreen
 
 #################################
 
