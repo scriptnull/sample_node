@@ -1,23 +1,23 @@
 triggers:
-  - name: sl-trigger
+  - name: slbg-trigger
     type: trigger
     pointer:
       counter: 4
 
-  - name: fl-trigger
-    type: trigger
-    pointer:
-      counter: 11
-
-  - name: flbg-trigger
-    type: trigger
-    pointer:
-      counter: 3
-
-  - name: flsm-trigger
-    type: trigger
-    pointer:
-      counter: 3
+  # - name: fl-trigger
+  #   type: trigger
+  #   pointer:
+  #     counter: 11
+  #
+  # - name: flbg-trigger
+  #   type: trigger
+  #   pointer:
+  #     counter: 3
+  #
+  # - name: flsm-trigger
+  #   type: trigger
+  #   pointer:
+  #     counter: 3
 
   # - name: x-trigger
   #   type: trigger
