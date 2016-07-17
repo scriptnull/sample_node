@@ -2,9 +2,9 @@ triggers:
   - name: b-sun-trigger
     type: trigger
     pointer:
-      counter: 10
+      counter: 11
 
   - name: bbg-sun-trigger
     type: trigger
     pointer:
-      counter: 12
+      counter: 13
