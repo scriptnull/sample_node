@@ -3,3 +3,8 @@ triggers:
     type: trigger
     pointer:
       counter: 10
+
+  - name: lbg-sun-trigger
+    type: trigger
+    pointer:
+      counter: 10
