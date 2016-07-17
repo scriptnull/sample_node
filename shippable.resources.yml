@@ -41,7 +41,6 @@ resources:
     integration: scriptnull-aws
     pointer:
       sourceName : "testCL"
-    version:
       region: "us-west-2"
 
   # - name: sn-gke
