@@ -22,25 +22,25 @@ jobs:
       - TASK: managed
         deployMethod: upgrade
 
-    - name: lbg-sunecs-1-man
-      type: manifest
-      steps:
-        - IN: sn-sn
-        - IN: lbg-sun-trigger
-        - TASK: managed
+  - name: lbg-sunecs-1-man
+    type: manifest
+    steps:
+      - IN: sn-sn
+      - IN: lbg-sun-trigger
+      - TASK: managed
 
-    - name: lbg-sunecs-2-man
-      type: manifest
-      steps:
-        - IN: sn-nginx
-        - IN: lbg-sun-trigger
-        - TASK: managed
+  - name: lbg-sunecs-2-man
+    type: manifest
+    steps:
+      - IN: sn-nginx
+      - IN: lbg-sun-trigger
+      - TASK: managed
 
-    - name: lbg-sun-ecs
-      type: ecsDeploy
-      steps:
-        - IN: lbg-sunecs-1-man
-        - IN: lbg-sunecs-2-man
-        - IN: sn-ecs
-        - TASK: managed
-          deployMethod: blueGreen
+  - name: lbg-sun-ecs
+    type: ecsDeploy
+    steps:
+      - IN: lbg-sunecs-1-man
+      - IN: lbg-sunecs-2-man
+      - IN: sn-ecs
+      - TASK: managed
+        deployMethod: blueGreen
