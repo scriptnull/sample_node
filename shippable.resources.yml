@@ -49,6 +49,12 @@ resources:
     pointer:
       sourceName : "nothing"
 
+  - name: b-cluster
+    type: cluster
+    integration: scriptnull-ddc
+    pointer:
+      sourceName : "nothing"
+
   # - name: sn-gke
   #   type: gkeCluster
   #   integration: scriptnull-gke
