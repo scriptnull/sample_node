@@ -25,14 +25,14 @@ jobs:
   - name: lbg-sunecs-1-man
     type: manifest
     steps:
-      - IN: sn-sn
+      - IN: sn-nginx
       - IN: lbg-sun-trigger
       - TASK: managed
 
   - name: lbg-sunecs-2-man
     type: manifest
     steps:
-      - IN: sn-nginx
+      - IN: sn-sn
       - IN: lbg-sun-trigger
       - TASK: managed
 
