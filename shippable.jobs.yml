@@ -1,113 +1,23 @@
-##################### GKE Testing starts here
 jobs:
-  # - name: fl-man
-  #   type: manifest
-  #   steps:
-  #     - GET: sn-nginx
-  #     - GET: fl-trigger
-  #     - TASK: managed
-  #
-  # - name: fl-gke
-  #   type: gkeDeploy
-  #   steps:
-  #     - GET: fl-man
-  #     - GET: sn-gke
-  #     - TASK: managed
-  #       deployMethod: upgrade
-
-  # - name: slbg-1-man
-  #   type: manifest
-  #   steps:
-  #     - GET: sn-nginx
-  #     - GET: slbg-trigger
-  #     - TASK: managed
-  #
-  # - name: slbg-2-man
-  #   type: manifest
-  #   steps:
-  #     - GET: sn-sn
-  #     - GET: slbg-trigger
-  #     - TASK: managed
-  #
-  # - name: slbg-gke
-  #   type: gkeDeploy
-  #   steps:
-  #     - GET: slbg-1-man
-  #     - GET: slbg-2-man
-  #     - GET: sn-gke
-  #     - TASK: managed
-  #       deployMethod: blueGreen
-
-  - name: x-slup-1-man
+  - name: l-sunecs-1-man
     type: manifest
     steps:
-      - GET: sn-sn
-      - GET: slup-trigger
+      - IN: sn-nginx
+      - IN: l-sun-trigger
       - TASK: managed
 
-  - name: x-slup-2-man
+  - name: l-sunecs-2-man
     type: manifest
     steps:
-      - GET: sn-nginx
-      - GET: slup-trigger
+      - IN: sn-sn
+      - IN: l-sun-trigger
       - TASK: managed
 
-  - name: x-slup-gke
-    type: gkeDeploy
+  - name: sun-ecs
+    type: ecsDeploy
     steps:
-      - GET: x-slup-1-man
-      - GET: x-slup-2-man
-      - GET: sn-gke
+      - IN: l-sunecs-1-man
+      - IN: l-sunecs-2-man
+      - IN: sn-ecs
       - TASK: managed
         deployMethod: upgrade
-
-
-  # - name: flbg-man
-  #   type: manifest
-  #   steps:
-  #     - GET: sn-nginx
-  #     - GET: flbg-trigger
-  #     - TASK: managed
-  #
-  # - name: flbg-gke
-  #   type: gkeDeploy
-  #   steps:
-  #     - GET: flbg-man
-  #     - GET: sn-gke
-  #     - TASK: managed
-
-  # - name: flsm-man
-  #   type: manifest
-  #   steps:
-  #     - GET: sn-sn
-  #     - GET: flsm-trigger
-  #     - TASK: managed
-  #
-  # - name: flsm-gke
-  #   type: gkeDeploy
-  #   steps:
-  #     - GET: flsm-man
-  #     - GET: sn-small-gke
-  #     - TASK: managed
-  #       deployType: blueGreen
-
-  # - name: 1-man
-  #   type: manifest
-  #   steps:
-  #     - GET: sn-sn
-  #     - GET: x-trigger
-  #
-  # - name: 2-man
-  #   type: manifest
-  #   steps:
-  #     - GET: sn-nginx
-  #     - GET: x-trigger
-  #
-  # - name: multi-gke
-  #   type: gkeDeploy
-  #   options:
-  #     deployMethod: blueGreen
-  #   steps:
-  #     - GET: 1-man
-  #     - GET: 2-man
-  #     - GET: sn-gke

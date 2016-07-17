@@ -29,34 +29,35 @@ resources:
   - name: sn-opts
     type: dockerOptions
     version:
-      memory: 6000
+      memory: 200
 
   - name: sn-replicas
     type: replicas
     version:
       count: 2
 
-  - name: sn-gke
-    type: gkeCluster
-    integration: scriptnull-gke
+  - name: sn-ecs
+    type: ecsCluster
+    integration: scriptnull-aws
     pointer:
-      sourceName: "micro-cluster" #name of the cluster we are deploying.
-      region: "us-east1-d"
+      sourceName : "testCL"
+    version:
+      region: "us-west-2"
 
-  - name: sn-small-gke
-    type: gkeCluster
-    integration: scriptnull-gke
-    pointer:
-      sourceName: "small-cluster" #name of the cluster we are deploying.
-      region: "us-east1-d"
-
-  # - name: sn-ecs
-  #   type: ecsCluster
-  #   integration: scriptnull-aws
+  # - name: sn-gke
+  #   type: gkeCluster
+  #   integration: scriptnull-gke
   #   pointer:
-  #     sourceName : "testCL"
-  #   version:
-  #     region: "us-west-2"
+  #     sourceName: "micro-cluster" #name of the cluster we are deploying.
+  #     region: "us-east1-d"
+  #
+  # - name: sn-small-gke
+  #   type: gkeCluster
+  #   integration: scriptnull-gke
+  #   pointer:
+  #     sourceName: "small-cluster" #name of the cluster we are deploying.
+  #     region: "us-east1-d"
+
   #
   # - name: sn-tri
   #   type: tripubCluster
