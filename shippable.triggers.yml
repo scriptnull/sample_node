@@ -8,3 +8,8 @@ triggers:
     type: trigger
     pointer:
       counter: 12
+
+  - name: l-ddc-trigger
+    type: trigger
+    pointer:
+      counter: 1
