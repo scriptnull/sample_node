@@ -48,14 +48,14 @@ jobs:
   - name: l-sunddc-1-man
     type: manifest
     steps:
-      - IN: sn-nginx
+      - IN: sn-sn
       - IN: l-ddc-trigger
       - TASK: managed
 
   - name: l-sunddc-2-man
     type: manifest
     steps:
-      - IN: sn-sn
+      - IN: sn-nginx
       - IN: l-ddc-trigger
       - TASK: managed
 
@@ -64,5 +64,5 @@ jobs:
     steps:
       - IN: l-sunddc-1-man
       - IN: l-sunddc-2-man
-      - IN: sn-ddc
+      - IN: sn-ddc-1
       - TASK: managed
