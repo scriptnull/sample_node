@@ -25,18 +25,18 @@ jobs:
   - name: bbg-sunecs-1-man
     type: manifest
     steps:
-      - IN: sn-sn
+      - IN: sn-nginx
       - IN: bbg-sun-trigger
       - TASK: managed
 
   - name: bbg-sunecs-2-man
     type: manifest
     steps:
-      - IN: sn-nginx
+      - IN: sn-sn
       - IN: bbg-sun-trigger
       - TASK: managed
 
-  - name: bbg-sun-ecs
+  - name: x-bbg-sun-ecs
     type: ecsDeploy
     steps:
       - IN: bbg-sunecs-1-man

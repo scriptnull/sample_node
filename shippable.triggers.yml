@@ -7,4 +7,4 @@ triggers:
   - name: bbg-sun-trigger
     type: trigger
     pointer:
-      counter: 13
+      counter: 14
