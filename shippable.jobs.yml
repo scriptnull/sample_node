@@ -2,14 +2,14 @@ jobs:
   - name: l-sunecs-1-man
     type: manifest
     steps:
-      - IN: sn-nginx
+      - IN: sn-sn
       - IN: l-sun-trigger
       - TASK: managed
 
   - name: l-sunecs-2-man
     type: manifest
     steps:
-      - IN: sn-sn
+      - IN: sn-nginx
       - IN: l-sun-trigger
       - TASK: managed
 
