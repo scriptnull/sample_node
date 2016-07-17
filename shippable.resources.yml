@@ -43,8 +43,8 @@ resources:
       sourceName : "testCL"
       region: "us-west-2"
 
-  - name: sn-ddc-1
-    type: ecsCluster
+  - name: sn-ddc-2
+    type: ddcCluster
     integration: scriptnull-ddc
     pointer:
       sourceName : "nothing"
