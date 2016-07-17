@@ -1,46 +1,46 @@
 jobs:
-  - name: l-sunecs-1-man
+  - name: b-sunecs-1-man
     type: manifest
     steps:
       - IN: sn-sn
-      - IN: l-sun-trigger
+      - IN: b-sun-trigger
       - TASK: managed
 
-  - name: l-sunecs-2-man
+  - name: b-sunecs-2-man
     type: manifest
     steps:
       - IN: sn-nginx
-      - IN: l-sun-trigger
+      - IN: b-sun-trigger
       - TASK: managed
 
-  - name: sun-ecs
+  - name: b-sun-ecs
     type: ecsDeploy
     steps:
-      - IN: l-sunecs-1-man
-      - IN: l-sunecs-2-man
+      - IN: b-sunecs-1-man
+      - IN: b-sunecs-2-man
       - IN: sn-ecs
       - TASK: managed
         deployMethod: upgrade
 
-  - name: lbg-sunecs-1-man
+  - name: bbg-sunecs-1-man
     type: manifest
     steps:
       - IN: sn-nginx
-      - IN: lbg-sun-trigger
+      - IN: bbg-sun-trigger
       - TASK: managed
 
-  - name: lbg-sunecs-2-man
+  - name: bbg-sunecs-2-man
     type: manifest
     steps:
       - IN: sn-sn
-      - IN: lbg-sun-trigger
+      - IN: bbg-sun-trigger
       - TASK: managed
 
-  - name: lbg-sun-ecs
+  - name: bbg-sun-ecs
     type: ecsDeploy
     steps:
-      - IN: lbg-sunecs-1-man
-      - IN: lbg-sunecs-2-man
+      - IN: bbg-sunecs-1-man
+      - IN: bbg-sunecs-2-man
       - IN: sn-ecs
       - TASK: managed
         deployMethod: blueGreen

@@ -1,10 +1,10 @@
 triggers:
-  - name: l-sun-trigger
+  - name: b-sun-trigger
     type: trigger
     pointer:
       counter: 10
 
-  - name: lbg-sun-trigger
+  - name: bbg-sun-trigger
     type: trigger
     pointer:
       counter: 12
