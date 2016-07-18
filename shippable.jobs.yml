@@ -2,7 +2,7 @@ jobs:
   - name: b-mon-common
     type: manifest
     steps:
-      - IN: sn-sn
+      - IN: sn-nginx
       - IN: b-mon-trigger
       - TASK: managed
 
@@ -10,33 +10,33 @@ jobs:
     type: ddcDeploy
     steps:
       - IN: b-mon-common
-      - IN: cluster-ddc
+      - IN: cluster-dcl
       - TASK: managed
 
   - name: b-mon-dcl
     type: dclDeploy
     steps:
       - IN: b-mon-common
-      - IN: cluster-dcl
+      - IN: cluster-aws
       - TASK: managed
 
   - name: b-mon-ecs
     type: ecsDeploy
     steps:
       - IN: b-mon-common
-      - IN: cluster-aws
+      - IN: cluster-gke
       - TASK: managed
 
   - name: b-mon-gke
     type: gkeDeploy
     steps:
       - IN: b-mon-common
-      - IN: cluster-gke
+      - IN: cluster-tripub
       - TASK: managed
 
   - name: b-mon-tripub
     type: tripubDeploy
     steps:
       - IN: b-mon-common
-      - IN: cluster-tripub
+      - IN: cluster-ddc
       - TASK: managed

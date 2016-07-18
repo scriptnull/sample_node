@@ -2,4 +2,4 @@ triggers:
   - name: b-mon-trigger
     type: trigger
     pointer:
-      counter: 7
+      counter: 8
