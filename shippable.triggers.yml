@@ -2,4 +2,4 @@ triggers:
   - name: l-mon-trigger
     type: trigger
     pointer:
-      counter: 3
+      counter: 4
