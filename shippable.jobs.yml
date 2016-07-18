@@ -2,7 +2,7 @@ jobs:
   - name: l-monddc-1-man
     type: manifest
     steps:
-      - IN: sn-nginx
+      - IN: sn-sn
       - IN: l-ddc-trigger
       - TASK: managed
 
