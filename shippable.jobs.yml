@@ -2,7 +2,7 @@ jobs:
   - name: b-mon-common
     type: manifest
     steps:
-      - IN: sn-nginx
+      - IN: sn-sn
       - IN: b-mon-trigger
       - TASK: managed
 

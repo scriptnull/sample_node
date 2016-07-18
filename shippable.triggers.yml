@@ -1,5 +1,5 @@
 triggers:
-  - name: l-mon-trigger
+  - name: b-mon-trigger
     type: trigger
     pointer:
-      counter: 6
+      counter: 7
