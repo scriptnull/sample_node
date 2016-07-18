@@ -1,67 +1,42 @@
 jobs:
-  - name: l-monddc-1-man
+  - name: l-mon-common
     type: manifest
     steps:
       - IN: sn-sn
-      - IN: l-ddc-trigger
+      - IN: l-mon-trigger
       - TASK: managed
 
-  - name: mon-ddc
+  - name: l-mon-ddc
     type: ddcDeploy
     steps:
-      - IN: l-monddc-1-man
-      - IN: cluster-y
+      - IN: l-mon-common
+      - IN: cluster-ddc
       - TASK: managed
 
-  # - name: l-sunecs-1-man
-  #   type: manifest
-  #   steps:
-  #     - IN: sn-sn
-  #     - IN: l-sun-trigger
-  #     - TASK: managed
-  #
-  # - name: l-sunecs-2-man
-  #   type: manifest
-  #   steps:
-  #     - IN: sn-nginx
-  #     - IN: l-sun-trigger
-  #     - TASK: managed
-  #
-  # - name: sun-ecs
-  #   type: ecsDeploy
-  #   steps:
-  #     - IN: l-sunecs-1-man
-  #     - IN: l-sunecs-2-man
-  #     - IN: sn-ecs
-  #     - TASK: managed
-  #       deployMethod: upgrade
-  #
-  # - name: lbg-sunecs-1-man
-  #   type: manifest
-  #   steps:
-  #     - IN: sn-nginx
-  #     - IN: lbg-sun-trigger
-  #     - TASK: managed
-  #
-  # - name: lbg-sunecs-2-man
-  #   type: manifest
-  #   steps:
-  #     - IN: sn-sn
-  #     - IN: lbg-sun-trigger
-  #     - TASK: managed
-  #
-  # - name: lbg-sun-ecs
-  #   type: ecsDeploy
-  #   steps:
-  #     - IN: lbg-sunecs-1-man
-  #     - IN: lbg-sunecs-2-man
-  #     - IN: sn-ecs
-  #     - TASK: managed
-  #       deployMethod: blueGreen
+  - name: l-mon-dcl
+    type: dclDeploy
+    steps:
+      - IN: l-mon-common
+      - IN: cluster-dcl
+      - TASK: managed
 
-  # - name: l-sunddc-2-man
-  #   type: manifest
-  #   steps:
-  #     - IN: sn-nginx
-  #     - IN: l-ddc-trigger
-  #     - TASK: managed
+  - name: l-mon-ecs
+    type: ecsDeploy
+    steps:
+      - IN: l-mon-common
+      - IN: cluster-aws
+      - TASK: managed
+
+  - name: l-mon-gke
+    type: gkeDeploy
+    steps:
+      - IN: l-mon-common
+      - IN: cluster-gke
+      - TASK: managed
+
+  - name: l-mon-tripub
+    type: tripubDeploy
+    steps:
+      - IN: l-mon-common
+      - IN: cluster-tripub
+      - TASK: managed

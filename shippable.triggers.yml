@@ -1,15 +1,5 @@
 triggers:
-  - name: l-ddc-trigger
+  - name: l-mon-trigger
     type: trigger
     pointer:
-      counter: 14
-
-  # - name: l-sun-trigger
-  #   type: trigger
-  #   pointer:
-  #     counter: 10
-  #
-  # - name: lbg-sun-trigger
-  #   type: trigger
-  #   pointer:
-  #     counter: 12
+      counter: 1
