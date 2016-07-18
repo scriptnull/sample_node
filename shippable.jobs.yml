@@ -1,56 +1,64 @@
 jobs:
-  - name: l-sunecs-1-man
-    type: manifest
-    steps:
-      - IN: sn-sn
-      - IN: l-sun-trigger
-      - TASK: managed
-
-  - name: l-sunecs-2-man
-    type: manifest
-    steps:
-      - IN: sn-nginx
-      - IN: l-sun-trigger
-      - TASK: managed
-
-  - name: sun-ecs
-    type: ecsDeploy
-    steps:
-      - IN: l-sunecs-1-man
-      - IN: l-sunecs-2-man
-      - IN: sn-ecs
-      - TASK: managed
-        deployMethod: upgrade
-
-  - name: lbg-sunecs-1-man
-    type: manifest
-    steps:
-      - IN: sn-nginx
-      - IN: lbg-sun-trigger
-      - TASK: managed
-
-  - name: lbg-sunecs-2-man
-    type: manifest
-    steps:
-      - IN: sn-sn
-      - IN: lbg-sun-trigger
-      - TASK: managed
-
-  - name: lbg-sun-ecs
-    type: ecsDeploy
-    steps:
-      - IN: lbg-sunecs-1-man
-      - IN: lbg-sunecs-2-man
-      - IN: sn-ecs
-      - TASK: managed
-        deployMethod: blueGreen
-
-  - name: l-sunddc-1-man
+  - name: l-monddc-1-man
     type: manifest
     steps:
       - IN: sn-nginx
       - IN: l-ddc-trigger
       - TASK: managed
+
+  - name: mon-ddc
+    type: ddcDeploy
+    steps:
+      - IN: l-monddc-1-man
+      - IN: cluster-x
+      - IN: sn-ddc-2
+      - TASK: managed
+
+  # - name: l-sunecs-1-man
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-sn
+  #     - IN: l-sun-trigger
+  #     - TASK: managed
+  #
+  # - name: l-sunecs-2-man
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-nginx
+  #     - IN: l-sun-trigger
+  #     - TASK: managed
+  #
+  # - name: sun-ecs
+  #   type: ecsDeploy
+  #   steps:
+  #     - IN: l-sunecs-1-man
+  #     - IN: l-sunecs-2-man
+  #     - IN: sn-ecs
+  #     - TASK: managed
+  #       deployMethod: upgrade
+  #
+  # - name: lbg-sunecs-1-man
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-nginx
+  #     - IN: lbg-sun-trigger
+  #     - TASK: managed
+  #
+  # - name: lbg-sunecs-2-man
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-sn
+  #     - IN: lbg-sun-trigger
+  #     - TASK: managed
+  #
+  # - name: lbg-sun-ecs
+  #   type: ecsDeploy
+  #   steps:
+  #     - IN: lbg-sunecs-1-man
+  #     - IN: lbg-sunecs-2-man
+  #     - IN: sn-ecs
+  #     - TASK: managed
+  #       deployMethod: blueGreen
 
   # - name: l-sunddc-2-man
   #   type: manifest
@@ -58,11 +66,3 @@ jobs:
   #     - IN: sn-nginx
   #     - IN: l-ddc-trigger
   #     - TASK: managed
-
-  - name: sun-ddc
-    type: ddcDeploy
-    steps:
-      - IN: l-sunddc-1-man
-      - IN: l-sunddc-2-man
-      - IN: cluster-x
-      - TASK: managed
