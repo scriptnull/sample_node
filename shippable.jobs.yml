@@ -10,7 +10,7 @@ jobs:
     type: ddcDeploy
     steps:
       - IN: l-monddc-1-man
-      - IN: cluster-x
+      - IN: cluster-y
       - TASK: managed
 
   # - name: l-sunecs-1-man
