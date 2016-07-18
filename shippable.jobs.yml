@@ -2,7 +2,7 @@ jobs:
   - name: l-monddc-1-man
     type: manifest
     steps:
-      - IN: sn-nginx
+      - IN: sn-sn
       - IN: l-ddc-trigger
       - TASK: managed
 
@@ -11,7 +11,6 @@ jobs:
     steps:
       - IN: l-monddc-1-man
       - IN: cluster-x
-      - IN: sn-ddc-2
       - TASK: managed
 
   # - name: l-sunecs-1-man
