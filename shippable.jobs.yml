@@ -1,42 +1,78 @@
 jobs:
-  - name: l-mon-common
+  - name: l-mon-new-common
     type: manifest
     steps:
       - IN: sn-nginx
-      - IN: l-mon-trigger
+      - IN: l-mon-new-trigger
       - TASK: managed
 
-  - name: l-mon-ddc
+  - name: l-mon-new-ddc
     type: ddcDeploy
     steps:
-      - IN: l-mon-common
-      - IN: cluster-dcl
+      - IN: l-mon-new-common
+      - IN: cluster-old-dcl
       - TASK: managed
 
-  - name: l-mon-dcl
+  - name: l-mon-new-dcl
     type: dclDeploy
     steps:
-      - IN: l-mon-common
-      - IN: cluster-aws
+      - IN: l-mon-new-common
+      - IN: cluster-old-aws
       - TASK: managed
 
-  - name: l-mon-ecs
+  - name: l-mon-new-ecs
     type: ecsDeploy
     steps:
-      - IN: l-mon-common
-      - IN: cluster-gke
+      - IN: l-mon-new-common
+      - IN: cluster-old-gke
       - TASK: managed
 
-  - name: l-mon-gke
+  - name: l-mon-new-gke
     type: gkeDeploy
     steps:
-      - IN: l-mon-common
-      - IN: cluster-ddc
+      - IN: l-mon-new-common
+      - IN: cluster-old-ddc
       - TASK: managed
 
-  - name: l-mon-tripub
+  - name: l-mon-new-tripub
     type: tripubDeploy
     steps:
-      - IN: l-mon-common
-      - IN: cluster-ddc
+      - IN: l-mon-new-common
+      - IN: cluster-old-ddc
       - TASK: managed
+
+
+  # - name: l-mon-ddc
+  #   type: ddcDeploy
+  #   steps:
+  #     - IN: l-mon-common
+  #     - IN: cluster-dcl
+  #     - TASK: managed
+  #
+  # - name: l-mon-dcl
+  #   type: dclDeploy
+  #   steps:
+  #     - IN: l-mon-common
+  #     - IN: cluster-aws
+  #     - TASK: managed
+  #
+  # - name: l-mon-ecs
+  #   type: ecsDeploy
+  #   steps:
+  #     - IN: l-mon-common
+  #     - IN: cluster-gke
+  #     - TASK: managed
+  #
+  # - name: l-mon-gke
+  #   type: gkeDeploy
+  #   steps:
+  #     - IN: l-mon-common
+  #     - IN: cluster-ddc
+  #     - TASK: managed
+  #
+  # - name: l-mon-tripub
+  #   type: tripubDeploy
+  #   steps:
+  #     - IN: l-mon-common
+  #     - IN: cluster-ddc
+  #     - TASK: managed
