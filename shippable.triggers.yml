@@ -12,4 +12,4 @@ triggers:
   - name: l-ddc-trigger
     type: trigger
     pointer:
-      counter: 6
+      counter: 7
