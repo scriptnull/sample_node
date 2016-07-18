@@ -36,44 +36,8 @@ resources:
     version:
       count: 2
 
-  - name: sn-ecs
-    type: ecsCluster
-    integration: scriptnull-aws
-    pointer:
-      sourceName : "testCL"
-      region: "us-west-2"
-
-  - name: sn-ddc-2
-    type: ddcCluster
-    integration: scriptnull-ddc
-    pointer:
-      sourceName : "nothing"
-
-  - name: b-cluster
+  - name: gen-ddc-cluster
     type: cluster
     integration: scriptnull-ddc
     pointer:
       sourceName : "nothing"
-
-  # - name: sn-gke
-  #   type: gkeCluster
-  #   integration: scriptnull-gke
-  #   pointer:
-  #     sourceName: "micro-cluster" #name of the cluster we are deploying.
-  #     region: "us-east1-d"
-  #
-  # - name: sn-small-gke
-  #   type: gkeCluster
-  #   integration: scriptnull-gke
-  #   pointer:
-  #     sourceName: "small-cluster" #name of the cluster we are deploying.
-  #     region: "us-east1-d"
-
-  #
-  # - name: sn-tri
-  #   type: tripubCluster
-  #   integration: scriptnull-triton
-  #   pointer:
-  #     sourceName: "my-triton"
-  #   version:
-  #     region: "us-east-1"

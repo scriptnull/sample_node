@@ -1,14 +1,4 @@
 triggers:
-  - name: b-sun-trigger
-    type: trigger
-    pointer:
-      counter: 11
-
-  - name: bbg-sun-trigger
-    type: trigger
-    pointer:
-      counter: 15
-
   - name: b-ddc-trigger
     type: trigger
     pointer:

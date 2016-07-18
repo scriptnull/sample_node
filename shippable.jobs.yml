@@ -1,68 +1,14 @@
 jobs:
-  - name: b-sunecs-1-man
-    type: manifest
-    steps:
-      - IN: sn-nginx
-      - IN: b-sun-trigger
-      - TASK: managed
-
-  - name: b-sunecs-2-man
-    type: manifest
-    steps:
-      - IN: sn-sn
-      - IN: b-sun-trigger
-      - TASK: managed
-
-  - name: b-sun-ecs
-    type: ecsDeploy
-    steps:
-      - IN: b-sunecs-1-man
-      - IN: b-sunecs-2-man
-      - IN: sn-ecs
-      - TASK: managed
-        deployMethod: upgrade
-
-  - name: bbg-sunecs-1-man
-    type: manifest
-    steps:
-      - IN: sn-sn
-      - IN: bbg-sun-trigger
-      - TASK: managed
-
-  - name: bbg-sunecs-2-man
-    type: manifest
-    steps:
-      - IN: sn-nginx
-      - IN: bbg-sun-trigger
-      - TASK: managed
-
-  - name: x-bbg-sun-ecs
-    type: ecsDeploy
-    steps:
-      - IN: bbg-sunecs-1-man
-      - IN: bbg-sunecs-2-man
-      - IN: sn-ecs
-      - TASK: managed
-        deployMethod: blueGreen
-
-  - name: b-sunddc-1-man
+  - name: b-monddc-1-man
     type: manifest
     steps:
       - IN: sn-nginx
       - IN: b-ddc-trigger
       - TASK: managed
 
-  - name: b-sunddc-2-man
-    type: manifest
-    steps:
-      - IN: sn-sn
-      - IN: b-ddc-trigger
-      - TASK: managed
-
-  - name: b-sun-ddc
+  - name: mon-ddc
     type: ddcDeploy
     steps:
-      - IN: b-sunddc-1-man
-      - IN: b-sunddc-2-man
-      - IN: sn-ddc-2
+      - IN: b-monddc-1-man
+      - IN: gen-ddc-cluster
       - TASK: managed
