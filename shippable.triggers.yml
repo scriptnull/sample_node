@@ -2,7 +2,7 @@ triggers:
   - name: l-ddc-trigger
     type: trigger
     pointer:
-      counter: 9
+      counter: 10
 
   # - name: l-sun-trigger
   #   type: trigger
