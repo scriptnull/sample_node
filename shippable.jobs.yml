@@ -2,7 +2,7 @@ jobs:
   - name: l-mon-common
     type: manifest
     steps:
-      - IN: sn-nginx
+      - IN: sn-sn
       - IN: l-mon-trigger
       - TASK: managed
 
