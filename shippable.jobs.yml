@@ -1,14 +1,42 @@
 jobs:
-  - name: b-monddc-1-man
+  - name: b-mon-common
     type: manifest
     steps:
       - IN: sn-nginx
-      - IN: b-ddc-trigger
+      - IN: b-mon-trigger
       - TASK: managed
 
-  - name: mon-ddc
+  - name: b-mon-ddc
     type: ddcDeploy
     steps:
-      - IN: b-monddc-1-man
-      - IN: gen-ddc-cluster
+      - IN: b-mon-common
+      - IN: cluster-ddc
+      - TASK: managed
+
+  - name: b-mon-dcl
+    type: dclDeploy
+    steps:
+      - IN: b-mon-common
+      - IN: cluster-dcl
+      - TASK: managed
+
+  - name: b-mon-ecs
+    type: ecsDeploy
+    steps:
+      - IN: b-mon-common
+      - IN: cluster-aws
+      - TASK: managed
+
+  - name: b-mon-gke
+    type: gkeDeploy
+    steps:
+      - IN: b-mon-common
+      - IN: cluster-gke
+      - TASK: managed
+
+  - name: b-mon-tripub
+    type: tripubDeploy
+    steps:
+      - IN: b-mon-common
+      - IN: cluster-tripub
       - TASK: managed

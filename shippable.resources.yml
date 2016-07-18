@@ -36,8 +36,35 @@ resources:
     version:
       count: 2
 
-  - name: gen-ddc-cluster
+  - name: cluster-ddc
     type: cluster
     integration: scriptnull-ddc
     pointer:
       sourceName : "nothing"
+
+  - name: cluster-dcl
+    type: cluster
+    integration: scriptnull-dcl
+    pointer:
+     sourceName : "cluster-dcl"
+
+  - name: cluster-aws
+    type: cluster
+    integration: scriptnull-aws
+    pointer:
+      sourceName : "testCL"
+      region: "us-west-2"
+
+  - name: cluster-gke
+    type: cluster
+    integration: scriptnull-gke
+    pointer:
+      sourceName: "small-cluster" #name of the cluster we are deploying.
+      region: "us-east1-d"
+
+  - name: cluster-tripub
+    type: cluster
+    integration: scriptnull-triton
+    pointer:
+      sourceName: "my-triton"
+      region: "us-east-1"
