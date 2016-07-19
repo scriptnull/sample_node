@@ -78,7 +78,7 @@ resources:
 
   - name: invalid-repo
     type: gitRepo
-    integration: github
+    integration: scriptnull-github
     pointer:
       sourceName: scriptnull/invalid
       branch: invalidBranch
