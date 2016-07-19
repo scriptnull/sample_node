@@ -81,4 +81,4 @@ resources:
     integration: scriptnull-github
     pointer:
       sourceName: scriptnull/invalid
-      branch: invalidBranch
+      branch: invalidBranch-x
