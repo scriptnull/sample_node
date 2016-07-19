@@ -6,73 +6,73 @@ jobs:
       - IN: l-tue-new-trigger
       - TASK: managed
 
-  # - name: l-tue-new-ddc
-  #   type: ddcDeploy
-  #   steps:
-  #     - IN: l-tue-new-common
-  #     - IN: cluster-old-dcl
-  #     - TASK: managed
-  #
-  # - name: l-tue-new-dcl
-  #   type: dclDeploy
-  #   steps:
-  #     - IN: l-tue-new-common
-  #     - IN: cluster-old-aws
-  #     - TASK: managed
-  #
-  # - name: l-tue-new-ecs
-  #   type: ecsDeploy
-  #   steps:
-  #     - IN: l-tue-new-common
-  #     - IN: cluster-old-gke
-  #     - TASK: managed
-  #
-  # - name: l-tue-new-gke
-  #   type: gkeDeploy
-  #   steps:
-  #     - IN: l-tue-new-common
-  #     - IN: cluster-old-ddc
-  #     - TASK: managed
-  #
-  # - name: l-tue-new-tripub
-  #   type: tripubDeploy
-  #   steps:
-  #     - IN: l-tue-new-common
-  #     - IN: cluster-old-ddc
-  #     - TASK: managed
-
-
-  - name: l-tue-ddc
+  - name: l-tue-new-ddc
     type: ddcDeploy
     steps:
-      - IN: l-tue-common
-      - IN: cluster-ddc
+      - IN: l-tue-new-common
+      - IN: cluster-old-dcl
       - TASK: managed
 
-  - name: l-tue-dcl
+  - name: l-tue-new-dcl
     type: dclDeploy
     steps:
-      - IN: l-tue-common
-      - IN: cluster-dcl
+      - IN: l-tue-new-common
+      - IN: cluster-old-aws
       - TASK: managed
 
-  - name: l-tue-ecs
+  - name: l-tue-new-ecs
     type: ecsDeploy
     steps:
-      - IN: l-tue-common
-      - IN: cluster-ecs
+      - IN: l-tue-new-common
+      - IN: cluster-old-gke
       - TASK: managed
 
-  - name: l-tue-gke
+  - name: l-tue-new-gke
     type: gkeDeploy
     steps:
-      - IN: l-tue-common
-      - IN: cluster-gke
+      - IN: l-tue-new-common
+      - IN: cluster-old-ddc
       - TASK: managed
 
-  - name: l-tue-tripub
+  - name: l-tue-new-tripub
     type: tripubDeploy
     steps:
-      - IN: l-tue-common
-      - IN: cluster-tripub
+      - IN: l-tue-new-common
+      - IN: cluster-old-ddc
       - TASK: managed
+
+  #
+  # - name: l-tue-ddc
+  #   type: ddcDeploy
+  #   steps:
+  #     - IN: l-tue-common
+  #     - IN: cluster-ddc
+  #     - TASK: managed
+  #
+  # - name: l-tue-dcl
+  #   type: dclDeploy
+  #   steps:
+  #     - IN: l-tue-common
+  #     - IN: cluster-dcl
+  #     - TASK: managed
+  #
+  # - name: l-tue-ecs
+  #   type: ecsDeploy
+  #   steps:
+  #     - IN: l-tue-common
+  #     - IN: cluster-ecs
+  #     - TASK: managed
+  #
+  # - name: l-tue-gke
+  #   type: gkeDeploy
+  #   steps:
+  #     - IN: l-tue-common
+  #     - IN: cluster-gke
+  #     - TASK: managed
+  #
+  # - name: l-tue-tripub
+  #   type: tripubDeploy
+  #   steps:
+  #     - IN: l-tue-common
+  #     - IN: cluster-tripub
+  #     - TASK: managed
