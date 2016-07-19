@@ -2,4 +2,4 @@ triggers:
   - name: l-mon-new-trigger
     type: trigger
     pointer:
-      counter: 7
+      counter: 8
