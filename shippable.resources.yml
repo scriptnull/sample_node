@@ -101,3 +101,10 @@ resources:
     pointer:
       sourceName: "my-triton"
       region: "us-east-1"
+
+  - name: invalid-repo
+    type: gitRepo
+    integration: github
+    pointer:
+      sourceName: scriptnull/invalid
+      branch: master
