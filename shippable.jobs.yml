@@ -2,42 +2,42 @@ jobs:
   - name: l-tue-common
     type: manifest
     steps:
-      - IN: sn-nginx
+      - IN: sn-sn
       - IN: l-tue-new-trigger
       - TASK: managed
 
   - name: l-tue-new-ddc
     type: ddcDeploy
     steps:
-      - IN: l-tue-new-common
+      - IN: l-tue-common
       - IN: cluster-old-dcl
       - TASK: managed
 
   - name: l-tue-new-dcl
     type: dclDeploy
     steps:
-      - IN: l-tue-new-common
+      - IN: l-tue-common
       - IN: cluster-old-aws
       - TASK: managed
 
   - name: l-tue-new-ecs
     type: ecsDeploy
     steps:
-      - IN: l-tue-new-common
+      - IN: l-tue-common
       - IN: cluster-old-gke
       - TASK: managed
 
   - name: l-tue-new-gke
     type: gkeDeploy
     steps:
-      - IN: l-tue-new-common
+      - IN: l-tue-common
       - IN: cluster-old-ddc
       - TASK: managed
 
   - name: l-tue-new-tripub
     type: tripubDeploy
     steps:
-      - IN: l-tue-new-common
+      - IN: l-tue-common
       - IN: cluster-old-ddc
       - TASK: managed
 
