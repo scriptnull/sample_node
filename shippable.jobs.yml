@@ -1,5 +1,5 @@
 jobs:
-  - name: l-tue-new-common
+  - name: l-tue-common
     type: manifest
     steps:
       - IN: sn-nginx
