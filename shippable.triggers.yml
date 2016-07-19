@@ -3,3 +3,8 @@ triggers:
     type: trigger
     pointer:
       counter: 8
+
+  - name: b-tue-trigger
+    type: trigger
+    pointer:
+      counter: 8

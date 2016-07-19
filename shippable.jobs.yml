@@ -6,6 +6,20 @@ jobs:
       - IN: b-mon-trigger
       - TASK: managed
 
+  - name: b-tue-common
+    type: manifest
+    steps:
+      - IN: sn-nginx
+      - IN: b-tue-trigger
+      - TASK: managed
+
+  - name: b-tue-ecs
+    type: ecsDeploy
+    steps:
+      - IN: b-tue-common
+      - IN: cluster-old-aws
+      - TASK: managed
+
   - name: b-mon-ddc
     type: ddcDeploy
     steps:

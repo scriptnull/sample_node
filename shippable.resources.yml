@@ -68,3 +68,10 @@ resources:
     pointer:
       sourceName: "my-triton"
       region: "us-east-1"
+
+  - name: cluster-old-aws
+    type: ecsCluster
+    integration: scriptnull-aws
+    pointer:
+      sourceName : "testCL"
+      region: "us-west-2"
