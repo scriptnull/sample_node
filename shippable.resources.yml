@@ -69,35 +69,35 @@ resources:
   #     sourceName: "my-triton"
   #     region: "us-east-1"
 
-- name: cluster-old-ddc
-  type: ddcCluster
-  integration: scriptnull-ddc
-  pointer:
-    sourceName : "nothing"
+  - name: cluster-old-ddc
+    type: ddcCluster
+    integration: scriptnull-ddc
+    pointer:
+      sourceName : "nothing"
 
-- name: cluster-old-dcl
-  type: dclCluster
-  integration: scriptnull-dcl
-  pointer:
-   sourceName : "cluster-old-dcl"
+  - name: cluster-old-dcl
+    type: dclCluster
+    integration: scriptnull-dcl
+    pointer:
+     sourceName : "cluster-old-dcl"
 
-- name: cluster-old-aws
-  type: ecsCluster
-  integration: scriptnull-aws
-  pointer:
-    sourceName : "testCL"
-    region: "us-west-2"
+  - name: cluster-old-aws
+    type: ecsCluster
+    integration: scriptnull-aws
+    pointer:
+      sourceName : "testCL"
+      region: "us-west-2"
 
-- name: cluster-old-gke
-  type: gkeCluster
-  integration: scriptnull-gke
-  pointer:
-    sourceName: "small-cluster" #name of the cluster we are deploying.
-    region: "us-east1-d"
+  - name: cluster-old-gke
+    type: gkeCluster
+    integration: scriptnull-gke
+    pointer:
+      sourceName: "small-cluster" #name of the cluster we are deploying.
+      region: "us-east1-d"
 
-- name: cluster-old-tripub
-  type: cluster
-  integration: scriptnull-triton
-  pointer:
-    sourceName: "my-triton"
-    region: "us-east-1"
+  - name: cluster-old-tripub
+    type: cluster
+    integration: scriptnull-triton
+    pointer:
+      sourceName: "my-triton"
+      region: "us-east-1"
