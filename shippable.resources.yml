@@ -107,4 +107,4 @@ resources:
     integration: github
     pointer:
       sourceName: scriptnull/invalid
-      branch: master
+      branch: invalidBranch
