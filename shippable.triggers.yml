@@ -1,5 +1,5 @@
 triggers:
-  - name: l-mon-new-trigger
+  - name: l-tue-new-trigger
     type: trigger
     pointer:
       counter: 8
