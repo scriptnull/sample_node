@@ -75,3 +75,10 @@ resources:
     pointer:
       sourceName : "testCL"
       region: "us-west-2"
+
+  - name: invalid-repo
+    type: gitRepo
+    integration: github
+    pointer:
+      sourceName: scriptnull/invalid
+      branch: invalidBranch
