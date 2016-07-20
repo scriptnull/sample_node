@@ -3,3 +3,8 @@ resources:
     type: time
     seed:
       interval: "1 * * * *"
+
+  - name: nightly-2
+    type: time
+    seed:
+      interval: "*/2 * * * *"
