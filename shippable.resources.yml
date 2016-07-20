@@ -82,3 +82,8 @@ resources:
     pointer:
       sourceName: scriptnull/invalid
       branch: invalidBranch-x
+
+  - name: nightly-beta
+    type: time
+    seed:
+      interval: "*/2 * * * *"
