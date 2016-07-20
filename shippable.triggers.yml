@@ -1,5 +1,0 @@
-triggers:
-  - name: l-tue-new-trigger
-    type: trigger
-    pointer:
-      counter: 11
