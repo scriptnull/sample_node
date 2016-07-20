@@ -1,5 +1,5 @@
 resources:
-  - name: nightly-1
+  - name: nightly
     type: time
     seed:
-      interval: "* 20 * * *"
+      interval: "*/2 * * * *"
