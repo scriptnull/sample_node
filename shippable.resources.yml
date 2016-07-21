@@ -34,8 +34,8 @@ resources:
     version:
       memory: 400
       user: "driftking"
-      workingDir: "/makemeworking"
+      workingDir: "/app"
       publishAllPorts: true
       cmd:
         - "node"
-        - "job2.js"
+        - "job3.js"
