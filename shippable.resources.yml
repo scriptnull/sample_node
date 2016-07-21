@@ -19,7 +19,7 @@ resources:
     type: cluster
     integration: scriptnull-triton
     pointer:
-      region: "us-east-1"
+      region: "us-east-2"
 
   - name: sn-opts
     type: dockerOptions
