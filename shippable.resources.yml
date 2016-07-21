@@ -24,4 +24,4 @@ resources:
   - name: sn-opts
     type: dockerOptions
     version:
-      user: "yoyo"
+      publishAllPorts: true
