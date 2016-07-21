@@ -36,4 +36,4 @@ resources:
       user: "driftking"
       workingDir: "/app"
       publishAllPorts: true
-      cmd: "node job2.js"
+      cmd: "node job.js"
