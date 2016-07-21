@@ -34,6 +34,6 @@ resources:
     version:
       memory: 400
       user: "driftking"
-      # workingDir: "/app"
+      workingDir: "/app"
       publishAllPorts: true
       cmd: "node job.js"
