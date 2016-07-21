@@ -24,4 +24,5 @@ resources:
   - name: sn-opts
     type: dockerOptions
     version:
+      memory: 400
       publishAllPorts: true
