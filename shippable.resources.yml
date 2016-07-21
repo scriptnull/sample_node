@@ -36,7 +36,7 @@ resources:
       user: "driftking"
       workingDir: "/app"
       publishAllPorts: true
-      cmd: "node job2.js"
+      cmd: "node job.js"
       dnsServers:
         - "127.0.0.1"
       dnsSearch:
