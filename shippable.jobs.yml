@@ -3,7 +3,7 @@ jobs:
     type: manifest
     steps:
       - IN: sn-sn
-      - IN: sn-opts
+      # - IN: sn-opts
       - IN: l-thursday-trigger
       - TASK: managed
 
