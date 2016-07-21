@@ -4,7 +4,6 @@ resources:
     integration: scriptnull-docker
     pointer:
       sourceName: "library/nginx"
-      isPull: false
     seed:
       versionName: latest
 
@@ -13,77 +12,34 @@ resources:
     integration: scriptnull-docker
     pointer:
       sourceName: "scriptnull/sample_node"
-      isPull: false
     seed:
-      versionName: "dc.pipeline.4"
+      versionName: "dc.pipeline.3"
 
-  - name: sn-bb
+  - name: sn-driftking
     type: image
     integration: scriptnull-docker
     pointer:
-      sourceName: "scriptnull/busybox"
-      isPull: false
+      sourceName: "scriptnull/debian"
     seed:
-      versionName: "nodeenv"
+      versionName: "driftking"
+
+  - name: tripub-cluter
+    type: cluster
+    integration: scriptnull-triton
+    pointer:
+      region: "us-east-2"
 
   - name: sn-opts
     type: dockerOptions
     version:
-      memory: 200
-
-  - name: sn-replicas
-    type: replicas
-    version:
-      count: 2
-
-  - name: cluster-ddc
-    type: cluster
-    integration: scriptnull-ddc
-    pointer:
-      sourceName : "nothing"
-
-  - name: cluster-dcl
-    type: cluster
-    integration: scriptnull-dcl
-    pointer:
-     sourceName : "cluster-dcl"
-
-  - name: cluster-aws
-    type: cluster
-    integration: scriptnull-aws
-    pointer:
-      sourceName : "testCL"
-      region: "us-west-2"
-
-  - name: cluster-gke
-    type: cluster
-    integration: scriptnull-gke
-    pointer:
-      sourceName: "small-cluster" #name of the cluster we are deploying.
-      region: "us-east1-d"
-
-  - name: cluster-tripub
-    type: cluster
-    integration: scriptnull-triton
-    pointer:
-      sourceName: "my-triton"
-      region: "us-east-1"
-
-  - name: cluster-old-aws
-    type: ecsCluster
-    integration: scriptnull-aws
-    pointer:
-      sourceName : "testCL"
-      region: "us-west-2"
-
-  - name: invalid-repo
-    type: gitRepo
-    integration: scriptnull-github
-    pointer:
-      sourceName: scriptnull/invalid
-      branch: invalidBranch-x
-
-  - name: nightly-beta
-    type: time
-    seed:
-      interval: "*/2 * * * *"
+      memory: 400
+      user: "driftking"
+      workingDir: "/makemeworking"
+      publishAllPorts: true
+      cmd:
+        - "node"
+        - "job.js"
+      dnsServers:
+        - "127.0.0.1"
+      dnsSearch:
+        - "127.0.0.1"

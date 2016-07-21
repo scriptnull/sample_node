@@ -1,56 +1,15 @@
 jobs:
-  - name: b-mon-common
+  - name: b-th-manifest
     type: manifest
     steps:
-      - IN: sn-nginx
-      - IN: b-mon-trigger
+      - IN: sn-driftking
+      - IN: sn-opts
+      - IN: b-thursday-trigger
       - TASK: managed
 
-  - name: b-tue-common
-    type: manifest
-    steps:
-      - IN: sn-nginx
-      - IN: b-tue-trigger
-      - TASK: managed
-
-  - name: b-tue-ecs
-    type: ecsDeploy
-    steps:
-      - IN: b-tue-common
-      - IN: cluster-old-aws
-      - TASK: managed
-
-  - name: b-mon-ddc
-    type: ddcDeploy
-    steps:
-      - IN: b-mon-common
-      - IN: cluster-dcl
-      - TASK: managed
-
-  - name: b-mon-dcl
-    type: dclDeploy
-    steps:
-      - IN: b-mon-common
-      - IN: cluster-aws
-      - TASK: managed
-
-  - name: b-mon-ecs
-    type: ecsDeploy
-    steps:
-      - IN: b-mon-common
-      - IN: cluster-gke
-      - TASK: managed
-
-  - name: b-mon-gke
-    type: gkeDeploy
-    steps:
-      - IN: b-mon-common
-      - IN: cluster-tripub
-      - TASK: managed
-
-  - name: b-mon-tripub
+  - name: b-th-deploy
     type: tripubDeploy
     steps:
-      - IN: b-mon-common
-      - IN: cluster-ddc
+      - IN: b-th-manifest
+      - IN: tripub-cluter
       - TASK: managed
