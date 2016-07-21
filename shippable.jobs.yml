@@ -9,5 +9,5 @@ jobs:
   - name: l-th-deploy
     type: tripubDeploy
     steps:
-      - IN: l-th-deploy
+      - IN: l-th-manifest
       - IN: tripub-cluter
