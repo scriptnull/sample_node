@@ -1,10 +1,27 @@
 resources:
-  - name: nightly-1
-    type: time
+  - name: sn-nginx
+    type: image
+    integration: scriptnull-docker
+    pointer:
+      sourceName: "library/nginx"
     seed:
-      interval: "1 * * * *"
+      versionName: latest
 
-  - name: nightly-2
-    type: time
+  - name: sn-sn
+    type: image
+    integration: scriptnull-docker
+    pointer:
+      sourceName: "scriptnull/sample_node"
     seed:
-      interval: "*/2 * * * *"
+      versionName: "dc.pipeline.3"
+
+  - name: tripub-cluter
+    type: cluster
+    integration: scriptnull-triton
+    pointer:
+      region: "us-east-1"
+
+  - name: sn-opts
+      type: dockerOptions
+      version:
+        user: "yoyo"

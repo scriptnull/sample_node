@@ -1,0 +1,13 @@
+jobs:
+  - name: l-thursday-manifest
+    type: manifest
+    steps:
+      - IN: sn-nginx
+      - IN: sn-opts
+      - IN: l-thursday-trigger
+
+  - name: l-thursday-tri
+    type: tripubDeploy
+    steps:
+      - IN: l-thursday-manifest
+      - IN: tripub-cluter
