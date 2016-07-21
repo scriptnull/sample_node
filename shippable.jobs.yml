@@ -2,7 +2,7 @@ jobs:
   - name: l-th-manifest
     type: manifest
     steps:
-      - IN: sn-sn
+      - IN: sn-nginx
       - IN: sn-opts
       - IN: l-thursday-trigger
       - TASK: managed

@@ -2,4 +2,4 @@ triggers:
   - name: l-thursday-trigger
     type: trigger
     pointer:
-      counter: 5
+      counter: 6
