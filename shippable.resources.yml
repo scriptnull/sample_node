@@ -15,6 +15,14 @@ resources:
     seed:
       versionName: "dc.pipeline.3"
 
+  - name: sn-driftking
+    type: image
+    integration: scriptnull-docker
+    pointer:
+      sourceName: "scriptnull/debian"
+    seed:
+      versionName: "driftking"
+
   - name: tripub-cluter
     type: cluster
     integration: scriptnull-triton
