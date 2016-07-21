@@ -33,4 +33,5 @@ resources:
     type: dockerOptions
     version:
       memory: 400
+      user: "driftking"
       publishAllPorts: true
