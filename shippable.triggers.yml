@@ -2,4 +2,4 @@ triggers:
   - name: lf-trigger-yy
     type: trigger
     pointer:
-      counter: 42
+      counter: 43
