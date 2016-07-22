@@ -1,15 +1,13 @@
 jobs:
-  - name: l-th-manifest
+  - name: l-fri-manifest
     type: manifest
     steps:
       - IN: sn-driftking
       - IN: sn-opts
-      - IN: l-thursday-trigger
-      - TASK: managed
+      - IN: l-friday-trigger
 
-  - name: l-th-deploy
+  - name: l-fri-deploy
     type: tripubDeploy
     steps:
-      - IN: l-th-manifest
+      - IN: l-fri-manifest
       - IN: tripub-cluter
-      - TASK: managed

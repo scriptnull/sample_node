@@ -1,5 +1,5 @@
 triggers:
-  - name: l-thursday-trigger
+  - name: l-friday-trigger
     type: trigger
     pointer:
       counter: 30
