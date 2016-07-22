@@ -41,6 +41,7 @@ resources:
     type: dockerOptions
     version:
       memory: 400
+      privileged: true
       entryPoint:
         - '/bin/sh'
         - './entrypoint2.sh'
