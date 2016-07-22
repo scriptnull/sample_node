@@ -41,6 +41,7 @@ resources:
     type: dockerOptions
     version:
       memory: 400
+      entryPoint: './entrypoint2.sh'
       user: "driftking"
       workingDir: "/app"
       publishAllPorts: true
