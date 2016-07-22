@@ -38,3 +38,6 @@ jobs:
       - IN: sn-driftking
       - IN: sn-opts
       - IN: l2-trigger
+
+    - name: invalid-job-1
+      type: manifest
