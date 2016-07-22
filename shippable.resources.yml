@@ -41,10 +41,10 @@ resources:
     type: dockerOptions
     version:
       memory: 400
-      privileged: true
-      entryPoint:
-        - '/bin/sh'
-        - './entrypoint2.sh'
+      # privileged: true
+      # entryPoint:
+      #   - '/bin/sh'
+      #   - './entrypoint2.sh'
       # cmd: './entrypoint2.sh'
       user: "driftking"
       workingDir: "/app"

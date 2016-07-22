@@ -5,11 +5,9 @@ jobs:
       - IN: sn-entrypoint
       - IN: sn-opts
       - IN: lf-trigger-yy
-      - TASK: managed
 
   - name: lf-deploy-yy
     type: tripubDeploy
     steps:
       - IN: lf-man-yy
       - IN: tripub-cluter
-      - TASK: managed
