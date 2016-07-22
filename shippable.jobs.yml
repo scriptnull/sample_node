@@ -6,6 +6,11 @@ jobs:
       - IN: sn-opts
       - IN: l-friday-trigger
 
+  - name: l2-man
+    type: manifest
+    steps:
+      - IN: sn-driftking
+      - IN: l2-trigger
   # - name: l-fri-deploy
   #   type: tripubDeploy
   #   steps:
