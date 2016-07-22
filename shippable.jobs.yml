@@ -12,6 +12,20 @@ jobs:
       - IN: lf-man
       - IN: tripub-cluter
 
+  - name: lf-man-xx
+    type: manifest
+    steps:
+      - IN: sn-entrypoint
+      - IN: sn-opts
+      - IN: l-friday-trigger-xx
+
+  - name: lf-deploy-xx
+    type: tripubDeploy
+    steps:
+      - IN: lf-man
+      - IN: tripub-cluter
+      - TASK: managed
+
   # - name: l2-man
   #   type: manifest
   #   steps:
