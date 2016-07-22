@@ -24,20 +24,20 @@ jobs:
   #   steps:
   #     - IN: l-fri-manifest
   #     - IN: tripub-cluter
+  #
+  # - name: l-fri-manifest-2
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-driftking
+  #     - IN: sn-opts
+  #     - IN: l-friday-trigger
+  #
+  # - name: invalid-job
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-driftking
+  #     - IN: sn-opts
+  #     - IN: l2-trigger
 
-  - name: l-fri-manifest-2
-    type: manifest
-    steps:
-      - IN: sn-driftking
-      - IN: sn-opts
-      - IN: l-friday-trigger
-
-  - name: invalid-job
-    type: manifest
-    steps:
-      - IN: sn-driftking
-      - IN: sn-opts
-      - IN: l2-trigger
-
-  - name: invalid-job-x
+  - name: invalid-job-y
     type: manifest
