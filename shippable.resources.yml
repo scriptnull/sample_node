@@ -23,11 +23,11 @@ resources:
     seed:
       versionName: "driftking"
 
-  - name: tripub-cluter
-    type: cluster
-    integration: scriptnull-triton
-    pointer:
-      region: "us-east-2"
+  # - name: tripub-cluter
+  #   type: cluster
+  #   integration: scriptnull-triton
+  #   pointer:
+  #     region: "us-east-2"
 
   - name: sn-opts
     type: dockerOptions
