@@ -1,63 +1,15 @@
 jobs:
-  - name: lf-man
+  - name: lf-man-yy
     type: manifest
     steps:
       - IN: sn-entrypoint
       - IN: sn-opts
-      - IN: l-friday-trigger
-
-  - name: lf-deploy-1
-    type: tripubDeploy
-    steps:
-      - IN: lf-man
-      - IN: tripub-cluter
-
-  - name: lf-man-xx
-    type: manifest
-    steps:
-      - IN: sn-entrypoint
-      # - IN: sn-opts
-      - IN: l-friday-trigger-xx
-
-  - name: lf-deploy-xx
-    type: tripubDeploy
-    steps:
-      - IN: lf-man-xx
-      - IN: tripub-cluter
+      - IN: lf-trigger-yy
       - TASK: managed
 
-  # - name: l2-man
-  #   type: manifest
-  #   steps:
-  #     - IN: sn-driftking
-  #     - IN: l2-trigger
-
-  # - name: l3-man-1
-  #   type: manifest
-  #   steps:
-  #     - IN: sn-driftking
-  #     - IN: l3-trigger
-  #     - TASK: managed
-
-  # - name: l-fri-deploy
-  #   type: tripubDeploy
-  #   steps:
-  #     - IN: l-fri-manifest
-  #     - IN: tripub-cluter
-  #
-  # - name: l-fri-manifest-2
-  #   type: manifest
-  #   steps:
-  #     - IN: sn-driftking
-  #     - IN: sn-opts
-  #     - IN: l-friday-trigger
-  #
-  # - name: invalid-job
-  #   type: manifest
-  #   steps:
-  #     - IN: sn-driftking
-  #     - IN: sn-opts
-  #     - IN: l2-trigger
-
-  # - name: invalid-job-y
-  #   type: manifest
+  - name: lf-deploy-yy
+    type: tripubDeploy
+    steps:
+      - IN: lf-man-yy
+      - IN: tripub-cluter
+      - TASK: managed

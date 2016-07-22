@@ -1,15 +1,5 @@
 triggers:
-  - name: l-friday-trigger
+  - name: lf-trigger-yy
     type: trigger
     pointer:
-      counter: 35
-
-  - name: l-friday-trigger-xx
-    type: trigger
-    pointer:
-      counter: 37
-
-  - name: l2-trigger
-    type: trigger
-    pointer:
-      counter: 31
+      counter: 36
