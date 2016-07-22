@@ -16,13 +16,13 @@ jobs:
     type: manifest
     steps:
       - IN: sn-entrypoint
-      - IN: sn-opts
+      # - IN: sn-opts
       - IN: l-friday-trigger-xx
 
   - name: lf-deploy-xx
     type: tripubDeploy
     steps:
-      - IN: lf-man
+      - IN: lf-man-xx
       - IN: tripub-cluter
       - TASK: managed
 

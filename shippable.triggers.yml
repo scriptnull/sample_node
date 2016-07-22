@@ -7,15 +7,9 @@ triggers:
   - name: l-friday-trigger-xx
     type: trigger
     pointer:
-      counter: 36
+      counter: 37
 
   - name: l2-trigger
     type: trigger
     pointer:
       counter: 31
-
-  - name: l3-man
-    type: manifest
-    steps:
-      - IN: sn-driftking
-      - IN: l3-trigger
