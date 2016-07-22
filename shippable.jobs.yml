@@ -1,10 +1,16 @@
 jobs:
-  # - name: l-fri-manifest-1
-  #   type: manifest
-  #   steps:
-  #     - IN: sn-driftking
-  #     - IN: sn-opts
-  #     - IN: l-friday-trigger
+  - name: lf-man
+    type: manifest
+    steps:
+      - IN: sn-entrypoint
+      - IN: sn-opts
+      - IN: l-friday-trigger
+
+  - name: lf-deploy
+    type: tripubDeploy
+    steps:
+      - IN: lf-man
+      - IN: tripub-cluter
 
   # - name: l2-man
   #   type: manifest
@@ -39,5 +45,5 @@ jobs:
   #     - IN: sn-opts
   #     - IN: l2-trigger
 
-  - name: invalid-job-y
-    type: manifest
+  # - name: invalid-job-y
+  #   type: manifest
