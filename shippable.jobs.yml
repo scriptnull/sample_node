@@ -1,22 +1,24 @@
 jobs:
-  - name: l-fri-manifest
+  - name: l-fri-manifest-1
     type: manifest
     steps:
       - IN: sn-driftking
       - IN: sn-opts
       - IN: l-friday-trigger
 
-  - name: l2-man
+  # - name: l2-man
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-driftking
+  #     - IN: l2-trigger
+
+  - name: l3-man-1
     type: manifest
     steps:
       - IN: sn-driftking
-      - IN: l2-trigger
+      - IN: l3-trigger
+      - TASK: managed
 
-    - name: l3-man
-      type: manifest
-      steps:
-        - IN: sn-driftking
-        - IN: l3-trigger
   # - name: l-fri-deploy
   #   type: tripubDeploy
   #   steps:
