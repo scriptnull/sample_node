@@ -2,7 +2,7 @@ triggers:
   - name: l-friday-trigger
     type: trigger
     pointer:
-      counter: 33
+      counter: 34
 
   - name: l2-trigger
     type: trigger

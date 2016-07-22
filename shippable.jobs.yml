@@ -3,7 +3,7 @@ jobs:
     type: manifest
     steps:
       - IN: sn-entrypoint
-      - IN: sn-opts
+      # - IN: sn-opts
       - IN: l-friday-trigger
 
   - name: lf-deploy
