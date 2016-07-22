@@ -39,5 +39,5 @@ jobs:
       - IN: sn-opts
       - IN: l2-trigger
 
-    - name: invalid-job-1
-      type: manifest
+  - name: invalid-job-x
+    type: manifest
