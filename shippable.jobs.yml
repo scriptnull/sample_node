@@ -31,3 +31,10 @@ jobs:
       - IN: sn-driftking
       - IN: sn-opts
       - IN: l-friday-trigger
+
+  - name: invalid-job
+    type: manifest
+    steps:
+      - IN: sn-driftking
+      - IN: sn-opts
+      - IN: l2-trigger
