@@ -8,3 +8,9 @@ triggers:
     type: trigger
     pointer:
       counter: 31
+
+  - name: l3-man
+    type: manifest
+    steps:
+      - IN: sn-driftking
+      - IN: l3-trigger
