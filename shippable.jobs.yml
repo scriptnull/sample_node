@@ -6,8 +6,8 @@ jobs:
       - IN: sn-opts
       - IN: l-friday-trigger
 
-  - name: l-fri-deploy
-    type: tripubDeploy
-    steps:
-      - IN: l-fri-manifest
-      - IN: tripub-cluter
+  # - name: l-fri-deploy
+  #   type: tripubDeploy
+  #   steps:
+  #     - IN: l-fri-manifest
+  #     - IN: tripub-cluter
