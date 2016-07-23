@@ -2,4 +2,4 @@ triggers:
   - name: lsa-trigger-yy
     type: trigger
     pointer:
-      counter: 46
+      counte: 47
