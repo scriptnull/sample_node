@@ -7,4 +7,4 @@ triggers:
   - name: lsa-trigger-app
     type: trigger
     pointer:
-      counte: 53
+      counte: 54
