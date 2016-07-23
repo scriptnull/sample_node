@@ -50,3 +50,5 @@ resources:
     version:
       memory: 400
       publishAllPorts: true
+      links:
+        - "lsa-man-yy_0_0:redis"

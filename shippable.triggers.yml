@@ -3,3 +3,8 @@ triggers:
     type: trigger
     pointer:
       counte: 47
+
+  - name: lsa-trigger-app
+    type: trigger
+    pointer:
+      counte: 47

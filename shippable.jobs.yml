@@ -2,12 +2,24 @@ jobs:
   - name: lsa-man-yy
     type: manifest
     steps:
+      - IN: sn-redis
+      - IN: lsa-trigger-yy
+
+  - name: lsa-man-dk
+    type: manifest
+    steps:
       - IN: sn-driftking
       - IN: sn-opts
-      - IN: lsa-trigger-yy
+      - IN: lsa-trigger-app
 
   - name: lsa-deploy-yy
     type: tripubDeploy
     steps:
       - IN: lsa-man-yy
+      - IN: tripub-cluter
+
+  - name: lsa-deploy-app
+    type: tripubDeploy
+    steps:
+      - IN: lsa-man-dk
       - IN: tripub-cluter
