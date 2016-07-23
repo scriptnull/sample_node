@@ -52,3 +52,9 @@ resources:
       publishAllPorts: true
       links:
         - "lsa-man-yy_0_0:redis"
+
+  - name: sn-redis-params
+    type: params
+    version:
+      params:
+        mykey: "myvalue"

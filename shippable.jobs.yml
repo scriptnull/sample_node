@@ -3,13 +3,14 @@ jobs:
     type: manifest
     steps:
       - IN: sn-redis
+      - IN: sn-redis-params
       - IN: lsa-trigger-yy
 
   - name: lsa-man-dk
     type: manifest
     steps:
-      - IN: sn-driftking
-      - IN: sn-opts
+      - IN: sn-entrypoint
+      # - IN: sn-opts
       - IN: lsa-trigger-app
 
   - name: lsa-deploy-yy
