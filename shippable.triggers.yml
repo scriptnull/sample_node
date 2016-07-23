@@ -2,9 +2,9 @@ triggers:
   - name: lsa-trigger-yy
     type: trigger
     pointer:
-      counte: 47
+      counte: 48
 
   - name: lsa-trigger-app
     type: trigger
     pointer:
-      counte: 47
+      counte: 48
