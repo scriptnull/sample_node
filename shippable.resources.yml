@@ -7,6 +7,14 @@ resources:
     seed:
       versionName: latest
 
+  - name: sn-redis
+    type: image
+    integration: scriptnull-docker
+    pointer:
+      sourceName: "library/nginx"
+    seed:
+      versionName: latest
+
   - name: sn-sn
     type: image
     integration: scriptnull-docker
@@ -41,11 +49,4 @@ resources:
     type: dockerOptions
     version:
       memory: 400
-      # privileged: true
-      entryPoint:
-        - '/bin/sh'
-        - './entrypoint2.sh'
-      # cmd: './entrypoint2.sh'
-      user: "driftking"
-      workingDir: "/app"
       publishAllPorts: true

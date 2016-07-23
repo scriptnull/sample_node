@@ -1,13 +1,13 @@
 jobs:
-  - name: lf-man-yy
+  - name: lsa-man-yy
     type: manifest
     steps:
-      - IN: sn-entrypoint
+      - IN: sn-redis
       - IN: sn-opts
-      - IN: lf-trigger-yy
+      - IN: lsa-trigger-yy
 
-  - name: lf-deploy-yy
+  - name: lsa-deploy-yy
     type: tripubDeploy
     steps:
-      - IN: lf-man-yy
+      - IN: lsa-man-yy
       - IN: tripub-cluter

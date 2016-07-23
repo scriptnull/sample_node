@@ -1,5 +1,5 @@
 triggers:
-  - name: lf-trigger-yy
+  - name: lsa-trigger-yy
     type: trigger
     pointer:
       counter: 46
