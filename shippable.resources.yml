@@ -51,7 +51,7 @@ resources:
       memory: 400
       publishAllPorts: true
       links:
-        - "lsa-man-yy_0_0:redis"
+        - "lsa-man-yy_0_0_32a59176-fff4-49f4-ac77-0863094cc48b:redis"
 
   - name: sn-redis-params
     type: params
