@@ -1,10 +1,5 @@
 triggers:
-  - name: lsa-trigger-yy
+  - name: lmon-tri-trigger
     type: trigger
     pointer:
       counte: 49
-
-  - name: lsa-trigger-app
-    type: trigger
-    pointer:
-      counte: 55

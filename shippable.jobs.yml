@@ -1,26 +1,12 @@
 jobs:
-  - name: lsa-man-yy
+  - name: lmon-tri-man
     type: manifest
     steps:
       - IN: sn-redis
-      - IN: sn-redis-params
-      - IN: lsa-trigger-yy
+      - IN: lmon-tri-trigger
 
-  - name: lsa-man-dk
-    type: manifest
+  - name: lmon-tri-deploy
+    type: deploy
     steps:
-      - IN: sn-entrypoint
-      - IN: sn-opts
-      - IN: lsa-trigger-app
-
-  - name: lsa-deploy-yy
-    type: tripubDeploy
-    steps:
-      - IN: lsa-man-yy
-      - IN: tripub-cluter
-
-  - name: lsa-deploy-app
-    type: tripubDeploy
-    steps:
-      - IN: lsa-man-dk
+      - IN: lmon-tri-man
       - IN: tripub-cluter
