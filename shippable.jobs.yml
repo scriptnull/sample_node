@@ -2,7 +2,7 @@ jobs:
   - name: lmon-tri-man
     type: manifest
     steps:
-      - IN: sn-redis
+      - IN: sn-entrypoint
       - IN: lmon-tri-trigger
 
   - name: lmon-tri-deploy
