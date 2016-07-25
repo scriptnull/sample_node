@@ -2,4 +2,4 @@ triggers:
   - name: lmon-tri-trigger
     type: trigger
     pointer:
-      counte: 49
+      counte: 50
