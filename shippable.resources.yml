@@ -66,3 +66,9 @@ resources:
     version:
       params:
         mykey: "myvalue"
+
+  - name: dcl-cluter
+    type: cluster
+    integration: scriptnull-dcl
+    pointer:
+      sourceName: "cluster-dcl"

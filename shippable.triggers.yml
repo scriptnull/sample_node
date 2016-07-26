@@ -3,3 +3,8 @@ triggers:
     type: trigger
     pointer:
       counte: 58
+
+  - name: bmon-dcl-trigger
+    type: trigger
+    pointer:
+      counte: 78

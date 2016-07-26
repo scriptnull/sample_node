@@ -19,6 +19,19 @@ jobs:
       - TASK: managed
         deployMethod: upgrade
 
+  - name: bmon-dcl-man
+    type: manifest
+    steps:
+      - IN: sn-sn
+      - IN: bmon-dcl-trigger
+
+  - name: bmon-dcl-deploy
+    type: deploy
+    steps:
+      - IN: bmon-dcl-man
+      - IN: dcl-cluter
+
+
   # - name: old-tri-man
   #   type: manifest
   #   steps:
