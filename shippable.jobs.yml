@@ -22,3 +22,15 @@ jobs:
     steps:
       - IN: old-tri-man
       - IN: tripub-cluter
+
+  - name: lmon-dcl-man
+    type: manifest
+    steps:
+      - IN: sn-nginx
+      - IN: lmon-dcl-trigger
+
+  - name: lmon-dcl-deploy
+    type: deploy
+    steps:
+      - IN: lmon-dcl-man
+      - IN: dcl-cluter

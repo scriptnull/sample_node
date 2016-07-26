@@ -8,3 +8,8 @@ triggers:
     type: trigger
     pointer:
       counte: 70
+
+  - name: lmon-dcl-trigger
+    type: trigger
+    pointer:
+      counte: 72
