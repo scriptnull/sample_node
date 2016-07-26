@@ -11,6 +11,14 @@ jobs:
       - IN: bmon-tri-man
       - IN: tripub-cluter
 
+  - name: up-bmon-tri-deploy
+    type: deploy
+    steps:
+      - IN: bmon-tri-man
+      - IN: tripub-cluter
+      - TASK: managed
+        deployMethod: upgrade
+
   # - name: old-tri-man
   #   type: manifest
   #   steps:
