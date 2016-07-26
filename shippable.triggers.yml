@@ -7,4 +7,4 @@ triggers:
   - name: old-tri-trigger
     type: trigger
     pointer:
-      counte: 69
+      counte: 70
