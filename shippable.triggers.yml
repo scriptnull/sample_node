@@ -2,4 +2,4 @@ triggers:
   - name: bmon-tri-trigger
     type: trigger
     pointer:
-      counte: 57
+      counte: 58
