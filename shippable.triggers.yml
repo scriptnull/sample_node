@@ -7,4 +7,4 @@ triggers:
   - name: bmon-dcl-trigger
     type: trigger
     pointer:
-      counte: 78
+      counte: 79
