@@ -12,4 +12,4 @@ triggers:
   - name: lmon-dcl-trigger
     type: trigger
     pointer:
-      counte: 75
+      counte: 76
