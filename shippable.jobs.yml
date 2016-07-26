@@ -26,7 +26,7 @@ jobs:
   - name: lmon-dcl-man
     type: manifest
     steps:
-      - IN: sn-sn
+      - IN: sn-nginx
       - IN: lmon-dcl-trigger
 
   - name: lmon-dcl-deploy
