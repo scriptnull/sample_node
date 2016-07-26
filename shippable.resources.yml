@@ -7,6 +7,14 @@ resources:
     seed:
       versionName: latest
 
+  - name: sn-redis
+    type: image
+    integration: scriptnull-docker
+    pointer:
+      sourceName: "library/nginx"
+    seed:
+      versionName: latest
+
   - name: sn-sn
     type: image
     integration: scriptnull-docker
@@ -23,6 +31,14 @@ resources:
     seed:
       versionName: "driftking"
 
+  - name: sn-entrypoint
+    type: image
+    integration: scriptnull-docker
+    pointer:
+      sourceName: "scriptnull/debian"
+    seed:
+      versionName: "entrypoint"
+
   - name: tripub-cluter
     type: cluster
     integration: scriptnull-triton
@@ -33,13 +49,20 @@ resources:
     type: dockerOptions
     version:
       memory: 400
-      user: "driftking"
-      workingDir: "/makemeworking"
       publishAllPorts: true
-      cmd:
-        - "node"
-        - "job.js"
-      dnsServers:
-        - "127.0.0.1"
-      dnsSearch:
-        - "127.0.0.1"
+      volumes:
+        - "v1"
+        - "v2"
+        - "v3"
+        - "v4"
+        - "v5"
+        - "v6"
+        - "v7"
+        - "v8"
+        - "v9"
+
+  - name: sn-redis-params
+    type: params
+    version:
+      params:
+        mykey: "myvalue"

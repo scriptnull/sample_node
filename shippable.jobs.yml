@@ -1,15 +1,24 @@
 jobs:
-  - name: b-th-manifest
+  - name: bmon-tri-man
     type: manifest
     steps:
-      - IN: sn-driftking
-      - IN: sn-opts
-      - IN: b-thursday-trigger
-      - TASK: managed
+      - IN: sn-nginx
+      - IN: bmon-tri-trigger
 
-  - name: b-th-deploy
-    type: tripubDeploy
+  - name: bmon-tri-deploy
+    type: deploy
     steps:
-      - IN: b-th-manifest
+      - IN: bmon-tri-man
       - IN: tripub-cluter
-      - TASK: managed
+
+  # - name: old-tri-man
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-entrypoint
+  #     - IN: old-tri-trigger
+  #
+  # - name: old-tri-deploy
+  #   type: tripubDeploy
+  #   steps:
+  #     - IN: old-tri-man
+  #     - IN: tripub-cluter

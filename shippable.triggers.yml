@@ -1,5 +1,5 @@
 triggers:
-  - name: b-thursday-trigger
+  - name: bmon-tri-trigger
     type: trigger
     pointer:
-      counter: 30
+      counte: 55
