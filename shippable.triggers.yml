@@ -3,3 +3,8 @@ triggers:
     type: trigger
     pointer:
       counte: 69
+
+  - name: old-tri-trigger
+    type: trigger
+    pointer:
+      counte: 69
