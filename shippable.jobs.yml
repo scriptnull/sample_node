@@ -2,7 +2,7 @@ jobs:
   - name: bmon-tri-man
     type: manifest
     steps:
-      - IN: sn-nginx
+      - IN: sn-sn
       - IN: bmon-tri-trigger
 
   - name: bmon-tri-deploy
