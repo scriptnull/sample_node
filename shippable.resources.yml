@@ -45,12 +45,6 @@ resources:
     pointer:
       region: "us-east-2"
 
-  - name: dcl-cluter
-    type: cluster
-    integration: scriptnull-dcl
-    pointer:
-      sourceName: "cluster-dcl"
-
   - name: sn-opts
     type: dockerOptions
     version:
@@ -72,3 +66,8 @@ resources:
     version:
       params:
         mykey: "myvalue"
+
+  - name: sn-replicas
+    type: replicas
+    version:
+      count: 1

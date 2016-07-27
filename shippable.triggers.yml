@@ -1,8 +1,8 @@
 triggers:
-  - name: lmon-tri-trigger
+  - name: new-tri-trigger
     type: trigger
     pointer:
-      counte: 72
+      counte: 7
 
   - name: old-tri-trigger
     type: trigger

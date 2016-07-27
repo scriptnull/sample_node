@@ -1,36 +1,24 @@
 jobs:
-  - name: lmon-tri-man
+  - name: new-tri-man
     type: manifest
     steps:
       - IN: sn-nginx
-      - IN: lmon-tri-trigger
+      - IN: new-tri-trigger
 
-  - name: lmon-tri-deploy
+  - name: new-tri-deploy
     type: deploy
     steps:
-      - IN: lmon-tri-man
+      - IN: new-tri-man
       - IN: tripub-cluter
 
-  - name: old-tri-man
-    type: manifest
-    steps:
-      - IN: sn-entrypoint
-      - IN: old-tri-trigger
-
-  - name: old-tri-deploy
-    type: tripubDeploy
-    steps:
-      - IN: old-tri-man
-      - IN: tripub-cluter
-
-  - name: lmon-dcl-man
-    type: manifest
-    steps:
-      - IN: sn-sn
-      - IN: lmon-dcl-trigger
-
-  - name: lmon-dcl-deploy
-    type: deploy
-    steps:
-      - IN: lmon-dcl-man
-      - IN: dcl-cluter
+  # - name: old-tri-man
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-entrypoint
+  #     - IN: old-tri-trigger
+  #
+  # - name: old-tri-deploy
+  #   type: tripubDeploy
+  #   steps:
+  #     - IN: old-tri-man
+  #     - IN: tripub-cluter
