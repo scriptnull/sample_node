@@ -9,7 +9,7 @@ jobs:
   - name: new-tri-deploy-xx
     type: deploy
     steps:
-      - IN: new-tri-man
+      - IN: new-tri-man-xx
       - IN: tripub-cluter
 
   # - name: old-tri-man
