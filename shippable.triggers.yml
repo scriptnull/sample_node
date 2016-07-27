@@ -2,7 +2,7 @@ triggers:
   - name: new-tri-trigger
     type: trigger
     pointer:
-      counte: 15
+      counte: 16
 
   - name: old-tri-trigger
     type: trigger
