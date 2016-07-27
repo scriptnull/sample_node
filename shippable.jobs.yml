@@ -3,6 +3,7 @@ jobs:
     type: manifest
     steps:
       - IN: sn-sn
+      - IN: sn-replicas
       - IN: new-tri-trigger
 
   - name: new-tri-deploy
