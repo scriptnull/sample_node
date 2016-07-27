@@ -1,12 +1,12 @@
 jobs:
-  - name: new-tri-man
+  - name: new-tri-man-xx
     type: manifest
     steps:
       - IN: sn-nginx
       - IN: sn-replicas
       - IN: new-tri-trigger
 
-  - name: new-tri-deploy
+  - name: new-tri-deploy-xx
     type: deploy
     steps:
       - IN: new-tri-man
