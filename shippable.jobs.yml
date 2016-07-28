@@ -1,12 +1,12 @@
 jobs:
-  - name: lthu-man
+  - name: lthu-man-1
     type: manifest
     steps:
       - IN: sn-sn
       - IN: sn-replicas
       - IN: lthu-trigger
 
-  - name: lthu-deploy
+  - name: lthu-deploy-1
     type: deploy
     steps:
       - IN: lthu-man
