@@ -1,25 +1,13 @@
 jobs:
-  - name: new-tri-man-xx
+  - name: lthu-man
     type: manifest
     steps:
       - IN: sn-nginx
       - IN: sn-replicas
-      - IN: new-tri-trigger
+      - IN: lthu-trigger
 
-  - name: new-tri-deploy-xx
+  - name: lthu-deploy
     type: deploy
     steps:
-      - IN: new-tri-man-xx
+      - IN: lthu-man
       - IN: tripub-cluter
-
-  # - name: old-tri-man
-  #   type: manifest
-  #   steps:
-  #     - IN: sn-entrypoint
-  #     - IN: old-tri-trigger
-  #
-  # - name: old-tri-deploy
-  #   type: tripubDeploy
-  #   steps:
-  #     - IN: old-tri-man
-  #     - IN: tripub-cluter

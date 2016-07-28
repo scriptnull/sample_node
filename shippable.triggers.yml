@@ -1,5 +1,5 @@
 triggers:
-  - name: new-tri-trigger
+  - name: lthu-trigger
     type: trigger
     pointer:
       counte: 22
