@@ -2,7 +2,7 @@ jobs:
   - name: lthu-man-2
     type: manifest
     steps:
-      - IN: sn-sn
+      - IN: sn-driftking
       - IN: sn-replicas
       - IN: lthu-trigger-2
 
