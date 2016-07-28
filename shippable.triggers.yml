@@ -2,7 +2,7 @@ triggers:
   - name: lthu-trigger
     type: trigger
     pointer:
-      counte: 25
+      counte: 26
 
   - name: old-tri-trigger
     type: trigger

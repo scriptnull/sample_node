@@ -2,7 +2,7 @@ jobs:
   - name: lthu-man
     type: manifest
     steps:
-      - IN: sn-nginx
+      - IN: sn-sn
       - IN: sn-replicas
       - IN: lthu-trigger
 
