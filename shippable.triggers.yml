@@ -1,8 +1,8 @@
 triggers:
-  - name: lthu-trigger-1
+  - name: lthu-trigger-2
     type: trigger
     pointer:
-      counte: 4
+      counter: 1
 
   - name: old-tri-trigger
     type: trigger
