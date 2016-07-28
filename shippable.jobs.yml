@@ -1,5 +1,5 @@
 jobs:
-  - name: lthu-man-4
+  - name: lthu-man-5
     type: manifest
     steps:
       - IN: sn-driftking
@@ -9,5 +9,5 @@ jobs:
   - name: lthu-deploy-2
     type: deploy
     steps:
-      - IN: lthu-man-4
+      - IN: lthu-man-5
       - IN: tripub-cluter
