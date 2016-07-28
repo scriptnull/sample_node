@@ -9,5 +9,5 @@ jobs:
   - name: lthu-deploy-1
     type: deploy
     steps:
-      - IN: lthu-man
+      - IN: lthu-man-1
       - IN: tripub-cluter
