@@ -1,13 +1,13 @@
 jobs:
-  - name: lthu-man-12
+  - name: lthu-man-13
     type: manifest
     steps:
       - IN: sn-driftking
       - IN: sn-replicas
       - IN: lthu-trigger-2
 
-  - name: lthu-deploy-2
+  - name: lthu-deploy-13
     type: deploy
     steps:
-      - IN: lthu-man-12
+      - IN: lthu-man-13
       - IN: tripub-cluter
