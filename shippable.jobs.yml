@@ -1,15 +1,15 @@
 jobs:
-  - name: bfri-man-3
+  - name: bfri-man-4
     type: manifest
     steps:
       - IN: sn-driftking-1
       - IN: sn-replicas-1
       - IN: bfri-trigger-1
 
-  - name: bfri-deploy-3
+  - name: bfri-deploy-4
     type: deploy
     steps:
-      - IN: bfri-man-3
+      - IN: bfri-man-4
       - IN: tripub-cluter-1
 
   # - name: bmon-tri-man
