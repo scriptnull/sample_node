@@ -3,13 +3,3 @@ triggers:
     type: trigger
     pointer:
       counter: 36
-
-  - name: old-tri-trigger
-    type: trigger
-    pointer:
-      counte: 70
-
-  - name: lmon-dcl-trigger
-    type: trigger
-    pointer:
-      counte: 78

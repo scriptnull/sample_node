@@ -45,29 +45,7 @@ resources:
     pointer:
       region: "us-east-2"
 
-  - name: sn-opts
-    type: dockerOptions
-    version:
-      memory: 400
-      publishAllPorts: true
-      volumes:
-        - "v1"
-        - "v2"
-        - "v3"
-        - "v4"
-        - "v5"
-        - "v6"
-        - "v7"
-        - "v8"
-        - "v9"
-
-  - name: sn-redis-params
-    type: params
-    version:
-      params:
-        mykey: "myvalue"
-
   - name: sn-replicas
     type: replicas
     version:
-      count: 3
+      count: 1
