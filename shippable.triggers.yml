@@ -2,4 +2,4 @@ triggers:
   - name: bfri-trigger-1
     type: trigger
     pointer:
-      counte: 65
+      counte: 66
