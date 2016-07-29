@@ -26,3 +26,16 @@ jobs:
       - IN: tripub-cluter
       - TASK: managed
         deployMethod: upgrade
+
+  - name: lthu-man-14
+    type: manifest
+    steps:
+      - IN: sn-driftking
+      - IN: sn-replicas
+      - IN: lthu-trigger-14
+
+  - name: lthu-deploy-14
+    type: deploy
+    steps:
+      - IN: lthu-man-14
+      - IN: tripub-cluter

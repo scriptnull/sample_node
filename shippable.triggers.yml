@@ -8,3 +8,8 @@ triggers:
     type: trigger
     pointer:
       counter: 48
+
+  - name: lthu-trigger-14
+    type: trigger
+    pointer:
+      counter: 43
