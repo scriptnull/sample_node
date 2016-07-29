@@ -53,4 +53,4 @@ resources:
   - name: up-sn-replicas
     type: replicas
     version:
-      count: 2
+      count: 1
