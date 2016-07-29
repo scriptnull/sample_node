@@ -3,3 +3,8 @@ triggers:
     type: trigger
     pointer:
       counter: 43
+
+  - name: up-lthu-trigger-2
+    type: trigger
+    pointer:
+      counter: 43

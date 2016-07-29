@@ -11,3 +11,18 @@ jobs:
     steps:
       - IN: lthu-man-13
       - IN: tripub-cluter
+
+  - name: up-lthu-man-13
+    type: manifest
+    steps:
+      - IN: sn-driftking
+      - IN: up-sn-replicas
+      - IN: up-lthu-trigger-2
+
+  - name: up-lthu-deploy-13
+    type: deploy
+    steps:
+      - IN: up-lthu-man-13
+      - IN: tripub-cluter
+      - TASK: managed
+        deployType: upgrade
