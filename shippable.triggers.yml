@@ -7,4 +7,4 @@ triggers:
   - name: up-lthu-trigger-2
     type: trigger
     pointer:
-      counter: 47
+      counter: 48
