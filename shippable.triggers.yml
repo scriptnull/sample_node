@@ -1,10 +1,5 @@
 triggers:
-  - name: bmon-tri-trigger
+  - name: bfri-trigger-1
     type: trigger
     pointer:
       counte: 58
-
-  - name: bmon-dcl-trigger
-    type: trigger
-    pointer:
-      counte: 79

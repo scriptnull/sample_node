@@ -67,8 +67,7 @@ resources:
       params:
         mykey: "myvalue"
 
-  - name: dcl-cluter
-    type: cluster
-    integration: scriptnull-dcl
-    pointer:
-      sourceName: "cluster-dcl"
+  - name: sn-replicas
+    type: replicas
+    version:
+      count: 1

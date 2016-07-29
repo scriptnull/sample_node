@@ -1,35 +1,48 @@
 jobs:
-  - name: bmon-tri-man
+  - name: bfri-man-1
     type: manifest
     steps:
-      - IN: sn-sn
-      - IN: bmon-tri-trigger
+      - IN: sn-driftking
+      - IN: sn-replicas
+      - IN: bfri-trigger-1
 
-  - name: bmon-tri-deploy
+  - name: bfri-deploy-1
     type: deploy
     steps:
-      - IN: bmon-tri-man
+      - IN: lfri-man-1
       - IN: tripub-cluter
 
-  - name: up-bmon-tri-deploy
-    type: deploy
-    steps:
-      - IN: bmon-tri-man
-      - IN: tripub-cluter
-      - TASK: managed
-        deployMethod: upgrade
+  # - name: bmon-tri-man
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-sn
+  #     - IN: bmon-tri-trigger
+  #
+  # - name: bmon-tri-deploy
+  #   type: deploy
+  #   steps:
+  #     - IN: bmon-tri-man
+  #     - IN: tripub-cluter
+  #
+  # - name: up-bmon-tri-deploy
+  #   type: deploy
+  #   steps:
+  #     - IN: bmon-tri-man
+  #     - IN: tripub-cluter
+  #     - TASK: managed
+  #       deployMethod: upgrade
 
-  - name: bmon-dcl-man
-    type: manifest
-    steps:
-      - IN: sn-sn
-      - IN: bmon-dcl-trigger
-
-  - name: bmon-dcl-deploy
-    type: deploy
-    steps:
-      - IN: bmon-dcl-man
-      - IN: dcl-cluter
+  # - name: bmon-dcl-man
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-sn
+  #     - IN: bmon-dcl-trigger
+  #
+  # - name: bmon-dcl-deploy
+  #   type: deploy
+  #   steps:
+  #     - IN: bmon-dcl-man
+  #     - IN: dcl-cluter
 
 
   # - name: old-tri-man
