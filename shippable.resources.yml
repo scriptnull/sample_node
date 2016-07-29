@@ -70,4 +70,4 @@ resources:
   - name: sn-replicas-1
     type: replicas
     version:
-      count: 2
+      count: 1
