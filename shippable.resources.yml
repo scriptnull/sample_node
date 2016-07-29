@@ -1,5 +1,5 @@
 resources:
-  - name: sn-nginx
+  - name: sn-nginx-1
     type: image
     integration: scriptnull-docker
     pointer:
@@ -7,7 +7,7 @@ resources:
     seed:
       versionName: latest
 
-  - name: sn-redis
+  - name: sn-redis-1
     type: image
     integration: scriptnull-docker
     pointer:
@@ -15,7 +15,7 @@ resources:
     seed:
       versionName: latest
 
-  - name: sn-sn
+  - name: sn-sn-1
     type: image
     integration: scriptnull-docker
     pointer:
@@ -23,7 +23,7 @@ resources:
     seed:
       versionName: "dc.pipeline.3"
 
-  - name: sn-driftking
+  - name: sn-driftking-1
     type: image
     integration: scriptnull-docker
     pointer:
@@ -31,7 +31,7 @@ resources:
     seed:
       versionName: "driftking"
 
-  - name: sn-entrypoint
+  - name: sn-entrypoint-1
     type: image
     integration: scriptnull-docker
     pointer:
@@ -39,13 +39,13 @@ resources:
     seed:
       versionName: "entrypoint"
 
-  - name: tripub-cluter
+  - name: tripub-cluter-1
     type: cluster
     integration: scriptnull-triton
     pointer:
       region: "us-east-2"
 
-  - name: sn-opts
+  - name: sn-opts-1
     type: dockerOptions
     version:
       memory: 400
@@ -61,13 +61,13 @@ resources:
         - "v8"
         - "v9"
 
-  - name: sn-redis-params
+  - name: sn-redis-params-1
     type: params
     version:
       params:
         mykey: "myvalue"
 
-  - name: sn-replicas
+  - name: sn-replicas-1
     type: replicas
     version:
       count: 1
