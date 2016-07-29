@@ -12,4 +12,4 @@ triggers:
   - name: lthu-trigger-14
     type: trigger
     pointer:
-      counter: 43
+      counter: 44
