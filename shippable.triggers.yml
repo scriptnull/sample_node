@@ -1,15 +1,5 @@
 triggers:
-  - name: lthu-trigger-2
+  - name: lsat-trigger
     type: trigger
     pointer:
-      counter: 43
-
-  - name: up-lthu-trigger-2
-    type: trigger
-    pointer:
-      counter: 48
-
-  - name: lthu-trigger-14
-    type: trigger
-    pointer:
-      counter: 44
+      counter: 1

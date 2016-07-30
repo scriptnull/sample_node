@@ -1,41 +1,12 @@
 jobs:
-  - name: lthu-man-13
+  - name: lsat-man
     type: manifest
     steps:
       - IN: sn-driftking
-      - IN: sn-replicas
-      - IN: lthu-trigger-2
+      - IN: lsat-trigger
 
-  - name: lthu-deploy-13
+  - name: lsat-tri-deploy
     type: deploy
     steps:
-      - IN: lthu-man-13
-      - IN: tripub-cluter
-
-  - name: up-lthu-man-13
-    type: manifest
-    steps:
-      - IN: sn-driftking
-      - IN: up-sn-replicas
-      - IN: up-lthu-trigger-2
-
-  - name: up-lthu-deploy-14
-    type: deploy
-    steps:
-      - IN: up-lthu-man-13
-      - IN: tripub-cluter
-      - TASK: managed
-        deployMethod: upgrade
-
-  - name: lthu-man-14
-    type: manifest
-    steps:
-      - IN: sn-driftking
-      - IN: sn-replicas
-      - IN: lthu-trigger-14
-
-  - name: lthu-deploy-14
-    type: deploy
-    steps:
-      - IN: lthu-man-14
+      - IN: lsat-man
       - IN: tripub-cluter
