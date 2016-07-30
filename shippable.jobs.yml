@@ -1,5 +1,5 @@
 jobs:
-  - name: lsat-man
+  - name: lsat-man-1
     type: manifest
     steps:
       - IN: sn-driftking
