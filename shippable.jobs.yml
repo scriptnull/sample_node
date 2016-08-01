@@ -5,33 +5,33 @@ jobs:
       - IN: sn-driftking
       - IN: lsat-trigger
 
-  # - name: lsat-tri-deploy-1
-  #   type: deploy
-  #   steps:
-  #     - IN: lsat-man-2
-  #     - IN: tripub-cluter
+  - name: lsat-tri-deploy-1
+    type: deploy
+    steps:
+      - IN: lsat-man-2
+      - IN: tripub-cluter
 
-  # - name: lsat-tri-deploy-2
-  #   type: deploy
-  #   steps:
-  #     - IN: lsat-man-2
-  #     - IN: tripub-cluters
+  - name: lsat-tri-deploy-2
+    type: deploy
+    steps:
+      - IN: lsat-man-2
+      - IN: tripub-cluters
 
-  #
-  # - name: lsat-tri-deploy-5
-  #   type: deploy
-  #   steps:
-  #     - IN: lsat-man-2
-  #     - IN: tripub-cluter
 
-    # - name: lsat-tri-deploy-6
-    #   type: deploy
-    #   steps:
-    #     - IN: lsat-man-2
-    #     - IN: tripub-cluter
+  - name: lsat-tri-deploy-5
+    type: deploy
+    steps:
+      - IN: lsat-man-2
+      - IN: tripub-cluter
 
-  # - name: lsat-tri-deploy-7
-  #   type: deploy
-  #   steps:
-  #     - IN: lsat-man-2
-  #     - IN: tripub-cluter
+    - name: lsat-tri-deploy-6
+      type: deploy
+      steps:
+        - IN: lsat-man-2
+        - IN: tripub-cluter
+
+  - name: lsat-tri-deploy-7
+    type: deploy
+    steps:
+      - IN: lsat-man-2
+      - IN: tripub-cluter
