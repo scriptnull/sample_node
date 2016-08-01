@@ -18,11 +18,11 @@ jobs:
       - IN: sn-driftking-1
       - IN: delete-trigger
 
-  - name: delete-deploy
-    type: deploy
-    steps:
-      - IN: delete-manifest
-      - IN: tripub-cluter-1
+  # - name: delete-deploy
+  #   type: deploy
+  #   steps:
+  #     - IN: delete-manifest
+  #     - IN: tripub-cluter-1
 
   - name: delete-deploy-1
     type: deploy
