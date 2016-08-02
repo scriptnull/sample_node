@@ -84,7 +84,13 @@ jobs:
   #     - IN: lsat-man-2
   #     - IN: tripub-cluter
 
-  - name: lsat-tri-deploy-16
+  # - name: lsat-tri-deploy-16
+  #   type: deploy
+  #   steps:
+  #     - IN: lsat-man-2
+  #     - IN: tripub-cluter
+
+  - name: lsat-tri-deploy-17
     type: deploy
     steps:
       - IN: lsat-man-2
