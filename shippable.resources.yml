@@ -45,6 +45,12 @@ resources:
     pointer:
       region: "us-east-2"
 
+  - name: ecs-cluter
+    type: cluster
+    integration: scriptnull-aws
+    pointer:
+      region: "us-west-2"
+
   - name: sn-replicas
     type: replicas
     version:
