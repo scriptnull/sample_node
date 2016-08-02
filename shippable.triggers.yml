@@ -7,4 +7,4 @@ triggers:
   - name: delete-trigger
     type: trigger
     pointer:
-      counte: 70
+      counte: 71

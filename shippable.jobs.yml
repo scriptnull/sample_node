@@ -24,7 +24,13 @@ jobs:
   #     - IN: delete-manifest
   #     - IN: tripub-cluter-1
 
-  - name: delete-deploy-1
+  # - name: delete-deploy-1
+  #   type: deploy
+  #   steps:
+  #     - IN: delete-manifest
+  #     - IN: tripub-cluter-1
+
+  - name: delete-deploy-3
     type: deploy
     steps:
       - IN: delete-manifest
