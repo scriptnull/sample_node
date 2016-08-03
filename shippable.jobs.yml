@@ -42,11 +42,11 @@ jobs:
   #     - IN: delete-manifest
   #     - IN: tripub-cluter-1
 
-  # - name: delete-deploy-5
-  #   type: deploy
-  #   steps:
-  #     - IN: delete-manifest
-  #     - IN: tripub-cluter-1
+  - name: delete-deploy-5
+    type: deploy
+    steps:
+      - IN: delete-manifest
+      - IN: tripub-cluter-1
 
   - name: delete-deploy-6
     type: deploy
