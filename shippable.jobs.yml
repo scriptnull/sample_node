@@ -5,10 +5,10 @@ jobs:
       - IN: sn-driftking
       - IN: lsat-trigger
 
-  # - name: sample_node_v2-local_rSync
-  #   type: rSync
-  #   steps:
-  #     - IN: study_sync_repo_resource
+  - name: sample_node_v2-local_rSync
+    type: rSync
+    steps:
+      - IN: study_sync_repo_resource
 
   # - name: lsat-tri-deploy-1
   #   type: deploy
