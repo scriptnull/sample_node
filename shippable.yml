@@ -1,0 +1,13 @@
+language: node_js
+
+env:
+  global:
+    - FOO=FUBU
+    
+build:
+  ci:
+    - ps -eax
+    - ls -al
+
+  post_ci:
+    - echo "post ci stage. Finished ! yo"
