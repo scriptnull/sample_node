@@ -125,3 +125,14 @@ jobs:
     steps:
       - IN: lsat-man-2
       - IN: tripub-cluter
+
+  # - name: runSh-1
+  #   type: runSh
+  #   steps:
+  #     - IN: infra-repo
+  #     - TASK:
+  #       - script: ls
+  #       - script: ./GET/infra-repo/infra-repo/provision.sh
+  #     - on_success:
+  #       - echo 'This block executes after TASK section executes successfully'
+  #       - NOTIFY: slackNotifcation
