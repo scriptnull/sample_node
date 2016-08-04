@@ -61,6 +61,11 @@ resources:
     version:
       count: 2
 
+  - name: basic-replicas
+    type: replicas
+    version:
+      count: 2
+
   # - name: v2-local-runSh
   #   type: gitRepo
   #   integration: github
