@@ -2,7 +2,7 @@ triggers:
   - name: lsat-trigger
     type: trigger
     pointer:
-      counter: 12
+      counter: 13
 
   - name: lsat-trigger-2
     type: trigger
