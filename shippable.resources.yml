@@ -56,17 +56,17 @@ resources:
     version:
       count: 2
 
-  - name: sn-replicas-1
-    type: replicas
-    version:
-      count: 2
+  # - name: sn-replicas-1
+  #   type: replicas
+  #   version:
+  #     count: 2
 
-  # - name: study_sync_repo_resource
-  #   type: syncRepo
-  #   integration: github
-  #   pointer:
-  #     sourceName: "scriptnull/sample_node"
-  #     branch: "v2-rSync-study"
+  - name: study_sync_repo_resource
+    type: syncRepo
+    integration: github
+    pointer:
+      sourceName: "scriptnull/sample_node"
+      branch: "v2-rSync-study"
 
   # - name: up-sn-replicas
   #   type: replicas
