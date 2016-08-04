@@ -8,3 +8,8 @@ triggers:
     type: trigger
     pointer:
       counter: 12
+
+  - name: lsat-trigger-3
+    type: trigger
+    pointer:
+      counter: 12
