@@ -56,6 +56,11 @@ resources:
     version:
       count: 2
 
+  - name: xx-replicas
+    type: replicas
+    version:
+      count: 3
+
   # - name: sn-replicas-1
   #   type: replicas
   #   version:
