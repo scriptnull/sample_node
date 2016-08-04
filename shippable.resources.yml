@@ -1,0 +1,5 @@
+resources:
+  - name: hello-replica
+    type: replicas
+    version:
+      count: 2
