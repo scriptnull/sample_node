@@ -72,7 +72,7 @@ resources:
     version:
       count: 1
 
-  - name: delete-this-resource
-    type: replicas
-    version:
-      count: 1
+  # - name: delete-this-resource
+  #   type: replicas
+  #   version:
+  #     count: 1
