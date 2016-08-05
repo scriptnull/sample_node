@@ -6,6 +6,14 @@ resources:
       sourceName: scriptnull/sample_node
       branch: v2-local-runSh
 
+  - name: sn-debian
+    type: image
+    integration: scriptnull-docker
+    pointer:
+      sourceName: "scriptnull/debian"
+    seed:
+      versionName: "v2-local-runSh.4"
+
   # - name: sn-nginx
   #   type: image
   #   integration: scriptnull-docker
