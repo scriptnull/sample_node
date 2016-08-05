@@ -2,4 +2,4 @@ triggers:
   - name: runSh-trigger
     type: trigger
     pointer:
-      counter: 15
+      counter: 16
