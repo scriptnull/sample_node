@@ -1,9 +1,9 @@
 jobs:
-  - name: runSh-2
+  - name: runSh-3
     type: runSh
     steps:
       - IN: v2-local-runSh
-      - IN: runSh-trigger
+      - IN: runSh-trigger-1
       - TASK:
         - script: ls
         - script: /build/IN/v2-local-runSh/v2-local-runSh/s1.sh
