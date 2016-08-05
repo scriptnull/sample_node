@@ -9,7 +9,7 @@ jobs:
         - script: /build/IN/v2-local-runSh/v2-local-runSh/s1.sh
       - OUT: sn-debian
 
-  - name: runCI-1
+  - name: runCI-2
     type: runCI
     steps:
       - IN: v2-local-runSh
