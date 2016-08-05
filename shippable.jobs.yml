@@ -18,17 +18,16 @@ jobs:
       - TASK: managed
       - OUT: sn-debian
 
-  # - name: lsat-man-2
-  #   type: manifest
-  #   steps:
-  #     - IN: sn-driftking
-  #     - IN: lsat-trigger
-  #
-  # - name: lsat-tri-deploy-1
-  #   type: deploy
-  #   steps:
-  #     - IN: lsat-man-2
-  #     - IN: tripub-cluter
+  - name: runCI-man
+    type: manifest
+    steps:
+      - IN: sn-debian
+
+  - name: runCI-deploy
+    type: deploy
+    steps:
+      - IN: runCI-man
+      - IN: tripub-cluter
 
   # - name: lsat-tri-deploy-2
   #   type: deploy
