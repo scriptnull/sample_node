@@ -1,15 +1,23 @@
 jobs:
-  - name: lsat-man-2
-    type: manifest
+  - name: runSh-1
+    type: runSh
     steps:
-      - IN: sn-driftking
-      - IN: lsat-trigger
+      - IN: v2-local-runSh
+      - IN: runSh-trigger
+      - TASK:
+        - script: ls
 
-  - name: lsat-tri-deploy-1
-    type: deploy
-    steps:
-      - IN: lsat-man-2
-      - IN: tripub-cluter
+  # - name: lsat-man-2
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-driftking
+  #     - IN: lsat-trigger
+  #
+  # - name: lsat-tri-deploy-1
+  #   type: deploy
+  #   steps:
+  #     - IN: lsat-man-2
+  #     - IN: tripub-cluter
 
   # - name: lsat-tri-deploy-2
   #   type: deploy
@@ -131,14 +139,3 @@ jobs:
   #   steps:
   #     - IN: lsat-man-2
   #     - IN: tripub-cluter
-
-  # - name: runSh-1
-  #   type: runSh
-  #   steps:
-  #     - IN: infra-repo
-  #     - TASK:
-  #       - script: ls
-  #       - script: ./GET/infra-repo/infra-repo/provision.sh
-  #     - on_success:
-  #       - echo 'This block executes after TASK section executes successfully'
-  #       - NOTIFY: slackNotifcation

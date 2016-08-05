@@ -1,20 +1,5 @@
 triggers:
-  - name: lsat-trigger
+  - name: runSh-trigger
     type: trigger
     pointer:
       counter: 13
-
-  - name: lsat-trigger-2
-    type: trigger
-    pointer:
-      counter: 12
-
-  - name: lsat-trigger-3
-    type: trigger
-    pointer:
-      counter: 12
-
-  - name: lsat-trigger-4
-    type: trigger
-    pointer:
-      counter: 12

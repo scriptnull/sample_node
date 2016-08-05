@@ -83,9 +83,9 @@ resources:
   #   version:
   #     count: 2
 
-  # - name: v2-local-runSh
-  #   type: gitRepo
-  #   integration: github
-  #   pointer:
-  #     sourceName: scriptnull/sample_node
-  #     branch: v2-local-runSh
+  - name: v2-local-runSh
+    type: gitRepo
+    integration: github
+    pointer:
+      sourceName: scriptnull/sample_node
+      branch: v2-local-runSh
