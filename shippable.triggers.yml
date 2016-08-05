@@ -7,4 +7,4 @@ triggers:
   - name: runCI-trigger
     type: trigger
     pointer:
-      counter: 21
+      counter: 22
