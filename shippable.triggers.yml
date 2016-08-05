@@ -2,7 +2,7 @@ triggers:
   - name: runSh-trigger
     type: trigger
     pointer:
-      counter: 19
+      counter: 20
 
   - name: runCI-trigger
     type: trigger
