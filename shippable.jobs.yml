@@ -7,6 +7,7 @@ jobs:
       - TASK:
         - script: ls
         - script: /build/IN/v2-local-runSh/v2-local-runSh/s1.sh
+      - OUT: sn-debian
 
   # - name: runCI-2
   #   type: runCI
