@@ -3,3 +3,8 @@ triggers:
     type: trigger
     pointer:
       counter: 18
+
+  - name: runCI-trigger
+    type: trigger
+    pointer:
+      counter: 18

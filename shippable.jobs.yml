@@ -7,8 +7,14 @@ jobs:
       - TASK:
         - script: ls
         - script: /build/IN/v2-local-runSh/v2-local-runSh/s1.sh
-        - script: docker build -t="scriptnull/sample_node:delete" /build/IN/v2-local-runSh/v2-local-runSh/
-        - script: docker push scriptnull/sample_node:delete
+        # - script: docker build -t="scriptnull/sample_node:delete" /build/IN/v2-local-runSh/v2-local-runSh/
+        # - script: docker push scriptnull/sample_node:delete
+
+  - name: runCI-1
+    type: runCI
+    steps:
+      - IN: v2-local-runSh
+      - IN: runCI-trigger
 
   # - name: lsat-man-2
   #   type: manifest
