@@ -6,6 +6,7 @@ jobs:
       - IN: runSh-trigger
       - TASK:
         - script: ls
+        - script: /build/IN/v2-local-runSh/v2-local-runSh/s1.sh
 
   # - name: lsat-man-2
   #   type: manifest
