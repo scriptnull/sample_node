@@ -1,65 +1,72 @@
 resources:
-  - name: sn-nginx
-    type: image
-    integration: scriptnull-docker
+  - name: v2-local-runSh
+    type: gitRepo
+    integration: github
     pointer:
-      sourceName: "library/nginx"
-    seed:
-      versionName: latest
+      sourceName: scriptnull/sample_node
+      branch: v2-local-runSh
 
-  - name: sn-redis
-    type: image
-    integration: scriptnull-docker
-    pointer:
-      sourceName: "library/nginx"
-    seed:
-      versionName: latest
-
-  - name: sn-sn
-    type: image
-    integration: scriptnull-docker
-    pointer:
-      sourceName: "scriptnull/sample_node"
-    seed:
-      versionName: "dc.pipeline.3"
-
-  - name: sn-driftking
-    type: image
-    integration: scriptnull-docker
-    pointer:
-      sourceName: "scriptnull/debian"
-    seed:
-      versionName: "driftking"
-
-  - name: sn-entrypoint
-    type: image
-    integration: scriptnull-docker
-    pointer:
-      sourceName: "scriptnull/debian"
-    seed:
-      versionName: "entrypoint"
-
-  - name: tripub-cluter
-    type: cluster
-    integration: scriptnull-triton
-    pointer:
-      region: "us-east-2"
-
-  - name: ecs-cluter
-    type: cluster
-    integration: scriptnull-aws
-    pointer:
-      region: "us-west-2"
-
-  - name: sn-replicas
-    type: replicas
-    version:
-      count: 2
-
-  - name: xx-replicas
-    type: replicas
-    version:
-      count: 3
+  # - name: sn-nginx
+  #   type: image
+  #   integration: scriptnull-docker
+  #   pointer:
+  #     sourceName: "library/nginx"
+  #   seed:
+  #     versionName: latest
+  #
+  # - name: sn-redis
+  #   type: image
+  #   integration: scriptnull-docker
+  #   pointer:
+  #     sourceName: "library/nginx"
+  #   seed:
+  #     versionName: latest
+  #
+  # - name: sn-sn
+  #   type: image
+  #   integration: scriptnull-docker
+  #   pointer:
+  #     sourceName: "scriptnull/sample_node"
+  #   seed:
+  #     versionName: "dc.pipeline.3"
+  #
+  # - name: sn-driftking
+  #   type: image
+  #   integration: scriptnull-docker
+  #   pointer:
+  #     sourceName: "scriptnull/debian"
+  #   seed:
+  #     versionName: "driftking"
+  #
+  # - name: sn-entrypoint
+  #   type: image
+  #   integration: scriptnull-docker
+  #   pointer:
+  #     sourceName: "scriptnull/debian"
+  #   seed:
+  #     versionName: "entrypoint"
+  #
+  # - name: tripub-cluter
+  #   type: cluster
+  #   integration: scriptnull-triton
+  #   pointer:
+  #     region: "us-east-2"
+  #
+  # - name: ecs-cluter
+  #   type: cluster
+  #   integration: scriptnull-aws
+  #   pointer:
+  #     region: "us-west-2"
+  #
+  # - name: sn-replicas
+  #   type: replicas
+  #   version:
+  #     count: 2
+  #
+  # - name: xx-replicas
+  #   type: replicas
+  #   version:
+  #     count: 3
 
   # - name: sn-replicas-1
   #   type: replicas
@@ -82,10 +89,3 @@ resources:
   #   type: replicas
   #   version:
   #     count: 2
-
-  - name: v2-local-runSh
-    type: gitRepo
-    integration: github
-    pointer:
-      sourceName: scriptnull/sample_node
-      branch: v2-local-runSh
