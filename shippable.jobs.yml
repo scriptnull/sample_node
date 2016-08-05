@@ -7,6 +7,8 @@ jobs:
       - TASK:
         - script: ls
         - script: /build/IN/v2-local-runSh/v2-local-runSh/s1.sh
+        - script: docker build -t="scriptnull/sample_node:delete" /build/IN/v2-local-runSh/v2-local-runSh/
+        - script: docker push scriptnull/sample_node:delete
 
   # - name: lsat-man-2
   #   type: manifest
