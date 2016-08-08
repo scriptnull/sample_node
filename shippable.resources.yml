@@ -1,78 +1,33 @@
 resources:
-  - name: sn-nginx-1
-    type: image
-    integration: scriptnull-docker
-    pointer:
-      sourceName: "library/nginx"
-    seed:
-      versionName: latest
-
-  - name: sn-redis-1
-    type: image
-    integration: scriptnull-docker
-    pointer:
-      sourceName: "library/nginx"
-    seed:
-      versionName: latest
-
-  - name: sn-sn-1
+  - name: sn-myapp3-1
     type: image
     integration: scriptnull-docker
     pointer:
       sourceName: "scriptnull/sample_node"
+      isPull: true
     seed:
-      versionName: "dc.pipeline.3"
+      versionName: "myapp3"
 
-  - name: sn-driftking-1
-    type: image
-    integration: scriptnull-docker
-    pointer:
-      sourceName: "scriptnull/debian"
-    seed:
-      versionName: "driftking"
-
-  - name: sn-entrypoint-1
-    type: image
-    integration: scriptnull-docker
-    pointer:
-      sourceName: "scriptnull/debian"
-    seed:
-      versionName: "entrypoint"
-
-  - name: tripub-cluter-1
+  - name: sn-ecs-cluster-1
     type: cluster
-    integration: scriptnull-triton
+    integration: scriptnull-aws
     pointer:
-      region: "us-east-2"
+      sourceName : "loadBalanceTest" #name of the cluster we are deploying
+      region: "us-east-1"
 
-  - name: sn-opts-1
+  - name: sn-lb
+    type: loadBalancer
+    pointer:
+      sourceName: EC2Contai-EcsElast-17A64D22JHQLM
+
+  - name: sn-lb-1
+    type: loadBalancer
+    pointer:
+      sourceName: shLoadBalancer
+
+  - name: sn-docker-opts
     type: dockerOptions
     version:
-      memory: 400
-      publishAllPorts: true
-      volumes:
-        - "v1"
-        - "v2"
-        - "v3"
-        - "v4"
-        - "v5"
-        - "v6"
-        - "v7"
-        - "v8"
-        - "v9"
-
-  - name: sn-redis-params-1
-    type: params
-    version:
-      params:
-        mykey: "myvalue"
-
-  - name: sn-replicas-1
-    type: replicas
-    version:
-      count: 1
-
-  # - name: delete-this-resource
-  #   type: replicas
-  #   version:
-  #     count: 1
+      memory: 200
+      portMappings:
+        - "80:80"

@@ -1,10 +1,5 @@
 triggers:
-  - name: bfri-trigger-1
-    type: trigger
-    pointer:
-      counte: 70
-
-  - name: delete-trigger
-    type: trigger
-    pointer:
-      counte: 74
+   - name: sn-trigger-1
+     type: trigger
+     pointer:
+       counter: 778

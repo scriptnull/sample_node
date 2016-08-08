@@ -1,118 +1,20 @@
 jobs:
-  - name: bfri-man-4
+  - name: sn-manifestjob1-1
     type: manifest
     steps:
-      - IN: sn-driftking-1
-      - IN: sn-replicas-1
-      - IN: bfri-trigger-1
+      - IN: sn-myapp3-1
+      - IN: sn-docker-opts-1
+      - IN: sn-trigger-1
 
-  - name: bfri-deploy-4
+  - name: sn-ecsDeploy-1
     type: deploy
     steps:
-      - IN: bfri-man-4
-      - IN: tripub-cluter-1
-
-  - name: delete-manifest
-    type: manifest
-    steps:
-      - IN: sn-driftking-1
-      - IN: delete-trigger
-
-  # - name: delete-deploy
-  #   type: deploy
-  #   steps:
-  #     - IN: delete-manifest
-  #     - IN: tripub-cluter-1
-
-  # - name: delete-deploy-1
-  #   type: deploy
-  #   steps:
-  #     - IN: delete-manifest
-  #     - IN: tripub-cluter-1
-
-  # - name: delete-deploy-3
-  #   type: deploy
-  #   steps:
-  #     - IN: delete-manifest
-  #     - IN: tripub-cluter-1
-
-  # - name: delete-deploy-4
-  #   type: deploy
-  #   steps:
-  #     - IN: delete-manifest
-  #     - IN: tripub-cluter-1
-
-  # - name: delete-deploy-5
-  #   type: deploy
-  #   steps:
-  #     - IN: delete-manifest
-  #     - IN: tripub-cluter-1
-  #
-  # - name: delete-deploy-6
-  #   type: deploy
-  #   steps:
-  #     - IN: delete-manifest
-  #     - IN: tripub-cluter-1
-
-  # - name: delete-deploy-7
-  #   type: deploy
-  #   steps:
-  #     - IN: delete-manifest
-  #     - IN: tripub-cluter-1
-
-  # - name: delete-deploy-8
-  #   type: deploy
-  #   steps:
-  #     - IN: delete-manifest
-  #     - IN: tripub-cluter-1
-
-  # - name: delete-deploy-2
-  #   type: deploy
-  #   steps:
-  #     - IN: delete-manifest
-  #     - IN: tripub-cluter-1
-
-  # - name: bmon-tri-man
-  #   type: manifest
-  #   steps:
-  #     - IN: sn-sn
-  #     - IN: bmon-tri-trigger
-  #
-  # - name: bmon-tri-deploy
-  #   type: deploy
-  #   steps:
-  #     - IN: bmon-tri-man
-  #     - IN: tripub-cluter
-  #
-  # - name: up-bmon-tri-deploy
-  #   type: deploy
-  #   steps:
-  #     - IN: bmon-tri-man
-  #     - IN: tripub-cluter
-  #     - TASK: managed
-  #       deployMethod: upgrade
-
-  # - name: bmon-dcl-man
-  #   type: manifest
-  #   steps:
-  #     - IN: sn-sn
-  #     - IN: bmon-dcl-trigger
-  #
-  # - name: bmon-dcl-deploy
-  #   type: deploy
-  #   steps:
-  #     - IN: bmon-dcl-man
-  #     - IN: dcl-cluter
-
-
-  # - name: old-tri-man
-  #   type: manifest
-  #   steps:
-  #     - IN: sn-entrypoint
-  #     - IN: old-tri-trigger
-  #
-  # - name: old-tri-deploy
-  #   type: tripubDeploy
-  #   steps:
-  #     - IN: old-tri-man
-  #     - IN: tripub-cluter
+      - IN: sn-manifestjob1-1
+      - IN: sn-ecs-cluster-1
+      # - IN: sn-lb-1-11
+      #   applyTo:
+      #     - manifest: sn-manifestjob1 # it can only apply to one manifest
+      #       image: sn-myapp3 # it can only apply to one image in the manifest
+      #       port: 80
+      - TASK: managed
+        deployMethod: upgrade
