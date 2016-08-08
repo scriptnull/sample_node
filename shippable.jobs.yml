@@ -13,7 +13,7 @@ jobs:
       - IN: sn-ecs-cluster-1
       - IN: sn-lb-1
         applyTo:
-          - manifest: sn-manifestjob1 # it can only apply to one manifest
+          - manifest: sn-manifestjob1-1 # it can only apply to one manifest
             image: sn-myapp3-1 # it can only apply to one image in the manifest
             port: 80
       - TASK: managed
