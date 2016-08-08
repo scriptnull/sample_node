@@ -25,7 +25,7 @@ resources:
     pointer:
       sourceName: shLoadBalancer
 
-  - name: sn-docker-opts
+  - name: sn-docker-opts-1
     type: dockerOptions
     version:
       memory: 200
