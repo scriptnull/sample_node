@@ -1,4 +1,4 @@
 triggers:
    - name: sn-trigger-1
      type: trigger
-     counter: 8
+     counter: 9
