@@ -1,10 +1,5 @@
 triggers:
-  - name: runSh-trigger-1
-    type: trigger
-    pointer:
-      counter: 7
-
-  # - name: runCI-trigger
-  #   type: trigger
-  #   pointer:
-  #     counter: 24
+   - name: sn-trigger-1
+     type: trigger
+     pointer:
+       counter: 7

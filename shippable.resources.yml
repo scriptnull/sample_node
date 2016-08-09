@@ -1,100 +1,33 @@
 resources:
-  - name: v2-local-runSh
-    type: gitRepo
-    integration: github
-    pointer:
-      sourceName: scriptnull/sample_node
-      branch: v2-local-runSh
-
-  - name: sn-debian
+  - name: sn-myapp3-1
     type: image
     integration: scriptnull-docker
     pointer:
-      sourceName: "scriptnull/debian"
+      sourceName: "scriptnull/sample_node"
+      isPull: true
     seed:
-      versionName: "v2-local-runSh.4"
+      versionName: "myapp3"
 
-  - name: tripub-cluter
+  - name: sn-ecs-cluster-1
     type: cluster
-    integration: scriptnull-triton
+    integration: scriptnull-aws
     pointer:
-      region: "us-east-2"
+      sourceName : "loadBalanceTest" #name of the cluster we are deploying
+      region: "us-east-1"
 
-  # - name: sn-nginx
-  #   type: image
-  #   integration: scriptnull-docker
-  #   pointer:
-  #     sourceName: "library/nginx"
-  #   seed:
-  #     versionName: latest
-  #
-  # - name: sn-redis
-  #   type: image
-  #   integration: scriptnull-docker
-  #   pointer:
-  #     sourceName: "library/nginx"
-  #   seed:
-  #     versionName: latest
-  #
-  # - name: sn-sn
-  #   type: image
-  #   integration: scriptnull-docker
-  #   pointer:
-  #     sourceName: "scriptnull/sample_node"
-  #   seed:
-  #     versionName: "dc.pipeline.3"
-  #
-  # - name: sn-driftking
-  #   type: image
-  #   integration: scriptnull-docker
-  #   pointer:
-  #     sourceName: "scriptnull/debian"
-  #   seed:
-  #     versionName: "driftking"
-  #
-  # - name: sn-entrypoint
-  #   type: image
-  #   integration: scriptnull-docker
-  #   pointer:
-  #     sourceName: "scriptnull/debian"
-  #   seed:
-  #     versionName: "entrypoint"
-  #
+  - name: sn-lb
+    type: loadBalancer
+    pointer:
+      sourceName: EC2Contai-EcsElast-17A64D22JHQLM
 
-  # - name: ecs-cluter
-  #   type: cluster
-  #   integration: scriptnull-aws
-  #   pointer:
-  #     region: "us-west-2"
-  #
-  # - name: sn-replicas
-  #   type: replicas
-  #   version:
-  #     count: 2
-  #
-  # - name: xx-replicas
-  #   type: replicas
-  #   version:
-  #     count: 3
+  - name: sn-lb-1
+    type: loadBalancer
+    pointer:
+      sourceName: shLoadBalancer
 
-  # - name: sn-replicas-1
-  #   type: replicas
-  #   version:
-  #     count: 2
-
-  # - name: study_sync_repo_resource
-  #   type: syncRepo
-  #   integration: github
-  #   pointer:
-  #     sourceName: "scriptnull/sample_node"
-  #     branch: "v2-rSync-study"
-
-  # - name: up-sn-replicas
-  #   type: replicas
-  #   version:
-  #     count: 2
-
-  # - name: basic-replicas
-  #   type: replicas
-  #   version:
-  #     count: 2
+  - name: sn-docker-opts-1
+    type: dockerOptions
+    version:
+      memory: 200
+      portMappings:
+        - "80:80"

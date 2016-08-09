@@ -1,150 +1,20 @@
 jobs:
-  - name: runSh-3
-    type: runSh
+  - name: sn-manifestjob1-1
+    type: manifest
     steps:
-      - IN: v2-local-runSh
-      - IN: runSh-trigger-1
-      - TASK:
-        - script: ls
-        - script: /build/IN/v2-local-runSh/v2-local-runSh/s1.sh
-      - OUT: sn-debian
+      - IN: sn-myapp3-1
+      - IN: sn-docker-opts-1
+      - IN: sn-trigger-1
 
-  # - name: runCI-2
-  #   type: runCI
-  #   steps:
-  #     - IN: v2-local-runSh
-  #     - IN: runCI-trigger
-  #     - TASK: managed
-  #     - OUT: sn-debian
-
-  # - name: runCI-man
-  #   type: manifest
-  #   steps:
-  #     - IN: sn-debian
-  #
-  # - name: runCI-deploy
-  #   type: deploy
-  #   steps:
-  #     - IN: runCI-man
-  #     - IN: tripub-cluter
-
-  # - name: lsat-tri-deploy-2
-  #   type: deploy
-  #   steps:
-  #     - IN: lsat-man-2
-  #     - IN: tripub-cluter
-  #
-  #
-  # - name: lsat-tri-deploy-5
-  #   type: deploy
-  #   steps:
-  #     - IN: lsat-man-2
-  #     - IN: tripub-cluter
-
-  # - name: lsat-tri-deploy-6
-  #   type: deploy
-  #   steps:
-  #     - IN: lsat-man-2
-  #     - IN: tripub-cluter
-
-  # - name: lsat-tri-deploy-7
-  #   type: deploy
-  #   steps:
-  #     - IN: lsat-man-2
-  #     - IN: tripub-cluter
-
-  # - name: lsat-tri-deploy-8
-  #   type: deploy
-  #   steps:
-  #     - IN: lsat-man-2
-  #     - IN: tripub-cluter
-
-  # - name: lsat-tri-deploy-9
-  #   type: deploy
-  #   steps:
-  #     - IN: lsat-man-2
-  #     - IN: tripub-cluter
-
-  # - name: lsat-tri-deploy-10
-  #   type: deploy
-  #   steps:
-  #     - IN: lsat-man-2
-  #     - IN: tripub-cluter
-
-  # - name: lsat-tri-deploy-11
-  #   type: deploy
-  #   steps:
-  #     - IN: lsat-man-2
-  #     - IN: tripub-cluter
-
-  # - name: lsat-tri-deploy-12
-  #   type: deploy
-  #   steps:
-  #     - IN: lsat-man-2
-  #     - IN: tripub-cluter
-
-  # - name: lsat-tri-deploy-13
-  #   type: deploy
-  #   steps:
-  #     - IN: lsat-man-2
-  #     - IN: tripub-cluter
-  #
-  # - name: lsat-tri-deploy-14
-  #   type: deploy
-  #   steps:
-  #     - IN: lsat-man-2
-  #     - IN: tripub-cluter
-
-  # - name: lsat-tri-deploy-15
-  #   type: deploy
-  #   steps:
-  #     - IN: lsat-man-2
-  #     - IN: tripub-cluter
-
-  # - name: lsat-tri-deploy-16
-  #   type: deploy
-  #   steps:
-  #     - IN: lsat-man-2
-  #     - IN: tripub-cluter
-
-  # - name: lsat-tri-deploy-17
-  #   type: deploy
-  #   steps:
-  #     - IN: lsat-man-2
-  #     - IN: tripub-cluter
-
-  # - name: lsat-tri-deploy-18
-  #   type: deploy
-  #   steps:
-  #     - IN: lsat-man-2
-  #     - IN: tripub-cluter
-
-  # - name: lsat-tri-deploy-19
-  #   type: deploy
-  #   steps:
-  #     - IN: lsat-man-2
-  #     - IN: tripub-cluter
-
-  # - name: lsat-tri-deploy-20
-  #   type: deploy
-  #   steps:
-  #     - IN: lsat-man-2
-  #     - IN: tripub-cluter
-
-  # - name: lsat-tri-deploy-21
-  #   type: deploy
-  #   steps:
-  #     - IN: lsat-man-2
-  #     - IN: tripub-cluter
-
-  # - name: lsat-tri-deploy-22
-  #   type: deploy
-  #   steps:
-  #     - IN: lsat-man-2
-  #     - IN: tripub-cluter
-
-  # - name: lsat-tri-deploy-23
-  #   type: deploy
-  #   steps:
-  #     - IN: lsat-man-2
-  #     - IN: tripub-cluter
+  - name: sn-ecsDeploy-2
+    type: deploy
+    steps:
+      - IN: sn-manifestjob1-1
+      - IN: sn-ecs-cluster-1
+      # - IN: sn-lb
+      #   applyTo:
+      #     - manifest: sn-manifestjob1-1 # it can only apply to one manifest
+      #       image: sn-myapp3-1 # it can only apply to one image in the manifest
+      #       port: 80
+      - TASK: managed
+        deployMethod: upgrade
