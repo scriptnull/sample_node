@@ -1,15 +1,15 @@
 jobs:
-  - name: sn-manifestjob1-1
+  - name: sn-manifestjob1-2
     type: manifest
     steps:
       - IN: sn-myapp3-1
       - IN: sn-docker-opts-1
       - IN: sn-trigger-1
 
-  - name: sn-ecsDeploy-4
+  - name: sn-ecsDeploy-5
     type: deploy
     steps:
-      - IN: sn-manifestjob1-1
+      - IN: sn-manifestjob1-2
       - IN: sn-ecs-cluster-1
       # - IN: sn-lb-1
       #   applyTo:

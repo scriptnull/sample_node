@@ -1,5 +1,4 @@
 triggers:
    - name: sn-trigger-1
      type: trigger
-     pointer:
-       counter: 8
+     counter: 8
