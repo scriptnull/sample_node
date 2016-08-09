@@ -15,6 +15,13 @@ resources:
       sourceName : "loadBalanceTest" #name of the cluster we are deploying
       region: "us-east-1"
 
+  - name: sn-ecs-cluster-2
+    type: cluster
+    integration: scriptnull-aws
+    pointer:
+      sourceName : "testCL" #name of the cluster we are deploying
+      region: "us-west-2"
+
   - name: sn-lb
     type: loadBalancer
     pointer:
