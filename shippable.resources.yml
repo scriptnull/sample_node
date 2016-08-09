@@ -30,4 +30,4 @@ resources:
     version:
       memory: 100
       portMappings:
-        - "8081:80"
+        - "80:80"
