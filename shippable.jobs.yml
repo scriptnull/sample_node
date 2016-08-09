@@ -11,7 +11,7 @@ jobs:
     steps:
       - IN: sn-man-1
       - IN: sn-ecs-cluster-1
-      - IN: sn-lb-1
+      - IN: sn-lb
         applyTo:
           - manifest: sn-man-1
             image: sn-myapp3-1
