@@ -1,19 +1,19 @@
 jobs:
-  - name: sn-manifestjob1-1
+  - name: sn-b-man-1
     type: manifest
     steps:
       - IN: sn-myapp3-1
       - IN: sn-docker-opts-1
-      - IN: sn-trigger-1
+      - IN: sn-trigger-2
 
-  - name: sn-ecsDeploy-2
+  - name: sn-ecsDeploy-3
     type: deploy
     steps:
-      - IN: sn-manifestjob1-1
+      - IN: sn-b-man-1
       - IN: sn-ecs-cluster-1
       # - IN: sn-lb
       #   applyTo:
-      #     - manifest: sn-manifestjob1-1 # it can only apply to one manifest
+      #     - manifest: sn-b-man-1 # it can only apply to one manifest
       #       image: sn-myapp3-1 # it can only apply to one image in the manifest
       #       port: 80
       - TASK: managed
