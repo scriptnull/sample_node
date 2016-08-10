@@ -8,6 +8,13 @@ resources:
     seed:
       versionName: "myapp3"
 
+  - name: sn-tri-cluster
+    type: cluster
+    integration: scriptnull-triton
+    pointer:
+      sourceName: "some-cluster"
+      region: "us-east-2"
+
   # - name: sn-ecs-cluster-1
   #   type: cluster
   #   integration: scriptnull-aws
