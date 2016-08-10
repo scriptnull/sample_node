@@ -15,12 +15,12 @@ resources:
       sourceName: "some-cluster"
       region: "us-east-2"
 
-  # - name: sn-ecs-cluster-1
-  #   type: cluster
-  #   integration: scriptnull-aws
-  #   pointer:
-  #     sourceName : "loadBalanceTest" #name of the cluster we are deploying
-  #     region: "us-east-1"
+  - name: sn-ecs-cluster-1
+    type: cluster
+    integration: scriptnull-aws
+    pointer:
+      sourceName : "loadBalanceTest" #name of the cluster we are deploying
+      region: "us-east-1"
 
   # - name: sn-lb
   #   type: loadBalancer
