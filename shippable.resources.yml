@@ -8,22 +8,22 @@ resources:
     seed:
       versionName: "myapp3"
 
-  - name: sn-ecs-cluster-1
-    type: cluster
-    integration: scriptnull-aws
-    pointer:
-      sourceName : "loadBalanceTest" #name of the cluster we are deploying
-      region: "us-east-1"
+  # - name: sn-ecs-cluster-1
+  #   type: cluster
+  #   integration: scriptnull-aws
+  #   pointer:
+  #     sourceName : "loadBalanceTest" #name of the cluster we are deploying
+  #     region: "us-east-1"
 
-  - name: sn-lb
-    type: loadBalancer
-    pointer:
-      sourceName: EC2Contai-EcsElast-17A64D22JHQLM
-
-  - name: sn-lb-1
-    type: loadBalancer
-    pointer:
-      sourceName: shLoadBalancer
+  # - name: sn-lb
+  #   type: loadBalancer
+  #   pointer:
+  #     sourceName: EC2Contai-EcsElast-17A64D22JHQLM
+  #
+  # - name: sn-lb-1
+  #   type: loadBalancer
+  #   pointer:
+  #     sourceName: shLoadBalancer
 
   - name: sn-docker-opts-1
     type: dockerOptions
