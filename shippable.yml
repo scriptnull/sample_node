@@ -2,10 +2,4 @@ language: node_js
 
 build:
   ci:
-    - docker build -t="scriptnull/debian:$BRANCH.$BUILD_NUMBER" .
-    - docker push scriptnull/debian:$BRANCH.$BUILD_NUMBER
-
-integrations:
-  hub:
-    - integrationName: "scriptnull-docker"
-      type: docker
+    - echo "Hello world"
