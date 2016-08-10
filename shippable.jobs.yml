@@ -3,10 +3,9 @@ jobs:
     type: manifest
     steps:
       - IN: sn-myapp3-1
-      - IN: sn-docker-opts-1
       - IN: sn-trigger-3
 
-  - name: sn-tri-deploy
+  - name: sn-tri-deploy-1
     type: deploy
     steps:
       - IN: sn-man-1
