@@ -2,4 +2,4 @@ triggers:
   - name: sn-trigger-3
     type: trigger
     pointer:
-      counter: 11
+      counter: 12
