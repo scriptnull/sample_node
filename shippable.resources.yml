@@ -38,3 +38,5 @@ resources:
       memory: 100
       portMappings:
         - "80:80"
+      volumesFrom:
+        "somerandome:app"
