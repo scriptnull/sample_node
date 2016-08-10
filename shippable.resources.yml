@@ -39,4 +39,4 @@ resources:
       portMappings:
         - "80:80"
       volumesFrom:
-        - "somdfome:app"
+        - "sdfome:app"
