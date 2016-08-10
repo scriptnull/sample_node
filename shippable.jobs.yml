@@ -5,3 +5,9 @@ jobs:
       - IN: sn-myapp3-1
       - IN: sn-docker-opts-1
       - IN: sn-trigger-3
+
+  - name: sn-tri-deploy
+    type: deploy
+    steps:
+      - IN: sn-man-1
+      - IN: sn-tri-cluster
