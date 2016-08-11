@@ -1,5 +1,5 @@
 triggers:
-  - name: sn-trigger-3
+    - name: sn-trigger-3
     type: trigger
     pointer:
       counter: 30
