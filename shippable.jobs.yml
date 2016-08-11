@@ -14,6 +14,7 @@ jobs:
   - name: fail-runSh
     type: runSh
     steps:
+      - IN: script-repo
       - IN: runTrigger
       - TASK:
         - script: pwd
