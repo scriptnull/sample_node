@@ -10,3 +10,12 @@ jobs:
     steps:
       - IN: sn-man-1
       - IN: sn-tri-cluster
+
+  - name: fail-runSh
+    type: runSh
+    steps:
+      - IN: runTrigger
+      - TASK:
+        - script: pwd
+        - script: sl
+        - script: ls
