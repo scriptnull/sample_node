@@ -1,15 +1,15 @@
 jobs:
-  - name: sn-man-1
-    type: manifest
-    steps:
-      - IN: sn-myapp3-1
-      - IN: sn-trigger-3
-
-  - name: sn-tri-deploy-1
-    type: deploy
-    steps:
-      - IN: sn-man-1
-      - IN: sn-tri-cluster
+  # - name: sn-man-1
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-myapp3-1
+  #     - IN: sn-trigger-3
+  #
+  # - name: sn-tri-deploy-1
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-man-1
+  #     - IN: sn-tri-cluster
 
   - name: fail-runSh
     type: runSh

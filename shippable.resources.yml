@@ -1,19 +1,19 @@
 resources:
-  - name: sn-myapp3-1
-    type: image
-    integration: scriptnull-docker
-    pointer:
-      sourceName: "scriptnull/sample_node"
-      isPull: true
-    seed:
-      versionName: "myapp3"
-
-  - name: sn-tri-cluster
-    type: cluster
-    integration: scriptnull-triton
-    pointer:
-      sourceName: "some-cluster"
-      region: "us-east-2"
+  # - name: sn-myapp3-1
+  #   type: image
+  #   integration: scriptnull-docker
+  #   pointer:
+  #     sourceName: "scriptnull/sample_node"
+  #     isPull: true
+  #   seed:
+  #     versionName: "myapp3"
+  #
+  # - name: sn-tri-cluster
+  #   type: cluster
+  #   integration: scriptnull-triton
+  #   pointer:
+  #     sourceName: "some-cluster"
+  #     region: "us-east-2"
 
   - name: script-repo
     type: gitRepo
