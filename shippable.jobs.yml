@@ -9,4 +9,4 @@ jobs:
     type: deploy
     steps:
       - IN: sn-man-1
-      - IN: sn-ecs-cluster-1
+      - IN: sn-tri-cluster
