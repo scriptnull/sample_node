@@ -38,3 +38,10 @@ resources:
       memory: 200
       portMappings:
         - "80:80"
+
+  - name: script-repo
+    type: gitRepo
+    integration: scriptnull-github
+    pointer:
+      sourceName: scriptnull/sample_node
+      branch: v2-local-runSh

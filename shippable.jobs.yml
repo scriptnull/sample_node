@@ -6,6 +6,14 @@ jobs:
       - IN: sn-docker-opts-1
       - IN: sn-trigger-2
 
+  - name: fail-runSh
+    type: runSh
+    steps:
+      - IN: script-repo
+      - IN: runTrigger
+      - TASK:
+        - script: /build/IN/script-repo/gitRepo/fail.sh
+
   - name: sn-ecsDeploy-3
     type: deploy
     steps:

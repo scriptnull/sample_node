@@ -3,3 +3,8 @@ triggers:
      type: trigger
      pointer:
        counter: 7
+
+  - name: runTrigger
+    type: trigger
+    pointer:
+      counter: 1
