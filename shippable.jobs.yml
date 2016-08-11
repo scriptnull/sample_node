@@ -17,6 +17,4 @@ jobs:
       - IN: script-repo
       - IN: runTrigger
       - TASK:
-        - script: pwd
-        - script: sl
-        - script: ls
+        - script: /build/IN/script-repo/gitRepo/fail.sh
