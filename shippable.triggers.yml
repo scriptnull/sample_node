@@ -1,8 +1,8 @@
 triggers:
-   - name: sn-trigger-2
-     type: trigger
-     pointer:
-       counter: 7
+  - name: sn-trigger-2
+    type: trigger
+    pointer:
+      counter: 7
 
   - name: runTrigger
     type: trigger
