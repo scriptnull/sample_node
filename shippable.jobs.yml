@@ -5,13 +5,13 @@ jobs:
       - IN: sn-b1-myapp2
       - IN: sn-b1-trigger
 
-  - name: fail-runSh
+  - name: sn-b1-runSh
     type: runSh
     steps:
       - IN: sn-b1-script-repo
       - IN: sn-b1-runTrigger
       - TASK:
-        - script: /build/IN/sn-b1-script-repo/gitRepo/fail.sh
+        - script: ls
 
   - name: sn-b1-ecs-deploy
     type: deploy
