@@ -18,7 +18,7 @@ jobs:
     type: deploy
     steps:
       - IN: sn-b-man-1
-      - IN: sn-ecs-cluster-2
+      - IN: sn-ecs-cluster-1
       # - IN: sn-lb
       #   applyTo:
       #     - manifest: sn-b-man-1 # it can only apply to one manifest
