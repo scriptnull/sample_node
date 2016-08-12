@@ -1,5 +1,14 @@
 resources:
-  - name: sn-myapp3-1
+  - name: sn-b1-myapp2
+    type: image
+    integration: scriptnull-docker
+    pointer:
+      sourceName: "scriptnull/sample_node"
+      isPull: true
+    seed:
+      versionName: "myapp2"
+
+  - name: sn-b1-myapp3
     type: image
     integration: scriptnull-docker
     pointer:
@@ -8,53 +17,16 @@ resources:
     seed:
       versionName: "myapp3"
 
-  - name: sn-ecs-cluster-1
-    type: cluster
-    integration: scriptnull-aws
-    pointer:
-      sourceName : "loadBalanceTest" #name of the cluster we are deploying
-      region: "us-east-1"
-
-  - name: sn-ecs-cluster-2
+  - name: sn-ecs-testCL
     type: cluster
     integration: scriptnull-aws
     pointer:
       sourceName : "testCL" #name of the cluster we are deploying
       region: "us-west-2"
 
-  - name: sn-lb
-    type: loadBalancer
-    pointer:
-      sourceName: EC2Contai-EcsElast-17A64D22JHQLM
-
-  - name: sn-lb-1
-    type: loadBalancer
-    pointer:
-      sourceName: shLoadBalancer
-
-  - name: sn-docker-opts-1
-    type: dockerOptions
-    version:
-      memory: 200
-      portMappings:
-        - "80:80"
-
-  - name: script-repo
+  - name: sn-b1-script-repo
     type: gitRepo
     integration: scriptnull-github
     pointer:
       sourceName: scriptnull/sample_node
       branch: v2-local-runSh
-
-  - name: sn-tri-cluster
-    type: cluster
-    integration: scriptnull-triton
-    pointer:
-      sourceName: "some-cluster"
-      region: "us-east-2"
-
-  - name: sn-tri-do
-    type: dockerOptions
-    version:
-      memory: 200
-      publishAllPorts: false

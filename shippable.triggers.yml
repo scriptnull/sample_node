@@ -1,20 +1,10 @@
 triggers:
-  - name: sn-trigger-2
+  - name: sn-b1-trigger
     type: trigger
     pointer:
-      counter: 8
+      counter: 1
 
-  - name: sn-trigger-3
+  - name: sn-b1-runTrigger
     type: trigger
     pointer:
-      counter: 2
-
-  - name: tri-trigger
-    type: trigger
-    pointer:
-      counter: 3
-
-  - name: runTrigger
-    type: trigger
-    pointer:
-      counter: 2
+      counter: 1

@@ -1,59 +1,22 @@
 jobs:
-  - name: sn-b-man-1
+  - name: sn-b1-man-1
     type: manifest
     steps:
-      - IN: sn-myapp3-1
-      - IN: sn-docker-opts-1
-      - IN: sn-trigger-2
-
-  - name: sn-b-man-2
-    type: manifest
-    steps:
-      - IN: sn-myapp3-1
-      - IN: sn-docker-opts-1
-      - IN: sn-trigger-3
-
-  - name: sn-b-man-3
-    type: manifest
-    steps:
-      - IN: sn-myapp3-1
-      - IN: sn-tri-do
-      - IN: tri-trigger
+      - IN: sn-b1-myapp2
+      - IN: sn-b1-trigger
 
   - name: fail-runSh
     type: runSh
     steps:
-      - IN: script-repo
-      - IN: runTrigger
+      - IN: sn-b1-script-repo
+      - IN: sn-b1-runTrigger
       - TASK:
-        - script: /build/IN/script-repo/gitRepo/fail.sh
+        - script: /build/IN/sn-b1-script-repo/gitRepo/fail.sh
 
-  - name: sn-ecsDeploy-3
+  - name: sn-b1-ecs-deploy
     type: deploy
     steps:
-      - IN: sn-b-man-1
-      - IN: sn-ecs-cluster-1
-      # - IN: sn-lb
-      #   applyTo:
-      #     - manifest: sn-b-man-1 # it can only apply to one manifest
-      #       image: sn-myapp3-1 # it can only apply to one image in the manifest
-      #       port: 80
+      - IN: sn-b1-man-1
+      - IN: sn-ecs-testCL
       - TASK: managed
         deployMethod: upgrade
-
-  - name: sn-ecsDeploy-5
-    type: deploy
-    steps:
-      - IN: sn-b-man-2
-      - IN: sn-ecs-cluster-1
-      # - IN: sn-lb
-      #   applyTo:
-      #     - manifest: sn-b-man-1 # it can only apply to one manifest
-      #       image: sn-myapp3-1 # it can only apply to one image in the manifest
-      #       port: 80
-
-  - name: sn-tri-deploy
-    type: deploy
-    steps:
-      - IN: sn-b-man-3
-      - IN: sn-tri-cluster
