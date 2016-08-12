@@ -4,6 +4,11 @@ triggers:
     pointer:
       counter: 8
 
+  - name: sn-trigger-3
+    type: trigger
+    pointer:
+      counter: 8
+
   - name: runTrigger
     type: trigger
     pointer:

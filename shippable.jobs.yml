@@ -6,6 +6,13 @@ jobs:
       - IN: sn-docker-opts-1
       - IN: sn-trigger-2
 
+  - name: sn-b-man-2
+    type: manifest
+    steps:
+      - IN: sn-myapp3-1
+      - IN: sn-docker-opts-1
+      - IN: sn-trigger-3
+
   - name: fail-runSh
     type: runSh
     steps:
@@ -18,6 +25,19 @@ jobs:
     type: deploy
     steps:
       - IN: sn-b-man-1
+      - IN: sn-ecs-cluster-1
+      # - IN: sn-lb
+      #   applyTo:
+      #     - manifest: sn-b-man-1 # it can only apply to one manifest
+      #       image: sn-myapp3-1 # it can only apply to one image in the manifest
+      #       port: 80
+      - TASK: managed
+        deployMethod: upgrade
+
+  - name: sn-ecsDeploy-4
+    type: deploy
+    steps:
+      - IN: sn-b-man-2
       - IN: sn-ecs-cluster-1
       # - IN: sn-lb
       #   applyTo:
