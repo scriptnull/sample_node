@@ -13,6 +13,13 @@ jobs:
       - IN: sn-docker-opts-1
       - IN: sn-trigger-3
 
+  - name: sn-b-man-3
+    type: manifest
+    steps:
+      - IN: sn-myapp3-1
+      - IN: sn-tri-do
+      - IN: tri-trigger
+
   - name: fail-runSh
     type: runSh
     steps:
@@ -44,3 +51,9 @@ jobs:
       #     - manifest: sn-b-man-1 # it can only apply to one manifest
       #       image: sn-myapp3-1 # it can only apply to one image in the manifest
       #       port: 80
+
+  - name: sn-tri-deploy
+    type: deploy
+    steps:
+      - IN: sn-b-man-3
+      - IN: sn-tri-cluster

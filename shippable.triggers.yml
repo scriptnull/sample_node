@@ -9,6 +9,11 @@ triggers:
     pointer:
       counter: 2
 
+  - name: tri-trigger
+    type: trigger
+    pointer:
+      counter: 1
+
   - name: runTrigger
     type: trigger
     pointer:
