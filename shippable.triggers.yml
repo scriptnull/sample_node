@@ -2,7 +2,7 @@ triggers:
   - name: sn-b1-trigger
     type: trigger
     pointer:
-      counter: 1
+      counter: 2
 
   - name: sn-b1-runTrigger
     type: trigger
