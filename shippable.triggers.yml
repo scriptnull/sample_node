@@ -22,4 +22,4 @@ triggers:
   - name: good-runTrigger
     type: trigger
     pointer:
-      counter: 2
+      counter: 3
