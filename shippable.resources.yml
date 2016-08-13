@@ -1,12 +1,21 @@
 resources:
-  # - name: sn-myapp3-1
-  #   type: image
-  #   integration: scriptnull-docker
-  #   pointer:
-  #     sourceName: "scriptnull/sample_node"
-  #     isPull: true
-  #   seed:
-  #     versionName: "myapp3"
+  - name: sn-myapp3
+    type: image
+    integration: scriptnull-docker
+    pointer:
+      sourceName: "scriptnull/sample_node"
+      isPull: true
+    seed:
+      versionName: "myapp3"
+
+  - name: sn-myapp2
+    type: image
+    integration: scriptnull-docker
+    pointer:
+      sourceName: "scriptnull/sample_node"
+      isPull: true
+    seed:
+      versionName: "myapp2"
   #
   # - name: sn-tri-cluster
   #   type: cluster
@@ -15,19 +24,19 @@ resources:
   #     sourceName: "some-cluster"
   #     region: "us-east-2"
 
-  - name: script-repo
-    type: gitRepo
-    integration: github
-    pointer:
-      sourceName: scriptnull/sample_node
-      branch: v2-local-runSh
-
-  # - name: sn-ecs-cluster-1
-  #   type: cluster
-  #   integration: scriptnull-aws
+  # - name: script-repo
+  #   type: gitRepo
+  #   integration: github
   #   pointer:
-  #     sourceName : "loadBalanceTest" #name of the cluster we are deploying
-  #     region: "us-east-1"
+  #     sourceName: scriptnull/sample_node
+  #     branch: v2-local-runSh
+
+  - name: sn-ecs-cluster-1
+    type: cluster
+    integration: scriptnull-aws
+    pointer:
+      sourceName : "loadBalanceTest" #name of the cluster we are deploying
+      region: "us-east-1"
 
   # - name: sn-lb
   #   type: loadBalancer
