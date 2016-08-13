@@ -8,6 +8,15 @@ resources:
     seed:
       versionName: "myapp3"
 
+  - name: sn-myapp2-1
+    type: image
+    integration: scriptnull-docker
+    pointer:
+      sourceName: "scriptnull/sample_node"
+      isPull: true
+    seed:
+      versionName: "myapp2"
+
   - name: sn-ecs-cluster-1
     type: cluster
     integration: scriptnull-aws

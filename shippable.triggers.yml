@@ -18,3 +18,8 @@ triggers:
     type: trigger
     pointer:
       counter: 2
+
+  - name: good-runTrigger
+    type: trigger
+    pointer:
+      counter: 2

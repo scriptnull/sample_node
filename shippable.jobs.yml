@@ -28,6 +28,16 @@ jobs:
       - TASK:
         - script: /build/IN/script-repo/gitRepo/fail.sh
 
+  - name: good-runSh
+    type: runSh
+    steps:
+      - IN: sn-myapp3-1
+      - IN: good-runTrigger
+      - TASK:
+          - script: echo "starting ..."
+          - script: "echo 'versionName=latest' > /build/state/sn-myapp2-1.env"
+      - OUT: sn-myapp2-1
+
   - name: sn-ecsDeploy-3
     type: deploy
     steps:
