@@ -2,7 +2,7 @@ triggers:
   - name: sn-trigger-3
     type: trigger
     pointer:
-      counter: 31
+      counter: 32
 
   - name: runTrigger
     type: trigger
