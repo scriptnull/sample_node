@@ -17,6 +17,7 @@ jobs:
   - name: good-runSh
     type: runSh
     steps:
+      - IN: sn-myapp3
       - IN: runTrigger
       - TASK:
           - script: echo "starting ..."
