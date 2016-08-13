@@ -4,6 +4,7 @@ jobs:
     steps:
       - IN: sn-myapp2
       - IN: sn-trigger-3
+      - OUT: sn-myapp3
 
   - name: sn-ecs-deploy
     type: deploy
