@@ -7,4 +7,4 @@ triggers:
   - name: runTrigger
     type: trigger
     pointer:
-      counter: 43
+      counter: 44
