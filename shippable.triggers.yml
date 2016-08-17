@@ -1,25 +1,25 @@
 triggers:
   - name: sn-trigger-2
     type: trigger
-    pointer:
+    version:
       counter: 9
 
   - name: sn-trigger-3
     type: trigger
-    pointer:
+    version:
       counter: 2
 
   - name: tri-trigger
     type: trigger
-    pointer:
+    version:
       counter: 3
 
   - name: runTrigger
     type: trigger
-    pointer:
+    version:
       counter: 2
 
   - name: good-runTrigger
     type: trigger
-    pointer:
+    version:
       counter: 3
