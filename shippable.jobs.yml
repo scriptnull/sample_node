@@ -20,13 +20,12 @@ jobs:
   - name: invalid-runSh
     type: runSh
     steps:
-
+      - IN: sn-myapp3
 
   # - name: invalid-rSync
   #   type: rSync
   #   steps:
   #     - IN: sn-myapp3
-
 
   # - name: sn-ecs-deploy
   #   type: deploy
