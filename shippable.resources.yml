@@ -53,6 +53,8 @@ resources:
     version:
       memory: 100
 
-  - name: invalid-params-1
+  - name: invalid-params-xx
     type: params
-    version:
+
+  - name: invalid-replicas-xx
+    type: replicas
