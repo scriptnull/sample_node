@@ -69,7 +69,7 @@ resources:
       publishAllPorts: false
 
   - name: invalid-cluster
-    # type: cluster
+    type: cluster
     # integration: scriptnull-triton
     # pointer:
     #   sourceName: "some-cluster"
