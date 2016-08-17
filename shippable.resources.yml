@@ -82,4 +82,4 @@ resources:
   - name: invalid-version
     type: version
     seed:
-      versionName: '1.0.0'
+      xxName: '1.0.0'
