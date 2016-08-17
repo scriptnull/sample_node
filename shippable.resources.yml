@@ -52,3 +52,7 @@ resources:
     type: dockerOptions
     version:
       memory: 100
+
+  - name: invalid-params
+    type: params
+    version:
