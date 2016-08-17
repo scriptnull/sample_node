@@ -55,6 +55,8 @@ resources:
 
   - name: invalid-params-xx
     type: params
+    version:
 
   - name: invalid-replicas-xx
     type: replicas
+    version:
