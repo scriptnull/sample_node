@@ -66,6 +66,6 @@ resources:
 
   - name: valid-cluster
     type: cluster
-    integration: scriptnull-triton
+    integration: scriptnull-docker
     pointer:
       abc: 'abb'
