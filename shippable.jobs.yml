@@ -8,7 +8,6 @@ jobs:
 
   - name: invalid-man-job-1
     type: manifest
-    steps:
 
   # - name: sn-ecs-deploy
   #   type: deploy
