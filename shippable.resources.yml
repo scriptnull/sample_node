@@ -65,7 +65,7 @@ resources:
       count : 1
 
   - name: invalid-res
-    type: random1
+    type: random2
     version:
       xx: name
 
