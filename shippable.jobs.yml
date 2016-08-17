@@ -17,6 +17,10 @@ jobs:
       - TASK: managed
         bump: major
 
+  - name: invalid-runSh
+    type: runSh
+    steps:
+
 
   # - name: invalid-rSync
   #   type: rSync
