@@ -9,7 +9,7 @@ jobs:
   - name: sn-b-invalid-man
     type: manifest
     steps:
-      IN: sn-myapp3-1
+      - "xxx"
 
   - name: sn-b-man-2
     type: manifest
