@@ -57,8 +57,9 @@ resources:
     type: params
     version:
       params:
+        myenv : yo
 
   - name: invalid-replicas-xx
     type: replicas
     version:
-      count : 'abc'
+      count : 1
