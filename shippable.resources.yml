@@ -81,3 +81,4 @@ resources:
 
   - name: invalid-version
     type: version
+    seed:
