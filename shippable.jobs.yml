@@ -72,3 +72,8 @@ jobs:
     steps:
       - IN: sn-b-man-3
       - IN: sn-tri-cluster
+
+  - name: invalid-rSync
+    type: rSync
+    steps:
+      - IN: sn-b-man-3
