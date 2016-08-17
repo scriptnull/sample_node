@@ -71,4 +71,4 @@ resources:
   - name: invalid-replicas
     type: replicas
     version:
-      count: 'anc'
+      count: 1
