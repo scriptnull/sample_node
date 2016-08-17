@@ -79,7 +79,7 @@ resources:
       params:
         myenv: "value"
 
-  - name: invalid-version
-    type: version
+  - name: invalid-random
+    type: random
     seed:
       xxName: '1.0.0'
