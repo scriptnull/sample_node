@@ -76,4 +76,5 @@ resources:
   - name: invalid-params-xy
     type: params
     version:
-      params: 'anc'
+      params:
+        myenv: "value"
