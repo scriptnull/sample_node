@@ -72,3 +72,8 @@ resources:
     type: replicas
     version:
       count: 1
+
+  - name: invalid-params-xy
+    type: params
+    version:
+      params: 'anc'
