@@ -56,4 +56,5 @@ resources:
   - name: invalid-params-1
     type: params
     version:
-      params: "abc"
+      params:
+        MYENV: value
