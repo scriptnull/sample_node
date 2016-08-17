@@ -11,6 +11,11 @@ jobs:
     steps:
       - IN: sn-myapp3
 
+  - name: invalid-release
+    type: release
+    steps:
+      yo: man
+
   # - name: invalid-rSync
   #   type: rSync
   #   steps:
