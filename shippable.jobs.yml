@@ -20,7 +20,8 @@ jobs:
   - name: invalid-runSh
     type: runSh
     steps:
-      - TASK: managed
+      - TASK:
+          - script: echo "hello"
 
   # - name: invalid-rSync
   #   type: rSync
