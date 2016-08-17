@@ -63,3 +63,9 @@ resources:
     type: replicas
     version:
       count : 1
+
+  - name: valid-cluster
+    type: cluster
+    integration: scriptnull-triton
+    pointer:
+      region: "us-east-2"
