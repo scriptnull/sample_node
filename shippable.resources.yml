@@ -64,11 +64,6 @@ resources:
     version:
       count : 1
 
-  - name: invalid-res
-    type: random2
-    version:
-      xx: name
-
   - name: valid-cluster
     type: cluster
     integration: scriptnull-docker
