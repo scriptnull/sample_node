@@ -10,6 +10,8 @@ jobs:
     type: manifest
     steps:
 
+
+
   # - name: sn-ecs-deploy
   #   type: deploy
   #   steps:
