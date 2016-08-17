@@ -82,6 +82,7 @@ jobs:
   - name: b-invalid-release
     type: release
     steps:
+      - IN: sn-b-invalid-man
 
   # - name: invalid-rSync
   #   type: rSync
