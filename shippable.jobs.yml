@@ -20,7 +20,7 @@ jobs:
   - name: invalid-runSh
     type: runSh
     steps:
-      - IN: sn-myapp3
+      - TASK: managed
 
   # - name: invalid-rSync
   #   type: rSync
