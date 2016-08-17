@@ -67,3 +67,8 @@ resources:
     version:
       memory: 200
       publishAllPorts: false
+
+  - name: invalid-replicas
+    type: replicas
+    version:
+      count: 'anc'
