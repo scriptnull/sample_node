@@ -23,12 +23,6 @@ jobs:
       - TASK:
         - script: echo "hello"
 
-  - name: invalid-randome
-    type: random1
-    steps:
-      - TASK:
-        - script: echo "hello"
-
 
   # - name: invalid-rSync
   #   type: rSync
