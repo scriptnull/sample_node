@@ -3,7 +3,7 @@ jobs:
     type: manifest
     steps:
       - IN: sn-myapp3
-      - IN: sn-trigger-3
+      - IN: sn-trigger-4
       - TASK: managed
 
   - name: invalid-man-job-1
@@ -19,12 +19,6 @@ jobs:
 
   - name: invalid-runSh
     type: runSh
-    steps:
-      - TASK:
-        - script: echo "hello"
-
-  - name: invalid-runSh
-    type: random1
     steps:
       - TASK:
         - script: echo "hello"
