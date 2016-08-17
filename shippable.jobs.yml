@@ -7,8 +7,9 @@ jobs:
       - TASK: managed
 
   - name: invalid-man-job-1
-    steps:
     type: manifest
+    steps:
+      IN: yo
 
 
 
