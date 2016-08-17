@@ -4,7 +4,7 @@ triggers:
     pointer:
       counter: 34
 
-  - name: runTrigger
-    type: trigger
-    pointer:
-      counter: 5
+  # - name: runTrigger
+  #   type: trigger
+  #   pointer:
+  #     counter: 5

@@ -6,23 +6,23 @@ jobs:
       - IN: sn-trigger-3
       - TASK: managed
 
-  - name: sn-ecs-deploy
-    type: deploy
-    steps:
-      - IN: sn-man-1
-      - IN: sn-ecs-cluster-1
-      - TASK: managed
-        deployMethod: upgrade
-
-  - name: good-runSh
-    type: runSh
-    steps:
-      - IN: sn-myapp3
-      - IN: runTrigger
-      - TASK:
-          - script: echo "starting ..."
-          - script: "echo 'versionName=latest' > /build/state/sn-myapp2.env"
-      - OUT: sn-myapp2
+  # - name: sn-ecs-deploy
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-man-1
+  #     - IN: sn-ecs-cluster-1
+  #     - TASK: managed
+  #       deployMethod: upgrade
+  #
+  # - name: good-runSh
+  #   type: runSh
+  #   steps:
+  #     - IN: sn-myapp3
+  #     - IN: runTrigger
+  #     - TASK:
+  #         - script: echo "starting ..."
+  #         - script: "echo 'versionName=latest' > /build/state/sn-myapp2.env"
+  #     - OUT: sn-myapp2
 
   # - name: fail-runSh
   #   type: runSh
