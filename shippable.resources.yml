@@ -67,10 +67,3 @@ resources:
     version:
       memory: 200
       publishAllPorts: false
-
-  - name: invalid-cluster-1
-    # type: cluster
-    # integration: scriptnull-triton
-    # pointer:
-    #   sourceName: "some-cluster"
-    #   region: "us-east-2"
