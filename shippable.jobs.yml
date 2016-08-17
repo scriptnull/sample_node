@@ -14,7 +14,9 @@ jobs:
   - name: invalid-release
     type: release
     steps:
-      yo: man
+      - TASK: managed
+        bump: major
+
 
   # - name: invalid-rSync
   #   type: rSync
