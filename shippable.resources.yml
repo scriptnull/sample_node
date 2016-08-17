@@ -56,7 +56,9 @@ resources:
   - name: invalid-params-xx
     type: params
     version:
+      params:
 
   - name: invalid-replicas-xx
     type: replicas
     version:
+      count : 'abc'
