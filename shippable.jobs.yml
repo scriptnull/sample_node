@@ -6,6 +6,11 @@ jobs:
       - IN: sn-trigger-3
       - TASK: managed
 
+
+  - name: invalid-man-job-1
+    type: manifest
+    steps:
+
   # - name: sn-ecs-deploy
   #   type: deploy
   #   steps:
