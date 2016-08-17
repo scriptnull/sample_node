@@ -78,3 +78,6 @@ resources:
     version:
       params:
         myenv: "value"
+
+  - name: invalid-version
+    type: version
