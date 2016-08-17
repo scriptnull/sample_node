@@ -68,4 +68,5 @@ resources:
     type: cluster
     integration: scriptnull-docker
     pointer:
-      region: ""
+      region: "abc"
+      sourceName: ""
