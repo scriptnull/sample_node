@@ -76,8 +76,12 @@ jobs:
   - name: b-invalid-runSh
     type: runSh
     steps:
-      - IN: sn-b-man-3
+      - TASK:
+        - script: ls
 
+  - name: b-invalid-release
+    type: release
+    steps:
 
   # - name: invalid-rSync
   #   type: rSync
