@@ -6,6 +6,9 @@ jobs:
       - IN: sn-docker-opts-1
       - IN: sn-trigger-2
 
+  - name: sn-b-invalid-man
+    type: manifest
+
   - name: sn-b-man-2
     type: manifest
     steps:
