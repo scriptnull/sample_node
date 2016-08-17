@@ -55,4 +55,4 @@ resources:
 
   - name: invalid-params-1
     type: params
-    version: "abc"
+    version: "bbc"
