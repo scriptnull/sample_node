@@ -43,13 +43,13 @@ jobs:
   #     - TASK: managed
   #       deployMethod: upgrade
 
-  # - name: sn-ecs-deploy-5
-  #   type: deploy
-  #   steps:
-  #     - IN: sn-man-1
-  #     - IN: sn-ecs-cluster-1
-  #     - TASK: managed
-  #       deployMethod: upgrade
+  - name: sn-ecs-deploy-5
+    type: deploy
+    steps:
+      - IN: sn-man-1
+      - IN: sn-ecs-cluster-1
+      - TASK: managed
+        deployMethod: upgrade
 
   - name: sn-ecs-deploy-6
     type: deploy
