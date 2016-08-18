@@ -11,14 +11,14 @@ jobs:
   #   steps:
   #     - IN: sn-myapp3
 
-  # - name: sn-ecs-deploy
-  #   type: deploy
-  #   steps:
-  #     - IN: sn-man-1
-  #     - IN: sn-ecs-cluster-1
-  #     - TASK: managed
-  #       deployMethod: upgrade
-  #
+  - name: sn-ecs-deploy
+    type: deploy
+    steps:
+      - IN: sn-man-1
+      - IN: sn-ecs-cluster-1
+      - TASK: managed
+        deployMethod: upgrade
+
   # - name: good-runSh
   #   type: runSh
   #   steps:
