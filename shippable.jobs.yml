@@ -27,13 +27,13 @@ jobs:
   #     - TASK: managed
   #       deployMethod: upgrade
 
-  - name: sn-ecs-deploy-2
-    type: deploy
-    steps:
-      - IN: sn-man-1
-      - IN: sn-ecs-cluster-1
-      - TASK: managed
-        deployMethod: upgrade
+  # - name: sn-ecs-deploy-2
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-man-1
+  #     - IN: sn-ecs-cluster-1
+  #     - TASK: managed
+  #       deployMethod: upgrade
 
   - name: sn-ecs-deploy-3
     type: deploy
