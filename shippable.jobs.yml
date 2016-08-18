@@ -89,11 +89,11 @@ jobs:
       - IN: sn-myapp3-1
       - IN: sn-trigger-delete
 
-  - name: sn-ecs-del-1
-    type: deploy
-    steps:
-      - IN:  sn-b-delete
-      - IN: sn-ecs-cluster-1
+  # - name: sn-ecs-del-1
+  #   type: deploy
+  #   steps:
+  #     - IN:  sn-b-delete
+  #     - IN: sn-ecs-cluster-1
 
   - name: sn-ecs-del-2
     type: deploy
