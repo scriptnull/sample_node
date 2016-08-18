@@ -42,7 +42,7 @@ jobs:
           - script: "echo 'versionName=latest' > /build/state/sn-myapp2-1.env"
       - OUT: sn-myapp2-1
 
-  - name: sn-ecsDeploy-4
+  - name: sn-ecsDeploy-5
     type: deploy
     steps:
       - IN: sn-b-man-1
