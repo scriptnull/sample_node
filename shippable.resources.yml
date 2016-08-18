@@ -31,12 +31,12 @@ resources:
   #     sourceName: scriptnull/sample_node
   #     branch: v2-local-runSh
 
-  # - name: sn-ecs-cluster-1
-  #   type: cluster
-  #   integration: scriptnull-aws
-  #   pointer:
-  #     sourceName : "loadBalanceTest" #name of the cluster we are deploying
-  #     region: "us-east-1"
+  - name: sn-ecs-cluster-1
+    type: cluster
+    integration: scriptnull-aws
+    pointer:
+      sourceName : "loadBalanceTest" #name of the cluster we are deploying
+      region: "us-east-1"
 
   # - name: sn-lb
   #   type: loadBalancer
