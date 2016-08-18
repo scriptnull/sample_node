@@ -2,7 +2,7 @@ triggers:
   - name: sn-trigger-2
     type: trigger
     version:
-      counter: 9
+      counter: 10
 
   - name: sn-trigger-3
     type: trigger
