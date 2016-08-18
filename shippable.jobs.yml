@@ -82,3 +82,21 @@ jobs:
   #   type: rSync
   #   steps:
   #     - IN: sn-b-man-3
+
+  - name: sn-b-delete
+    type: manifest
+    steps:
+      - IN: sn-myapp3-1
+      - IN: sn-trigger-delete
+
+  - name: sn-ecs-del-1
+    type: deploy
+    steps:
+      - IN: sn-b-man-2
+      - IN: sn-ecs-cluster-1
+
+  - name: sn-ecs-del-2
+    type: deploy
+    steps:
+      - IN: sn-b-man-2
+      - IN: sn-ecs-cluster-1
