@@ -27,4 +27,4 @@ triggers:
   - name: sn-trigger-delete
     type: trigger
     version:
-      counter: 1
+      counter: 2

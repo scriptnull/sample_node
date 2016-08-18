@@ -92,11 +92,11 @@ jobs:
   - name: sn-ecs-del-1
     type: deploy
     steps:
-      - IN: sn-b-man-2
+      - IN:  sn-b-delete
       - IN: sn-ecs-cluster-1
 
   - name: sn-ecs-del-2
     type: deploy
     steps:
-      - IN: sn-b-man-2
+      - IN: sn-b-delete
       - IN: sn-ecs-cluster-1
