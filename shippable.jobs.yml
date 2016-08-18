@@ -43,7 +43,7 @@ jobs:
   #     - TASK: managed
   #       deployMethod: upgrade
 
-  - name: sn-ecs-deploy-4
+  - name: sn-ecs-deploy-5
     type: deploy
     steps:
       - IN: sn-man-1
