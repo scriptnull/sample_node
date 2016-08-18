@@ -6,24 +6,6 @@ jobs:
       - IN: sn-trigger-4
       - TASK: managed
 
-  - name: invalid-man-job-1
-    type: manifest
-    steps:
-      - IN: sn-myapp3
-
-  - name: invalid-release
-    type: release
-    steps:
-      - TASK: managed
-        bump: major
-
-  - name: invalid-runSh
-    type: runSh
-    steps:
-      - TASK:
-        - script: echo "hello"
-
-
   # - name: invalid-rSync
   #   type: rSync
   #   steps:

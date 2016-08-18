@@ -52,20 +52,3 @@ resources:
     type: dockerOptions
     version:
       memory: 100
-
-  - name: invalid-params-xx
-    type: params
-    version:
-      params:
-        myenv : yo
-
-  - name: invalid-replicas-xx
-    type: replicas
-    version:
-      count : 1
-
-  - name: valid-cluster
-    type: cluster
-    integration: scriptnull-docker
-    pointer:
-      something: else
