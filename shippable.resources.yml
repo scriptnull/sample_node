@@ -62,6 +62,12 @@ resources:
       sourceName: "some-cluster"
       region: "us-east-2"
 
+  - name: sn-ddc-cluster
+    type: cluster
+    integration: scriptnull-ddc
+    pointer:
+      sourceName: "some-ddc-cluster"
+
   - name: sn-tri-do
     type: dockerOptions
     version:
