@@ -65,8 +65,6 @@ jobs:
       - IN: version-resource
       - IN: sn-man-1
       - IN: release-trigger
-      - TASK: managed
-        bump: minor
 
   # - name: good-runSh
   #   type: runSh
