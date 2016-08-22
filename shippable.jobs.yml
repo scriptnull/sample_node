@@ -66,6 +66,14 @@ jobs:
       - IN: sn-ecs-deploy-6
       - IN: release-trigger
 
+  - name: sn-ecs-deploy-7
+    type: deploy
+    steps:
+      - IN: minor-releases
+      - IN: sn-ecs-cluster-1
+      - TASK: managed
+        deployMethod: upgrade
+
   # - name: good-runSh
   #   type: runSh
   #   steps:
