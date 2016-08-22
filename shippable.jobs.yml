@@ -63,7 +63,7 @@ jobs:
     type: release
     steps:
       - IN: version-resource
-      - IN: sn-ecs-deploy-6
+      - IN: sn-man-1
       - IN: release-trigger
 
   - name: sn-ecs-deploy-7
