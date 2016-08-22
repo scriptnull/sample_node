@@ -107,7 +107,7 @@ jobs:
   - name: sn-rel-man
     type: manifest
     steps:
-      - IN: sn-myapp3-1
+      - IN: sn-myapp2-1
       - IN: sn-rel-trigger
       - TASK: managed
 
