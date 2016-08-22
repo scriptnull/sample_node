@@ -29,7 +29,7 @@ resources:
     integration: github
     pointer:
       sourceName: scriptnull/sample_node
-      branch: v2-local-runSh
+      branch: v2-local-runSh-xx
 
   - name: sn-ecs-cluster-1
     type: cluster
