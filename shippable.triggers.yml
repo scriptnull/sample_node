@@ -2,7 +2,7 @@ triggers:
   - name: sn-trigger-4
     type: trigger
     version:
-      counter: 3
+      counter: 4
 
   - name: release-trigger
     type: trigger
