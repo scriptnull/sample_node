@@ -33,3 +33,8 @@ triggers:
     type: trigger
     version:
       counter: 3
+
+  - name: release-trigger
+    type: trigger
+    version:
+      counter: 1
