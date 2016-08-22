@@ -2,7 +2,7 @@ jobs:
   - name: sn-man-1
     type: manifest
     steps:
-      - IN: sn-myapp2
+      - IN: sn-myapp3
       - IN: sn-trigger-4
       - TASK: managed
 
