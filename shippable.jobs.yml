@@ -91,3 +91,9 @@ jobs:
   #     - IN: runTrigger
   #     - TASK:
   #       - script: /build/IN/script-repo/gitRepo/fail.sh
+
+  - name: deps-man
+    type: manifest
+    steps:
+      - IN: another-repo-img
+      - IN: deps-trigger

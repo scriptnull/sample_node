@@ -9,6 +9,12 @@ triggers:
     version:
       counter: 4
 
+
+  - name: deps-trigger
+    type: trigger
+    version:
+      counter: 5
+
   # - name: runTrigger
   #   type: trigger
   #   pointer:
