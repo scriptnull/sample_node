@@ -63,7 +63,7 @@ jobs:
     type: release
     steps:
       - IN: version-resource
-      - IN: sn-man-1
+      - IN: sn-ecs-deploy-6
       - IN: release-trigger
 
   # - name: good-runSh
