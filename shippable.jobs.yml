@@ -59,6 +59,14 @@ jobs:
       - TASK: managed
         deployMethod: upgrade
 
+  - name: minor-releases
+    type: release
+    steps:
+      - IN: version-resource
+      - IN: sn-man-1
+      - TASK: managed
+        bump: minor
+
   # - name: good-runSh
   #   type: runSh
   #   steps:

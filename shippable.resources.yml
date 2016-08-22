@@ -52,3 +52,8 @@ resources:
     type: dockerOptions
     version:
       memory: 100
+
+  - name: version-resource
+    type: version
+    seed:
+      versionName: "0.1.0"

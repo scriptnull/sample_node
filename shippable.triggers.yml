@@ -4,6 +4,11 @@ triggers:
     version:
       counter: 13
 
+  - name: release-trigger
+    type: trigger
+    version:
+      counter: 1
+
   # - name: runTrigger
   #   type: trigger
   #   pointer:
