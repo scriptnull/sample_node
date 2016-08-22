@@ -84,3 +84,8 @@ resources:
     version:
       params:
         myenv: "value"
+
+  - name: version-resource
+    type: version
+    seed:
+      versionName: "0.1.0"

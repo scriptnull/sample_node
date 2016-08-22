@@ -100,3 +100,36 @@ jobs:
     steps:
       - IN: sn-b-delete
       - IN: sn-ddc-cluster
+
+
+################################################
+
+  - name: sn-rel-man
+    type: manifest
+    steps:
+      - IN: sn-myapp3-1
+      - IN: sn-rel-trigger
+      - TASK: managed
+
+  - name: sn-rel-deploy-1
+    type: deploy
+    steps:
+      - IN: sn-rel-man
+      - IN: sn-ecs-cluster-1
+      - TASK: managed
+        deployMethod: upgrade
+
+  - name: minor-releases
+    type: release
+    steps:
+      - IN: version-resource
+      - IN: sn-rel-man
+      - IN: release-trigger
+
+  - name: sn-rel-deploy-2
+    type: deploy
+    steps:
+      - IN: minor-releases
+      - IN: sn-ecs-cluster-1
+      - TASK: managed
+        deployMethod: upgrade
