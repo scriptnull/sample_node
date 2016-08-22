@@ -32,7 +32,7 @@ triggers:
   - name: sn-rel-trigger
     type: trigger
     version:
-      counter: 5
+      counter: 6
 
   - name: release-trigger
     type: trigger
