@@ -39,8 +39,8 @@ resources:
     type: dockerOptions
     version:
       memory: 100
-      volumesFrom:
-        - "vol_con:ro"
+      volumes:
+        - "/root/hello:/inside_con:ro"
 
   - name: sn-ddc-cluster
     type: cluster
