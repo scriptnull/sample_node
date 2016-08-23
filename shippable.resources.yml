@@ -43,7 +43,7 @@ resources:
       entryPoint: "/usr/bin/node"
       cmd: "job.js"
       volumesFrom:
-        - "vol_con"
+        - "vol_con:ro"
 
   - name: sn-ddc-cluster
     type: cluster
