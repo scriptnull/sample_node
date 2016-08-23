@@ -26,11 +26,27 @@ resources:
     seed:
       versionName: "driftking"
 
+  - name: sn-b-ep
+    type: image
+    integration: scriptnull-docker
+    pointer:
+      sourceName: "scriptnull/debian"
+      isPull: true
+    seed:
+      versionName: "entrypoint"
+
   - name: sn-b-docker-opts-1
     type: dockerOptions
     version:
       memory: 100
       user: "driftking"
+      entryPoint:
+        - "/bin/bash"
+        - "entrypoint2.sh"
+
+      # workingDir: "/app/makemeworking"
+      # entryPoint: "/usr/bin/node"
+      # cmd: "job.js"
 
   - name: sn-b-ddc-cluster
     type: cluster

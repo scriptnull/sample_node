@@ -2,7 +2,7 @@ jobs:
   - name: sn-b-man-1
     type: manifest
     steps:
-      - IN: sn-b-dk
+      - IN: sn-b-ep
       - IN: sn-b-docker-opts-1
       - IN: sn-b-trigger-1
 
