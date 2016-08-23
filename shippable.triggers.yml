@@ -2,4 +2,4 @@ triggers:
   - name: sn-trigger-1
     type: trigger
     version:
-      counter: 21
+      counter: 22
