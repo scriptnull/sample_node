@@ -1,40 +1,5 @@
 triggers:
-  - name: sn-trigger-2
-    type: trigger
-    version:
-      counter: 10
-
-  - name: sn-trigger-3
+  - name: sn-b-trigger-1
     type: trigger
     version:
       counter: 2
-
-  - name: tri-trigger
-    type: trigger
-    version:
-      counter: 3
-
-  - name: runTrigger
-    type: trigger
-    version:
-      counter: 2
-
-  - name: good-runTrigger
-    type: trigger
-    version:
-      counter: 3
-
-  - name: sn-trigger-delete
-    type: trigger
-    version:
-      counter: 3
-
-  - name: sn-rel-trigger
-    type: trigger
-    version:
-      counter: 6
-
-  - name: release-trigger
-    type: trigger
-    version:
-      counter: 1
