@@ -43,6 +43,11 @@ resources:
       workingDir: "/app/makemeworking"
       entryPoint: "/usr/bin/node"
       cmd: "job.js"
+      volumes:
+        - "/hhjj"
+        - "/root/home:inso_ro:ro"
+      volumesFrom:
+        - "vol_con:ro"
 
   - name: sn-b-ddc-cluster
     type: cluster
