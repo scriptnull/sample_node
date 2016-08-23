@@ -40,7 +40,7 @@ resources:
     version:
       memory: 100
       volumes:
-        - "/root/hello:/inside_xz:ro"
+        - "/root/hello:/inside_hh:ro"
 
   - name: sn-ddc-cluster
     type: cluster
