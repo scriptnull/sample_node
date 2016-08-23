@@ -17,10 +17,20 @@ resources:
     seed:
       versionName: "myapp2"
 
+  - name: sn-dk
+    type: image
+    integration: scriptnull-docker
+    pointer:
+      sourceName: "scriptnull/debian"
+      isPull: true
+    seed:
+      versionName: "driftking"
+
   - name: sn-docker-opts-1
     type: dockerOptions
     version:
       memory: 100
+      user: "driftking"
 
   - name: sn-ddc-cluster
     type: cluster
