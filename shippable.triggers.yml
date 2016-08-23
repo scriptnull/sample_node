@@ -1,21 +1,5 @@
 triggers:
-  - name: sn-trigger-4
+  - name: sn-trigger-1
     type: trigger
     version:
       counter: 4
-
-  - name: release-trigger
-    type: trigger
-    version:
-      counter: 4
-
-
-  - name: deps-trigger
-    type: trigger
-    version:
-      counter: 5
-
-  # - name: runTrigger
-  #   type: trigger
-  #   pointer:
-  #     counter: 5

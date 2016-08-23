@@ -16,44 +16,14 @@ resources:
       isPull: true
     seed:
       versionName: "myapp2"
-  #
-  # - name: sn-tri-cluster
-  #   type: cluster
-  #   integration: scriptnull-triton
-  #   pointer:
-  #     sourceName: "some-cluster"
-  #     region: "us-east-2"
-
-  - name: script-repo
-    type: gitRepo
-    integration: github
-    pointer:
-      sourceName: scriptnull/sample_node
-      branch: v2-local-runSh-xx
-
-  - name: sn-ecs-cluster-1
-    type: cluster
-    integration: scriptnull-aws
-    pointer:
-      sourceName : "loadBalanceTest" #name of the cluster we are deploying
-      region: "us-east-1"
-
-  # - name: sn-lb
-  #   type: loadBalancer
-  #   pointer:
-  #     sourceName: EC2Contai-EcsElast-17A64D22JHQLM
-  #
-  # - name: sn-lb-1
-  #   type: loadBalancer
-  #   pointer:
-  #     sourceName: shLoadBalancer
 
   - name: sn-docker-opts-1
     type: dockerOptions
     version:
       memory: 100
 
-  - name: version-resource
-    type: version
-    seed:
-      versionName: "0.1.0"
+  - name: sn-ddc-cluster
+    type: cluster
+    integration: scriptnull-ddc
+    pointer:
+      sourceName : "some-random-name" #name of the cluster we are deploying
