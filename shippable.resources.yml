@@ -40,7 +40,8 @@ resources:
     version:
       memory: 100
       user: "driftking"
-      entryPoint: "/usr/bin/node /app/makemeworking/job.js"
+      entryPoint: "/usr/bin/node"
+      cmd: "/app/makemeworking/job.js"
 
   - name: sn-ddc-cluster
     type: cluster
