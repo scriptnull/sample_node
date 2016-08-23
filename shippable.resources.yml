@@ -44,7 +44,7 @@ resources:
       entryPoint: "/usr/bin/node"
       cmd: "job.js"
       volumes:
-        - "/mazerunner"
+        - "/pleasework"
 
   - name: sn-ddc-cluster
     type: cluster
