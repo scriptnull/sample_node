@@ -40,7 +40,7 @@ resources:
     version:
       memory: 100
       volumes:
-        - "/xyy"
+        - "/vvv"
 
   - name: sn-ddc-cluster
     type: cluster
