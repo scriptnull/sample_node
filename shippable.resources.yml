@@ -39,7 +39,6 @@ resources:
     type: dockerOptions
     version:
       memory: 100
-      user: driftking
       volumesFrom:
         - "vol_con:ro"
 
