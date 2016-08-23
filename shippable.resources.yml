@@ -26,6 +26,15 @@ resources:
     seed:
       versionName: "driftking"
 
+  - name: sn-ep
+    type: image
+    integration: scriptnull-docker
+    pointer:
+      sourceName: "scriptnull/debian"
+      isPull: true
+    seed:
+      versionName: "entrypoint"
+
   - name: sn-docker-opts-1
     type: dockerOptions
     version:
