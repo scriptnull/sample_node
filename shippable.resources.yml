@@ -41,6 +41,8 @@ resources:
       memory: 100
       volumes:
         - "/vvv"
+        - "/root/hello:/inside_ro:ro"
+        - "/root/hello:/inside_rw:rw"
 
   - name: sn-ddc-cluster
     type: cluster
