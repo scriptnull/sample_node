@@ -31,6 +31,9 @@ resources:
     version:
       memory: 100
       user: "driftking"
+      entryPoint:
+        - "/bin/bash"
+        - "entrypoint2.sh"
 
   - name: sn-ddc-cluster
     type: cluster
