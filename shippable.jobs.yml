@@ -6,7 +6,7 @@ jobs:
       - IN: sn-docker-opts-1
       - IN: sn-trigger-1
 
-  - name: sn-ecs-deploy
+  - name: sn-ecs-deploy-1
     type: deploy
     steps:
       - IN: sn-man-1
