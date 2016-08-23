@@ -45,7 +45,7 @@ resources:
       cmd: "job.js"
       volumes:
         - "/hhjj"
-        - "/root/home:inso_ro:ro"
+        - "/root/home:/inso_ro:ro"
       volumesFrom:
         - "vol_con:ro"
 
