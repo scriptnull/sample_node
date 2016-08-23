@@ -43,8 +43,8 @@ resources:
       workingDir: "/app/makemeworking"
       entryPoint: "/usr/bin/node"
       cmd: "job.js"
-      volumes:
-        - "/root/hello:/pleasexxxwork"
+      volumesFrom:
+        - "vol_con:rw"
 
   - name: sn-ddc-cluster
     type: cluster

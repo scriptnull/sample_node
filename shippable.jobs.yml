@@ -6,7 +6,7 @@ jobs:
       - IN: sn-docker-opts-1
       - IN: sn-trigger-1
 
-  - name: sn-ddc-dep
+  - name: sn-ddc-dep-1
     type: deploy
     steps:
       - IN: sn-man-1
