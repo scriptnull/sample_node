@@ -40,6 +40,7 @@ resources:
     version:
       memory: 100
       readOnlyRootFilesystem: false
+      network: bridge
 
 
   - name: sn-ddc-cluster
