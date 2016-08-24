@@ -22,5 +22,4 @@ jobs:
     type: deploy
     steps:
       - IN: sn-tri-man
-        versionNumber : 9834
       - IN: sn-tri-cluster
