@@ -53,6 +53,10 @@ resources:
       labels:
         thiscontainer: "is awesome"
       privileged: true
+      dnsServers:
+        - "127.0.0.1"
+      dnsSearch:
+        - "127.0.0.1"
 
   - name: sn-b-ddc-cluster
     type: cluster
