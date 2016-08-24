@@ -22,4 +22,4 @@ jobs:
     type: deploy
     steps:
       - IN: sn-tri-man
-      - IN: ssn-tri-cluster
+      - IN: sn-tri-cluster
