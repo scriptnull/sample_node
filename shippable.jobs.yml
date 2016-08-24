@@ -11,3 +11,15 @@ jobs:
     steps:
       - IN: sn-b-man-1
       - IN: sn-b-ddc-cluster
+
+  - name: sn-b-tri-man
+    type: manifest
+    steps:
+      - IN: sn-dk
+      - IN: sn-b-tm-trigger
+
+  - name: sn-b-tri-dep
+    type: deploy
+    steps:
+      - IN: sn-b-tri-man
+      - IN: sn-b-tri-cluster

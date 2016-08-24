@@ -63,3 +63,10 @@ resources:
     integration: scriptnull-ddc
     pointer:
       sourceName : "some-random-name" #name of the cluster we are deploying
+
+  - name: sn-b-tri-cluster
+    type: cluster
+    integration: scriptnull-triton
+    pointer:
+      sourceName : "some-name" #name of the cluster we are deploying
+      region : "us-east-2"

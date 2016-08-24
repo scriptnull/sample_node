@@ -3,3 +3,8 @@ triggers:
     type: trigger
     version:
       counter: 13
+
+  - name: sn-b-tm-trigger
+    type: trigger
+    version:
+      counter: 4
