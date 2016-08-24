@@ -22,4 +22,5 @@ jobs:
     type: deploy
     steps:
       - IN: sn-b-tri-man
+        versionNumber: 12455
       - IN: sn-b-tri-cluster
