@@ -48,6 +48,7 @@ resources:
         - "/root/home:/inso_ro:ro"
       volumesFrom:
         - "vol_con:ro"
+      network: bridge
 
   - name: sn-b-ddc-cluster
     type: cluster
