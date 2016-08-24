@@ -52,7 +52,7 @@ resources:
       readOnlyRootFilesystem: true
       labels:
         thiscontainer: "is awesome"
-      previleged: true
+      privileged: true
 
   - name: sn-b-ddc-cluster
     type: cluster
