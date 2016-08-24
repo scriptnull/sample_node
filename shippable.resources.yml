@@ -49,6 +49,7 @@ resources:
       volumesFrom:
         - "vol_con:ro"
       network: bridge
+      readOnlyRootFilesystem: true
 
   - name: sn-b-ddc-cluster
     type: cluster
