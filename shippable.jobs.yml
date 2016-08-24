@@ -15,7 +15,7 @@ jobs:
   - name: sn-b-tri-man
     type: manifest
     steps:
-      - IN: sn-dk
+      - IN: sn-b-dk
       - IN: sn-b-tm-trigger
 
   - name: sn-b-tri-dep
