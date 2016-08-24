@@ -50,6 +50,8 @@ resources:
         - "vol_con:ro"
       network: bridge
       readOnlyRootFilesystem: true
+      labels:
+        thiscontainer: "is awesome"
 
   - name: sn-b-ddc-cluster
     type: cluster
