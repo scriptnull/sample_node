@@ -15,12 +15,11 @@ jobs:
   - name: sn-b-tri-man
     type: manifest
     steps:
-      - IN: sn-b-dk
+      - IN: sn-b-ep
       - IN: sn-b-tm-trigger
 
   - name: sn-b-tri-dep
     type: deploy
     steps:
       - IN: sn-b-tri-man
-        versionNumber: 12455
       - IN: sn-b-tri-cluster
