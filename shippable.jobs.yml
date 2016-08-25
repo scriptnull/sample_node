@@ -16,7 +16,7 @@ jobs:
     type: manifest
     steps:
       - IN: sn-ep
-      - IN: sn-docker-opts-1
+      # - IN: sn-docker-opts-1
       - IN: sn-tm-trigger
 
   - name: sn-tri-dep
