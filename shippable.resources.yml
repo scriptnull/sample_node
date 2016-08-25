@@ -55,3 +55,10 @@ resources:
     pointer:
       sourceName : "some-name" #name of the cluster we are deploying
       region : "us-east-2"
+
+  - name: sn-gke-cluster
+    type: cluster
+    integration: scriptnull-gke
+    pointer:
+      sourceName : "small-cluster" #name of the cluster we are deploying
+      region : "us-east1-d"

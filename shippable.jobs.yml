@@ -24,3 +24,16 @@ jobs:
     steps:
       - IN: sn-tri-man
       - IN: sn-tri-cluster
+
+  - name: sn-gke-man
+    type: manifest
+    steps:
+      - IN: sn-ep
+      # - IN: sn-docker-opts-1
+      - IN: sn-gke-trigger
+
+  - name: sn-gke-dep
+    type: deploy
+    steps:
+      - IN: sn-gke-man
+      - IN: sn-gke-cluster

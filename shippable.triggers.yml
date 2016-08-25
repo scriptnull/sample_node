@@ -8,3 +8,8 @@ triggers:
     type: trigger
     version:
       counter: 11
+
+  - name: sn-gke-trigger
+    type: trigger
+    version:
+      counter: 11
