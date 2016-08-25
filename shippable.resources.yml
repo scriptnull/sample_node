@@ -40,7 +40,7 @@ resources:
     version:
       memory: 100
       readOnlyRootFilesystem: false
-      network: bridge
+      network: "none"
 
   - name: sn-ecs-cluster
     type: cluster
