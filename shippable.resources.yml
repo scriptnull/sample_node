@@ -39,7 +39,7 @@ resources:
     type: dockerOptions
     version:
       memory: 100
-      readOnlyRootFilesystem: true
+      readOnlyRootFilesystem: false
       network: bridge
 
   - name: sn-ecs-cluster
