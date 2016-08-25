@@ -6,11 +6,11 @@ jobs:
       - IN: sn-docker-opts-1
       - IN: sn-trigger-1
 
-  - name: sn-ddc-dep-1
+  - name: sn-ecs-dep
     type: deploy
     steps:
       - IN: sn-man-1
-      - IN: sn-ddc-cluster
+      - IN: sn-ecs-cluster
 
   - name: sn-tri-man
     type: manifest
