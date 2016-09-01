@@ -3,3 +3,15 @@ language: node_js
 build:
   ci:
     - echo "Hello world"
+
+integrations:
+  notifications:
+    - integrationName: scriptnull-slack
+      type: slack
+      recipients:
+        - "#scriptnull-test"
+      branches:
+        only:
+          - master
+      on_success: always
+      on_failure: always
