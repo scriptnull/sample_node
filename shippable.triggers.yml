@@ -14,6 +14,7 @@ triggers:
     version:
       counter: 2
 
+
   - name: sn-gke-trigger
     type: trigger
     version:
