@@ -37,3 +37,16 @@ jobs:
   #   steps:
   #     - IN: sn-gke-man
   #     - IN: sn-gke-cluster
+
+
+  - name: sn-ddc-man
+    type: manifest
+    steps:
+      - IN: sn-ep
+      - IN: sn-ddc-trigger
+
+  - name: sn-ddc-dep
+    type: deploy
+    steps:
+      - IN: sn-ddc-man
+      - IN: sn-ddc-cluster

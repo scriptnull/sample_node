@@ -62,3 +62,10 @@ resources:
   #   pointer:
   #     sourceName : "small-cluster" #name of the cluster we are deploying
   #     region : "us-east1-d"
+
+  - name: sn-ddc-cluster
+    type: cluster
+    integration: scriptnull-ddc
+    pointer:
+      sourceName : "something" #name of the cluster we are deploying
+      region: "us-west-2"
