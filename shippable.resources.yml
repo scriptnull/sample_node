@@ -1,5 +1,5 @@
 resources:
-  - name: sn-myapp3
+  - name: sn-q-myapp3
     type: image
     integration: scriptnull-docker
     pointer:
@@ -8,7 +8,7 @@ resources:
     seed:
       versionName: "myapp3"
 
-  - name: sn-myapp2
+  - name: sn-q-myapp2
     type: image
     integration: scriptnull-docker
     pointer:
@@ -17,7 +17,7 @@ resources:
     seed:
       versionName: "myapp2"
 
-  - name: sn-dk
+  - name: sn-q-dk
     type: image
     integration: scriptnull-docker
     pointer:
@@ -26,7 +26,7 @@ resources:
     seed:
       versionName: "driftking"
 
-  - name: sn-ep
+  - name: sn-q-ep
     type: image
     integration: scriptnull-docker
     pointer:
@@ -35,35 +35,35 @@ resources:
     seed:
       versionName: "entrypoint"
 
-  - name: sn-docker-opts-1
+  - name: sn-q-docker-opts-1
     type: dockerOptions
     version:
       memory: 100
       readOnlyRootFilesystem: false
       network: "none"
 
-  # - name: sn-ecs-cluster
+  # - name: sn-q-ecs-cluster
   #   type: cluster
   #   integration: scriptnull-aws
   #   pointer:
   #     sourceName : "testCL" #name of the cluster we are deploying
   #     region: "us-west-2"
   #
-  - name: sn-tri-cluster
+  - name: sn-q-tri-cluster
     type: cluster
     integration: scriptnull-triton
     pointer:
       sourceName : "some-name" #name of the cluster we are deploying
       region : "us-east-2"
   #
-  # - name: sn-gke-cluster
+  # - name: sn-q-gke-cluster
   #   type: cluster
   #   integration: scriptnull-gke
   #   pointer:
   #     sourceName : "small-cluster" #name of the cluster we are deploying
   #     region : "us-east1-d"
 
-  - name: sn-ddc-cluster
+  - name: sn-q-ddc-cluster
     type: cluster
     integration: scriptnull-ddc
     pointer:
