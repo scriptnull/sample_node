@@ -15,7 +15,7 @@ jobs:
   - name: sn-tri-man
     type: manifest
     steps:
-      - IN: sn-ep
+      - IN: sn-dk
       # - IN: sn-docker-opts-1
       - IN: sn-tm-trigger
 
@@ -23,7 +23,6 @@ jobs:
     type: deploy
     steps:
       - IN: sn-tri-man
-        versionNumber: 1234
       - IN: sn-tri-cluster
 
   # - name: sn-gke-man
