@@ -23,7 +23,6 @@ jobs:
     type: deploy
     steps:
       - IN: sn-tri-man
-        versionNumber: 1898
       - IN: sn-tri-cluster
 
   # - name: sn-gke-man
