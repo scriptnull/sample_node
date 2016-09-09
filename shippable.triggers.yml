@@ -7,7 +7,7 @@ triggers:
   - name: sn-tm-trigger
     type: trigger
     version:
-      counter: 13
+      counter: 14
 
   - name: sn-ddc-trigger
     type: trigger
