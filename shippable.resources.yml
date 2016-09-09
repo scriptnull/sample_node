@@ -35,6 +35,15 @@ resources:
     seed:
       versionName: "entrypoint"
 
+  - name: sn-q-bb
+    type: image
+    integration: scriptnull-docker
+    pointer:
+      sourceName: "busybox"
+      isPull: true
+    seed:
+      versionName: "latest"
+
   - name: sn-q-docker-opts-1
     type: dockerOptions
     version:
