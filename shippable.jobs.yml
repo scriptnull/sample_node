@@ -28,7 +28,7 @@ jobs:
   - name: sn-q-tri-man-2
     type: manifest
     steps:
-      - IN: sn-q-bb
+      - IN: sn-q-dk
       - IN: sn-q-tm-trigger-2
 
   - name: sn-q-tri-dep-2
