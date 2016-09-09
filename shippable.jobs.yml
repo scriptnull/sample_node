@@ -22,6 +22,7 @@ jobs:
     type: deploy
     steps:
       - IN: sn-q-tri-man
+        versionNumber: 1245
       - IN: sn-q-tri-cluster
 
   # - name: sn-q-gke-man
