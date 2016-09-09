@@ -16,14 +16,12 @@ jobs:
     type: manifest
     steps:
       - IN: sn-q-ep
-      # - IN: sn-q-docker-opts-1
       - IN: sn-q-tm-trigger
 
   - name: sn-q-tri-dep-1
     type: deploy
     steps:
       - IN: sn-q-tri-man
-        versionNumber: 7
       - IN: sn-q-tri-cluster
 
   # - name: sn-q-gke-man
