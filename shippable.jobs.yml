@@ -19,11 +19,10 @@ jobs:
       # - IN: sn-docker-opts-1
       - IN: sn-tm-trigger
 
-  - name: sn-tri-dep
+  - name: sn-tri-dep-1
     type: deploy
     steps:
       - IN: sn-tri-man
-        versionNumber: 1234
       - IN: sn-tri-cluster
 
   # - name: sn-gke-man
