@@ -66,7 +66,7 @@ jobs:
   - name: sn-q-ecs-man-up
     type: manifest
     steps:
-      - IN: sn-q-ep
+      - IN: sn-q-dk
       - IN: sn-q-ecs-trigger
 
   - name: sn-q-ecs-deploy-up
@@ -74,5 +74,9 @@ jobs:
     steps:
       - IN: sn-q-ecs-man-up
       - IN: sn-q-ecs-cluster
+      - IN: q-lb-loadbalancer1
+        applyTo:
+          manifest: sn-q-ecs-man-up
+          image: sn-q-dk
       - TASK: managed
         deployMethod: upgrade
