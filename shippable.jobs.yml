@@ -56,7 +56,7 @@ jobs:
     steps:
       - IN: sn-ep
       - IN: sn-dk
-      - IN: sn-myapp2
+      - IN: sn-myapp3
       - IN: sn-ecs-lb-trigger
 
   - name: sn-ecs-lb-deploy
