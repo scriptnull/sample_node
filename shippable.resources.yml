@@ -72,6 +72,13 @@ resources:
   #     sourceName : "small-cluster" #name of the cluster we are deploying
   #     region : "us-east1-d"
 
+  - name: sn-q-do
+    type: dockerOptions
+    version:
+      memory: 200
+      portMappings:
+        - "8082:80"
+
   - name: sn-q-ddc-cluster
     type: cluster
     integration: scriptnull-ddc

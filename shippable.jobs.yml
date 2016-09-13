@@ -67,6 +67,7 @@ jobs:
     type: manifest
     steps:
       - IN: sn-q-dk
+      - IN: sn-q-do
       - IN: sn-q-ecs-trigger
 
   - name: sn-q-ecs-deploy-up
