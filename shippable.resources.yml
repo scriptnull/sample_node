@@ -48,13 +48,30 @@ resources:
   #   pointer:
   #     sourceName : "testCL" #name of the cluster we are deploying
   #     region: "us-west-2"
-  #
-  - name: sn-tri-cluster
+
+  - name: sn-ecs-lb-cluster
     type: cluster
-    integration: scriptnull-triton
+    integration: test-aws
     pointer:
-      sourceName : "some-name" #name of the cluster we are deploying
-      region : "us-east-2"
+      sourceName : "loadBalanceTest" #name of the cluster we are deploying
+      region: "us-east-1"
+
+  - name: lb-loadbalancer1
+    type: loadBalancer
+    pointer:
+      sourceName: EC2Contai-EcsElast-17A64D22JHQLM
+
+  - name: lb-loadbalancer2
+    type: loadBalancer
+    pointer:
+      sourceName: shLoadBalancer
+
+  # - name: sn-tri-cluster
+  #   type: cluster
+  #   integration: scriptnull-triton
+  #   pointer:
+  #     sourceName : "some-name" #name of the cluster we are deploying
+  #     region : "us-east-2"
   #
   # - name: sn-gke-cluster
   #   type: cluster
@@ -63,9 +80,9 @@ resources:
   #     sourceName : "small-cluster" #name of the cluster we are deploying
   #     region : "us-east1-d"
 
-  - name: sn-ddc-cluster
-    type: cluster
-    integration: scriptnull-ddc
-    pointer:
-      sourceName : "something" #name of the cluster we are deploying
-      region: "us-west-2"
+  # - name: sn-ddc-cluster
+  #   type: cluster
+  #   integration: scriptnull-ddc
+  #   pointer:
+  #     sourceName : "something" #name of the cluster we are deploying
+  #     region: "us-west-2"

@@ -12,19 +12,18 @@ jobs:
   #     - IN: sn-man-1
   #     - IN: sn-ecs-cluster
   #
-  - name: sn-tri-man
-    type: manifest
-    steps:
-      - IN: sn-ep
-      # - IN: sn-docker-opts-1
-      - IN: sn-tm-trigger
-
-  - name: sn-tri-dep-1
-    type: deploy
-    steps:
-      - IN: sn-tri-man
-        versionNumber: 7
-      - IN: sn-tri-cluster
+  # - name: sn-tri-man
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-ep
+  #     - IN: sn-tm-trigger
+  #
+  # - name: sn-tri-dep-1
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-tri-man
+  #       versionNumber: 7
+  #     - IN: sn-tri-cluster
 
   # - name: sn-gke-man
   #   type: manifest
@@ -40,14 +39,26 @@ jobs:
   #     - IN: sn-gke-cluster
 
 
-  - name: sn-ddc-man
+  # - name: sn-ddc-man
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-dk
+  #     - IN: sn-ddc-trigger
+  #
+  # - name: sn-ddc-dep
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-ddc-man
+  #     - IN: sn-ddc-cluster
+
+  - name: sn-ecs-lb-man
     type: manifest
     steps:
-      - IN: sn-dk
-      - IN: sn-ddc-trigger
+      - IN: sn-ep
+      - IN: sn-ecs-lb-trigger
 
-  - name: sn-ddc-dep
+  - name: sn-ecs-lb-deploy
     type: deploy
     steps:
-      - IN: sn-ddc-man
-      - IN: sn-ddc-cluster
+      - IN: sn-ecs-lb-man
+      - IN: sn-ecs-lb-cluster
