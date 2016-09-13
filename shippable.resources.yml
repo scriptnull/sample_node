@@ -77,7 +77,7 @@ resources:
     version:
       memory: 200
       portMappings:
-        - "8082:80"
+        - "80:80"
 
   - name: sn-q-ddc-cluster
     type: cluster
