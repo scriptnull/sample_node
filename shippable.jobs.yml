@@ -54,7 +54,7 @@ jobs:
   - name: sn-ecs-lb-man
     type: manifest
     steps:
-      - IN: sn-dk
+      - IN: sn-ep
       - IN: sn-ecs-lb-trigger
 
   - name: sn-ecs-lb-deploy
@@ -65,10 +65,10 @@ jobs:
       - IN: lb-loadbalancer1
         applyTo:
           - manifest: sn-ecs-lb-man
-            image: sn-dk
+            image: sn-ep
             port: 80
           - manifest: sn-ecs-lb-man
-            image: sn-ep
+            image: sn-dk
             port: 8082
       - TASK: managed
         deployMethod: upgrade
