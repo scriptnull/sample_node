@@ -73,6 +73,6 @@ jobs:
     type: deploy
     steps:
       - IN: sn-q-ecs-man-up
-      - IN: sn-ecs-cluster
+      - IN: sn-q-ecs-cluster
       - TASK: managed
         deployMethod: upgrade
