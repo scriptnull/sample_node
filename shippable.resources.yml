@@ -78,3 +78,20 @@ resources:
     pointer:
       sourceName : "something" #name of the cluster we are deploying
       region: "us-west-2"
+
+  - name: sn-q-ecs-cluster
+    type: cluster
+    integration: scriptnull-aws
+    pointer:
+      sourceName : "loadBalanceTest" #name of the cluster we are deploying
+      region: "us-east-1"
+
+  - name: q-lb-loadbalancer1
+    type: loadBalancer
+    pointer:
+      sourceName: EC2Contai-EcsElast-17A64D22JHQLM
+
+  - name: q-lb-loadbalancer2
+    type: loadBalancer
+    pointer:
+      sourceName: shLoadBalancer

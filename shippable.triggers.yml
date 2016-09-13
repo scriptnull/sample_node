@@ -23,3 +23,8 @@ triggers:
     type: trigger
     version:
       counter: 6
+
+  - name: sn-q-ecs-trigger
+    type: trigger
+    version:
+      counter: 1

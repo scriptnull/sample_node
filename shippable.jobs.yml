@@ -62,3 +62,17 @@ jobs:
     steps:
       - IN: sn-q-ddc-man
       - IN: sn-q-ddc-cluster
+
+  - name: sn-q-ecs-man-up
+    type: manifest
+    steps:
+      - IN: sn-q-ep
+      - IN: sn-q-ecs-trigger
+
+  - name: sn-q-ecs-deploy-up
+    type: deploy
+    steps:
+      - IN: sn-q-ecs-man-up
+      - IN: sn-ecs-cluster
+      - TASK: managed
+        deployMethod: upgrade
