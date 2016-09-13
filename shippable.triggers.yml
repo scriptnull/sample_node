@@ -22,4 +22,4 @@ triggers:
   - name: sn-ecs-lb-trigger
     type: trigger
     version:
-      counter: 9
+      counter: 10
