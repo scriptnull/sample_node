@@ -62,3 +62,5 @@ jobs:
     steps:
       - IN: sn-ecs-lb-man
       - IN: sn-ecs-lb-cluster
+      - TASK: managed
+        deployMethod: upgrade
