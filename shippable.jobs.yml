@@ -56,7 +56,6 @@ jobs:
     steps:
       - IN: sn-ep
       - IN: sn-dk
-      - IN: sn-myapp2
       - IN: sn-ecs-lb-trigger
 
   - name: sn-ecs-lb-deploy
@@ -68,12 +67,9 @@ jobs:
         applyTo:
           - manifest: sn-ecs-lb-man
             image: sn-dk
-            port: 80
           - manifest: sn-ecs-lb-man
             image: sn-ep
-            port: 8081
           - manifest: sn-ecs-lb-man
             image: sn-myapp3
-            port: 8082
       - TASK: managed
         deployMethod: upgrade
