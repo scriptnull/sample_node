@@ -12,7 +12,7 @@ triggers:
   - name: sn-ddc-trigger
     type: trigger
     version:
-      counter: 21
+      counter: 22
 
   - name: sn-gke-trigger
     type: trigger

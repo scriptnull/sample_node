@@ -15,7 +15,7 @@ jobs:
   - name: sn-tri-man
     type: manifest
     steps:
-      - IN: sn-dk
+      - IN: sn-ep
       - IN: sn-secure-params
       - IN: sn-tm-trigger
 
@@ -50,6 +50,8 @@ jobs:
     type: deploy
     steps:
       - IN: sn-ddc-man
+      - IN: sn-tri-man
+        force: true
       - IN: sn-ddc-cluster
 
   # - name: sn-ecs-lb-man
