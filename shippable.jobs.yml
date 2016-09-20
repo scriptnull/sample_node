@@ -43,8 +43,8 @@ jobs:
     type: manifest
     steps:
       - IN: sn-dk
-      - IN: sn-secure-params
       - IN: sn-ddc-trigger
+      # - IN: sn-secure-params
 
   - name: sn-ddc-dep
     type: deploy
