@@ -96,4 +96,7 @@ resources:
     version:
       params:
         HELLO: "world"
-        secure: DRaAAlvxVdu4FfNfbn19ziREecqGx5m/bEbtkOCX1uUOIyc9uvpcJrgleAnBtRTjbXulMwgFdBSRg415Nwf9J8xwduvqL2jBQxzqe5lB4/LLzOzfGLYEoIvsuLTAOqTMvJEBw/5n2WAz08gKdC1oNTAvnXJrRH8KEOiz7/qwRlxNDJNxJYvSSG0pQB5tAt0FY37hrQRrNu7boU6VgYy8shT0aq9j7w9ZOjXufROihNad5x0S9B0dhqk5S5ZOqc8j3tuIIUYZikybvRO2EVCm2CzFE+ofY6FtCVG8AKHkTnC7hhkbyLwA1lRabyrtKndCN2ME9a6kbbEnXczJU1ZOhA==
+        # WITH=betaQuotes
+        # secure: DRaAAlvxVdu4FfNfbn19ziREecqGx5m/bEbtkOCX1uUOIyc9uvpcJrgleAnBtRTjbXulMwgFdBSRg415Nwf9J8xwduvqL2jBQxzqe5lB4/LLzOzfGLYEoIvsuLTAOqTMvJEBw/5n2WAz08gKdC1oNTAvnXJrRH8KEOiz7/qwRlxNDJNxJYvSSG0pQB5tAt0FY37hrQRrNu7boU6VgYy8shT0aq9j7w9ZOjXufROihNad5x0S9B0dhqk5S5ZOqc8j3tuIIUYZikybvRO2EVCm2CzFE+ofY6FtCVG8AKHkTnC7hhkbyLwA1lRabyrtKndCN2ME9a6kbbEnXczJU1ZOhA==
+        # MYENV="mine" YOURENV="yours"
+        secure: Z66FClsKUZrxI8kUw99u9PphRdQjRENQyecftSyfpS2DLtMVGa8C/lVVvADxCvtYEiDBHY3tTsnmwKCmNiAf3Rq5Q+gU2nybkN5H7+PQUGwxCF1h5I3uvfTOEUmTIT1y73rijRFqZ4T+qEypzR8lkrFQY8a6cA4io7BXVecatStcxUDHGZuovc/rOMI7HvfbubLORpEBHarDq5yb2Hh7+i/7n518+9i3H8kFYFJu1ip7Dd8IyCGRdMgZVZnLleqf3nrDyG16+yVRsj47xK60IPREbY7nT+Of0YRTtzAwdBBIPKx/YA5iwUCyA0sSP/CKmT/41xlLA36TeQNFjL25+w==
