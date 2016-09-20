@@ -5,6 +5,7 @@ jobs:
       - IN: sn-b-dk
       - IN: sn-b-secure-params
       - IN: sn-b-dcl-trigger
+      - IN: sn-b-trigger
 
   - name: sn-b-dcl-dep
     type: deploy
@@ -12,12 +13,27 @@ jobs:
       - IN: sn-b-dcl-man
       - IN: sn-b-dcl-cluster
 
+  - name: sn-b-ddc-man
+    type: manifest
+    steps:
+      - IN: sn-b-dk
+      - IN: sn-b-secure-params
+      - IN: sn-b-ddc-trigger
+      - IN: sn-b-trigger
+
+  - name: sn-b-ddc-dep
+    type: deploy
+    steps:
+      - IN: sn-b-ddc-man
+      - IN: sn-b-ddc-cluster
+
   - name: sn-b-tri-man
     type: manifest
     steps:
       - IN: sn-b-dk
       - IN: sn-b-secure-params
       - IN: sn-b-tri-trigger
+      - IN: sn-b-trigger
 
   - name: sn-b-tri-dep
     type: deploy
@@ -31,9 +47,24 @@ jobs:
       - IN: sn-b-dk
       - IN: sn-b-secure-params
       - IN: sn-b-ecs-trigger
+      - IN: sn-b-trigger
 
   - name: sn-b-ecs-dep
     type: deploy
     steps:
       - IN: sn-b-ecs-man
       - IN: sn-b-ecs-lb-cluster
+
+  - name: sn-b-gke-man
+    type: manifest
+    steps:
+      - IN: sn-b-dk
+      - IN: sn-b-secure-params
+      - IN: sn-b-gke-trigger
+      - IN: sn-b-trigger
+
+  - name: sn-b-gke-dep
+    type: deploy
+    steps:
+      - IN: sn-b-gke-man
+      - IN: sn-b-gke-cluster
