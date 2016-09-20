@@ -50,6 +50,7 @@ jobs:
     type: deploy
     steps:
       - IN: sn-ddc-man
+        force: true
       - IN: sn-ddc-cluster
 
   # - name: sn-ecs-lb-man
