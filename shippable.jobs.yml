@@ -11,6 +11,7 @@ jobs:
     type: deploy
     steps:
       - IN: sn-b-dcl-man
+        force: true
       - IN: sn-b-dcl-cluster
 
   - name: sn-b-ddc-man
@@ -25,6 +26,7 @@ jobs:
     type: deploy
     steps:
       - IN: sn-b-ddc-man
+        force: true
       - IN: sn-b-ddc-cluster
 
   - name: sn-b-tri-man
@@ -39,6 +41,7 @@ jobs:
     type: deploy
     steps:
       - IN: sn-b-tri-man
+        force: true
       - IN: sn-b-tri-cluster
 
   - name: sn-b-ecs-man
@@ -53,6 +56,7 @@ jobs:
     type: deploy
     steps:
       - IN: sn-b-ecs-man
+        force: true
       - IN: sn-b-ecs-lb-cluster
 
   - name: sn-b-gke-man
@@ -67,4 +71,5 @@ jobs:
     type: deploy
     steps:
       - IN: sn-b-gke-man
+        force: true
       - IN: sn-b-gke-cluster
