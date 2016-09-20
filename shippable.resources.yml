@@ -90,3 +90,10 @@ resources:
     integration: scriptnull-dcl
     pointer:
       sourceName : "cluster-dcl"
+
+  - name: sn-b-secure-params
+    type: params
+    version:
+      params:
+        HELLO: "world"
+        secure: DRaAAlvxVdu4FfNfbn19ziREecqGx5m/bEbtkOCX1uUOIyc9uvpcJrgleAnBtRTjbXulMwgFdBSRg415Nwf9J8xwduvqL2jBQxzqe5lB4/LLzOzfGLYEoIvsuLTAOqTMvJEBw/5n2WAz08gKdC1oNTAvnXJrRH8KEOiz7/qwRlxNDJNxJYvSSG0pQB5tAt0FY37hrQRrNu7boU6VgYy8shT0aq9j7w9ZOjXufROihNad5x0S9B0dhqk5S5ZOqc8j3tuIIUYZikybvRO2EVCm2CzFE+ofY6FtCVG8AKHkTnC7hhkbyLwA1lRabyrtKndCN2ME9a6kbbEnXczJU1ZOhA==

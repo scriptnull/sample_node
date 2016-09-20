@@ -27,4 +27,4 @@ triggers:
   - name: sn-b-dcl-trigger
     type: trigger
     version:
-      counter: 1
+      counter: 2
