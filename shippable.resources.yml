@@ -42,6 +42,13 @@ resources:
       readOnlyRootFilesystem: false
       network: "none"
 
+  - name: sn-secure-params
+    type: params
+    version:
+      params:
+        MONGO_API_URL: "localhost:28017"
+        secure: JC9Ef+P7T4QyX6mC14d0bDPDrs6JGz5pWoXFpmovAxeuuPpXCiuaTp6HfjHcsUo929qCK8HPpGXH9g4ReFGSX3KgXAReCnAAs8nIx8uHfFY+StQAirsRmQUhKjIu6PA8gX3lgAVCbllYnGPOaTQLYFzl/6h0FayDVlfoHWKw1JpthoSVDnUo2N6RHxsznRrDU/npXyoFC9Mv0BUEtC1aMujGE9fPe4ZJgn1EMP5owLqfT1Q5Gvj7wujqmrC7Cr+7gjkUP9X7oIQymerKYn85CV9ykq7+GdzK8XjJxRZV2V2I3PtpN61615DN6gqjBxQFRSPdwrgh/7UxaAtaLd/prg==
+
   # - name: sn-ecs-cluster
   #   type: cluster
   #   integration: scriptnull-aws
