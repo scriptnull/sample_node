@@ -7,12 +7,12 @@ triggers:
   - name: sn-tm-trigger
     type: trigger
     version:
-      counter: 18
+      counter: 19
 
   - name: sn-ddc-trigger
     type: trigger
     version:
-      counter: 12
+      counter: 13
 
   - name: sn-gke-trigger
     type: trigger
