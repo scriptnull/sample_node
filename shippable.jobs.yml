@@ -80,13 +80,13 @@ jobs:
   - name: sn-mix-a-man
     type: manifest
     steps:
-      - IN: sn-ep
+      - IN: sn-dk
       - IN: sn-mix-a-trigger
 
   - name: sn-mix-b-man
     type: manifest
     steps:
-      - IN: sn-dk
+      - IN: sn-ep
       - IN: sn-mix-b-trigger
 
   - name: sn-tri-dep-2
