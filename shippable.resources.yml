@@ -70,3 +70,23 @@ resources:
     pointer:
       sourceName : "some-name" #name of the cluster we are deploying
       region : "us-east-2"
+
+  - name: sn-b-gke-cluster
+    type: cluster
+    integration: scriptnull-gke
+    pointer:
+      sourceName : "small-cluster" #name of the cluster we are deploying
+      region : "us-east1-d"
+
+  - name: sn-b-ecs-lb-cluster
+    type: cluster
+    integration: scriptnull-aws
+    pointer:
+      sourceName : "loadBalanceTest" #name of the cluster we are deploying
+      region: "us-east-1"
+
+  - name: sn-b-dcl-cluster
+    type: cluster
+    integration: scriptnull-dcl
+    pointer:
+      sourceName : "cluster-dcl"

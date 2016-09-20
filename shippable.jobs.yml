@@ -1,26 +1,12 @@
 jobs:
-  - name: sn-b-man-1
+  - name: sn-b-dcl-man
     type: manifest
     steps:
-      - IN: sn-b-ep
-      - IN: sn-b-docker-opts-1
-      - IN: sn-b-trigger-1
+      - IN: sn-b-dk
+      - IN: sn-b-trigger
 
-  - name: sn-b-ecs-deploy
+  - name: sn-b-dcl-dep
     type: deploy
     steps:
-      - IN: sn-b-man-1
-      - IN: sn-b-ddc-cluster
-
-  - name: sn-b-tri-man
-    type: manifest
-    steps:
-      - IN: sn-b-ep
-      - IN: sn-b-tm-trigger
-
-  - name: sn-b-tri-dep
-    type: deploy
-    steps:
-      - IN: sn-b-tri-man
-        versionNumber: 9999999
-      - IN: sn-b-tri-cluster
+      - IN: sn-b-dcl-man
+      - IN: sn-b-dcl-cluster
