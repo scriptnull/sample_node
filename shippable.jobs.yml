@@ -83,10 +83,10 @@ jobs:
       - IN: sn-b-secure-params
       - IN: sn-b-mix-trigger
 
-  - name: sn-b-mix-tri-dep-1
+  - name: sn-b-mix-tri-dep-2
     type: deploy
     steps:
       - IN: sn-b-mix-a-man
         force: true
       - IN: sn-b-mix-b-man
-      - IN: sn-b-dcl-cluster
+      - IN: sn-b-ddc-cluster
