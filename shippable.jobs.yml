@@ -74,7 +74,7 @@ jobs:
     steps:
       - IN: sn-b-dk
       - IN: sn-b-secure-params
-      - IN: sn-b-trigger
+      - IN: sn-b-mix-trigger
 
   - name: sn-b-mix-b-man
     type: manifest
