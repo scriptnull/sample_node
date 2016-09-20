@@ -3,7 +3,7 @@ jobs:
     type: manifest
     steps:
       - IN: sn-b-dk
-      - IN: sn-b-trigger
+      - IN: sn-b-dcl-trigger
 
   - name: sn-b-dcl-dep
     type: deploy
