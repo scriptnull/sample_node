@@ -47,8 +47,8 @@ resources:
     version:
       params:
         MONGO_API_URL: "localhost:28017"
-        secure: JC9Ef+P7T4QyX6mC14d0bDPDrs6JGz5pWoXFpmovAxeuuPpXCiuaTp6HfjHcsUo929qCK8HPpGXH9g4ReFGSX3KgXAReCnAAs8nIx8uHfFY+StQAirsRmQUhKjIu6PA8gX3lgAVCbllYnGPOaTQLYFzl/6h0FayDVlfoHWKw1JpthoSVDnUo2N6RHxsznRrDU/npXyoFC9Mv0BUEtC1aMujGE9fPe4ZJgn1EMP5owLqfT1Q5Gvj7wujqmrC7Cr+7gjkUP9X7oIQymerKYn85CV9ykq7+GdzK8XjJxRZV2V2I3PtpN61615DN6gqjBxQFRSPdwrgh/7UxaAtaLd/prg==
         secure: MoNGjUahD1Jl03y/+VdxB9FnvKVc/3n8JqocfYhYlR0TSxB6l2HLI1fx00P/r8+aeEeFb716EUZAchqzWuFHXRN1sNxT6QJAFg7Bj0OQXudSD1wBJ9qqM50vMbv+D0o3SGfPUq8WoW0Mu1jMAC0CKv6wNkrmeWyV0EI6FmYLi7Y223u55n8Jl8o5D8EILaqVi+cTwJEK8QxdAAWhHfIg17drCdXNpXU/Bf5odO48azdVo7/y/9ZhUUGjpkcMtrKkLkQVb8czJ2nilc2epNUr+4FodsYMFcOtnpo3jalJNTUWCjD8kTipkoAjBv0RJHQIitI2iEqao+7qGSp+fJ0ckQ==
+        # secure: JC9Ef+P7T4QyX6mC14d0bDPDrs6JGz5pWoXFpmovAxeuuPpXCiuaTp6HfjHcsUo929qCK8HPpGXH9g4ReFGSX3KgXAReCnAAs8nIx8uHfFY+StQAirsRmQUhKjIu6PA8gX3lgAVCbllYnGPOaTQLYFzl/6h0FayDVlfoHWKw1JpthoSVDnUo2N6RHxsznRrDU/npXyoFC9Mv0BUEtC1aMujGE9fPe4ZJgn1EMP5owLqfT1Q5Gvj7wujqmrC7Cr+7gjkUP9X7oIQymerKYn85CV9ykq7+GdzK8XjJxRZV2V2I3PtpN61615DN6gqjBxQFRSPdwrgh/7UxaAtaLd/prg==
 
   # - name: sn-ecs-cluster
   #   type: cluster
