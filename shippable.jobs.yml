@@ -39,37 +39,37 @@ jobs:
   #     - IN: sn-gke-cluster
 
 
-  # - name: sn-ddc-man
-  #   type: manifest
-  #   steps:
-  #     - IN: sn-dk
-  #     - IN: sn-ddc-trigger
-  #
-  # - name: sn-ddc-dep
-  #   type: deploy
-  #   steps:
-  #     - IN: sn-ddc-man
-  #     - IN: sn-ddc-cluster
-
-  - name: sn-ecs-lb-man
+  - name: sn-ddc-man
     type: manifest
     steps:
-      - IN: sn-ep
       - IN: sn-dk
-      - IN: sn-ecs-lb-trigger
+      - IN: sn-ddc-trigger
 
-  - name: sn-ecs-lb-deploy
+  - name: sn-ddc-dep
     type: deploy
     steps:
-      - IN: sn-ecs-lb-man
-      - IN: sn-ecs-lb-cluster
-      - IN: lb-loadbalancer1
-        applyTo:
-          - manifest: sn-ecs-lb-man
-            image: sn-dk
-          - manifest: sn-ecs-lb-man
-            image: sn-ep
-          - manifest: sn-ecs-lb-man
-            image: sn-myapp3
-      - TASK: managed
-        deployMethod: upgrade
+      - IN: sn-ddc-man
+      - IN: sn-ddc-cluster
+
+  # - name: sn-ecs-lb-man
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-ep
+  #     - IN: sn-dk
+  #     - IN: sn-ecs-lb-trigger
+  #
+  # - name: sn-ecs-lb-deploy
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-ecs-lb-man
+  #     - IN: sn-ecs-lb-cluster
+  #     - IN: lb-loadbalancer1
+  #       applyTo:
+  #         - manifest: sn-ecs-lb-man
+  #           image: sn-dk
+  #         - manifest: sn-ecs-lb-man
+  #           image: sn-ep
+  #         - manifest: sn-ecs-lb-man
+  #           image: sn-myapp3
+  #     - TASK: managed
+  #       deployMethod: upgrade
