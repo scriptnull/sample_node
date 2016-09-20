@@ -2,27 +2,27 @@ triggers:
   - name: sn-b-trigger
     type: trigger
     version:
-      counter: 13
+      counter: 0
 
-  - name: sn-b-tm-trigger
+  - name: sn-b-tri-trigger
     type: trigger
     version:
-      counter: 10
+      counter: 0
 
   - name: sn-b-ddc-trigger
     type: trigger
     version:
-      counter: 15
+      counter: 0
 
   - name: sn-b-gke-trigger
     type: trigger
     version:
-      counter: 6
+      counter: 0
 
   - name: sn-b-ecs-trigger
     type: trigger
     version:
-      counter: 15
+      counter: 0
 
   - name: sn-b-dcl-trigger
     type: trigger

@@ -11,3 +11,29 @@ jobs:
     steps:
       - IN: sn-b-dcl-man
       - IN: sn-b-dcl-cluster
+
+  - name: sn-b-tri-man
+    type: manifest
+    steps:
+      - IN: sn-b-dk
+      - IN: sn-b-secure-params
+      - IN: sn-b-tri-trigger
+
+  - name: sn-b-tri-dep
+    type: deploy
+    steps:
+      - IN: sn-b-tri-man
+      - IN: sn-b-tri-cluster
+
+  - name: sn-b-ecs-man
+    type: manifest
+    steps:
+      - IN: sn-b-dk
+      - IN: sn-b-secure-params
+      - IN: sn-b-ecs-trigger
+
+  - name: sn-b-ecs-dep
+    type: deploy
+    steps:
+      - IN: sn-b-ecs-man
+      - IN: sn-b-ecs-lb-cluster
