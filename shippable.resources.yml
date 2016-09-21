@@ -59,8 +59,9 @@ resources:
         # # CAT="name is tom" MOUSE="name is jerry"
         # secure: V5SIfxXoqR5/wJ5uHZotcdIzn348lm32O2zzQzfVsuV/dtU1jmbZxLHzC11RQNbsLviI9bO2jwQjf45d79XyL144GLA8K9yAXQpUI99ybMVd/XtI1/m4/UL1h1rLy4rZhnFm1sMINmFT3kPX20JmoASAkEJrwes4fA29WW/drsCgyirKQubxOmFA15CZvwixXaekNF/nYS59LGxTgrhgYRayKe4U/1m2ZD+WS4QRDLXzxnoHUbfKDThsVTVvZJhlrYPm7BzXtPP4D2jWc0aDl0X+r1X49d3wpNa1g9Cm+QQeNDphSyot+ePRYAknCFDbW+SbGBrTD4P6oW0FcFnt6w==
         # # CAT=" tom and jerry"
-        secure: QgXLQwPnZAG/+xUyqGFpH05Kfuxco31oJjRDCLcHG9fbqLSV8xWg9nVVYUQKOBrvDtCrQlzitnny3NSBxclnKmNgR1cDeE6jf6IX/QMmqCxhcCWVtJPPVPhJLuzISrBiNVGyPnvjKqz5XXW51xng34h/1P0k9uQlus60Z9vUCYAVFCHupH6feJVn3KTnq4HNfNCY1gMQBBHu6Nf5yvVRLPPgt85nHs/p1IcvNeuW7N2iq25ASn97ezXPXMosdtQfMGgkS+B1A8l8zYGpFPt7hdR1wE7T7ijHLIjck1nOh/nwH/GfUvm9f7DZFGEWoALWnyf3bdMwaZp5mkRuhKJulA==
-
+        # secure: QgXLQwPnZAG/+xUyqGFpH05Kfuxco31oJjRDCLcHG9fbqLSV8xWg9nVVYUQKOBrvDtCrQlzitnny3NSBxclnKmNgR1cDeE6jf6IX/QMmqCxhcCWVtJPPVPhJLuzISrBiNVGyPnvjKqz5XXW51xng34h/1P0k9uQlus60Z9vUCYAVFCHupH6feJVn3KTnq4HNfNCY1gMQBBHu6Nf5yvVRLPPgt85nHs/p1IcvNeuW7N2iq25ASn97ezXPXMosdtQfMGgkS+B1A8l8zYGpFPt7hdR1wE7T7ijHLIjck1nOh/nwH/GfUvm9f7DZFGEWoALWnyf3bdMwaZp5mkRuhKJulA==
+        # # CAT="name is tom" MOUSE="name is jerry" DOG="name is tommy"
+        secure: OljrJiEW/m7txafFjzCPI5Dvk2i88+Q+wn2tLTGp+g7fJaiW5snbdQz/XGLcaKhkHnbUc+EK2J07F6HBBHRsbPpmbl2AdeB3P5YRVD/hhJ8VkWTyinhS9JhUnlvKDvgJKdIUUR7uR9GX0OPfmDQGIB+UcJrG1K5YLDEltrDDu2+seRsUc0AfAsbx6xLwVoIKmy5OEOpk0IahdhmdmldOxHTWpHmoB1gvxmQH9sJMBiXNmbSG5ubOA2MVqfD8OVlET9gh4LY0JFiw6KZgrfFhcx3jHnvXnUZc7NSNEAvzjLak4zaZdZ+L9OLY7k/EuRdZ51Lprc69rFCDIV1vzMANhA==
 
   # - name: sn-ecs-cluster
   #   type: cluster
