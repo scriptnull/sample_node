@@ -49,7 +49,7 @@ resources:
         MONGO_API_URL: "localhost:28017"
         GREET: "Hello World"
         # # CAT=tom
-        # secure: GsHspxke/uydACxkemDV6fbm//RoEL5DbVBt6v0QsHGppx7/+YIv8MI42n67ha3KIYV+1hKrc2ezPZltP2Cmhy7+ECc8C1JVDUGJXvxoNs82pyRJW1MIJQohVdpst+rlU//kbhEONt1YX1d5e26kZMmZB+2+USok9Et3tsE9WjvAIszZV+l4vonUPIsKv+jc0WXZBU6KP2lOUhbI4/Ehjx5esow+VQ+j+pDyXUTIFR2ygxmwKJnxLoeg1euF0sxgEwYaJKf2cyM2nSW4V1KzS865FN3uBDcKi7ZQkx/2sknDFJuHAgyS+89QzO6YW7m/fEFw6rWuoUfDraoqidgacA==
+        secure: GsHspxke/uydACxkemDV6fbm//RoEL5DbVBt6v0QsHGppx7/+YIv8MI42n67ha3KIYV+1hKrc2ezPZltP2Cmhy7+ECc8C1JVDUGJXvxoNs82pyRJW1MIJQohVdpst+rlU//kbhEONt1YX1d5e26kZMmZB+2+USok9Et3tsE9WjvAIszZV+l4vonUPIsKv+jc0WXZBU6KP2lOUhbI4/Ehjx5esow+VQ+j+pDyXUTIFR2ygxmwKJnxLoeg1euF0sxgEwYaJKf2cyM2nSW4V1KzS865FN3uBDcKi7ZQkx/2sknDFJuHAgyS+89QzO6YW7m/fEFw6rWuoUfDraoqidgacA==
         # # CAT=tom MOUSE=jerry
         # secure: UP14IWTNogG0CfXlIZ1N//dubrXYV8ukAd1b57LeKMFL/fLzGQjXN74Z+YXdlWsi+r/esRmb8XhE9Bpwz87pwlm+NbQGy2O7asV55bEe087FxF7Os2NFCkDtJmLQq+BkcIbXs9leEcG+aZl4ycHatJRHVVL4v/Vj7rkv3of4ezHKPkvh+JqZF0OYjb30a7Dk1azOUydnhmb44urmEQ4gP8owdClQlPI0lXfouIuc+EggKLBwJ1RN0Dly6AHcsPB0HqgJZXHqsYyHPlMDm8Zilpko4ledD4AHXU5Uy8HLzfHBogfhTFGlrHC22RuPx7VR1h61ScagB7KUzuG/u2b1tw==
         # # CAT="tom"
@@ -61,7 +61,7 @@ resources:
         # # CAT=" tom and jerry"
         # secure: QgXLQwPnZAG/+xUyqGFpH05Kfuxco31oJjRDCLcHG9fbqLSV8xWg9nVVYUQKOBrvDtCrQlzitnny3NSBxclnKmNgR1cDeE6jf6IX/QMmqCxhcCWVtJPPVPhJLuzISrBiNVGyPnvjKqz5XXW51xng34h/1P0k9uQlus60Z9vUCYAVFCHupH6feJVn3KTnq4HNfNCY1gMQBBHu6Nf5yvVRLPPgt85nHs/p1IcvNeuW7N2iq25ASn97ezXPXMosdtQfMGgkS+B1A8l8zYGpFPt7hdR1wE7T7ijHLIjck1nOh/nwH/GfUvm9f7DZFGEWoALWnyf3bdMwaZp5mkRuhKJulA==
         # # CAT="name is tom" MOUSE="name is jerry" DOG="name is tommy"
-        secure: OljrJiEW/m7txafFjzCPI5Dvk2i88+Q+wn2tLTGp+g7fJaiW5snbdQz/XGLcaKhkHnbUc+EK2J07F6HBBHRsbPpmbl2AdeB3P5YRVD/hhJ8VkWTyinhS9JhUnlvKDvgJKdIUUR7uR9GX0OPfmDQGIB+UcJrG1K5YLDEltrDDu2+seRsUc0AfAsbx6xLwVoIKmy5OEOpk0IahdhmdmldOxHTWpHmoB1gvxmQH9sJMBiXNmbSG5ubOA2MVqfD8OVlET9gh4LY0JFiw6KZgrfFhcx3jHnvXnUZc7NSNEAvzjLak4zaZdZ+L9OLY7k/EuRdZ51Lprc69rFCDIV1vzMANhA==
+        # secure: OljrJiEW/m7txafFjzCPI5Dvk2i88+Q+wn2tLTGp+g7fJaiW5snbdQz/XGLcaKhkHnbUc+EK2J07F6HBBHRsbPpmbl2AdeB3P5YRVD/hhJ8VkWTyinhS9JhUnlvKDvgJKdIUUR7uR9GX0OPfmDQGIB+UcJrG1K5YLDEltrDDu2+seRsUc0AfAsbx6xLwVoIKmy5OEOpk0IahdhmdmldOxHTWpHmoB1gvxmQH9sJMBiXNmbSG5ubOA2MVqfD8OVlET9gh4LY0JFiw6KZgrfFhcx3jHnvXnUZc7NSNEAvzjLak4zaZdZ+L9OLY7k/EuRdZ51Lprc69rFCDIV1vzMANhA==
 
   # - name: sn-ecs-cluster
   #   type: cluster
