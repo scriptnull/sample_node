@@ -49,9 +49,9 @@ resources:
         MONGO_API_URL: "localhost:28017"
         GREET: "Hello World"
         # # CAT=tom
-        secure: GsHspxke/uydACxkemDV6fbm//RoEL5DbVBt6v0QsHGppx7/+YIv8MI42n67ha3KIYV+1hKrc2ezPZltP2Cmhy7+ECc8C1JVDUGJXvxoNs82pyRJW1MIJQohVdpst+rlU//kbhEONt1YX1d5e26kZMmZB+2+USok9Et3tsE9WjvAIszZV+l4vonUPIsKv+jc0WXZBU6KP2lOUhbI4/Ehjx5esow+VQ+j+pDyXUTIFR2ygxmwKJnxLoeg1euF0sxgEwYaJKf2cyM2nSW4V1KzS865FN3uBDcKi7ZQkx/2sknDFJuHAgyS+89QzO6YW7m/fEFw6rWuoUfDraoqidgacA==
+        # secure: GsHspxke/uydACxkemDV6fbm//RoEL5DbVBt6v0QsHGppx7/+YIv8MI42n67ha3KIYV+1hKrc2ezPZltP2Cmhy7+ECc8C1JVDUGJXvxoNs82pyRJW1MIJQohVdpst+rlU//kbhEONt1YX1d5e26kZMmZB+2+USok9Et3tsE9WjvAIszZV+l4vonUPIsKv+jc0WXZBU6KP2lOUhbI4/Ehjx5esow+VQ+j+pDyXUTIFR2ygxmwKJnxLoeg1euF0sxgEwYaJKf2cyM2nSW4V1KzS865FN3uBDcKi7ZQkx/2sknDFJuHAgyS+89QzO6YW7m/fEFw6rWuoUfDraoqidgacA==
         # # CAT=tom MOUSE=jerry
-        # secure: UP14IWTNogG0CfXlIZ1N//dubrXYV8ukAd1b57LeKMFL/fLzGQjXN74Z+YXdlWsi+r/esRmb8XhE9Bpwz87pwlm+NbQGy2O7asV55bEe087FxF7Os2NFCkDtJmLQq+BkcIbXs9leEcG+aZl4ycHatJRHVVL4v/Vj7rkv3of4ezHKPkvh+JqZF0OYjb30a7Dk1azOUydnhmb44urmEQ4gP8owdClQlPI0lXfouIuc+EggKLBwJ1RN0Dly6AHcsPB0HqgJZXHqsYyHPlMDm8Zilpko4ledD4AHXU5Uy8HLzfHBogfhTFGlrHC22RuPx7VR1h61ScagB7KUzuG/u2b1tw==
+        secure: UP14IWTNogG0CfXlIZ1N//dubrXYV8ukAd1b57LeKMFL/fLzGQjXN74Z+YXdlWsi+r/esRmb8XhE9Bpwz87pwlm+NbQGy2O7asV55bEe087FxF7Os2NFCkDtJmLQq+BkcIbXs9leEcG+aZl4ycHatJRHVVL4v/Vj7rkv3of4ezHKPkvh+JqZF0OYjb30a7Dk1azOUydnhmb44urmEQ4gP8owdClQlPI0lXfouIuc+EggKLBwJ1RN0Dly6AHcsPB0HqgJZXHqsYyHPlMDm8Zilpko4ledD4AHXU5Uy8HLzfHBogfhTFGlrHC22RuPx7VR1h61ScagB7KUzuG/u2b1tw==
         # # CAT="tom"
         # secure: mThaZ2mczBeK0dZtqWuDmIcltUCjFK+xE6OvhVPH+tosnL4Hts84wvh+uYpm3SxmLyDaK84Q5mh0yhdaADRfnj6cmkm81mDe4QdGLOZ7qNref+iciV6tH63htYovxR5s9mxe8vjHTkCbYFbue6uniedf0qg5Xp4sBGGJ043Ie6o4Vz+xkF2+4fCl6Nc4XEfOH3qKI3nKiz5Y/AUrdJhsMeI07+tXVg/7hQle5TIbDTvnHrnYtM9dsVgU3Hk5vQ6/AbT6u2Hyu18CtuuZeQ2Kxm+9PjSe27qK0iszGx4EVZaBVtuWdz6E3Tgznarvb28ty7bwI8/OYQ5LWxM9zITY1g==
         #   # CAT="tom" MOUSE="jerry"
