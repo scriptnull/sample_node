@@ -69,6 +69,8 @@ jobs:
       - IN: sn-b-gke-man
       - IN: sn-b-gke-cluster
 
+#############################################################
+
   - name: sn-b-mix-a-man
     type: manifest
     steps:
