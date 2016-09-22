@@ -1,35 +1,35 @@
 triggers:
-  - name: sn-trigger-1
-    type: trigger
-    version:
-      counter: 43
-
-  - name: sn-tm-trigger
-    type: trigger
-    version:
-      counter: 22
-
-  - name: sn-ddc-trigger
-    type: trigger
-    version:
-      counter: 17
-
-  - name: sn-gke-trigger
-    type: trigger
-    version:
-      counter: 6
-
-  - name: sn-ecs-lb-trigger
-    type: trigger
-    version:
-      counter: 15
-
-  - name: sn-mix-a-trigger
-    type: trigger
-    version:
-      counter: 4
-
-  - name: sn-mix-b-trigger
-    type: trigger
-    version:
-      counter: 4
+  # - name: sn-trigger-1
+  #   type: trigger
+  #   version:
+  #     counter: 43
+  #
+  # - name: sn-tm-trigger
+  #   type: trigger
+  #   version:
+  #     counter: 22
+  #
+  # - name: sn-ddc-trigger
+  #   type: trigger
+  #   version:
+  #     counter: 17
+  #
+  # - name: sn-gke-trigger
+  #   type: trigger
+  #   version:
+  #     counter: 6
+  #
+  # - name: sn-ecs-lb-trigger
+  #   type: trigger
+  #   version:
+  #     counter: 15
+  #
+  # - name: sn-mix-a-trigger
+  #   type: trigger
+  #   version:
+  #     counter: 4
+  #
+  # - name: sn-mix-b-trigger
+  #   type: trigger
+  #   version:
+  #     counter: 4

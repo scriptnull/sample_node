@@ -39,18 +39,18 @@ jobs:
   #     - IN: sn-gke-cluster
 
 
-  - name: sn-ddc-man
-    type: manifest
-    steps:
-      - IN: sn-dk
-      - IN: sn-secure-params
-      - IN: sn-ddc-trigger
-
-  - name: sn-ddc-dep
-    type: deploy
-    steps:
-      - IN: sn-ddc-man
-      - IN: sn-ddc-cluster
+  # - name: sn-ddc-man
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-dk
+  #     - IN: sn-secure-params
+  #     - IN: sn-ddc-trigger
+  #
+  # - name: sn-ddc-dep
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-ddc-man
+  #     - IN: sn-ddc-cluster
 
   # - name: sn-ecs-lb-man
   #   type: manifest
