@@ -5,6 +5,13 @@ jobs:
       - IN: sn-q-vici-http-js
       - IN: sn-q-file-trigger
 
+  - name: sn-q-chain-file-man
+    type: manifest
+    steps:
+      - IN: sn-q-vici-init-js
+      - IN: sn-q-file-man
+      - IN: sn-q-chain-trigger
+
   # - name: sn-q-man-1
   #   type: manifest
   #   steps:

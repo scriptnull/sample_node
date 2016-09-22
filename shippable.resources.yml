@@ -6,6 +6,13 @@ resources:
     seed:
       versionName: "initial"
 
+  - name: sn-q-vici-init-js
+    type: file
+    pointer:
+      sourceName: "https://raw.githubusercontent.com/scriptnull/vici/master/vici.init.js"
+    seed:
+      versionName: "initial"
+
   - name: sn-q-myapp3
     type: image
     integration: scriptnull-docker

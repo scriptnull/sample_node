@@ -1,4 +1,9 @@
 triggers:
+  - name: sn-q-chain-trigger
+    type: trigger
+    version:
+      counter: 1
+
   - name: sn-q-file-trigger
     type: trigger
     version:
