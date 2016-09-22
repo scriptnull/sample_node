@@ -3,6 +3,7 @@ jobs:
     type: manifest
     steps:
       - IN: sn-file
+      - IN: sn-file-trigger
 
   #
   # - name: sn-ecs-dep
