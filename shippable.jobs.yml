@@ -9,6 +9,7 @@ jobs:
     type: manifest
     steps:
       - IN: sn-vici-http-js
+      - IN: sn-file-man
       - IN: sn-vici-trigger
 
   #
