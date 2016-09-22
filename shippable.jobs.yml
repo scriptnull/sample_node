@@ -5,6 +5,12 @@ jobs:
       - IN: sn-file
       - IN: sn-file-trigger
 
+  - name: sn-vici-man
+    type: manifest
+    steps:
+      - IN: sn-vici-http-js
+      - IN: sn-vici-trigger
+
   #
   # - name: sn-ecs-dep
   #   type: deploy
