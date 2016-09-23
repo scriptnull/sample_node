@@ -1,5 +1,5 @@
 jobs:
-  - name: sn-file-man
+  - name: sn-file-man-1
     type: manifest
     steps:
       - IN: sn-vici-http-js
@@ -12,10 +12,10 @@ jobs:
   #     - IN: sn-file-man
   #     - IN: sn-vici-trigger
 
-  - name: sn-cluster-dep
+  - name: sn-cluster-dep-1
     type: deploy
     steps:
-      - IN: sn-file-man
+      - IN: sn-file-man-1
       - IN: sn-cluster
 
   #
