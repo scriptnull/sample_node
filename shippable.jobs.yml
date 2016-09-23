@@ -1,5 +1,5 @@
 jobs:
-  - name: sn-q-file-man
+  - name: sn-q-file-man-1
     type: manifest
     steps:
       - IN: sn-q-vici-http-js
@@ -12,10 +12,10 @@ jobs:
       - IN: sn-q-file-man
       - IN: sn-q-chain-trigger
 
-  - name: sn-q-cluster-deploy
+  - name: sn-q-cluster-deploy-1
     type: deploy
     steps:
-      - IN: sn-q-file-man
+      - IN: sn-q-file-man-1
       - IN: sn-q-cluster
 
   # - name: sn-q-man-1
