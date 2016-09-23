@@ -13,6 +13,12 @@ resources:
     seed:
       versionName: "initial"
 
+  - name: sn-q-cluster
+    type: cluster
+    integration: scriptnull-node
+    pointer:
+      sourceName: 'scriptnull-cluster'
+
   - name: sn-q-myapp3
     type: image
     integration: scriptnull-docker

@@ -12,6 +12,12 @@ jobs:
       - IN: sn-q-file-man
       - IN: sn-q-chain-trigger
 
+  - name: sn-q-cluster-deploy
+    type: deploy
+    steps:
+      - IN: sn-q-file-man
+      - IN: sn-q-cluster
+
   # - name: sn-q-man-1
   #   type: manifest
   #   steps:
