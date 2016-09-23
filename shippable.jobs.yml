@@ -2,7 +2,7 @@ jobs:
   - name: sn-file-man
     type: manifest
     steps:
-      - IN: sn-file
+      - IN: sn-vici-http-js
       - IN: sn-file-trigger
 
   # - name: sn-vici-man
