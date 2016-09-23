@@ -5,12 +5,18 @@ jobs:
       - IN: sn-file
       - IN: sn-file-trigger
 
-  - name: sn-vici-man
-    type: manifest
+  # - name: sn-vici-man
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-vici-http-js
+  #     - IN: sn-file-man
+  #     - IN: sn-vici-trigger
+
+  - name: sn-cluster-dep
+    type: deploy
     steps:
-      - IN: sn-vici-http-js
       - IN: sn-file-man
-      - IN: sn-vici-trigger
+      - IN: sn-cluster
 
   #
   # - name: sn-ecs-dep
