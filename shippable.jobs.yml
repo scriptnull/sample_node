@@ -17,8 +17,8 @@ jobs:
     steps:
       - IN: sn-file-man-1
       - IN: sn-cluster
-      - TASK:
-          - script: echo "Hello world !" > abc.txt
+      # - TASK:
+      #     - script: echo "Hello world !" > abc.txt
 
   #
   # - name: sn-ecs-dep
