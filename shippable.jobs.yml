@@ -5,8 +5,8 @@ jobs:
       - IN: sn-file
       # - IN: sn-vici-http-js
       - IN: sn-file-trigger
+      # - name: sn-vici-man
 
-  # - name: sn-vici-man
   #   type: manifest
   #   steps:
   #     - IN: sn-vici-http-js
@@ -23,10 +23,10 @@ jobs:
           - script: xkcd
     on_success:
       - script: echo "hurray ! its success" > /build/state/status.hello
-      - NOTIFY: scriptnull-slack
+      - NOTIFY: slackNotification
     on_failure:
       - script: echo "Alas ! I am said to use this expression in English class for sad events."
-      - NOTIFY: scriptnull-slack
+      - NOTIFY: slackNotification
 
   #
   # - name: sn-ecs-dep

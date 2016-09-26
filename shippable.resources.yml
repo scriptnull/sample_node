@@ -19,6 +19,13 @@ resources:
     pointer:
       sourceName: 'scriptnull-cluster'
 
+  - name: slackNotification
+    type: notification
+    integration: scriptnull-slack
+    pointer:
+      recipients:
+        - "#scriptnull-test"
+
   # - name: sn-myapp3
   #   type: image
   #   integration: scriptnull-docker
