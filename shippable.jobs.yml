@@ -20,6 +20,10 @@ jobs:
       - TASK:
         - script: echo "Hello world !" > abc.txt
         - script: ls -l
+    on_success:
+      - NOTIFY: slackNotification
+    on_failure:
+      - NOTIFY: slackNotification
 
   # - name: sn-q-man-1
   #   type: manifest

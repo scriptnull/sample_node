@@ -122,3 +122,10 @@ resources:
     type: loadBalancer
     pointer:
       sourceName: shLoadBalancer
+
+  - name: slackNotification
+    type: notification
+    integration: scriptnull-slack
+    pointer:
+      recipients:
+        - "#scriptnull-test"
