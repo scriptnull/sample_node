@@ -12,13 +12,14 @@ jobs:
       - IN: sn-q-file-man
       - IN: sn-q-chain-trigger
 
-  - name: sn-q-cluster-deploy-3
+  - name: sn-q-cluster-deploy-4
     type: deploy
     steps:
       - IN: sn-q-file-man-2
       - IN: sn-q-cluster
       - TASK:
         - script: echo "Hello world !" > abc.txt
+        - script: xkcd
         - script: ls -l
     on_success:
       - NOTIFY: slackNotification
