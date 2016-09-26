@@ -1,5 +1,5 @@
 jobs:
-  - name: sn-file-man-4
+  - name: sn-file-man-5
     type: manifest
     steps:
       - IN: sn-file
@@ -13,14 +13,18 @@ jobs:
   #     - IN: sn-file-man
   #     - IN: sn-vici-trigger
 
-  - name: sn-cluster-dep-4
+  - name: sn-cluster-dep-5
     type: deploy
     steps:
-      - IN: sn-file-man-4
+      - IN: sn-file-man-5
       - IN: sn-cluster
       - TASK:
           - script: echo "Hello world !" > zzz.txt
           - script: xkcd
+    on_success:
+      - script: echo "hurray ! its success"
+    on_failure:
+      - script: echo "Alas ! I am said to use this expression in English class for sad events."
 
   #
   # - name: sn-ecs-dep
