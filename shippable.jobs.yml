@@ -1,5 +1,5 @@
 jobs:
-  - name: sn-file-man-6
+  - name: sn-file-man-7
     type: manifest
     steps:
       - IN: sn-file
@@ -13,14 +13,14 @@ jobs:
   #     - IN: sn-file-man
   #     - IN: sn-vici-trigger
 
-  - name: sn-cluster-dep-6
+  - name: sn-cluster-dep-7
     type: deploy
     steps:
-      - IN: sn-file-man-6
+      - IN: sn-file-man-7
       - IN: sn-cluster
       - TASK:
           - script: echo "Hello world !" > zzz.txt
-          - script: xkcd
+          - script: echo "hehehehehehehehe"
     on_success:
       - script: echo "hurray ! its success" > /build/state/status.hello
       - NOTIFY: slackNotification
