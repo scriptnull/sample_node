@@ -134,4 +134,4 @@ resources:
     type: params
     version:
       params:
-        MONGO_API_URL: "abc:28017"
+        MONGO_API_URL: "xxx:28017"
