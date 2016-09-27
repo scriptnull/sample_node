@@ -19,6 +19,8 @@ jobs:
     steps:
       - IN: sn-file-man-9
       - IN: sn-cluster
+      - TASK:
+          - script: xkcd
 
   #
   # - name: sn-ecs-dep
