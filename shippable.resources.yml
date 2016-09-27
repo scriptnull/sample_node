@@ -19,6 +19,12 @@ resources:
     pointer:
       sourceName: 'scriptnull-cluster'
 
+  - name: sn-params
+    type: params
+    version:
+      params:
+        MONGO_API_URL: "localhost:28017"
+
   # - name: slackNotification
   #   type: notification
   #   integration: scriptnull-slack
