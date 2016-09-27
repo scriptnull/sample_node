@@ -4,6 +4,7 @@ jobs:
     steps:
       - IN: sn-q-vici-init-js
       - IN: sn-q-file-trigger
+      - IN: sn-q-params
 
   - name: sn-q-chain-file-man
     type: manifest

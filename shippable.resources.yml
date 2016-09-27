@@ -129,3 +129,9 @@ resources:
     pointer:
       recipients:
         - "#scriptnull-test"
+
+  - name: sn-q-params
+    type: params
+    version:
+      params:
+        MONGO_API_URL: "abc:28017"
