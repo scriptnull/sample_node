@@ -107,3 +107,12 @@ jobs:
           - manifest: sn-q-ecs-man-bg
             image: sn-q-myapp3
             port: 80
+
+  - name: sn-q-runSh
+    type: runSh
+    steps:
+      - IN: sn-q-runSh-trigger
+      - TASK:
+        - script: ls
+        - script: "echo \"versionName=`date +%s`\" > /build/state/sn-q-vici-init-js.env"
+      - OUT: sn-q-vici-init-js

@@ -9,6 +9,11 @@ triggers:
     version:
       counter: 12
 
+  - name: sn-q-runSh-trigger
+    type: trigger
+    version:
+      counter: 1
+
   - name: sn-q-trigger-1
     type: trigger
     version:
