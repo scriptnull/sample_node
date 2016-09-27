@@ -6,6 +6,12 @@ jobs:
       - IN: sn-q-params
       - IN: sn-q-file-trigger
 
+  # - name: sn-q-file-man-xxx
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-q-vici-http-js
+  #     - IN: sn-q-file-trigger
+
   - name: sn-q-file-dep-xxx
     type: deploy
     steps:

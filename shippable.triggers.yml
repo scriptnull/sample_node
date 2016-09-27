@@ -7,7 +7,7 @@ triggers:
   - name: sn-q-file-trigger
     type: trigger
     version:
-      counter: 18
+      counter: 19
 
   - name: sn-q-runSh-trigger
     type: trigger
