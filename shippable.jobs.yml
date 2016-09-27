@@ -1,35 +1,40 @@
 jobs:
-  - name: sn-q-file-man-2
+  - name: sn-q-file-man-xxx
     type: manifest
     steps:
       - IN: sn-q-vici-init-js
       - IN: sn-q-file-trigger
-      - IN: sn-q-params
 
-  - name: sn-q-chain-file-man
-    type: manifest
-    steps:
-      - IN: sn-q-vici-init-js
-      - IN: sn-q-chain-trigger
-
-  - name: sn-q-cluster-deploy-5
+  - name: sn-q-file-dep-xxx
     type: deploy
     steps:
-      - IN: sn-q-file-man-2
+      - IN: sn-q-file-man-xxx
       - IN: sn-q-cluster
-      - TASK:
-        - script: echo "Hello world !" > abc.txt
-        - script: ls -l
-    on_success:
-      - NOTIFY: slackNotification
-    on_failure:
-      - NOTIFY: slackNotification
 
-  - name: sn-q-chain-deploy
-    type: deploy
-    steps:
-      - IN: sn-q-chain-file-man
-      - IN: sn-q-cluster
+  # - name: sn-q-chain-file-man
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-q-vici-init-js
+  #     - IN: sn-q-chain-trigger
+
+  # - name: sn-q-cluster-deploy-5
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-q-file-man-2
+  #     - IN: sn-q-cluster
+  #     - TASK:
+  #       - script: echo "Hello world !" > abc.txt
+  #       - script: ls -l
+  #   on_success:
+  #     - NOTIFY: slackNotification
+  #   on_failure:
+  #     - NOTIFY: slackNotification
+
+  # - name: sn-q-chain-deploy
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-q-chain-file-man
+  #     - IN: sn-q-cluster
 
   # - name: sn-q-man-1
   #   type: manifest
