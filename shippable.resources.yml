@@ -24,6 +24,7 @@ resources:
     version:
       params:
         MONGO_API_URL: "abc:28017"
+        HELLO: "world"
 
   # - name: slackNotification
   #   type: notification
