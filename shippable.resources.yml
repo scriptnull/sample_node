@@ -135,3 +135,9 @@ resources:
     version:
       params:
         MONGO_API_URL: "xxx:28017"
+
+  - name: sn-q-params-2
+    type: params
+    version:
+      params:
+        MONGO_API_URL: "yyy:28017"

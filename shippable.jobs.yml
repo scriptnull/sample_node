@@ -10,6 +10,7 @@ jobs:
     type: deploy
     steps:
       - IN: sn-q-file-man-xxx
+      - IN: sn-q-params-2
       - IN: sn-q-cluster
       - TASK:
           - script: echo "$MONGO_API_URL"
