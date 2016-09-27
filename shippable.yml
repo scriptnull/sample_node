@@ -3,16 +3,12 @@ language: node_js
 build:
   ci:
     - echo "Hello world"
+    - MYVERSION=`date +%s`
   
 integrations:
   notifications:
-    - integrationName: email
-      type: email
-      recipients: 
-        - vishnu@shippable.com
-        - shiphitchcock1@gmail.com
-        - varsha@shippable.com
-      on_start: always
+    - integrationName: scriptnull-ci
+      type: webhook
+      payload:
+        - versionName=$MYVERSION
       on_success: always
-      on_failure: always
-      on_pull_request: always
