@@ -3,7 +3,7 @@ jobs:
     type: manifest
     steps:
       - IN: sn-file
-      - IN: sn-params
+      # - IN: sn-params
       # - IN: sn-vici-http-js
       - IN: sn-file-trigger
       # - name: sn-vici-man
@@ -19,8 +19,8 @@ jobs:
     steps:
       - IN: sn-file-man-7
       - IN: sn-cluster
-      - TASK:
-          - script: "ls"
+      # - TASK:
+      #     - script: "ls"
 
   #
   # - name: sn-ecs-dep
