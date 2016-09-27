@@ -140,4 +140,4 @@ resources:
     type: params
     version:
       params:
-        MONGO_API_URL: "yyy:28017"
+        MONGO_API_URL: "zzz:28017"
