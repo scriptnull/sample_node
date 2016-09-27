@@ -10,7 +10,6 @@ jobs:
     type: manifest
     steps:
       - IN: sn-q-vici-init-js
-      - IN: sn-q-file-man
       - IN: sn-q-chain-trigger
 
   - name: sn-q-cluster-deploy-5
@@ -25,6 +24,12 @@ jobs:
       - NOTIFY: slackNotification
     on_failure:
       - NOTIFY: slackNotification
+
+  - name: sn-q-chain-deploy
+    type: deploy
+    steps:
+      - IN: sn-q-chain-file-man
+      - IN: sn-q-cluster
 
   # - name: sn-q-man-1
   #   type: manifest
