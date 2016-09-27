@@ -1,5 +1,5 @@
 jobs:
-  - name: sn-file-man-7
+  - name: sn-file-man-8
     type: manifest
     steps:
       - IN: sn-file
@@ -14,10 +14,10 @@ jobs:
   #     - IN: sn-file-man
   #     - IN: sn-vici-trigger
 
-  - name: sn-cluster-dep-7
+  - name: sn-cluster-dep-8
     type: deploy
     steps:
-      - IN: sn-file-man-7
+      - IN: sn-file-man-8
       - IN: sn-cluster
 
   #
