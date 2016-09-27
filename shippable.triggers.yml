@@ -2,7 +2,7 @@ triggers:
   - name: sn-q-chain-trigger
     type: trigger
     version:
-      counter: 3
+      counter: 4
 
   - name: sn-q-file-trigger
     type: trigger
