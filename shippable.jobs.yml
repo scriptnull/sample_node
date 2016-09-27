@@ -3,7 +3,6 @@ jobs:
     type: manifest
     steps:
       - IN: sn-file
-      - IN: sn-vici-http-js
       - IN: sn-file-trigger
       # - name: sn-vici-man
 
@@ -19,14 +18,7 @@ jobs:
       - IN: sn-file-man-7
       - IN: sn-cluster
       - TASK:
-          - script: echo "Hello world !" > zzz.txt
-          - script: echo "hehehehehehehehe"
-    on_success:
-      - script: echo "hurray ! its success" > /build/state/status.hello
-      - NOTIFY: slackNotification
-    on_failure:
-      - script: echo "Alas ! I am said to use this expression in English class for sad events."
-      - NOTIFY: slackNotification
+          - script: "ls"
 
   #
   # - name: sn-ecs-dep
