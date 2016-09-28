@@ -101,14 +101,16 @@ jobs:
   - name: sn-mix-b-man
     type: manifest
     steps:
-      - IN: sn-dk
+      - IN: sn-ep
       - IN: sn-mix-b-trigger
 
   - name: sn-multi-manifest-dep
     type: deploy
     steps:
       - IN: sn-mix-a-man
+        force: true
       - IN: sn-mix-b-man
+        force: true
       - IN: sn-ecs-cluster
       - TASK: managed
         deployMethod: upgrade
