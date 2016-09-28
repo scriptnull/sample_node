@@ -149,10 +149,13 @@ jobs:
       - IN: sn-q-ep
       - IN: sn-q-mix-b-trigger
 
-  - name: sn-multi-manifest-dep
+  - name: sn-multi-manifest-ecs
     type: deploy
     steps:
       - IN: sn-q-mix-a-man
+        force: true
+      - IN: sn-q-mix-b-man
+        force: true
       - IN: sn-q-ecs-cluster-testCl
       - TASK: managed
-        deployMethod: upgrade
+        deployMethod: replace
