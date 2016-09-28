@@ -92,23 +92,23 @@ jobs:
   #     - TASK: managed
   #       deployMethod: upgrade
   #
-  # - name: sn-mix-a-man
-  #   type: manifest
-  #   steps:
-  #     - IN: sn-dk
-  #     - IN: sn-mix-a-trigger
-  #
-  # - name: sn-mix-b-man
-  #   type: manifest
-  #   steps:
-  #     - IN: sn-ep
-  #     - IN: sn-mix-b-trigger
-  #
-  # - name: sn-tri-dep-2
-  #   type: deploy
-  #   steps:
-  #     - IN: sn-mix-a-man
-  #       force: true
-  #     - IN: sn-mix-b-man
-  #       force: true
-  #     - IN: sn-tri-cluster
+  - name: sn-mix-a-man
+    type: manifest
+    steps:
+      - IN: sn-dk
+      - IN: sn-mix-a-trigger
+
+  - name: sn-mix-b-man
+    type: manifest
+    steps:
+      - IN: sn-ep
+      - IN: sn-mix-b-trigger
+
+  - name: sn-multi-manifest-dep
+    type: deploy
+    steps:
+      - IN: sn-mix-a-man
+      - IN: sn-mix-b-man
+      - IN: sn-ecs-cluster
+      - TASK: managed
+        deployMethod: upgrade
