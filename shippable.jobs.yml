@@ -158,5 +158,5 @@ jobs:
         force: true
       - IN: sn-q-tri-cluster
       - TASK: managed
-        deployOptions:
-          - parallel
+        # deployOptions:
+        #   - parallel
