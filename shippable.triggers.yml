@@ -42,4 +42,4 @@ triggers:
   - name: sn-mix-b-trigger
     type: trigger
     version:
-      counter: 6
+      counter: 7
