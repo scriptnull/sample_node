@@ -159,3 +159,5 @@ jobs:
       - IN: sn-q-ecs-cluster-testCl
       - TASK: managed
         deployMethod: replace
+        deployOptions:
+          - parallel
