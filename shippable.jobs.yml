@@ -1,11 +1,11 @@
 jobs:
-  - name: sn-file-man-9
-    type: manifest
-    steps:
-      - IN: sn-file
+  # - name: sn-file-man-9
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-file
       # - IN: sn-params
       # - IN: sn-vici-http-js
-      - IN: sn-file-trigger
+      # - IN: sn-file-trigger
       # - name: sn-vici-man
 
   #   type: manifest
@@ -14,13 +14,13 @@ jobs:
   #     - IN: sn-file-man
   #     - IN: sn-vici-trigger
 
-  - name: sn-cluster-dep-9
-    type: deploy
-    steps:
-      - IN: sn-file-man-9
-      - IN: sn-cluster
-      - TASK:
-          - script: xkcd
+  # - name: sn-cluster-dep-9
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-file-man-9
+  #     - IN: sn-cluster
+  #     - TASK:
+  #         - script: xkcd
 
   #
   # - name: sn-ecs-dep

@@ -1,13 +1,13 @@
 triggers:
-  - name: sn-file-trigger
-    type: trigger
-    version:
-      counter: 12
-
-  - name: sn-vici-trigger
-    type: trigger
-    version:
-      counter: 2
+  # - name: sn-file-trigger
+  #   type: trigger
+  #   version:
+  #     counter: 12
+  #
+  # - name: sn-vici-trigger
+  #   type: trigger
+  #   version:
+  #     counter: 2
 
   # - name: sn-trigger-1
   #   type: trigger
