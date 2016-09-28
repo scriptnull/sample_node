@@ -109,10 +109,8 @@ jobs:
     steps:
       - IN: sn-mix-a-man
         force: true
-      - IN: sn-mix-b-man
-        force: true
       - IN: sn-tri-cluster
       - TASK: managed
-        deployMethod: upgrade
+        deployMethod: blueGreen
         # deployOptions:
         #   - serial
