@@ -146,14 +146,15 @@ jobs:
   - name: sn-q-mix-b-man
     type: manifest
     steps:
-      - IN: sn-q-dk
+      - IN: sn-q-ep
       - IN: sn-q-mix-b-trigger
 
   - name: sn-multi-manifest-dep
     type: deploy
     steps:
       - IN: sn-q-mix-a-man
+        force: true
       - IN: sn-q-mix-b-man
-      - IN: sn-q-ecs-cluster
+      - IN: sn-q-ecs-cluster-testCl
       - TASK: managed
         deployMethod: upgrade
