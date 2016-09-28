@@ -113,5 +113,5 @@ jobs:
         force: true
       - IN: sn-gke-cluster
       - TASK: managed
-        # deployOptions:
-        #   - serial
+        deployOptions:
+          - parallel
