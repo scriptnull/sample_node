@@ -149,14 +149,14 @@ jobs:
       - IN: sn-q-ep
       - IN: sn-q-mix-b-trigger
 
-  - name: sn-multi-manifest-tri
+  - name: sn-multi-manifest-gke
     type: deploy
     steps:
       - IN: sn-q-mix-a-man
         force: true
       - IN: sn-q-mix-b-man
         force: true
-      - IN: sn-q-tri-cluster
+      - IN: sn-q-gke-cluster
       - TASK: managed
-        # deployOptions:
-        #   - parallel
+        deployOptions:
+          - parallel

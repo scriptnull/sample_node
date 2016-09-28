@@ -85,12 +85,12 @@ resources:
       sourceName : "some-name" #name of the cluster we are deploying
       region : "us-east-2"
   #
-  # - name: sn-q-gke-cluster
-  #   type: cluster
-  #   integration: scriptnull-gke
-  #   pointer:
-  #     sourceName : "small-cluster" #name of the cluster we are deploying
-  #     region : "us-east1-d"
+  - name: sn-q-gke-cluster
+    type: cluster
+    integration: scriptnull-gke
+    pointer:
+      sourceName : "small-cluster" #name of the cluster we are deploying
+      region : "us-east1-d"
 
   - name: sn-q-do
     type: dockerOptions
