@@ -155,6 +155,7 @@ jobs:
       - IN: sn-q-mix-a-man
         force: true
       - IN: sn-q-mix-b-man
+        force: true
       - IN: sn-q-ecs-cluster-testCl
       - TASK: managed
         deployMethod: upgrade

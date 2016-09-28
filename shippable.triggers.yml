@@ -52,4 +52,4 @@ triggers:
   - name: sn-q-mix-b-trigger
     type: trigger
     version:
-      counter: 2
+      counter: 3
