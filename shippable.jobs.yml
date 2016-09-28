@@ -136,3 +136,24 @@ jobs:
         - script: ls
         - script: "echo \"versionName=`date +%s`\" > /build/state/sn-q-vici-init-js.env"
       - OUT: sn-q-vici-init-js
+
+  - name: sn-q-mix-a-man
+    type: manifest
+    steps:
+      - IN: sn-q-ep
+      - IN: sn-q-mix-a-trigger
+
+  - name: sn-q-mix-b-man
+    type: manifest
+    steps:
+      - IN: sn-q-dk
+      - IN: sn-q-mix-b-trigger
+
+  - name: sn-multi-manifest-dep
+    type: deploy
+    steps:
+      - IN: sn-q-mix-a-man
+      - IN: sn-q-mix-b-man
+      - IN: sn-q-ecs-cluster
+      - TASK: managed
+        deployMethod: upgrade

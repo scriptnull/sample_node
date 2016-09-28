@@ -43,3 +43,13 @@ triggers:
     type: trigger
     version:
       counter: 8
+
+  - name: sn-q-mix-a-trigger
+    type: trigger
+    version:
+      counter: 2
+
+  - name: sn-q-mix-b-trigger
+    type: trigger
+    version:
+      counter: 5

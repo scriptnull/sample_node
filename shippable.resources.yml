@@ -77,7 +77,7 @@ resources:
   #   pointer:
   #     sourceName : "testCL" #name of the cluster we are deploying
   #     region: "us-west-2"
-  #
+
   - name: sn-q-tri-cluster
     type: cluster
     integration: scriptnull-triton
