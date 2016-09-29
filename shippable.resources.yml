@@ -33,14 +33,14 @@ resources:
   #     recipients:
   #       - "#scriptnull-test"
 
-  # - name: sn-myapp3
-  #   type: image
-  #   integration: scriptnull-docker
-  #   pointer:
-  #     sourceName: "scriptnull/sample_node"
-  #     isPull: true
-  #   seed:
-  #     versionName: "myapp3"
+  - name: sn-myapp3
+    type: image
+    integration: scriptnull-docker
+    pointer:
+      sourceName: "scriptnull/sample_node"
+      isPull: true
+    seed:
+      versionName: "myapp3"
   #
   # - name: sn-myapp2
   #   type: image
