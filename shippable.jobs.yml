@@ -26,7 +26,7 @@ jobs:
   - name: sn-ecs-man
     type: manifest
     steps:
-      - IN: sn-ep
+      - IN: sn-dk
       - IN: sn-ecs-trigger
 
   - name: sn-ecs-dep
