@@ -29,13 +29,13 @@ jobs:
       - IN: sn-dk
       - IN: sn-ecs-trigger
 
-  - name: sn-ecs-dep-1
+  - name: sn-ecs-dep-2
     type: deploy
     steps:
       - IN: sn-ecs-man-1
       - IN: sn-ecs-cluster
       - TASK: managed
-        deployMethod: upgrade
+        deployMethod: blueGreen
 
   # - name: sn-tri-man
   #   type: manifest
