@@ -74,7 +74,8 @@ resources:
     version:
       memory: 800
       readOnlyRootFilesystem: false
-      network: "none"
+      portMappings:
+        - "80:8080"
   #
   # - name: sn-secure-params
   #   type: params
