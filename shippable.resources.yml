@@ -74,7 +74,7 @@ resources:
     version:
       memory: 200
       portMappings:
-        - "8090:8080"
+        - "8089:8080"
   #
   # - name: sn-secure-params
   #   type: params
