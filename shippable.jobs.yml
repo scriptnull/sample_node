@@ -27,6 +27,7 @@ jobs:
     type: manifest
     steps:
       - IN: sn-dk
+      - IN: sn-ep
       # - IN: sn-docker-opts-1
       - IN: sn-ecs-trigger
 
