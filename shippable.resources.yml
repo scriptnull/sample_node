@@ -73,7 +73,6 @@ resources:
     type: dockerOptions
     version:
       memory: 100
-      readOnlyRootFilesystem: false
       portMappings:
         - "80:8080"
   #
