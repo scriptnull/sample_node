@@ -145,3 +145,10 @@ resources:
   #   pointer:
   #     sourceName : "something" #name of the cluster we are deploying
   #     region: "us-west-2"
+
+  - name: box-scaler
+    type: replicas
+    version:
+      count: 2
+    flags:
+      - replicas
