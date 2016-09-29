@@ -95,7 +95,7 @@ resources:
   - name: sn-q-do
     type: dockerOptions
     version:
-      memory: 200
+      memory: 100
       portMappings:
         - "80:8080"
 
