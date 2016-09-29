@@ -72,7 +72,7 @@ resources:
   - name: sn-docker-opts-1
     type: dockerOptions
     version:
-      memory: 100
+      memory: 200
       portMappings:
         - "80:8080"
   #
