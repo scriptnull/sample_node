@@ -69,12 +69,12 @@ resources:
     seed:
       versionName: "entrypoint"
   #
-  # - name: sn-docker-opts-1
-  #   type: dockerOptions
-  #   version:
-  #     memory: 100
-  #     readOnlyRootFilesystem: false
-  #     network: "none"
+  - name: sn-docker-opts-1
+    type: dockerOptions
+    version:
+      memory: 800
+      readOnlyRootFilesystem: false
+      network: "none"
   #
   # - name: sn-secure-params
   #   type: params
