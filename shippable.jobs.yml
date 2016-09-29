@@ -35,7 +35,7 @@ jobs:
       # - IN: sn-docker-opts-1
       - IN: sn-ecs-trigger
 
-  - name: sn-ecs-dep-4
+  - name: sn-ecs-dep-5
     type: deploy
     steps:
       - IN: sn-ecs-man-1
