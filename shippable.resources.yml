@@ -22,11 +22,11 @@ resources:
   #   seed:
   #     versionName: "initial"
   #
-  # - name: sn-cluster
-  #   type: cluster
-  #   integration: scriptnull-node
-  #   pointer:
-  #     sourceName: 'scriptnull-cluster'
+  - name: sn-cluster
+    type: cluster
+    integration: scriptnull-node
+    pointer:
+      sourceName: 'scriptnull-cluster'
   #
   # - name: sn-params
   #   type: params
