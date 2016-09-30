@@ -27,18 +27,18 @@ jobs:
     steps:
       - IN: sn-ep
 
-  - name: sn-ecs-man-1
-    type: manifest
-    steps:
-      - IN: sn-myapp3
-      - IN: box-scaler
-      # - IN: sn-docker-opts-1
-      - IN: sn-ecs-trigger
+  # - name: sn-ecs-man-1
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-myapp3
+  #     - IN: box-scaler
+  #     # - IN: sn-docker-opts-1
+  #     - IN: sn-ecs-trigger
 
   - name: sn-ecs-dep-5
     type: deploy
     steps:
-      - IN: sn-ecs-man-1
+      - IN: sn-ecs-man-2
       - IN: sn-ecs-cluster
       - TASK: managed
         deployMethod: upgrade
