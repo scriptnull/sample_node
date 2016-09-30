@@ -3,6 +3,7 @@ jobs:
     type: manifest
     steps:
       - IN: sn-file-jfrog
+      - IN: sn-file
 
   # - name: sn-file-man-9
   #   type: manifest
