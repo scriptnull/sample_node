@@ -95,9 +95,9 @@ resources:
   - name: sn-q-do
     type: dockerOptions
     version:
-      memory: 100
+      memory: 1000
       portMappings:
-        - "8089:8080"
+        - "80:8080"
 
   - name: sn-q-ddc-cluster
     type: cluster
