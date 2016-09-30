@@ -13,6 +13,14 @@ resources:
     seed:
       versionName: "initial"
 
+  - name: sn-q-file-jfrog
+    type: file
+    integration: scriptnull-jfrog
+    pointer:
+      sourceName: "test-local/shippable.yml"
+    seed:
+      versionName: "initial"
+
   - name: sn-q-cluster
     type: cluster
     integration: scriptnull-node
