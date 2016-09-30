@@ -17,7 +17,7 @@ triggers:
   - name: sn-q-trigger-1
     type: trigger
     version:
-      counter: 3
+      counter: 4
 
   - name: sn-q-tm-trigger
     type: trigger

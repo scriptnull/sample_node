@@ -50,14 +50,17 @@ jobs:
     type: manifest
     steps:
       - IN: sn-q-ep
-      - IN: sn-q-do
+      # - IN: sn-q-do
       - IN: sn-q-trigger-1
 
-  - name: sn-q-ecs-dep
+  - name: sn-q-ecs-dep-2
     type: deploy
     steps:
       - IN: sn-q-man-1
+        force: true
       - IN: sn-q-ecs-cluster-testCl
+      - TASK: managed
+        deployMethod: upgrade
 
   - name: sn-q-tri-man
     type: manifest
