@@ -1,10 +1,19 @@
 resources:
-  # - name: sn-file
-  #   type: file
-  #   pointer:
-  #     sourceName: "https://raw.githubusercontent.com/scriptnull/vici/master/vici.init.js"
-  #   seed:
-  #     versionName: "initial"
+  - name: sn-file
+    type: file
+    pointer:
+      sourceName: "https://raw.githubusercontent.com/scriptnull/vici/master/vici.init.js"
+    seed:
+      versionName: "initial"
+
+  - name: sn-file-jfrog
+    type: file
+    integration: scriptnull-jfrog
+    pointer:
+      sourceName: "test-local/shippable.yml"
+    seed:
+      versionName: "initial"
+
   #
   # - name: sn-vici-http-js
   #   type: file
@@ -75,6 +84,7 @@ resources:
       memory: 200
       portMappings:
         - "8089:8080"
+
   #
   # - name: sn-secure-params
   #   type: params
