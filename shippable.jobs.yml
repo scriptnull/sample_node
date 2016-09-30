@@ -50,7 +50,7 @@ jobs:
     type: manifest
     steps:
       - IN: sn-q-ep
-      # - IN: sn-q-do
+      - IN: sn-q-do
       - IN: sn-q-trigger-1
 
   - name: sn-q-ecs-dep-2
