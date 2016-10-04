@@ -72,7 +72,7 @@ jobs:
     type: manifest
     steps:
       - IN: sn-q-dk
-      - IN: sn-q-tesing-do
+      # - IN: sn-q-tesing-do
       - IN: sn-q-tm-trigger
 
   - name: sn-q-tri-dep-1

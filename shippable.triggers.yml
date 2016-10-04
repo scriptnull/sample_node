@@ -22,7 +22,7 @@ triggers:
   - name: sn-q-tm-trigger
     type: trigger
     version:
-      counter: 5
+      counter: 6
 
   - name: sn-q-tm-trigger-2
     type: trigger
