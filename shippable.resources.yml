@@ -149,3 +149,8 @@ resources:
     version:
       params:
         MONGO_API_URL: "kskks:28017"
+
+  - name: sn-q-tesing-do
+    type: dockerOptions
+    version:
+      user: driftking
