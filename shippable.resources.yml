@@ -153,4 +153,4 @@ resources:
   - name: sn-q-tesing-do
     type: dockerOptions
     version:
-      user: driftking
+      user: "hello world"
