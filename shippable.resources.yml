@@ -81,10 +81,10 @@ resources:
   - name: sn-docker-opts-1
     type: dockerOptions
     version:
-      memory: 200
-      portMappings:
-        - "8089:8080"
-
+      ulimits:
+        - name: nofile
+          soft: 50
+          hard: 100
   #
   # - name: sn-secure-params
   #   type: params

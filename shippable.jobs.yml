@@ -4,7 +4,7 @@ jobs:
     steps:
       # - IN: sn-file-jfrog
       - IN: sn-file
-  # 
+  #
   # - name: sn-file-deploy
   #   type: deploy
   #   steps:
@@ -38,6 +38,8 @@ jobs:
     type: manifest
     steps:
       - IN: sn-ep
+      - IN: sn-docker-opts-1
+      - IN: sn-ecs-trigger
 
   # - name: sn-ecs-man-1
   #   type: manifest
