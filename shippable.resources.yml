@@ -84,7 +84,6 @@ resources:
       ulimits:
         - name: nofile
           soft: 50
-          hard: 100
   #
   # - name: sn-secure-params
   #   type: params
