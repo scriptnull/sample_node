@@ -1,9 +1,9 @@
 jobs:
-  - name: sn-q-man-jfrog
-    type: manifest
-    steps:
-      - IN: sn-q-file-jfrog
-      - IN: sn-q-vici-http-js
+  # - name: sn-q-man-jfrog
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-q-file-jfrog
+  #     - IN: sn-q-vici-http-js
 
   - name: sn-q-file-man-xxx
     type: manifest
