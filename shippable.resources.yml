@@ -21,13 +21,13 @@ resources:
   #     sourceName: "https://raw.githubusercontent.com/scriptnull/vici/master/vici.http.js"
   #   seed:
   #     versionName: "initial"
-  #
-  # - name: sn-cluster
-  #   type: cluster
-  #   integration: scriptnull-node
-  #   pointer:
-  #     sourceName: 'scriptnull-cluster'
-  #
+
+  - name: sn-cluster
+    type: cluster
+    integration: scriptnull-node
+    pointer:
+      sourceName: 'scriptnull-cluster'
+
   # - name: sn-params
   #   type: params
   #   version:

@@ -4,12 +4,12 @@ jobs:
     steps:
       # - IN: sn-file-jfrog
       - IN: sn-file
-  #
-  # - name: sn-file-deploy
-  #   type: deploy
-  #   steps:
-  #     - IN: sn-man-jfrog
-  #     - IN: sn-cluster
+
+  - name: sn-file-deploy
+    type: deploy
+    steps:
+      - IN: sn-man-jfrog
+      - IN: sn-cluster
 
   # - name: sn-file-man-9
   #   type: manifest
