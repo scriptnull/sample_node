@@ -28,11 +28,11 @@ triggers:
   #   type: trigger
   #   version:
   #     counter: 6
-
-  - name: sn-ecs-trigger
-    type: trigger
-    version:
-      counter: 2
+  # 
+  # - name: sn-ecs-trigger
+  #   type: trigger
+  #   version:
+  #     counter: 2
 
   # - name: sn-ecs-lb-trigger
   #   type: trigger
