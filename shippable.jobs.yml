@@ -2,8 +2,8 @@ jobs:
   - name: sn-man-jfrog
     type: manifest
     steps:
-      # - IN: sn-file-jfrog
-      - IN: sn-file
+      - IN: sn-file-jfrog
+      # - IN: sn-file
 
   - name: sn-file-deploy
     type: deploy

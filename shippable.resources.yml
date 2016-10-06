@@ -6,13 +6,13 @@ resources:
     seed:
       versionName: "initial"
 
-  # - name: sn-file-jfrog
-  #   type: file
-  #   integration: scriptnull-jfrog
-  #   pointer:
-  #     sourceName: "test-local/shippable.yml"
-  #   seed:
-  #     versionName: "initial"
+  - name: sn-file-jfrog
+    type: file
+    integration: scriptnull-jfrog
+    pointer:
+      sourceName: "test-local/shippable.yml"
+    seed:
+      versionName: "initial"
 
   #
   # - name: sn-vici-http-js
