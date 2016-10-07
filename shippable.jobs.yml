@@ -73,6 +73,7 @@ jobs:
     type: deploy
     steps:
       - IN: sn-tri-man
+      - IN: sn-scaler
       - IN: sn-tri-cluster
       - TASK: managed
         deployMethod: upgrade
