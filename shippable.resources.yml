@@ -1,10 +1,10 @@
 resources:
-  - name: sn-file
-    type: file
-    pointer:
-      sourceName: "https://raw.githubusercontent.com/scriptnull/vici/master/vici.init.js"
-    seed:
-      versionName: "initial"
+  # - name: sn-file
+  #   type: file
+  #   pointer:
+  #     sourceName: "https://raw.githubusercontent.com/scriptnull/vici/master/vici.init.js"
+  #   seed:
+  #     versionName: "initial"
 
   # - name: sn-file-jfrog
   #   type: file
