@@ -78,6 +78,15 @@ resources:
     seed:
       versionName: "entrypoint"
 
+  - name: sn-no-integration
+    type: image
+    integration: scriptnull-docker
+    pointer:
+      sourceName: "scriptnull/debian"
+      isPull: true
+    seed:
+      versionName: "entrypoint"
+
   - name: sn-private-image
     type: image
     integration: scriptnull-docker
