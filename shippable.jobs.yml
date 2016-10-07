@@ -60,14 +60,30 @@ jobs:
   - name: sn-tri-man
     type: manifest
     steps:
-      - IN: sn-no-integration-2
+      - IN: sn-private-image
       - IN: sn-tm-trigger
 
-  - name: sn-tri-dep-1
+  # - name: sn-tri-dep-1
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-tri-man
+  #     - IN: sn-tri-cluster
+
+  - name: sn-tri-dep-upgrade
     type: deploy
     steps:
       - IN: sn-tri-man
       - IN: sn-tri-cluster
+      - TASK: managed
+        deployMethod: upgrade
+
+  - name: sn-tri-dep-replace
+    type: deploy
+    steps:
+      - IN: sn-tri-man
+      - IN: sn-tri-cluster
+      - TASK: managed
+        deployMethod: replace
 
   # - name: sn-gke-man
   #   type: manifest
