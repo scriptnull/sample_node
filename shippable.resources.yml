@@ -78,6 +78,14 @@ resources:
     seed:
       versionName: "entrypoint"
 
+  - name: sn-private-image
+    type: image
+    integration: scriptnull-docker
+    pointer:
+      sourceName: "scriptnull/vb-docker-app-img"
+    seed:
+      versionName: "latest"
+
   # - name: sn-docker-opts-1
   #   type: dockerOptions
   #   version:

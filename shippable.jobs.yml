@@ -60,7 +60,7 @@ jobs:
   - name: sn-tri-man
     type: manifest
     steps:
-      - IN: sn-ep
+      - IN: sn-private-image
       - IN: sn-tm-trigger
 
   - name: sn-tri-dep-1
