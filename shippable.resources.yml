@@ -78,9 +78,8 @@ resources:
     seed:
       versionName: "entrypoint"
 
-  - name: sn-no-integration
+  - name: sn-no-integration-2
     type: image
-    integration: scriptnull-docker
     pointer:
       sourceName: "scriptnull/debian"
       isPull: true

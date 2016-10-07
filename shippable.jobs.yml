@@ -60,7 +60,7 @@ jobs:
   - name: sn-tri-man
     type: manifest
     steps:
-      - IN: sn-no-integration
+      - IN: sn-no-integration-2
       - IN: sn-tm-trigger
 
   - name: sn-tri-dep-1
