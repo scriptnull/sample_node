@@ -35,7 +35,7 @@ resources:
     seed:
       versionName: "entrypoint"
 
-  - name: sn-private-image
+  - name: sn-b-private-image
     type: image
     integration: scriptnull-docker
     pointer:

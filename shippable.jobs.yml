@@ -30,7 +30,7 @@ jobs:
   - name: sn-b-tri-man
     type: manifest
     steps:
-      - IN: sn-b-ep
+      - IN: sn-b-private-image
       - IN: sn-b-tri-trigger
       - IN: sn-b-trigger
 
