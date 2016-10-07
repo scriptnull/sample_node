@@ -1,8 +1,8 @@
 jobs:
-  - name: sn-man-jfrog
-    type: manifest
-    steps:
-      - IN: sn-file-jfrog
+  # - name: sn-man-jfrog
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-file-jfrog
       # - IN: sn-file
 
   - name: sn-file-deploy
@@ -57,17 +57,17 @@ jobs:
   #     - TASK: managed
   #       deployMethod: upgrade
 
-  # - name: sn-tri-man
-  #   type: manifest
-  #   steps:
-  #     - IN: sn-ep
-  #     - IN: sn-tm-trigger
-  #
-  # - name: sn-tri-dep-1
-  #   type: deploy
-  #   steps:
-  #     - IN: sn-tri-man
-  #     - IN: sn-tri-cluster
+  - name: sn-tri-man
+    type: manifest
+    steps:
+      - IN: sn-ep
+      - IN: sn-tm-trigger
+
+  - name: sn-tri-dep-1
+    type: deploy
+    steps:
+      - IN: sn-tri-man
+      - IN: sn-tri-cluster
 
   # - name: sn-gke-man
   #   type: manifest

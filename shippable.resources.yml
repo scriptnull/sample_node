@@ -6,13 +6,13 @@ resources:
     seed:
       versionName: "initial"
 
-  - name: sn-file-jfrog
-    type: file
-    integration: scriptnull-jfrog
-    pointer:
-      sourceName: "test-local/shippable.yml"
-    seed:
-      versionName: "initial"
+  # - name: sn-file-jfrog
+  #   type: file
+  #   integration: scriptnull-jfrog
+  #   pointer:
+  #     sourceName: "test-local/shippable.yml"
+  #   seed:
+  #     versionName: "initial"
 
   #
   # - name: sn-vici-http-js
@@ -22,11 +22,11 @@ resources:
   #   seed:
   #     versionName: "initial"
 
-  - name: sn-cluster
-    type: cluster
-    integration: scriptnull-node
-    pointer:
-      sourceName: 'scriptnull-cluster'
+  # - name: sn-cluster
+  #   type: cluster
+  #   integration: scriptnull-node
+  #   pointer:
+  #     sourceName: 'scriptnull-cluster'
 
   # - name: sn-params
   #   type: params
@@ -60,24 +60,24 @@ resources:
   #   seed:
   #     versionName: "myapp2"
   #
-  # - name: sn-dk
-  #   type: image
-  #   integration: scriptnull-docker
-  #   pointer:
-  #     sourceName: "scriptnull/debian"
-  #     isPull: true
-  #   seed:
-  #     versionName: "driftking"
-  #
-  # - name: sn-ep
-  #   type: image
-  #   integration: scriptnull-docker
-  #   pointer:
-  #     sourceName: "scriptnull/debian"
-  #     isPull: true
-  #   seed:
-  #     versionName: "entrypoint"
-  #
+  - name: sn-dk
+    type: image
+    integration: scriptnull-docker
+    pointer:
+      sourceName: "scriptnull/debian"
+      isPull: true
+    seed:
+      versionName: "driftking"
+
+  - name: sn-ep
+    type: image
+    integration: scriptnull-docker
+    pointer:
+      sourceName: "scriptnull/debian"
+      isPull: true
+    seed:
+      versionName: "entrypoint"
+
   # - name: sn-docker-opts-1
   #   type: dockerOptions
   #   version:
@@ -134,12 +134,12 @@ resources:
   #   pointer:
   #     sourceName: shLoadBalancer
 
-  # - name: sn-tri-cluster
-  #   type: cluster
-  #   integration: scriptnull-triton
-  #   pointer:
-  #     sourceName : "some-name" #name of the cluster we are deploying
-  #     region : "us-east-2"
+  - name: sn-tri-cluster
+    type: cluster
+    integration: scriptnull-triton
+    pointer:
+      sourceName : "some-name" #name of the cluster we are deploying
+      region : "us-east-2"
 
   # - name: sn-gke-cluster
   #   type: cluster
