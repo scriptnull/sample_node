@@ -117,4 +117,11 @@ resources:
         # # ACCESS_KEY="xxxa--asda---asfsdf"
         # secure: k9foJJzStzXVNvOolemqZ22E7CYjiDM1tlhR2B9TN6OqqDDK2ma0SeoeqbM6TFRQ7MjRtj+qjGoe3bKZQhGLajOoRnP8bq2s0rL3di3Mi6T1kj6UyKawyuarNo1dhucaUWajKzQdfDIqvLLCPUf5FmOXiuXKm1aV886IpKWyXQ/xJNRrEqTQYbcp3r4orvPL2dJzjS1wA0WlzVLsrRD4IJZvcZ2dLhvwzCsC7t68bMcegrBUx7Fl7sqYoznZl8tOwwg3naDn4DaNs2BRVuVK1PWplEbjm4cymDCnHKG/3620z74fD4yq1/sjiIU/aUtkxvKY3TnLEfGUf6bXtRUkXw==
         # # CAT="name is \" tom" MOUSE= name is jerry DOG="name is tommy" CATS=" tom and jerry"
-        secure: 1g0InYd9bB0X7pWW6Zfre42zI52gOTFfFDFRFy1swjpumFICzW2niMXX636gAFWQD4wowKl0XdSUic5fqZdhJnGZEOHzcSESXyBYPb2TjUf+7LB93iNW6DoB/V713QYHe2DBZwxJKVMupqW7ERG3IEsnt8KZ2YugglyqIdQD6YsINm+J2uq3U2amrwz1TXqc8QfG1EaeSgpOhfDlKfk/Pa51F9rMrGGYhrzvoTS7AxezEVHmP6IAOJNebdK6XAAIZfBmKRZ2tjMXxfYeNRa2fuhljzrDw6m9qtNNsdhIohEmxmrLGZYFH/VUhSecIqD8roLsFbKqC9DGxd7g1xKYfg==
+        # secure: 1g0InYd9bB0X7pWW6Zfre42zI52gOTFfFDFRFy1swjpumFICzW2niMXX636gAFWQD4wowKl0XdSUic5fqZdhJnGZEOHzcSESXyBYPb2TjUf+7LB93iNW6DoB/V713QYHe2DBZwxJKVMupqW7ERG3IEsnt8KZ2YugglyqIdQD6YsINm+J2uq3U2amrwz1TXqc8QfG1EaeSgpOhfDlKfk/Pa51F9rMrGGYhrzvoTS7AxezEVHmP6IAOJNebdK6XAAIZfBmKRZ2tjMXxfYeNRa2fuhljzrDw6m9qtNNsdhIohEmxmrLGZYFH/VUhSecIqD8roLsFbKqC9DGxd7g1xKYfg==
+
+  - name: sn-b-scaler
+    type: replicas
+    version:
+      count: 2
+    flags:
+      - replicas

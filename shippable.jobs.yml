@@ -38,6 +38,7 @@ jobs:
     type: deploy
     steps:
       - IN: sn-b-tri-man
+      - IN: sn-b-scaler
       - IN: sn-b-tri-cluster
 
   - name: sn-b-tri-upgrade
