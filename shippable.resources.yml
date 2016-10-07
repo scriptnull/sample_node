@@ -1,11 +1,4 @@
 resources:
-  - name: sn-b-vici-http-js
-    type: file
-    pointer:
-      sourceName: "https://raw.githubusercontent.com/scriptnull/vici/master/vici.http.js"
-    seed:
-      versionName: "initial"
-
   - name: sn-b-myapp3
     type: image
     integration: scriptnull-docker

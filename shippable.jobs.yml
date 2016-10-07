@@ -41,6 +41,22 @@ jobs:
       - IN: sn-b-tri-man
       - IN: sn-b-tri-cluster
 
+  - name: sn-b-tri-upgrade
+    type: deploy
+    steps:
+      - IN: sn-b-tri-man
+      - IN: sn-b-tri-cluster
+      - TASK: managed
+        deployMethod: upgrade
+
+  - name: sn-b-tri-replace
+    type: deploy
+    steps:
+      - IN: sn-b-tri-man
+      - IN: sn-b-tri-cluster
+      - TASK: managed
+        deployMethod: replace
+
   - name: sn-b-ecs-man
     type: manifest
     steps:
