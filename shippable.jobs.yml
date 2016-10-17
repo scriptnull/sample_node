@@ -74,13 +74,13 @@ jobs:
     type: deploy
     steps:
       - IN: sn-aq-gke-man
-      - IN: sn-aq-docker-opts-1
       - IN: sn-aq-gke-cluster
 
   - name: sn-aq-ddc-man
     type: manifest
     steps:
       - IN: sn-aq-dk
+      - IN: sn-aq-docker-opts-1
       - IN: sn-aq-ddc-trigger
 
   - name: sn-aq-ddc-dep
