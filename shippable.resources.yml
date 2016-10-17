@@ -78,13 +78,13 @@ resources:
     seed:
       versionName: "entrypoint"
 
-  - name: sn-no-integration-2
-    type: image
-    pointer:
-      sourceName: "scriptnull/debian"
-      isPull: true
-    seed:
-      versionName: "entrypoint"
+  # - name: sn-no-integration-2
+  #   type: image
+  #   pointer:
+  #     sourceName: "scriptnull/debian"
+  #     isPull: true
+  #   seed:
+  #     versionName: "entrypoint"
 
   - name: sn-private-image
     type: image
@@ -157,12 +157,12 @@ resources:
       sourceName : "some-name" #name of the cluster we are deploying
       region : "us-east-2"
 
-  # - name: sn-gke-cluster
-  #   type: cluster
-  #   integration: scriptnull-gke
-  #   pointer:
-  #     sourceName : "small-cluster" #name of the cluster we are deploying
-  #     region : "us-east1-d"
+  - name: sn-gke-cluster
+    type: cluster
+    integration: scriptnull-gke
+    pointer:
+      sourceName : "small-cluster" #name of the cluster we are deploying
+      region : "us-east1-d"
 
   # - name: sn-ddc-cluster
   #   type: cluster

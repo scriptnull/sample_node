@@ -57,11 +57,11 @@ jobs:
   #     - TASK: managed
   #       deployMethod: upgrade
 
-  - name: sn-tri-man
-    type: manifest
-    steps:
-      - IN: sn-private-image
-      - IN: sn-tm-trigger
+  # - name: sn-tri-man
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-private-image
+  #     - IN: sn-tm-trigger
 
   # - name: sn-tri-dep-1
   #   type: deploy
@@ -69,35 +69,34 @@ jobs:
   #     - IN: sn-tri-man
   #     - IN: sn-tri-cluster
 
-  - name: sn-tri-dep-upgrade
-    type: deploy
-    steps:
-      - IN: sn-tri-man
-      - IN: sn-scaler
-      - IN: sn-tri-cluster
-      - TASK: managed
-        deployMethod: upgrade
-
-  - name: sn-tri-dep-replace
-    type: deploy
-    steps:
-      - IN: sn-tri-man
-      - IN: sn-tri-cluster
-      - TASK: managed
-        deployMethod: replace
-
-  # - name: sn-gke-man
-  #   type: manifest
-  #   steps:
-  #     - IN: sn-dk
-  #     # - IN: sn-docker-opts-1
-  #     - IN: sn-gke-trigger
-
-  # - name: sn-gke-dep
+  # - name: sn-tri-dep-upgrade
   #   type: deploy
   #   steps:
-  #     - IN: sn-gke-man
-  #     - IN: sn-gke-cluster
+  #     - IN: sn-tri-man
+  #     - IN: sn-scaler
+  #     - IN: sn-tri-cluster
+  #     - TASK: managed
+  #       deployMethod: upgrade
+
+  # - name: sn-tri-dep-replace
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-tri-man
+  #     - IN: sn-tri-cluster
+  #     - TASK: managed
+  #       deployMethod: replace
+
+  - name: sn-gke-man
+    type: manifest
+    steps:
+      - IN: sn-dk
+      - IN: sn-gke-trigger
+
+  - name: sn-gke-dep
+    type: deploy
+    steps:
+      - IN: sn-gke-man
+      - IN: sn-gke-cluster
 
 
   # - name: sn-ddc-man
