@@ -97,7 +97,7 @@ resources:
   - name: sn-docker-opts-1
     type: dockerOptions
     version:
-      volumes: Invalid volume
+      volumes:
 
   #
   # - name: sn-secure-params
