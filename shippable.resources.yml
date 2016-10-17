@@ -97,7 +97,8 @@ resources:
   - name: sn-docker-opts-1
     type: dockerOptions
     version:
-      volumes: "/host/path:/container/path2:rw"
+      volumes:
+        - "/home:/hostHome:rw"
 
   #
   # - name: sn-secure-params
