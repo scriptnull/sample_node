@@ -1,149 +1,150 @@
 jobs:
-  # - name: sn-man-jfrog
+  # - name: sn-aq-man-jfrog
   #   type: manifest
   #   steps:
-  #     - IN: sn-file-jfrog
-      # - IN: sn-file
+  #     - IN: sn-aq-file-jfrog
+      # - IN: sn-aq-file
 
-  # - name: sn-file-deploy
+  # - name: sn-aq-file-deploy
   #   type: deploy
   #   steps:
-  #     - IN: sn-man-jfrog
-  #     - IN: sn-cluster
+  #     - IN: sn-aq-man-jfrog
+  #     - IN: sn-aq-cluster
 
-  # - name: sn-file-man-9
+  # - name: sn-aq-file-man-9
   #   type: manifest
   #   steps:
-  #     - IN: sn-file
-      # - IN: sn-params
-      # - IN: sn-vici-http-js
-      # - IN: sn-file-trigger
-      # - name: sn-vici-man
+  #     - IN: sn-aq-file
+      # - IN: sn-aq-params
+      # - IN: sn-aq-vici-http-js
+      # - IN: sn-aq-file-trigger
+      # - name: sn-aq-vici-man
 
   #   type: manifest
   #   steps:
-  #     - IN: sn-vici-http-js
-  #     - IN: sn-file-man
-  #     - IN: sn-vici-trigger
+  #     - IN: sn-aq-vici-http-js
+  #     - IN: sn-aq-file-man
+  #     - IN: sn-aq-vici-trigger
 
-  # - name: sn-cluster-dep-9
+  # - name: sn-aq-cluster-dep-9
   #   type: deploy
   #   steps:
-  #     - IN: sn-file-man-9
-  #     - IN: sn-cluster
+  #     - IN: sn-aq-file-man-9
+  #     - IN: sn-aq-cluster
   #     - TASK:
   #         - script: xkcd
 
-  # - name: sn-tri-man
+  # - name: sn-aq-tri-man
   #   type: manifest
   #   steps:
-  #     - IN: sn-private-image
-  #     - IN: sn-tm-trigger
+  #     - IN: sn-aq-private-image
+  #     - IN: sn-aq-tm-trigger
 
-  # - name: sn-tri-dep-1
+  # - name: sn-aq-tri-dep-1
   #   type: deploy
   #   steps:
-  #     - IN: sn-tri-man
-  #     - IN: sn-tri-cluster
+  #     - IN: sn-aq-tri-man
+  #     - IN: sn-aq-tri-cluster
 
-  # - name: sn-tri-dep-upgrade
+  # - name: sn-aq-tri-dep-upgrade
   #   type: deploy
   #   steps:
-  #     - IN: sn-tri-man
-  #     - IN: sn-scaler
-  #     - IN: sn-tri-cluster
+  #     - IN: sn-aq-tri-man
+  #     - IN: sn-aq-scaler
+  #     - IN: sn-aq-tri-cluster
   #     - TASK: managed
   #       deployMethod: upgrade
 
-  # - name: sn-tri-dep-replace
+  # - name: sn-aq-tri-dep-replace
   #   type: deploy
   #   steps:
-  #     - IN: sn-tri-man
-  #     - IN: sn-tri-cluster
+  #     - IN: sn-aq-tri-man
+  #     - IN: sn-aq-tri-cluster
   #     - TASK: managed
   #       deployMethod: replace
 
-  - name: sn-gke-man
+  - name: sn-aq-gke-man
     type: manifest
     steps:
-      - IN: sn-dk
-      - IN: sn-gke-trigger
+      - IN: sn-aq-dk
+      - IN: sn-aq-docker-opts-1
+      - IN: sn-aq-gke-trigger
 
-  - name: sn-gke-dep
+  - name: sn-aq-gke-dep
     type: deploy
     steps:
-      - IN: sn-gke-man
-      - IN: sn-gke-cluster
+      - IN: sn-aq-gke-man
+      - IN: sn-aq-docker-opts-1
+      - IN: sn-aq-gke-cluster
 
-  - name: sn-ddc-man
+  - name: sn-aq-ddc-man
     type: manifest
     steps:
-      - IN: sn-dk
-      - IN: sn-ddc-trigger
+      - IN: sn-aq-dk
+      - IN: sn-aq-ddc-trigger
 
-  - name: sn-ddc-dep
+  - name: sn-aq-ddc-dep
     type: deploy
     steps:
-      - IN: sn-ddc-man
-      - IN: sn-docker-opts-1
-      - IN: sn-ddc-cluster
+      - IN: sn-aq-ddc-man
+      - IN: sn-aq-ddc-cluster
 
-  - name: sn-ecs-man
+  - name: sn-aq-ecs-man
     type: manifest
     steps:
-      - IN: sn-dk
-      - IN: sn-docker-opts-1
-      - IN: sn-ecs-trigger
+      - IN: sn-aq-dk
+      - IN: sn-aq-docker-opts-1
+      - IN: sn-aq-ecs-trigger
 
-  - name: sn-ecs-dep
+  - name: sn-aq-ecs-dep
     type: deploy
     steps:
-      - IN: sn-ecs-man
-      - IN: sn-ecs-cluster
+      - IN: sn-aq-ecs-man
+      - IN: sn-aq-ecs-cluster
 
-  # - name: sn-ecs-lb-man
+  # - name: sn-aq-ecs-lb-man
   #   type: manifest
   #   steps:
-  #     - IN: sn-ep
-  #     - IN: sn-dk
-  #     - IN: sn-ecs-lb-trigger
+  #     - IN: sn-aq-ep
+  #     - IN: sn-aq-dk
+  #     - IN: sn-aq-ecs-lb-trigger
   #
-  # - name: sn-ecs-lb-deploy
+  # - name: sn-aq-ecs-lb-deploy
   #   type: deploy
   #   steps:
-  #     - IN: sn-ecs-lb-man
-  #     - IN: sn-ecs-lb-cluster
+  #     - IN: sn-aq-ecs-lb-man
+  #     - IN: sn-aq-ecs-lb-cluster
   #     - IN: lb-loadbalancer1
   #       applyTo:
-  #         - manifest: sn-ecs-lb-man
-  #           image: sn-dk
-  #         - manifest: sn-ecs-lb-man
-  #           image: sn-ep
-  #         - manifest: sn-ecs-lb-man
-  #           image: sn-myapp3
+  #         - manifest: sn-aq-ecs-lb-man
+  #           image: sn-aq-dk
+  #         - manifest: sn-aq-ecs-lb-man
+  #           image: sn-aq-ep
+  #         - manifest: sn-aq-ecs-lb-man
+  #           image: sn-aq-myapp3
   #     - TASK: managed
   #       deployMethod: upgrade
   #
-  # - name: sn-mix-a-man
+  # - name: sn-aq-mix-a-man
   #   type: manifest
   #   steps:
-  #     - IN: sn-ep
-  #     - IN: sn-mix-a-trigger
+  #     - IN: sn-aq-ep
+  #     - IN: sn-aq-mix-a-trigger
   #
-  # - name: sn-mix-b-man
+  # - name: sn-aq-mix-b-man
   #   type: manifest
   #   steps:
-  #     - IN: sn-ep
-  #     - IN: sn-mix-b-trigger
+  #     - IN: sn-aq-ep
+  #     - IN: sn-aq-mix-b-trigger
 
-  # - name: sn-multi-manifest-gke
+  # - name: sn-aq-multi-manifest-gke
   #   type: deploy
   #   steps:
-  #     - IN: sn-mix-a-man
+  #     - IN: sn-aq-mix-a-man
   #       force: true
-  #     - IN: sn-mix-b-man
+  #     - IN: sn-aq-mix-b-man
   #       force: true
-  #     - IN: sn-gke-cluster
+  #     - IN: sn-aq-gke-cluster
   #     - TASK: managed
   #       deployOptions:
   #         - parallel

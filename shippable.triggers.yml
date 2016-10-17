@@ -1,50 +1,50 @@
 triggers:
-  # - name: sn-file-trigger
+  # - name: sn-aq-file-trigger
   #   type: trigger
   #   version:
   #     counter: 12
   #
-  # - name: sn-vici-trigger
+  # - name: sn-aq-vici-trigger
   #   type: trigger
   #   version:
   #     counter: 2
 
-  # - name: sn-trigger-1
+  # - name: sn-aq-trigger-1
   #   type: trigger
   #   version:
   #     counter: 43
   #
-  # - name: sn-tm-trigger
+  # - name: sn-aq-tm-trigger
   #   type: trigger
   #   version:
   #     counter: 24
   #
-  - name: sn-ddc-trigger
+  - name: sn-aq-ddc-trigger
     type: trigger
     version:
       counter: 17
   #
-  - name: sn-gke-trigger
+  - name: sn-aq-gke-trigger
     type: trigger
     version:
       counter: 10
   #
-  - name: sn-ecs-trigger
+  - name: sn-aq-ecs-trigger
     type: trigger
     version:
       counter: 2
 
-  # - name: sn-ecs-lb-trigger
+  # - name: sn-aq-ecs-lb-trigger
   #   type: trigger
   #   version:
   #     counter: 15
   #
-  # - name: sn-mix-a-trigger
+  # - name: sn-aq-mix-a-trigger
   #   type: trigger
   #   version:
   #     counter: 4
   #
-  # - name: sn-mix-b-trigger
+  # - name: sn-aq-mix-b-trigger
   #   type: trigger
   #   version:
   #     counter: 7

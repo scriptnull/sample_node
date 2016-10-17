@@ -1,12 +1,12 @@
 resources:
-  # - name: sn-file
+  # - name: sn-aq-file
   #   type: file
   #   pointer:
   #     sourceName: "https://raw.githubusercontent.com/scriptnull/vici/master/vici.init.js"
   #   seed:
   #     versionName: "initial"
 
-  # - name: sn-file-jfrog
+  # - name: sn-aq-file-jfrog
   #   type: file
   #   integration: scriptnull-jfrog
   #   pointer:
@@ -15,20 +15,20 @@ resources:
   #     versionName: "initial"
 
   #
-  # - name: sn-vici-http-js
+  # - name: sn-aq-vici-http-js
   #   type: file
   #   pointer:
   #     sourceName: "https://raw.githubusercontent.com/scriptnull/vici/master/vici.http.js"
   #   seed:
   #     versionName: "initial"
 
-  # - name: sn-cluster
+  # - name: sn-aq-cluster
   #   type: cluster
   #   integration: scriptnull-node
   #   pointer:
   #     sourceName: 'scriptnull-cluster'
 
-  # - name: sn-params
+  # - name: sn-aq-params
   #   type: params
   #   version:
   #     params:
@@ -42,7 +42,7 @@ resources:
   #     recipients:
   #       - "#scriptnull-test"
 
-  # - name: sn-myapp3
+  # - name: sn-aq-myapp3
   #   type: image
   #   integration: scriptnull-docker
   #   pointer:
@@ -51,7 +51,7 @@ resources:
   #   seed:
   #     versionName: "myapp3"
   #
-  # - name: sn-myapp2
+  # - name: sn-aq-myapp2
   #   type: image
   #   integration: scriptnull-docker
   #   pointer:
@@ -60,7 +60,7 @@ resources:
   #   seed:
   #     versionName: "myapp2"
   #
-  - name: sn-dk
+  - name: sn-aq-dk
     type: image
     integration: scriptnull-docker
     pointer:
@@ -69,7 +69,7 @@ resources:
     seed:
       versionName: "driftking"
 
-  - name: sn-ep
+  - name: sn-aq-ep
     type: image
     integration: scriptnull-docker
     pointer:
@@ -78,7 +78,7 @@ resources:
     seed:
       versionName: "entrypoint"
 
-  # - name: sn-no-integration-2
+  # - name: sn-aq-no-integration-2
   #   type: image
   #   pointer:
   #     sourceName: "scriptnull/debian"
@@ -86,7 +86,7 @@ resources:
   #   seed:
   #     versionName: "entrypoint"
 
-  - name: sn-private-image
+  - name: sn-aq-private-image
     type: image
     integration: scriptnull-docker
     pointer:
@@ -94,7 +94,7 @@ resources:
     seed:
       versionName: "latest"
 
-  - name: sn-docker-opts-1
+  - name: sn-aq-docker-opts-1
     type: dockerOptions
     version:
       volumes: "/home:/hostHome:rw"
@@ -102,7 +102,7 @@ resources:
         # - "/bin:/hostBin:ro"
 
   #
-  # - name: sn-secure-params
+  # - name: sn-aq-secure-params
   #   type: params
   #   version:
   #     params:
@@ -127,14 +127,14 @@ resources:
   #       # # CAT="name is \" tom" MOUSE= name is jerry DOG="name is tommy" CATS=" tom and jerry"
   #       # secure: KUrYEAgmSe0lbOfodyrWOecDiz2JzDGSE6ZVYFQVpwgcrG8+beO8ZJ8lCxL+LnkusON40xZvvfmr9CqbVZtBogtnFVxMioX14pKWrpqk8JGkL7Oe2DICbuhGg/xNzw9LpsFeg/EdF8GzjQfKnX8biB7CdefN79VorkipnlSrYFXjjd48emzc42G7rrxcsYuJSJJ5NDCAcJbBfGvd0z43u76kkcw8tTbcZysEb0pBsEolcUSBFcHrkgT8je4dAaiVoigp0LLFvTuEQ70x22Y/YxqqZ5J1AN0TaFrGvJ+XoZ6b6lCUCte3jz1Uf58PrQQ/tf7+pgGFHmm32zGoBXtwyQ==
 
-  - name: sn-ecs-cluster
+  - name: sn-aq-ecs-cluster
     type: cluster
     integration: scriptnull-aws
     pointer:
       sourceName : "testCL" #name of the cluster we are deploying
       region: "us-west-2"
 
-  # - name: sn-ecs-lb-cluster
+  # - name: sn-aq-ecs-lb-cluster
   #   type: cluster
   #   integration: scriptnull-aws
   #   pointer:
@@ -151,28 +151,28 @@ resources:
   #   pointer:
   #     sourceName: shLoadBalancer
 
-  # - name: sn-tri-cluster
+  # - name: sn-aq-tri-cluster
   #   type: cluster
   #   integration: scriptnull-triton
   #   pointer:
   #     sourceName : "some-name" #name of the cluster we are deploying
   #     region : "us-east-2"
 
-  - name: sn-gke-cluster
+  - name: sn-aq-gke-cluster
     type: cluster
     integration: scriptnull-gke
     pointer:
       sourceName : "small-cluster" #name of the cluster we are deploying
       region : "us-east1-d"
 
-  - name: sn-ddc-cluster
+  - name: sn-aq-ddc-cluster
     type: cluster
     integration: scriptnull-ddc
     pointer:
       sourceName : "something" #name of the cluster we are deploying
       region: "us-west-2"
 
-  - name: sn-scaler
+  - name: sn-aq-scaler
     type: replicas
     version:
       count: 2
