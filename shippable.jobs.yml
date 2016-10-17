@@ -90,6 +90,7 @@ jobs:
     type: manifest
     steps:
       - IN: sn-dk
+      - IN: sn-docker-opts-1
       - IN: sn-gke-trigger
 
   - name: sn-gke-dep

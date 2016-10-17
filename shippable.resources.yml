@@ -94,12 +94,11 @@ resources:
     seed:
       versionName: "latest"
 
-  # - name: sn-docker-opts-1
-  #   type: dockerOptions
-  #   version:
-  #     ulimits:
-  #       - name: nofile
-  #         soft: 50
+  - name: sn-docker-opts-1
+    type: dockerOptions
+    version:
+      volumes: "Hello world"
+
   #
   # - name: sn-secure-params
   #   type: params
