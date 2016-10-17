@@ -97,6 +97,7 @@ resources:
   - name: sn-aq-docker-opts-1
     type: dockerOptions
     version:
+      memory: 30
       volumes:
         - "/home:/hostHome:rw"
 
