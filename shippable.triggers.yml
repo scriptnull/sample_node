@@ -22,17 +22,17 @@ triggers:
   - name: sn-aq-ddc-trigger
     type: trigger
     version:
-      counter: 18
+      counter: 19
   #
   - name: sn-aq-gke-trigger
     type: trigger
     version:
-      counter: 12
+      counter: 13
   #
   - name: sn-aq-ecs-trigger
     type: trigger
     version:
-      counter: 3
+      counter: 4
 
   # - name: sn-aq-ecs-lb-trigger
   #   type: trigger

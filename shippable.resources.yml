@@ -98,9 +98,9 @@ resources:
     type: dockerOptions
     version:
       memory: 30
-      volumes:
-        - "/home:/hostHome:rw"
-        - "/bin:/hostBin:ro"
+      volumes: "/home:/hostHome:rw"
+        # - "/home:/hostHome:rw"
+        # - "/bin:/hostBin:ro"
 
   #
   # - name: sn-aq-secure-params
