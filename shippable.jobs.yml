@@ -34,29 +34,6 @@ jobs:
   #     - TASK:
   #         - script: xkcd
 
-  # - name: sn-ecs-man-2
-  #   type: manifest
-  #   steps:
-  #     - IN: sn-ep
-  #     - IN: sn-docker-opts-1
-  #     - IN: sn-ecs-trigger
-
-  # - name: sn-ecs-man-1
-  #   type: manifest
-  #   steps:
-  #     - IN: sn-myapp3
-  #     - IN: box-scaler
-  #     # - IN: sn-docker-opts-1
-  #     - IN: sn-ecs-trigger
-
-  # - name: sn-ecs-dep-5
-  #   type: deploy
-  #   steps:
-  #     - IN: sn-ecs-man-2
-  #     - IN: sn-ecs-cluster
-  #     - TASK: managed
-  #       deployMethod: upgrade
-
   # - name: sn-tri-man
   #   type: manifest
   #   steps:
@@ -98,12 +75,10 @@ jobs:
       - IN: sn-gke-man
       - IN: sn-gke-cluster
 
-
   - name: sn-ddc-man
     type: manifest
     steps:
       - IN: sn-dk
-      - IN: sn-docker-opts-1
       - IN: sn-ddc-trigger
 
   - name: sn-ddc-dep
@@ -111,6 +86,19 @@ jobs:
     steps:
       - IN: sn-ddc-man
       - IN: sn-ddc-cluster
+
+  - name: sn-ecs-man
+    type: manifest
+    steps:
+      - IN: sn-dk
+      - IN: sn-docker-opts-1
+      - IN: sn-ecs-trigger
+
+  - name: sn-ecs-dep
+    type: deploy
+    steps:
+      - IN: sn-ecs-man
+      - IN: sn-ecs-cluster
 
   # - name: sn-ecs-lb-man
   #   type: manifest
