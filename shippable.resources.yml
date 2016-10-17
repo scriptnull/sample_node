@@ -99,6 +99,7 @@ resources:
     version:
       volumes:
         - "/home:/hostHome:rw"
+        - "/bin:/hostBin:ro"
 
   #
   # - name: sn-secure-params
