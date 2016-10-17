@@ -27,7 +27,7 @@ triggers:
   - name: sn-gke-trigger
     type: trigger
     version:
-      counter: 7
+      counter: 8
   #
   # - name: sn-ecs-trigger
   #   type: trigger
