@@ -90,7 +90,6 @@ jobs:
     type: manifest
     steps:
       - IN: sn-dk
-      - IN: sn-docker-opts-1
       - IN: sn-gke-trigger
 
   - name: sn-gke-dep
@@ -100,18 +99,18 @@ jobs:
       - IN: sn-gke-cluster
 
 
-  # - name: sn-ddc-man
-  #   type: manifest
-  #   steps:
-  #     - IN: sn-dk
-  #     - IN: sn-secure-params
-  #     - IN: sn-ddc-trigger
-  #
-  # - name: sn-ddc-dep
-  #   type: deploy
-  #   steps:
-  #     - IN: sn-ddc-man
-  #     - IN: sn-ddc-cluster
+  - name: sn-ddc-man
+    type: manifest
+    steps:
+      - IN: sn-dk
+      - IN: sn-docker-opts-1
+      - IN: sn-ddc-trigger
+
+  - name: sn-ddc-dep
+    type: deploy
+    steps:
+      - IN: sn-ddc-man
+      - IN: sn-ddc-cluster
 
   # - name: sn-ecs-lb-man
   #   type: manifest

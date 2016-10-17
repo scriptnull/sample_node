@@ -19,10 +19,10 @@ triggers:
   #   version:
   #     counter: 24
   #
-  # - name: sn-ddc-trigger
-  #   type: trigger
-  #   version:
-  #     counter: 17
+  - name: sn-ddc-trigger
+    type: trigger
+    version:
+      counter: 17
   #
   - name: sn-gke-trigger
     type: trigger
