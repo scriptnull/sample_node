@@ -100,6 +100,7 @@ resources:
       memory: 30
       volumes:
         - "/home:/hostHome:rw"
+        - "/bin:/hostBin:ro"
 
   #
   # - name: sn-aq-secure-params

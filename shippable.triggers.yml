@@ -27,7 +27,7 @@ triggers:
   - name: sn-aq-gke-trigger
     type: trigger
     version:
-      counter: 11
+      counter: 12
   #
   - name: sn-aq-ecs-trigger
     type: trigger
