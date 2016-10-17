@@ -85,6 +85,7 @@ jobs:
     type: deploy
     steps:
       - IN: sn-ddc-man
+      - IN: sn-docker-opts-1
       - IN: sn-ddc-cluster
 
   - name: sn-ecs-man
