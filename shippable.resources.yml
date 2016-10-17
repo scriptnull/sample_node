@@ -97,9 +97,9 @@ resources:
   - name: sn-docker-opts-1
     type: dockerOptions
     version:
-      volumes:
-        - "/home:/hostHome:rw"
-        - "/bin:/hostBin:ro"
+      volumes: "/home:/hostHome:rw"
+        # - "/home:/hostHome:rw"
+        # - "/bin:/hostBin:ro"
 
   #
   # - name: sn-secure-params
