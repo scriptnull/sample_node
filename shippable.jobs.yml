@@ -39,18 +39,18 @@ jobs:
   #     - IN: sn-al-ship-tri-man-2
   #     - IN: sn-al-ship-tri-cluster
 
-  # - name: sn-al-ship-gke-man
-  #   type: manifest
-  #   steps:
-  #     - IN: sn-al-ship-dk
-  #     # - IN: sn-al-ship-docker-opts-1
-  #     - IN: sn-al-ship-gke-trigger
+  - name: sn-al-ship-gke-man
+    type: manifest
+    steps:
+      - IN: sn-al-ship-dk
+      - IN: sn-al-ship-docker-opts-2
+      - IN: sn-al-ship-gke-trigger
 
-  # - name: sn-al-ship-gke-dep
-  #   type: deploy
-  #   steps:
-  #     - IN: sn-al-ship-gke-man
-  #     - IN: sn-al-ship-gke-cluster
+  - name: sn-al-ship-gke-dep
+    type: deploy
+    steps:
+      - IN: sn-al-ship-gke-man
+      - IN: sn-al-ship-gke-cluster
 
 
   # - name: sn-al-ship-ddc-man

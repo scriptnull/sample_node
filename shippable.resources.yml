@@ -51,6 +51,12 @@ resources:
       volumes:
         - "/home/bin:/hostBin:rw"
 
+  - name: sn-al-ship-docker-opts-2
+    type: dockerOptions
+    version:
+      memory: 40
+      volumes: "/home/bin:/hostBin:rw"
+
   - name: sn-al-ship-ecs-cluster-testCl
     type: cluster
     integration: scriptnull-aws
