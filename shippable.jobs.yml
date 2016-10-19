@@ -1,78 +1,19 @@
 jobs:
-  # - name: sn-al-ship-man-jfrog
-  #   type: manifest
-  #   steps:
-  #     - IN: sn-al-ship-vici-http-js
-  #
-  # - name: sn-al-ship-dep-jfrog
-  #   type: deploy
-  #   steps:
-  #     - IN: sn-al-ship-man-jfrog
-  #     - IN: sn-al-ship-cluster
-  #
-  # - name: sn-al-ship-file-man-xxx
-  #   type: manifest
-  #   steps:
-  #     - IN: sn-al-ship-vici-init-js
-  #     - IN: sn-al-ship-params
-  #     - IN: sn-al-ship-file-trigger
+  - name: sn-al-ship-man-1
+    type: manifest
+    steps:
+      - IN: sn-al-ship-ep
+      - IN: sn-al-ship-docker-opts-1
+      - IN: sn-al-ship-trigger-1
 
-  # - name: sn-al-ship-file-man-xxx
-  #   type: manifest
-  #   steps:
-  #     - IN: sn-al-ship-vici-http-js
-  #     - IN: sn-al-ship-file-trigger
-  # 
-  # - name: sn-al-ship-file-dep-xxx
-  #   type: deploy
-  #   steps:
-  #     - IN: sn-al-ship-file-man-xxx
-  #     - IN: sn-al-ship-params-2
-  #     - IN: sn-al-ship-cluster
-  #     - TASK:
-  #         - script: echo "$MONGO_API_URL"
+  - name: sn-al-ship-ecs-dep-2
+    type: deploy
+    steps:
+      - IN: sn-al-ship-man-1
+      - IN: sn-al-ship-ecs-cluster-testCl
+      - TASK: managed
+        deployMethod: upgrade
 
-  # - name: sn-al-ship-chain-file-man
-  #   type: manifest
-  #   steps:
-  #     - IN: sn-al-ship-vici-init-js
-  #     - IN: sn-al-ship-chain-trigger
-
-  # - name: sn-al-ship-cluster-deploy-5
-  #   type: deploy
-  #   steps:
-  #     - IN: sn-al-ship-file-man-2
-  #     - IN: sn-al-ship-cluster
-  #     - TASK:
-  #       - script: echo "Hello world !" > abc.txt
-  #       - script: ls -l
-  #   on_success:
-  #     - NOTIFY: slackNotification
-  #   on_failure:
-  #     - NOTIFY: slackNotification
-
-  # - name: sn-al-ship-chain-deploy
-  #   type: deploy
-  #   steps:
-  #     - IN: sn-al-ship-chain-file-man
-  #     - IN: sn-al-ship-cluster
-
-  # - name: sn-al-ship-man-1
-  #   type: manifest
-  #   steps:
-  #     - IN: sn-al-ship-ep
-  #     - IN: sn-al-ship-do
-  #     - IN: sn-al-ship-trigger-1
-  #
-  # - name: sn-al-ship-ecs-dep-2
-  #   type: deploy
-  #   steps:
-  #     - IN: sn-al-ship-man-1
-  #       force: true
-  #     - IN: sn-al-ship-ecs-cluster-testCl
-  #     - TASK: managed
-  #       deployMethod: upgrade
-  #
   # - name: sn-al-ship-tri-man
   #   type: manifest
   #   steps:
@@ -141,36 +82,3 @@ jobs:
   #         - manifest: sn-al-ship-ecs-man-bg
   #           image: sn-al-ship-myapp3
   #           port: 80
-  #
-  # - name: sn-al-ship-runSh
-  #   type: runSh
-  #   steps:
-  #     - IN: sn-al-ship-runSh-trigger
-  #     - TASK:
-  #       - script: ls
-  #       - script: "echo \"versionName=`date +%s`\" > /build/state/sn-al-ship-vici-init-js.env"
-  #     - OUT: sn-al-ship-vici-init-js
-  #
-  # - name: sn-al-ship-mix-a-man
-  #   type: manifest
-  #   steps:
-  #     - IN: sn-al-ship-ep
-  #     - IN: sn-al-ship-mix-a-trigger
-  #
-  # - name: sn-al-ship-mix-b-man
-  #   type: manifest
-  #   steps:
-  #     - IN: sn-al-ship-ep
-  #     - IN: sn-al-ship-mix-b-trigger
-  #
-  # - name: sn-multi-manifest-gke
-  #   type: deploy
-  #   steps:
-  #     - IN: sn-al-ship-mix-a-man
-  #       force: true
-  #     - IN: sn-al-ship-mix-b-man
-  #       force: true
-  #     - IN: sn-al-ship-gke-cluster
-  #     - TASK: managed
-  #       deployOptions:
-  #         - parallel
