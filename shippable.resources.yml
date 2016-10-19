@@ -163,3 +163,13 @@ resources:
       isPull: true
     seed:
       versionName: "entrypoint"
+
+  - name: sn-q-ep-err
+    type: image
+    pointer:
+      sourceName:
+        - "scriptnull/debian"
+        - "Hello world"
+      isPull: true
+    seed:
+      versionName: "entrypoint"
