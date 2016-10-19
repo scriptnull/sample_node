@@ -47,8 +47,9 @@ resources:
   - name: sn-al-ship-docker-opts-1
     type: dockerOptions
     version:
-      memory: 30
-      volumes: "/home/bin:/hostBin:rw"
+      memory: 40
+      volumes:
+        - "/home/bin:/hostBin:rw"
 
   - name: sn-al-ship-ecs-cluster-testCl
     type: cluster
