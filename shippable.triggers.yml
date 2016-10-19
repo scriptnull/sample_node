@@ -1,55 +1,55 @@
 triggers:
-  - name: sn-q-chain-trigger
+  - name: sn-al-ship-chain-trigger
     type: trigger
     version:
       counter: 4
 
-  - name: sn-q-file-trigger
+  - name: sn-al-ship-file-trigger
     type: trigger
     version:
       counter: 20
 
-  - name: sn-q-runSh-trigger
+  - name: sn-al-ship-runSh-trigger
     type: trigger
     version:
       counter: 2
 
-  - name: sn-q-trigger-1
+  - name: sn-al-ship-trigger-1
     type: trigger
     version:
       counter: 6
 
-  - name: sn-q-tm-trigger
+  - name: sn-al-ship-tm-trigger
     type: trigger
     version:
       counter: 6
 
-  - name: sn-q-tm-trigger-2
+  - name: sn-al-ship-tm-trigger-2
     type: trigger
     version:
       counter: 4
 
-  - name: sn-q-ddc-trigger
+  - name: sn-al-ship-ddc-trigger
     type: trigger
     version:
       counter: 2
 
-  - name: sn-q-gke-trigger
+  - name: sn-al-ship-gke-trigger
     type: trigger
     version:
       counter: 6
 
-  - name: sn-q-ecs-trigger
+  - name: sn-al-ship-ecs-trigger
     type: trigger
     version:
       counter: 8
 
-  - name: sn-q-mix-a-trigger
+  - name: sn-al-ship-mix-a-trigger
     type: trigger
     version:
       counter: 4
 
-  - name: sn-q-mix-b-trigger
+  - name: sn-al-ship-mix-b-trigger
     type: trigger
     version:
       counter: 3

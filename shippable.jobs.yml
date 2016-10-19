@@ -1,48 +1,48 @@
 jobs:
-  - name: sn-q-man-jfrog
-    type: manifest
-    steps:
-      - IN: sn-q-vici-http-js
-
-  - name: sn-q-dep-jfrog
-    type: deploy
-    steps:
-      - IN: sn-q-man-jfrog
-      - IN: sn-q-cluster
-
-  - name: sn-q-file-man-xxx
-    type: manifest
-    steps:
-      - IN: sn-q-vici-init-js
-      - IN: sn-q-params
-      - IN: sn-q-file-trigger
-
-  # - name: sn-q-file-man-xxx
+  # - name: sn-al-ship-man-jfrog
   #   type: manifest
   #   steps:
-  #     - IN: sn-q-vici-http-js
-  #     - IN: sn-q-file-trigger
+  #     - IN: sn-al-ship-vici-http-js
+  #
+  # - name: sn-al-ship-dep-jfrog
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-al-ship-man-jfrog
+  #     - IN: sn-al-ship-cluster
+  #
+  # - name: sn-al-ship-file-man-xxx
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-al-ship-vici-init-js
+  #     - IN: sn-al-ship-params
+  #     - IN: sn-al-ship-file-trigger
 
-  - name: sn-q-file-dep-xxx
+  # - name: sn-al-ship-file-man-xxx
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-al-ship-vici-http-js
+  #     - IN: sn-al-ship-file-trigger
+
+  - name: sn-al-ship-file-dep-xxx
     type: deploy
     steps:
-      - IN: sn-q-file-man-xxx
-      - IN: sn-q-params-2
-      - IN: sn-q-cluster
+      - IN: sn-al-ship-file-man-xxx
+      - IN: sn-al-ship-params-2
+      - IN: sn-al-ship-cluster
       - TASK:
           - script: echo "$MONGO_API_URL"
 
-  # - name: sn-q-chain-file-man
+  # - name: sn-al-ship-chain-file-man
   #   type: manifest
   #   steps:
-  #     - IN: sn-q-vici-init-js
-  #     - IN: sn-q-chain-trigger
+  #     - IN: sn-al-ship-vici-init-js
+  #     - IN: sn-al-ship-chain-trigger
 
-  # - name: sn-q-cluster-deploy-5
+  # - name: sn-al-ship-cluster-deploy-5
   #   type: deploy
   #   steps:
-  #     - IN: sn-q-file-man-2
-  #     - IN: sn-q-cluster
+  #     - IN: sn-al-ship-file-man-2
+  #     - IN: sn-al-ship-cluster
   #     - TASK:
   #       - script: echo "Hello world !" > abc.txt
   #       - script: ls -l
@@ -51,126 +51,126 @@ jobs:
   #   on_failure:
   #     - NOTIFY: slackNotification
 
-  # - name: sn-q-chain-deploy
+  # - name: sn-al-ship-chain-deploy
   #   type: deploy
   #   steps:
-  #     - IN: sn-q-chain-file-man
-  #     - IN: sn-q-cluster
+  #     - IN: sn-al-ship-chain-file-man
+  #     - IN: sn-al-ship-cluster
 
-  - name: sn-q-man-1
-    type: manifest
-    steps:
-      - IN: sn-q-ep
-      - IN: sn-q-do
-      - IN: sn-q-trigger-1
-
-  - name: sn-q-ecs-dep-2
-    type: deploy
-    steps:
-      - IN: sn-q-man-1
-        force: true
-      - IN: sn-q-ecs-cluster-testCl
-      - TASK: managed
-        deployMethod: upgrade
-
-  - name: sn-q-tri-man
-    type: manifest
-    steps:
-      - IN: sn-q-dk
-      # - IN: sn-q-tesing-do
-      - IN: sn-q-tm-trigger
-
-  - name: sn-q-tri-dep-1
-    type: deploy
-    steps:
-      - IN: sn-q-tri-man
-      - IN: sn-q-tri-cluster
-
-  - name: sn-q-tri-man-2
-    type: manifest
-    steps:
-      - IN: sn-q-ep
-      - IN: sn-q-tm-trigger-2
-
-  - name: sn-q-tri-dep-2
-    type: deploy
-    steps:
-      - IN: sn-q-tri-man-2
-      - IN: sn-q-tri-cluster
-
-  # - name: sn-q-gke-man
+  # - name: sn-al-ship-man-1
   #   type: manifest
   #   steps:
-  #     - IN: sn-q-dk
-  #     # - IN: sn-q-docker-opts-1
-  #     - IN: sn-q-gke-trigger
-
-  # - name: sn-q-gke-dep
+  #     - IN: sn-al-ship-ep
+  #     - IN: sn-al-ship-do
+  #     - IN: sn-al-ship-trigger-1
+  #
+  # - name: sn-al-ship-ecs-dep-2
   #   type: deploy
   #   steps:
-  #     - IN: sn-q-gke-man
-  #     - IN: sn-q-gke-cluster
+  #     - IN: sn-al-ship-man-1
+  #       force: true
+  #     - IN: sn-al-ship-ecs-cluster-testCl
+  #     - TASK: managed
+  #       deployMethod: upgrade
+  #
+  # - name: sn-al-ship-tri-man
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-al-ship-dk
+  #     # - IN: sn-al-ship-tesing-do
+  #     - IN: sn-al-ship-tm-trigger
+  #
+  # - name: sn-al-ship-tri-dep-1
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-al-ship-tri-man
+  #     - IN: sn-al-ship-tri-cluster
+  #
+  # - name: sn-al-ship-tri-man-2
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-al-ship-ep
+  #     - IN: sn-al-ship-tm-trigger-2
+  #
+  # - name: sn-al-ship-tri-dep-2
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-al-ship-tri-man-2
+  #     - IN: sn-al-ship-tri-cluster
+
+  # - name: sn-al-ship-gke-man
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-al-ship-dk
+  #     # - IN: sn-al-ship-docker-opts-1
+  #     - IN: sn-al-ship-gke-trigger
+
+  # - name: sn-al-ship-gke-dep
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-al-ship-gke-man
+  #     - IN: sn-al-ship-gke-cluster
 
 
-  - name: sn-q-ddc-man
-    type: manifest
-    steps:
-      - IN: sn-q-ep
-      - IN: sn-q-ddc-trigger
-
-  - name: sn-q-ddc-dep
-    type: deploy
-    steps:
-      - IN: sn-q-ddc-man
-      - IN: sn-q-ddc-cluster
-
-  - name: sn-q-ecs-man-bg
-    type: manifest
-    steps:
-      - IN: sn-q-myapp3
-      - IN: sn-q-do
-      - IN: sn-q-ecs-trigger
-
-  - name: sn-q-ecs-deploy-bg
-    type: deploy
-    steps:
-      - IN: sn-q-ecs-man-bg
-      - IN: sn-q-ecs-cluster
-      - IN: q-lb-loadbalancer1
-        applyTo:
-          - manifest: sn-q-ecs-man-bg
-            image: sn-q-myapp3
-            port: 80
-
-  - name: sn-q-runSh
-    type: runSh
-    steps:
-      - IN: sn-q-runSh-trigger
-      - TASK:
-        - script: ls
-        - script: "echo \"versionName=`date +%s`\" > /build/state/sn-q-vici-init-js.env"
-      - OUT: sn-q-vici-init-js
-
-  - name: sn-q-mix-a-man
-    type: manifest
-    steps:
-      - IN: sn-q-ep
-      - IN: sn-q-mix-a-trigger
-
-  - name: sn-q-mix-b-man
-    type: manifest
-    steps:
-      - IN: sn-q-ep
-      - IN: sn-q-mix-b-trigger
-
-  - name: sn-multi-manifest-gke
-    type: deploy
-    steps:
-      - IN: sn-q-mix-a-man
-        force: true
-      - IN: sn-q-mix-b-man
-        force: true
-      - IN: sn-q-gke-cluster
-      - TASK: managed
-        deployOptions:
-          - parallel
+  # - name: sn-al-ship-ddc-man
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-al-ship-ep
+  #     - IN: sn-al-ship-ddc-trigger
+  #
+  # - name: sn-al-ship-ddc-dep
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-al-ship-ddc-man
+  #     - IN: sn-al-ship-ddc-cluster
+  #
+  # - name: sn-al-ship-ecs-man-bg
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-al-ship-myapp3
+  #     - IN: sn-al-ship-do
+  #     - IN: sn-al-ship-ecs-trigger
+  #
+  # - name: sn-al-ship-ecs-deploy-bg
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-al-ship-ecs-man-bg
+  #     - IN: sn-al-ship-ecs-cluster
+  #     - IN: q-lb-loadbalancer1
+  #       applyTo:
+  #         - manifest: sn-al-ship-ecs-man-bg
+  #           image: sn-al-ship-myapp3
+  #           port: 80
+  #
+  # - name: sn-al-ship-runSh
+  #   type: runSh
+  #   steps:
+  #     - IN: sn-al-ship-runSh-trigger
+  #     - TASK:
+  #       - script: ls
+  #       - script: "echo \"versionName=`date +%s`\" > /build/state/sn-al-ship-vici-init-js.env"
+  #     - OUT: sn-al-ship-vici-init-js
+  #
+  # - name: sn-al-ship-mix-a-man
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-al-ship-ep
+  #     - IN: sn-al-ship-mix-a-trigger
+  #
+  # - name: sn-al-ship-mix-b-man
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-al-ship-ep
+  #     - IN: sn-al-ship-mix-b-trigger
+  #
+  # - name: sn-multi-manifest-gke
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-al-ship-mix-a-man
+  #       force: true
+  #     - IN: sn-al-ship-mix-b-man
+  #       force: true
+  #     - IN: sn-al-ship-gke-cluster
+  #     - TASK: managed
+  #       deployOptions:
+  #         - parallel

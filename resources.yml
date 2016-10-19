@@ -1,7 +1,0 @@
-resources:
-  - name: sample_node
-    type: syncRepo
-    integration: github
-    source:
-      name: scriptnull/sample_node
-      branch: v2-gke-new-sync

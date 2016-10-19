@@ -1,4 +1,4 @@
 git status -s
-git add .
+git add . --all
 git commit -m "increment"
-git push origin master:v2-qhode
+git push origin master:v2-alpha-shippable
