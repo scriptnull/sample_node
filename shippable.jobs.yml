@@ -22,15 +22,15 @@ jobs:
   #   steps:
   #     - IN: sn-al-ship-vici-http-js
   #     - IN: sn-al-ship-file-trigger
-
-  - name: sn-al-ship-file-dep-xxx
-    type: deploy
-    steps:
-      - IN: sn-al-ship-file-man-xxx
-      - IN: sn-al-ship-params-2
-      - IN: sn-al-ship-cluster
-      - TASK:
-          - script: echo "$MONGO_API_URL"
+  # 
+  # - name: sn-al-ship-file-dep-xxx
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-al-ship-file-man-xxx
+  #     - IN: sn-al-ship-params-2
+  #     - IN: sn-al-ship-cluster
+  #     - TASK:
+  #         - script: echo "$MONGO_API_URL"
 
   # - name: sn-al-ship-chain-file-man
   #   type: manifest
