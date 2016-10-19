@@ -1,125 +1,95 @@
 resources:
-  # - name: sn-q-vici-http-js
-  #   type: file
-  #   pointer:
-  #     sourceName: "https://raw.githubusercontent.com/scriptnull/vici/master/vici.http.js"
-  #   seed:
-  #     versionName: "initial"
+  - name: sn-al-ship-myapp3
+    type: image
+    integration: scriptnull-docker
+    pointer:
+      sourceName: "scriptnull/sample_node"
+      isPull: true
+    seed:
+      versionName: "myapp3"
+
+  - name: sn-al-ship-myapp2
+    type: image
+    integration: scriptnull-docker
+    pointer:
+      sourceName: "scriptnull/sample_node"
+      isPull: true
+    seed:
+      versionName: "myapp2"
+
+  - name: sn-al-ship-dk
+    type: image
+    integration: scriptnull-docker
+    pointer:
+      sourceName: "scriptnull/debian"
+      isPull: true
+    seed:
+      versionName: "driftking"
+
+  - name: sn-al-ship-ep
+    type: image
+    integration: scriptnull-docker
+    pointer:
+      sourceName: "scriptnull/debian"
+      isPull: true
+    seed:
+      versionName: "entrypoint"
+
+  - name: sn-al-ship-bb
+    type: image
+    integration: scriptnull-docker
+    pointer:
+      sourceName: "busybox"
+      isPull: true
+    seed:
+      versionName: "latest"
+
+  - name: sn-al-ship-docker-opts-1
+    type: dockerOptions
+    version:
+      memory: 30
+
+  - name: sn-al-ship-ecs-cluster-testCl
+    type: cluster
+    integration: scriptnull-aws
+    pointer:
+      sourceName : "testCL" #name of the cluster we are deploying
+      region: "us-west-2"
   #
-  # - name: sn-q-vici-init-js
-  #   type: file
-  #   pointer:
-  #     sourceName: "https://raw.githubusercontent.com/scriptnull/vici/master/vici.init.js"
-  #   seed:
-  #     versionName: "initial"
-  #
-  # - name: sn-q-file-jfrog
-  #   type: file
-  #   integration: scriptnull-jfrog
-  #   pointer:
-  #     sourceName: "test-local/shippable.yml"
-  #   seed:
-  #     versionName: "initial"
-  #
-  # - name: sn-q-cluster
-  #   type: cluster
-  #   integration: scriptnull-node
-  #   pointer:
-  #     sourceName: 'scriptnull-cluster'
-  #
-  # - name: sn-q-myapp3
-  #   type: image
-  #   integration: scriptnull-docker
-  #   pointer:
-  #     sourceName: "scriptnull/sample_node"
-  #     isPull: true
-  #   seed:
-  #     versionName: "myapp3"
-  #
-  # - name: sn-q-myapp2
-  #   type: image
-  #   integration: scriptnull-docker
-  #   pointer:
-  #     sourceName: "scriptnull/sample_node"
-  #     isPull: true
-  #   seed:
-  #     versionName: "myapp2"
-  #
-  # - name: sn-q-dk
-  #   type: image
-  #   integration: scriptnull-docker
-  #   pointer:
-  #     sourceName: "scriptnull/debian"
-  #     isPull: true
-  #   seed:
-  #     versionName: "driftking"
-  #
-  # - name: sn-q-ep
-  #   type: image
-  #   integration: scriptnull-docker
-  #   pointer:
-  #     sourceName: "scriptnull/debian"
-  #     isPull: true
-  #   seed:
-  #     versionName: "entrypoint"
-  #
-  # - name: sn-q-bb
-  #   type: image
-  #   integration: scriptnull-docker
-  #   pointer:
-  #     sourceName: "busybox"
-  #     isPull: true
-  #   seed:
-  #     versionName: "latest"
-  #
-  # - name: sn-q-docker-opts-1
-  #   type: dockerOptions
-  #   version:
-  #     memory: 100
-  #     readOnlyRootFilesystem: false
-  #     network: "none"
-  #
-  # - name: sn-q-ecs-cluster-testCl
-  #   type: cluster
-  #   integration: scriptnull-aws
-  #   pointer:
-  #     sourceName : "testCL" #name of the cluster we are deploying
-  #     region: "us-west-2"
-  #
-  # - name: sn-q-tri-cluster
+  # - name: sn-al-ship-tri-cluster
   #   type: cluster
   #   integration: scriptnull-triton
   #   pointer:
   #     sourceName : "some-name" #name of the cluster we are deploying
   #     region : "us-east-2"
   # #
-  # - name: sn-q-gke-cluster
-  #   type: cluster
-  #   integration: scriptnull-gke
-  #   pointer:
-  #     sourceName : "small-cluster" #name of the cluster we are deploying
-  #     region : "us-east1-d"
+  - name: sn-al-ship-gke-cluster
+    type: cluster
+    integration: scriptnull-gke
+    pointer:
+      sourceName : "small-cluster" #name of the cluster we are deploying
+      region : "us-east1-d"
   #
-  # - name: sn-q-do
+  # - name: sn-al-ship-do
   #   type: dockerOptions
   #   version:
   #     memory: 1000
   #     portMappings:
   #       - "80:8080"
   #
-  # - name: sn-q-ddc-cluster
-  #   type: cluster
-  #   integration: scriptnull-ddc
-  #   pointer:
-  #     sourceName : "something" #name of the cluster we are deploying
-  #     region: "us-west-2"
-  #
-  # - name: sn-q-ecs-cluster
-  #   type: cluster
-  #   integration: scriptnull-aws
-  #   pointer:
-  #     sourceName : "loadBalanceTest" #name of the cluster we are deploying
-  #     region: "us-east-1"
+  - name: sn-al-ship-ddc-cluster
+    type: cluster
+    integration: scriptnull-ddc
+    pointer:
+      sourceName : "something" #name of the cluster we are deploying
+      region: "us-west-2"
+
+  - name: sn-al-ship-ecs-cluster
+    type: cluster
+    integration: scriptnull-aws
+    pointer:
+      sourceName : "loadBalanceTest" #name of the cluster we are deploying
+      region: "us-east-1"
   #
   # - name: q-lb-loadbalancer1
   #   type: loadBalancer
@@ -138,28 +108,20 @@ resources:
   #     recipients:
   #       - "#scriptnull-test"
   #
-  # - name: sn-q-params
+  # - name: sn-al-ship-params
   #   type: params
   #   version:
   #     params:
   #       MONGO_API_URL: "xxx:28017"
   #
-  # - name: sn-q-params-2
+  # - name: sn-al-ship-params-2
   #   type: params
   #   version:
   #     params:
   #       MONGO_API_URL: "kskks:28017"
   #
-  # - name: sn-q-tesing-do
+  # - name: sn-al-ship-tesing-do
   #   type: dockerOptions
   #   version:
   #     user:
   #       - "abcd"
-
-  - name: sn-q-ep
-    type: image
-    pointer:
-      sourceName: "scriptnull/debian"
-      isPull: true
-    seed:
-      versionName: "entrypoint"
