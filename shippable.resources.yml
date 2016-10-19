@@ -158,7 +158,6 @@ resources:
 
   - name: sn-q-ep
     type: image
-    integration: scriptnull-docker
     pointer:
       sourceName: "scriptnull/debian"
       isPull: true
