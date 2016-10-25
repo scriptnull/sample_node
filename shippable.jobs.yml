@@ -3,14 +3,16 @@ jobs:
     type: manifest
     steps:
       - IN: sn-myapp3
-      - IN: sn-docker-myapp3-80
+      # - IN: sn-docker-myapp3-80
       - IN: sn-ecs-trigger
 
-  - name: sn-ecs-dep
+  - name: sn-ecs-dep-1
     type: deploy
     steps:
       - IN: sn-ecs-man
       - IN: sn-ecs-cluster
+      - TASK: managed
+        deployMethod: upgrade
 
   # - name: sn-man-jfrog
   #   type: manifest
