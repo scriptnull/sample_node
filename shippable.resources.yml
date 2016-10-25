@@ -99,6 +99,8 @@ resources:
     version:
       portMappings:
         - "80:80"
+      labels:
+        Hello: world
 
   - name: sn-docker-myapp3-8080
     type: dockerOptions
