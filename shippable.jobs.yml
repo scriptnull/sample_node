@@ -4,6 +4,7 @@ jobs:
     steps:
       - IN: sn-myapp3
       - IN: sn-docker-myapp3-80
+      - IN: sn-myapp2
       - IN: sn-ecs-trigger
 
   - name: sn-ecs-dep-1
