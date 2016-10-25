@@ -47,7 +47,8 @@ resources:
   - name: sn-al-ship-docker-opts-2
     type: dockerOptions
     version:
-      memory: 30
+      portMappings:
+        - "80:80"
 
   # - name: sn-al-ship-docker-opts-3
   #   type: dockerOptions

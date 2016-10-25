@@ -3,6 +3,7 @@ jobs:
     type: manifest
     steps:
       - IN: sn-al-ship-myapp3
+      - IN: sn-al-ship-docker-opts-2
       - IN: sn-al-ship-trigger-1
 
   - name: sn-al-ship-ecs-dep
@@ -10,6 +11,11 @@ jobs:
     steps:
       - IN: sn-al-ship-man
       - IN: sn-al-ship-ecs-cluster
+      - IN: sn-al-ship-lb-1
+        applyTo:
+          - manifest: sn-al-ship-man
+            image: sn-al-ship-myapp3
+            port: 80
       - TASK: managed
         deployMethod: replace
 
