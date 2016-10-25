@@ -3,6 +3,7 @@
 <report name="my-app">
   <sessioninfo id="scriptnull-ThinkPad-X250-e70aeff1" start="1476949463321" dump="1476949463848"/>
   <sessioninfo id="scriptnull-ThinkPad-X250-1ae2bdeb" start="1476950689067" dump="1476950689592"/>
+  <sessioninfo id="scriptnull-ThinkPad-X250-1ec24335" start="1477389243638" dump="1477389244169"/>
   <package name="com/mycompany/products">
     <class name="com/mycompany/products/Bus">
       <method name="&lt;init&gt;" desc="()V" line="11">
@@ -118,16 +119,14 @@
         <counter type="METHOD" missed="1" covered="0"/>
       </method>
       <method name="add" desc="(Ljava/lang/Integer;Ljava/lang/Integer;)Ljava/lang/Integer;" line="15">
-        <counter type="INSTRUCTION" missed="4" covered="14"/>
-        <counter type="BRANCH" missed="1" covered="1"/>
-        <counter type="LINE" missed="1" covered="3"/>
-        <counter type="COMPLEXITY" missed="1" covered="1"/>
+        <counter type="INSTRUCTION" missed="0" covered="7"/>
+        <counter type="LINE" missed="0" covered="1"/>
+        <counter type="COMPLEXITY" missed="0" covered="1"/>
         <counter type="METHOD" missed="0" covered="1"/>
       </method>
-      <counter type="INSTRUCTION" missed="8" covered="17"/>
-      <counter type="BRANCH" missed="1" covered="1"/>
-      <counter type="LINE" missed="3" covered="4"/>
-      <counter type="COMPLEXITY" missed="2" covered="2"/>
+      <counter type="INSTRUCTION" missed="4" covered="10"/>
+      <counter type="LINE" missed="2" covered="2"/>
+      <counter type="COMPLEXITY" missed="1" covered="2"/>
       <counter type="METHOD" missed="1" covered="2"/>
       <counter type="CLASS" missed="0" covered="1"/>
     </class>
@@ -135,28 +134,22 @@
       <line nr="7" mi="0" ci="3" mb="0" cb="0"/>
       <line nr="11" mi="3" ci="0" mb="0" cb="0"/>
       <line nr="12" mi="1" ci="0" mb="0" cb="0"/>
-      <line nr="15" mi="0" ci="4" mb="1" cb="1"/>
-      <line nr="16" mi="4" ci="0" mb="0" cb="0"/>
-      <line nr="18" mi="0" ci="3" mb="0" cb="0"/>
-      <line nr="20" mi="0" ci="7" mb="0" cb="0"/>
-      <counter type="INSTRUCTION" missed="8" covered="17"/>
-      <counter type="BRANCH" missed="1" covered="1"/>
-      <counter type="LINE" missed="3" covered="4"/>
-      <counter type="COMPLEXITY" missed="2" covered="2"/>
+      <line nr="15" mi="0" ci="7" mb="0" cb="0"/>
+      <counter type="INSTRUCTION" missed="4" covered="10"/>
+      <counter type="LINE" missed="2" covered="2"/>
+      <counter type="COMPLEXITY" missed="1" covered="2"/>
       <counter type="METHOD" missed="1" covered="2"/>
       <counter type="CLASS" missed="0" covered="1"/>
     </sourcefile>
-    <counter type="INSTRUCTION" missed="8" covered="17"/>
-    <counter type="BRANCH" missed="1" covered="1"/>
-    <counter type="LINE" missed="3" covered="4"/>
-    <counter type="COMPLEXITY" missed="2" covered="2"/>
+    <counter type="INSTRUCTION" missed="4" covered="10"/>
+    <counter type="LINE" missed="2" covered="2"/>
+    <counter type="COMPLEXITY" missed="1" covered="2"/>
     <counter type="METHOD" missed="1" covered="2"/>
     <counter type="CLASS" missed="0" covered="1"/>
   </package>
-  <counter type="INSTRUCTION" missed="67" covered="17"/>
-  <counter type="BRANCH" missed="1" covered="1"/>
-  <counter type="LINE" missed="18" covered="4"/>
-  <counter type="COMPLEXITY" missed="8" covered="2"/>
+  <counter type="INSTRUCTION" missed="63" covered="10"/>
+  <counter type="LINE" missed="17" covered="2"/>
+  <counter type="COMPLEXITY" missed="7" covered="2"/>
   <counter type="METHOD" missed="7" covered="2"/>
   <counter type="CLASS" missed="4" covered="1"/>
 </report>
