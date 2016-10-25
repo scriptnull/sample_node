@@ -6,7 +6,7 @@ resources:
       sourceName: "scriptnull/sample_node"
       isPull: true
     seed:
-      versionName: "myapp3"
+      versionName: "myapp3" # exposes server in port 80
 
   - name: sn-al-ship-myapp2
     type: image
@@ -15,7 +15,7 @@ resources:
       sourceName: "scriptnull/sample_node"
       isPull: true
     seed:
-      versionName: "myapp2"
+      versionName: "myapp2" # exposes server in port 3000
 
   - name: sn-al-ship-dk
     type: image
@@ -44,33 +44,24 @@ resources:
     seed:
       versionName: "latest"
 
-  - name: sn-al-ship-docker-opts-1
-    type: dockerOptions
-    version:
-      memory: 40
-      volumes:
-        - "/home/bin:/hostBin:rw"
-
   - name: sn-al-ship-docker-opts-2
     type: dockerOptions
     version:
       memory: 30
-      volumes:
-        - "/home/bin:/hostBin:rw"
 
-  - name: sn-al-ship-docker-opts-3
-    type: dockerOptions
-    version:
-      memory: 30
-      volumes:
-        - "/home/bin:/hostBin:rw"
+  # - name: sn-al-ship-docker-opts-3
+  #   type: dockerOptions
+  #   version:
+  #     memory: 30
+  #     volumes:
+  #       - "/home/bin:/hostBin:rw"
 
-  - name: sn-al-ship-ecs-cluster-testCl
-    type: cluster
-    integration: scriptnull-aws
-    pointer:
-      sourceName : "testCL" #name of the cluster we are deploying
-      region: "us-west-2"
+  # - name: sn-al-ship-ecs-cluster-testCl
+  #   type: cluster
+  #   integration: scriptnull-aws
+  #   pointer:
+  #     sourceName : "testCL" #name of the cluster we are deploying
+  #     region: "us-west-2"
   #
   # - name: sn-al-ship-tri-cluster
   #   type: cluster
@@ -79,13 +70,13 @@ resources:
   #     sourceName : "some-name" #name of the cluster we are deploying
   #     region : "us-east-2"
   # #
-  - name: sn-al-ship-gke-cluster
-    type: cluster
-    integration: scriptnull-gke
-    pointer:
-      sourceName : "small-cluster" #name of the cluster we are deploying
-      region : "us-east1-d"
-  #
+  # - name: sn-al-ship-gke-cluster
+  #   type: cluster
+  #   integration: scriptnull-gke
+  #   pointer:
+  #     sourceName : "small-cluster" #name of the cluster we are deploying
+  #     region : "us-east1-d"
+
   # - name: sn-al-ship-do
   #   type: dockerOptions
   #   version:
@@ -93,19 +84,24 @@ resources:
   #     portMappings:
   #       - "80:8080"
   #
-  - name: sn-al-ship-ddc-cluster
-    type: cluster
-    integration: scriptnull-ddc
-    pointer:
-      sourceName : "something" #name of the cluster we are deploying
-      region: "us-west-2"
+  # - name: sn-al-ship-ddc-cluster
+  #   type: cluster
+  #   integration: scriptnull-ddc
+  #   pointer:
+  #     sourceName : "something" #name of the cluster we are deploying
+  #     region: "us-west-2"
 
   - name: sn-al-ship-ecs-cluster
     type: cluster
     integration: scriptnull-aws
     pointer:
-      sourceName : "loadBalanceTest" #name of the cluster we are deploying
-      region: "us-east-1"
+      sourceName : "default" #name of the cluster we are deploying
+      region: "us-west-2"
+
+  - name: sn-al-ship-lb-1
+    type: loadBalancer
+    pointer:
+      sourceName: EC2Contai-EcsElast-GPCOXIIKWPUJ
   #
   # - name: q-lb-loadbalancer1
   #   type: loadBalancer

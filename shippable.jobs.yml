@@ -1,18 +1,17 @@
 jobs:
-  - name: sn-al-ship-man-1
+  - name: sn-al-ship-man
     type: manifest
     steps:
-      - IN: sn-al-ship-ep
-      - IN: sn-al-ship-docker-opts-1
+      - IN: sn-al-ship-myapp3
       - IN: sn-al-ship-trigger-1
 
-  - name: sn-al-ship-ecs-dep-2
+  - name: sn-al-ship-ecs-dep
     type: deploy
     steps:
-      - IN: sn-al-ship-man-1
-      - IN: sn-al-ship-ecs-cluster-testCl
+      - IN: sn-al-ship-man
+      - IN: sn-al-ship-ecs-cluster
       - TASK: managed
-        deployMethod: upgrade
+        deployMethod: replace
 
   # - name: sn-al-ship-tri-man
   #   type: manifest
@@ -39,32 +38,32 @@ jobs:
   #     - IN: sn-al-ship-tri-man-2
   #     - IN: sn-al-ship-tri-cluster
 
-  - name: sn-al-ship-gke-man
-    type: manifest
-    steps:
-      - IN: sn-al-ship-dk
-      - IN: sn-al-ship-docker-opts-2
-      - IN: sn-al-ship-gke-trigger
-
-  - name: sn-al-ship-gke-dep
-    type: deploy
-    steps:
-      - IN: sn-al-ship-gke-man
-      - IN: sn-al-ship-gke-cluster
-
-
-  - name: sn-al-ship-ddc-man
-    type: manifest
-    steps:
-      - IN: sn-al-ship-ep
-      - IN: sn-al-ship-docker-opts-3
-      - IN: sn-al-ship-ddc-trigger
-
-  - name: sn-al-ship-ddc-dep
-    type: deploy
-    steps:
-      - IN: sn-al-ship-ddc-man
-      - IN: sn-al-ship-ddc-cluster
+  # - name: sn-al-ship-gke-man
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-al-ship-dk
+  #     - IN: sn-al-ship-docker-opts-2
+  #     - IN: sn-al-ship-gke-trigger
+  #
+  # - name: sn-al-ship-gke-dep
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-al-ship-gke-man
+  #     - IN: sn-al-ship-gke-cluster
+  #
+  #
+  # - name: sn-al-ship-ddc-man
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-al-ship-ep
+  #     - IN: sn-al-ship-docker-opts-3
+  #     - IN: sn-al-ship-ddc-trigger
+  #
+  # - name: sn-al-ship-ddc-dep
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-al-ship-ddc-man
+  #     - IN: sn-al-ship-ddc-cluster
   #
   # - name: sn-al-ship-ecs-man-bg
   #   type: manifest
