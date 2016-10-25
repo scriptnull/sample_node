@@ -42,24 +42,24 @@ resources:
   #     recipients:
   #       - "#scriptnull-test"
 
-  # - name: sn-myapp3
-  #   type: image
-  #   integration: scriptnull-docker
-  #   pointer:
-  #     sourceName: "scriptnull/sample_node"
-  #     isPull: true
-  #   seed:
-  #     versionName: "myapp3"
+  - name: sn-myapp3
+    type: image
+    integration: scriptnull-docker
+    pointer:
+      sourceName: "scriptnull/sample_node"
+      isPull: true
+    seed:
+      versionName: "myapp3" # exposes server in port 80
   #
-  # - name: sn-myapp2
-  #   type: image
-  #   integration: scriptnull-docker
-  #   pointer:
-  #     sourceName: "scriptnull/sample_node"
-  #     isPull: true
-  #   seed:
-  #     versionName: "myapp2"
-  #
+  - name: sn-myapp2
+    type: image
+    integration: scriptnull-docker
+    pointer:
+      sourceName: "scriptnull/sample_node"
+      isPull: true
+    seed:
+      versionName: "myapp2" # exposes server in port 3000
+
   - name: sn-dk
     type: image
     integration: scriptnull-docker
@@ -94,10 +94,10 @@ resources:
     seed:
       versionName: "latest"
 
-  - name: sn-docker-opts-1
-    type: dockerOptions
-    version:
-      volumes: "/home:/hostHome:rw"
+  # - name: sn-docker-opts-1
+  #   type: dockerOptions
+  #   version:
+  #     volumes: "/home:/hostHome:rw"
         # - "/home:/hostHome:rw"
         # - "/bin:/hostBin:ro"
 
@@ -131,7 +131,7 @@ resources:
     type: cluster
     integration: scriptnull-aws
     pointer:
-      sourceName : "testCL" #name of the cluster we are deploying
+      sourceName : "default" #name of the cluster we are deploying
       region: "us-west-2"
 
   # - name: sn-ecs-lb-cluster
@@ -158,23 +158,23 @@ resources:
   #     sourceName : "some-name" #name of the cluster we are deploying
   #     region : "us-east-2"
 
-  - name: sn-gke-cluster
-    type: cluster
-    integration: scriptnull-gke
-    pointer:
-      sourceName : "small-cluster" #name of the cluster we are deploying
-      region : "us-east1-d"
-
-  - name: sn-ddc-cluster
-    type: cluster
-    integration: scriptnull-ddc
-    pointer:
-      sourceName : "something" #name of the cluster we are deploying
-      region: "us-west-2"
-
-  - name: sn-scaler
-    type: replicas
-    version:
-      count: 2
-    flags:
-      - replicas
+  # - name: sn-gke-cluster
+  #   type: cluster
+  #   integration: scriptnull-gke
+  #   pointer:
+  #     sourceName : "small-cluster" #name of the cluster we are deploying
+  #     region : "us-east1-d"
+  #
+  # - name: sn-ddc-cluster
+  #   type: cluster
+  #   integration: scriptnull-ddc
+  #   pointer:
+  #     sourceName : "something" #name of the cluster we are deploying
+  #     region: "us-west-2"
+  #
+  # - name: sn-scaler
+  #   type: replicas
+  #   version:
+  #     count: 2
+  #   flags:
+  #     - replicas
