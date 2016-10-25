@@ -48,7 +48,7 @@ resources:
     type: dockerOptions
     version:
       portMappings:
-        - "80:80"
+        - "80:3000"
 
   # - name: sn-al-ship-docker-opts-3
   #   type: dockerOptions

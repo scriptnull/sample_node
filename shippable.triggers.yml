@@ -17,7 +17,7 @@ triggers:
   - name: sn-al-ship-trigger-1
     type: trigger
     version:
-      counter: 8
+      counter: 9
 
   - name: sn-al-ship-tm-trigger
     type: trigger

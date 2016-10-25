@@ -2,7 +2,7 @@ jobs:
   - name: sn-al-ship-man
     type: manifest
     steps:
-      - IN: sn-al-ship-myapp3
+      - IN: sn-al-ship-myapp2
       - IN: sn-al-ship-docker-opts-2
       - IN: sn-al-ship-trigger-1
 
@@ -14,8 +14,8 @@ jobs:
       - IN: sn-al-ship-lb-1
         applyTo:
           - manifest: sn-al-ship-man
-            image: sn-al-ship-myapp3
-            port: 80
+            image: sn-al-ship-myapp2
+            port: 3000
       - TASK: managed
         deployMethod: replace
 
