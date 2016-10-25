@@ -3,7 +3,7 @@ jobs:
     type: manifest
     steps:
       - IN: sn-myapp3
-      # - IN: sn-docker-myapp3-80
+      - IN: sn-docker-myapp3-80
       - IN: sn-ecs-trigger
 
   - name: sn-ecs-dep-1
@@ -11,6 +11,7 @@ jobs:
     steps:
       - IN: sn-ecs-man
       - IN: sn-ecs-cluster
+      - IN: lb-1
       - TASK: managed
         deployMethod: upgrade
 
