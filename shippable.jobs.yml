@@ -1,4 +1,17 @@
 jobs:
+  - name: sn-ecs-man
+    type: manifest
+    steps:
+      - IN: sn-myapp3
+      - IN: sn-docker-myapp3-80
+      - IN: sn-ecs-trigger
+
+  - name: sn-ecs-dep
+    type: deploy
+    steps:
+      - IN: sn-ecs-man
+      - IN: sn-ecs-cluster
+
   # - name: sn-man-jfrog
   #   type: manifest
   #   steps:
@@ -63,43 +76,30 @@ jobs:
   #     - TASK: managed
   #       deployMethod: replace
 
-  - name: sn-gke-man
-    type: manifest
-    steps:
-      - IN: sn-dk
-      - IN: sn-gke-trigger
-
-  - name: sn-gke-dep
-    type: deploy
-    steps:
-      - IN: sn-gke-man
-      - IN: sn-gke-cluster
-
-  - name: sn-ddc-man
-    type: manifest
-    steps:
-      - IN: sn-dk
-      - IN: sn-ddc-trigger
-
-  - name: sn-ddc-dep
-    type: deploy
-    steps:
-      - IN: sn-ddc-man
-      - IN: sn-docker-opts-1
-      - IN: sn-ddc-cluster
-
-  - name: sn-ecs-man
-    type: manifest
-    steps:
-      - IN: sn-dk
-      - IN: sn-docker-opts-1
-      - IN: sn-ecs-trigger
-
-  - name: sn-ecs-dep
-    type: deploy
-    steps:
-      - IN: sn-ecs-man
-      - IN: sn-ecs-cluster
+  # - name: sn-gke-man
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-dk
+  #     - IN: sn-gke-trigger
+  #
+  # - name: sn-gke-dep
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-gke-man
+  #     - IN: sn-gke-cluster
+  #
+  # - name: sn-ddc-man
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-dk
+  #     - IN: sn-ddc-trigger
+  #
+  # - name: sn-ddc-dep
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-ddc-man
+  #     - IN: sn-docker-opts-1
+  #     - IN: sn-ddc-cluster
 
   # - name: sn-ecs-lb-man
   #   type: manifest

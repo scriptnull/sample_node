@@ -94,12 +94,29 @@ resources:
     seed:
       versionName: "latest"
 
-  # - name: sn-docker-opts-1
-  #   type: dockerOptions
-  #   version:
-  #     volumes: "/home:/hostHome:rw"
-        # - "/home:/hostHome:rw"
-        # - "/bin:/hostBin:ro"
+  - name: sn-docker-myapp3-80
+    type: dockerOptions
+    version:
+      portMappings:
+        - "80:80"
+
+  - name: sn-docker-myapp3-8080
+    type: dockerOptions
+    version:
+      portMappings:
+        - "8080:80"
+
+  - name: sn-docker-myapp2-80
+    type: dockerOptions
+    version:
+      portMappings:
+        - "80:3000"
+
+  - name: sn-docker-myapp2-8080
+    type: dockerOptions
+    version:
+      portMappings:
+        - "8080:3000"
 
   #
   # - name: sn-secure-params
@@ -133,6 +150,11 @@ resources:
     pointer:
       sourceName : "default" #name of the cluster we are deploying
       region: "us-west-2"
+
+  - name: lb-1
+    type: loadBalancer
+    pointer:
+      sourceName: EC2Contai-EcsElast-GPCOXIIKWPUJ
 
   # - name: sn-ecs-lb-cluster
   #   type: cluster
