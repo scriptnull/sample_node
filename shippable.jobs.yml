@@ -2,8 +2,8 @@ jobs:
   - name: sn-ecs-man
     type: manifest
     steps:
-      - IN: sn-myapp2
-      - IN: sn-docker-myapp2-80
+      - IN: sn-myapp3
+      - IN: sn-docker-myapp3-80
       - IN: sn-ecs-trigger
 
   - name: sn-ecs-dep-1
@@ -14,8 +14,8 @@ jobs:
       - IN: lb-1
         applyTo:
           - manifest: sn-ecs-man
-            image: sn-myapp2
-            port: 3000
+            image: sn-myapp3
+            port: 80
       - TASK: managed
         deployMethod: replace
 
