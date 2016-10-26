@@ -11,11 +11,11 @@ jobs:
     steps:
       - IN: sn-ecs-man
       - IN: sn-ecs-cluster
-      - IN: lb-1
-        applyTo:
-          - manifest: sn-ecs-man
-            image: sn-myapp3
-            port: 80
+      # - IN: lb-1
+      #   applyTo:
+      #     - manifest: sn-ecs-man
+      #       image: sn-myapp3
+      #       port: 80
       - TASK: managed
         deployMethod: upgrade
 
