@@ -48,7 +48,7 @@ resources:
     type: dockerOptions
     version:
       portMappings:
-        - "80:3000"
+        - "80:80"
       labels:
         hi: world
 
