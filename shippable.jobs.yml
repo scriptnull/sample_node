@@ -11,11 +11,11 @@ jobs:
     steps:
       - IN: sn-ecs-man
       - IN: sn-ecs-cluster
-      # - IN: lb-1
-      #   applyTo:
-      #     - manifest: sn-ecs-man
-      #       image: sn-myapp2
-      #       port: 3000
+      - IN: lb-1
+        applyTo:
+          - manifest: sn-ecs-man
+            image: sn-myapp2
+            port: 3000
       - TASK: managed
         deployMethod: replace
 
