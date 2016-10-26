@@ -19,6 +19,19 @@ jobs:
       - TASK: managed
         deployMethod: replace
 
+  - name: sn-ecs-man-2
+    type: manifest
+    steps:
+      - IN: sn-myapp3
+
+  - name: sn-ecs-dep-2
+    type: deploy
+    steps:
+      - IN: sn-ecs-man-2
+      - IN: sn-ecs-cluster
+      - TASK: managed
+        deployMethod: replace
+
   # - name: sn-man-jfrog
   #   type: manifest
   #   steps:
