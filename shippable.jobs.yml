@@ -17,7 +17,7 @@ jobs:
       #       image: sn-myapp3
       #       port: 80
       - TASK: managed
-        deployMethod: upgrade
+        deployMethod: replace
 
   # - name: sn-man-jfrog
   #   type: manifest
