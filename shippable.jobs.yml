@@ -6,7 +6,7 @@ jobs:
       - IN: sn-al-ship-docker-opts-2
       - IN: sn-al-ship-trigger-1
 
-  - name: sn-al-ship-ecs-dep
+  - name: sn-al-ship-ecs-dep-1
     type: deploy
     steps:
       - IN: sn-al-ship-man
