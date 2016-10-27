@@ -75,7 +75,7 @@ jobs:
   - name: sn-rc-ship-dcl-man
     type: manifest
     steps:
-      - IN: sn-rc-ship-myapp3
+      - IN: sn-rc-ship-myapp2
       - IN: sn-rc-ship-dcl-trigger
 
   - name: sn-rc-ship-dcl-dep
