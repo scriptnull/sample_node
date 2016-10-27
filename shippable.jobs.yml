@@ -92,7 +92,7 @@ jobs:
       - IN: sn-rc-ship-release-trigger
       - OUT: sn-rc-ship-ep
       - TASK: managed
-        bump: patch
+        bump: minor
 
   - name: sn-rc-ship-dcl-dep-subseq
     type: deploy
