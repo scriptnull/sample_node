@@ -84,22 +84,22 @@ jobs:
       - IN: sn-rc-ship-dcl-man
       - IN: sn-rc-ship-dcl-cluster
 
-  - name: sn-rc-ship-rel-man
+  - name: sn-rc-ship-rel-man-xx
     type: manifest
     steps:
       - IN: sn-rc-ship-myapp2
 
-  - name: sn-rc-ship-dcl-dep-xx
+  - name: sn-rc-ship-dcl-dep-yy
     type: deploy
     steps:
-      - IN: sn-rc-ship-rel-man
+      - IN: sn-rc-ship-rel-man-xx
       - IN: sn-rc-ship-dcl-cluster
 
-  - name: sn-rc-ship-release-4
+  - name: sn-rc-ship-release-5
     type: release
     steps:
       - IN: sn-rc-ship-version
-      - IN: sn-rc-ship-dcl-dep-xx
+      - IN: sn-rc-ship-dcl-dep-yy
       - IN: sn-rc-ship-release-trigger
       - OUT: sn-rc-ship-ep
       - TASK: managed
