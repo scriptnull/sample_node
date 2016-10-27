@@ -57,6 +57,11 @@ resources:
     seed:
       versionName: "0.0.1"
 
+  - name: sn-rc-ship-invalid-version
+    type: version
+    seed:
+      versionName: "abc"
+
   # - name: sn-rc-ship-docker-opts-3
   #   type: dockerOptions
   #   version:
