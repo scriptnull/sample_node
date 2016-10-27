@@ -62,4 +62,4 @@ triggers:
   - name: sn-rc-ship-release-trigger
     type: trigger
     version:
-      counter: 1
+      counter: 2

@@ -89,6 +89,8 @@ jobs:
     steps:
       - IN: sn-rc-ship-version
       - IN: sn-rc-ship-release-trigger
+      - TASK: managed
+        bump: patch
 
   # - name: sn-rc-ship-ecs-man-bg
   #   type: manifest
