@@ -57,7 +57,7 @@ triggers:
   - name: sn-rc-ship-dcl-trigger
     type: trigger
     version:
-      counter: 13
+      counter: 14
 
   - name: sn-rc-ship-release-trigger
     type: trigger
