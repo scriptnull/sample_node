@@ -94,6 +94,11 @@ jobs:
       - TASK: managed
         bump: patch
 
+  - name: sn-rc-ship-dcl-dep-subseq
+    type: deploy
+    steps:
+      - IN: sn-rc-ship-release
+      - IN: sn-rc-ship-dcl-cluster
 
   # - name: sn-rc-ship-ecs-man-bg
   #   type: manifest
