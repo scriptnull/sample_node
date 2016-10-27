@@ -90,14 +90,10 @@ jobs:
       - IN: sn-rc-ship-version
       - IN: sn-rc-ship-dcl-dep
       - IN: sn-rc-ship-release-trigger
+      - OUT: sn-rc-ship-ep
       - TASK: managed
         bump: patch
 
-  - name: sn-rc-ship-dcl-man-1
-    type: manifest
-    steps:
-      - IN: sn-rc-ship-dk
-      - IN: sn-rc-ship-dcl-trigger
 
   # - name: sn-rc-ship-ecs-man-bg
   #   type: manifest
