@@ -75,7 +75,7 @@ jobs:
   - name: sn-rc-ship-dcl-man
     type: manifest
     steps:
-      - IN: sn-rc-ship-dk
+      - IN: sn-rc-ship-ep
       - IN: sn-rc-ship-replicas
       - IN: sn-rc-ship-dcl-trigger
 
@@ -89,7 +89,7 @@ jobs:
     type: deploy
     steps:
       - IN: sn-rc-ship-dcl-man
-      - IN: sn-rc-ship-dcl-cluster
+      - IN: sn-rc-ship-dcl-cluster-xx
 
   # - name: sn-rc-ship-ecs-man-bg
   #   type: manifest
