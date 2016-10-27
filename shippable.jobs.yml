@@ -76,6 +76,7 @@ jobs:
     type: manifest
     steps:
       - IN: sn-rc-ship-dk
+      - IN: sn-rc-ship-ep
       - IN: sn-rc-ship-dcl-trigger
 
   - name: sn-rc-ship-dcl-dep
