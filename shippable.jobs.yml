@@ -75,7 +75,7 @@ jobs:
   - name: sn-rc-ship-dcl-man
     type: manifest
     steps:
-      - IN: sn-rc-ship-ep
+      - IN: sn-rc-ship-dk
       - IN: sn-rc-ship-dcl-trigger
 
   - name: sn-rc-ship-dcl-dep
@@ -88,7 +88,7 @@ jobs:
     type: release
     steps:
       - IN: sn-rc-ship-version
-      - IN: sn-rc-ship-dcl-man
+      - IN: sn-rc-ship-dcl-dep
       - IN: sn-rc-ship-release-trigger
       - TASK: managed
         bump: patch
