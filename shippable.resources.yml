@@ -141,6 +141,10 @@ resources:
   #     user:
   #       - "abcd"
 
+  - name: sn-rc-ship-replicas
+    type: replicas
+    version:
+      count: 2
 
   - name: sn-rc-ship-dcl-cluster
     type: cluster
