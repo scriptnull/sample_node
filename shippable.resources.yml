@@ -144,7 +144,7 @@ resources:
   - name: sn-rc-ship-replicas
     type: replicas
     version:
-      count: 3
+      count: 1
 
   - name: sn-rc-ship-dcl-cluster
     type: cluster
