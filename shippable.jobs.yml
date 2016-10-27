@@ -87,7 +87,7 @@ jobs:
   - name: sn-rc-ship-release
     type: release
     steps:
-      i IN: sn-rc-ship-invalid-version
+      - IN: sn-rc-ship-invalid-version
       - IN: sn-rc-ship-release-trigger
       - TASK: managed
         bump: patch
