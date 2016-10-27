@@ -89,7 +89,7 @@ jobs:
     type: deploy
     steps:
       - IN: sn-rc-ship-dcl-man
-      - IN: sn-rc-ship-dcl-cluster
+      - IN: sn-rc-ship-dcl-cluster-xxx
 
   # - name: sn-rc-ship-ecs-man-bg
   #   type: manifest
