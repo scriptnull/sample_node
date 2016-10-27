@@ -1,90 +1,102 @@
 jobs:
-  - name: sn-al-ship-man
+  # - name: sn-rc-ship-man
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-rc-ship-myapp3
+  #     - IN: sn-rc-ship-docker-opts-2
+  #     - IN: sn-rc-ship-trigger-1
+  #
+  # - name: sn-rc-ship-ecs-dep-2
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-rc-ship-man
+  #     - IN: sn-rc-ship-ecs-cluster
+  #     - IN: sn-rc-ship-lb-1
+  #       applyTo:
+  #         - manifest: sn-rc-ship-man
+  #           image: sn-rc-ship-myapp3
+  #           port: 80
+  #     - TASK: managed
+  #       deployMethod: replace
+
+  # - name: sn-rc-ship-tri-man
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-rc-ship-dk
+  #     # - IN: sn-rc-ship-tesing-do
+  #     - IN: sn-rc-ship-tm-trigger
+  #
+  # - name: sn-rc-ship-tri-dep-1
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-rc-ship-tri-man
+  #     - IN: sn-rc-ship-tri-cluster
+  #
+  # - name: sn-rc-ship-tri-man-2
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-rc-ship-ep
+  #     - IN: sn-rc-ship-tm-trigger-2
+  #
+  # - name: sn-rc-ship-tri-dep-2
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-rc-ship-tri-man-2
+  #     - IN: sn-rc-ship-tri-cluster
+
+  # - name: sn-rc-ship-gke-man
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-rc-ship-dk
+  #     - IN: sn-rc-ship-docker-opts-2
+  #     - IN: sn-rc-ship-gke-trigger
+  #
+  # - name: sn-rc-ship-gke-dep
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-rc-ship-gke-man
+  #     - IN: sn-rc-ship-gke-cluster
+  #
+  #
+  # - name: sn-rc-ship-ddc-man
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-rc-ship-ep
+  #     - IN: sn-rc-ship-docker-opts-3
+  #     - IN: sn-rc-ship-ddc-trigger
+  #
+  # - name: sn-rc-ship-ddc-dep
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-rc-ship-ddc-man
+  #     - IN: sn-rc-ship-ddc-cluster
+  #
+
+  - name: sn-rc-ship-dcl-man
     type: manifest
     steps:
-      - IN: sn-al-ship-myapp3
-      - IN: sn-al-ship-docker-opts-2
-      - IN: sn-al-ship-trigger-1
+      - IN: sn-rc-ship-ep
 
-  - name: sn-al-ship-ecs-dep-2
+  - name: sn-rc-ship-dcl-dep
     type: deploy
     steps:
-      - IN: sn-al-ship-man
-      - IN: sn-al-ship-ecs-cluster
-      - IN: sn-al-ship-lb-1
-        applyTo:
-          - manifest: sn-al-ship-man
-            image: sn-al-ship-myapp3
-            port: 80
-      - TASK: managed
-        deployMethod: replace
+      - IN: sn-rc-ship-dcl-man
+      - IN: sn-rc-ship-dcl-cluster
 
-  # - name: sn-al-ship-tri-man
+  # - name: sn-rc-ship-ecs-man-bg
   #   type: manifest
   #   steps:
-  #     - IN: sn-al-ship-dk
-  #     # - IN: sn-al-ship-tesing-do
-  #     - IN: sn-al-ship-tm-trigger
+  #     - IN: sn-rc-ship-myapp3
+  #     - IN: sn-rc-ship-do
+  #     - IN: sn-rc-ship-ecs-trigger
   #
-  # - name: sn-al-ship-tri-dep-1
+  # - name: sn-rc-ship-ecs-deploy-bg
   #   type: deploy
   #   steps:
-  #     - IN: sn-al-ship-tri-man
-  #     - IN: sn-al-ship-tri-cluster
-  #
-  # - name: sn-al-ship-tri-man-2
-  #   type: manifest
-  #   steps:
-  #     - IN: sn-al-ship-ep
-  #     - IN: sn-al-ship-tm-trigger-2
-  #
-  # - name: sn-al-ship-tri-dep-2
-  #   type: deploy
-  #   steps:
-  #     - IN: sn-al-ship-tri-man-2
-  #     - IN: sn-al-ship-tri-cluster
-
-  # - name: sn-al-ship-gke-man
-  #   type: manifest
-  #   steps:
-  #     - IN: sn-al-ship-dk
-  #     - IN: sn-al-ship-docker-opts-2
-  #     - IN: sn-al-ship-gke-trigger
-  #
-  # - name: sn-al-ship-gke-dep
-  #   type: deploy
-  #   steps:
-  #     - IN: sn-al-ship-gke-man
-  #     - IN: sn-al-ship-gke-cluster
-  #
-  #
-  # - name: sn-al-ship-ddc-man
-  #   type: manifest
-  #   steps:
-  #     - IN: sn-al-ship-ep
-  #     - IN: sn-al-ship-docker-opts-3
-  #     - IN: sn-al-ship-ddc-trigger
-  #
-  # - name: sn-al-ship-ddc-dep
-  #   type: deploy
-  #   steps:
-  #     - IN: sn-al-ship-ddc-man
-  #     - IN: sn-al-ship-ddc-cluster
-  #
-  # - name: sn-al-ship-ecs-man-bg
-  #   type: manifest
-  #   steps:
-  #     - IN: sn-al-ship-myapp3
-  #     - IN: sn-al-ship-do
-  #     - IN: sn-al-ship-ecs-trigger
-  #
-  # - name: sn-al-ship-ecs-deploy-bg
-  #   type: deploy
-  #   steps:
-  #     - IN: sn-al-ship-ecs-man-bg
-  #     - IN: sn-al-ship-ecs-cluster
+  #     - IN: sn-rc-ship-ecs-man-bg
+  #     - IN: sn-rc-ship-ecs-cluster
   #     - IN: q-lb-loadbalancer1
   #       applyTo:
-  #         - manifest: sn-al-ship-ecs-man-bg
-  #           image: sn-al-ship-myapp3
+  #         - manifest: sn-rc-ship-ecs-man-bg
+  #           image: sn-rc-ship-myapp3
   #           port: 80
