@@ -53,3 +53,8 @@ triggers:
     type: trigger
     version:
       counter: 3
+
+  - name: sn-rc-ship-dcl-trigger
+    type: trigger
+    version:
+      counter: 3
