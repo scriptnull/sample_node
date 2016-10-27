@@ -128,11 +128,11 @@ resources:
   #     recipients:
   #       - "#scriptnull-test"
   #
-  # - name: sn-rc-ship-params
-  #   type: params
-  #   version:
-  #     params:
-  #       MONGO_API_URL: "xxx:28017"
+  - name: sn-rc-ship-params
+    type: params
+    version:
+      params:
+        MONGO_API_URL: "xxx:28017"
   #
   # - name: sn-rc-ship-params-2
   #   type: params

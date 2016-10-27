@@ -89,6 +89,10 @@ jobs:
     steps:
       - IN: sn-rc-ship-version
       - IN: sn-rc-ship-release-trigger
+      - IN: sn-rc-ship-docker-opts-2
+      - IN: sn-rc-ship-replicas
+      - IN: sn-rc-ship-dk
+      - IN: sn-rc-ship-params
       - TASK: managed
         bump: patch
 
