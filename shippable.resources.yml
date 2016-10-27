@@ -52,6 +52,11 @@ resources:
       labels:
         hi: world
 
+  - name: sn-rc-ship-version
+    type: version
+    seed:
+      versionName: "0.0.1"
+
   # - name: sn-rc-ship-docker-opts-3
   #   type: dockerOptions
   #   version:
