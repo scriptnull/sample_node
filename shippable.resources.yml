@@ -17,14 +17,14 @@ resources:
     seed:
       versionName: "myapp2" # exposes server in port 3000
 
-  - name: sn-rc-ship-dk
-    type: image
-    integration: scriptnull-docker
-    pointer:
-      sourceName: "scriptnull/debian"
-      isPull: true
-    seed:
-      versionName: "driftking"
+  # - name: sn-rc-ship-dk
+  #   type: image
+  #   integration: scriptnull-docker
+  #   pointer:
+  #     sourceName: "scriptnull/debian"
+  #     isPull: true
+  #   seed:
+  #     versionName: "driftking"
 
   - name: sn-rc-ship-ep
     type: image
