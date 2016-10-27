@@ -87,7 +87,7 @@ jobs:
   - name: sn-rc-ship-rel-man-xx
     type: manifest
     steps:
-      - IN: sn-rc-ship-myapp2
+      - IN: sn-rc-ship-myapp3
 
   - name: sn-rc-ship-dcl-dep-yy
     type: deploy
