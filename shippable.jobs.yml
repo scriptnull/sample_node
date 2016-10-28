@@ -61,7 +61,7 @@ jobs:
   - name: sn-al-ship-ddc-man
     type: manifest
     steps:
-      - IN: sn-al-ship-ep
+      - IN: sn-al-ship-dk
       - IN: sn-al-ship-ddc-trigger
 
   - name: sn-al-ship-ddc-dep
