@@ -123,12 +123,26 @@ jobs:
       - IN: sn-al-ship-ddc-man-zz
       - IN: sn-al-ship-ddc-cluster
 
-  - name: sn-al-ship-release-zz-1
+  - name: sn-al-ship-release-zz-2
     type: release
     steps:
       - IN: sn-al-ship-ddc-dep-zz
+      - IN: sn-al-ship-version
       - TASK: managed
         bump: alpha
+
+  - name: sn-al-ship-ddc-dep-zz-3
+    type: deploy
+    steps:
+      - IN: sn-al-ship-release-zz-2
+      - IN: sn-al-ship-ddc-cluster
+
+  - name: sn-al-ship-release-zz-3
+    type: release
+    steps:
+      - IN: n-al-ship-ddc-dep-zz-3
+      - TASK: managed
+        bump: beta
 
   # - name: sn-al-ship-beta-ddc
   #   type: deploy
