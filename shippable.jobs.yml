@@ -129,7 +129,7 @@ jobs:
       - IN: sn-al-ship-ddc-dep-zz
       - IN: sn-al-ship-version
       - TASK: managed
-        bump: alpha
+        bump: major
 
   - name: sn-al-ship-ddc-dep-zz-3
     type: deploy
