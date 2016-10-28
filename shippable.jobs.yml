@@ -76,6 +76,14 @@ jobs:
       - IN: sn-al-ship-ddc-dep
       - IN: sn-al-ship-version
 
+  - name: sn-al-ship-release-man
+    type: release
+    steps:
+      - IN: sn-al-ship-version
+      - IN: sn-al-ship-ddc-man
+      - TASK: managed
+        bump: patch
+
   #
   # - name: sn-al-ship-ecs-man-bg
   #   type: manifest
