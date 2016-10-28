@@ -117,10 +117,16 @@ jobs:
     steps:
       - IN: sn-al-ship-dk
 
-  - name: sn-al-ship-release-zz
-    type: release
+  - name: sn-al-ship-ddc-dep-zz
+    type: deploy
     steps:
       - IN: sn-al-ship-ddc-man-zz
+      - IN: sn-al-ship-ddc-cluster
+
+  - name: sn-al-ship-release-zz-1
+    type: release
+    steps:
+      - IN: sn-al-ship-ddc-dep-zz
       - TASK: managed
         bump: alpha
 
