@@ -140,7 +140,7 @@ jobs:
   - name: sn-al-ship-release-zz-3
     type: release
     steps:
-      - IN: n-al-ship-ddc-dep-zz-3
+      - IN: sn-al-ship-ddc-dep-zz-3
       - TASK: managed
         bump: beta
 
