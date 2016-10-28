@@ -93,6 +93,7 @@ jobs:
     type: release
     steps:
       - IN: sn-al-ship-beta-version
+      - IN: sn-al-ship-beta-ddc
       - TASK: managed
         bump: major
 
