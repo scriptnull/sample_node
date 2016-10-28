@@ -82,6 +82,8 @@ jobs:
     type: release
     steps:
       - IN: sn-al-ship-ddc-dep-xx
+      - TASK: managed
+        bump: major
 
   # - name: sn-al-ship-beta-ddc
   #   type: deploy
