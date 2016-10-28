@@ -115,7 +115,7 @@ jobs:
   - name: sn-al-ship-ddc-man-zz
     type: manifest
     steps:
-      - IN: sn-al-ship-dk
+      - IN: sn-al-ship-ep
 
   - name: sn-al-ship-ddc-dep-zz
     type: deploy
