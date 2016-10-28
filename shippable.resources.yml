@@ -208,4 +208,4 @@ resources:
   - name: sn-version
     type: version
     seed:
-      version: 0.0.0
+      versionName: 0.0.0
