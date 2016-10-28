@@ -74,6 +74,7 @@ jobs:
     type: release
     steps:
       - IN: sn-al-ship-ddc-dep
+      - IN: sn-al-ship-version
 
   #
   # - name: sn-al-ship-ecs-man-bg
