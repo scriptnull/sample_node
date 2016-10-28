@@ -64,19 +64,7 @@ jobs:
       - IN: sn-al-ship-ep
       - IN: sn-al-ship-ddc-trigger
 
-  - name: sn-al-ship-ddc-dep
-    type: deploy
-    steps:
-      - IN: sn-al-ship-ddc-man
-      - IN: sn-al-ship-ddc-cluster
-
-  - name: sn-al-ship-release-ddc
-    type: release
-    steps:
-      - IN: sn-al-ship-ddc-dep
-      - IN: sn-al-ship-version
-
-  - name: sn-al-ship-release-man
+  - name: sn-al-ship-release-man-1
     type: release
     steps:
       - IN: sn-al-ship-version
@@ -84,19 +72,32 @@ jobs:
       - TASK: managed
         bump: patch
 
-  - name: sn-al-ship-beta-ddc
-    type: deploy
-    steps:
-      - IN: sn-al-ship-release-ddc
-      - IN: sn-al-ship-ddc-cluster
+  # - name: sn-al-ship-ddc-dep
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-al-ship-ddc-man
+  #     - IN: sn-al-ship-ddc-cluster
 
-  - name: sn-al-ship-beta-release-1
-    type: release
-    steps:
-      - IN: sn-al-ship-beta-version
-      - IN: sn-al-ship-beta-ddc
-      - TASK: managed
-        bump: beta
+  # - name: sn-al-ship-release-ddc
+  #   type: release
+  #   steps:
+  #     - IN: sn-al-ship-ddc-dep
+  #     - IN: sn-al-ship-version
+
+  #
+  # - name: sn-al-ship-beta-ddc
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-al-ship-release-ddc
+  #     - IN: sn-al-ship-ddc-cluster
+  #
+  # - name: sn-al-ship-beta-release-1
+  #   type: release
+  #   steps:
+  #     - IN: sn-al-ship-beta-version
+  #     - IN: sn-al-ship-beta-ddc
+  #     - TASK: managed
+  #       bump: beta
 
   # - name: sn-al-ship-ecs-man-bg
   #   type: manifest
