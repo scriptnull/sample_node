@@ -204,3 +204,8 @@ resources:
   #     count: 2
   #   flags:
   #     - replicas
+
+  - name: sn-version
+    type: version
+    seed:
+      version: 0.0.0

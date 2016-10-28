@@ -67,6 +67,14 @@ jobs:
       - IN: sn-tri-man
       - IN: sn-tri-cluster
 
+  - name: sn-release
+    type: release
+    steps:
+      - IN: sn-version
+      - IN: sn-tri-dep-1
+      - TASK: managed
+        bump: patch
+
   # - name: sn-tri-dep-upgrade
   #   type: deploy
   #   steps:
