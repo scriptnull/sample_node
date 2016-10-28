@@ -14,25 +14,25 @@ triggers:
   #   version:
   #     counter: 43
   #
-  # - name: sn-tm-trigger
-  #   type: trigger
-  #   version:
-  #     counter: 24
-  #
-  - name: sn-ddc-trigger
-    type: trigger
-    version:
-      counter: 17
-  #
-  - name: sn-gke-trigger
-    type: trigger
-    version:
-      counter: 10
-  #
-  - name: sn-ecs-trigger
+  - name: sn-tm-trigger
     type: trigger
     version:
       counter: 24
+  #
+  # - name: sn-ddc-trigger
+  #   type: trigger
+  #   version:
+  #     counter: 17
+  # #
+  # - name: sn-gke-trigger
+  #   type: trigger
+  #   version:
+  #     counter: 10
+  # #
+  # - name: sn-ecs-trigger
+  #   type: trigger
+  #   version:
+  #     counter: 24
 
   # - name: sn-ecs-lb-trigger
   #   type: trigger
