@@ -149,4 +149,4 @@ resources:
   - name: sn-al-ship-beta-version
     type: version
     seed:
-      versionName: 0.0.0-beta
+      versionName: 0.0.0

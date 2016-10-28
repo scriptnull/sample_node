@@ -90,13 +90,13 @@ jobs:
       - IN: sn-al-ship-release-ddc
       - IN: sn-al-ship-ddc-cluster
 
-  - name: sn-al-ship-beta-release
+  - name: sn-al-ship-beta-release-1
     type: release
     steps:
       - IN: sn-al-ship-beta-version
       - IN: sn-al-ship-beta-ddc
       - TASK: managed
-        bump: major
+        bump: beta
 
   #
   # - name: sn-al-ship-ecs-man-bg
