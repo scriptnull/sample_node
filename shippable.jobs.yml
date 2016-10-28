@@ -84,6 +84,15 @@ jobs:
       - TASK: managed
         bump: patch
 
+  - name: sn-al-ship-beta-ddc
+    type: deploy
+    steps:
+      - IN: sn-al-ship-release-ddc
+      - IN: sn-al-ship-beta-version
+      - TASK: managed
+        bump: major
+
+
   #
   # - name: sn-al-ship-ecs-man-bg
   #   type: manifest
