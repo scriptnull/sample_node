@@ -87,24 +87,24 @@ resources:
   #     portMappings:
   #       - "80:8080"
   #
-  # - name: sn-al-ship-ddc-cluster
-  #   type: cluster
-  #   integration: scriptnull-ddc
-  #   pointer:
-  #     sourceName : "something" #name of the cluster we are deploying
-  #     region: "us-west-2"
-
-  - name: sn-al-ship-ecs-cluster
+  - name: sn-al-ship-ddc-cluster
     type: cluster
-    integration: scriptnull-aws
+    integration: scriptnull-ddc
     pointer:
-      sourceName : "default" #name of the cluster we are deploying
+      sourceName : "something" #name of the cluster we are deploying
       region: "us-west-2"
 
-  - name: sn-al-ship-lb-1
-    type: loadBalancer
-    pointer:
-      sourceName: EC2Contai-EcsElast-GPCOXIIKWPUJ
+  # - name: sn-al-ship-ecs-cluster
+  #   type: cluster
+  #   integration: scriptnull-aws
+  #   pointer:
+  #     sourceName : "default" #name of the cluster we are deploying
+  #     region: "us-west-2"
+  #
+  # - name: sn-al-ship-lb-1
+  #   type: loadBalancer
+  #   pointer:
+  #     sourceName: EC2Contai-EcsElast-GPCOXIIKWPUJ
   #
   # - name: q-lb-loadbalancer1
   #   type: loadBalancer
