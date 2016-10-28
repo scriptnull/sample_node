@@ -85,6 +85,33 @@ jobs:
       - TASK: managed
         bump: beta
 
+  - name: sn-al-ship-ddc-man-yy
+    type: manifest
+    steps:
+      - IN: sn-al-ship-dk
+
+  - name: sn-al-ship-release-ddc-yy-1
+    type: release
+    steps:
+      - IN: sn-al-ship-version
+      - IN: sn-al-ship-ddc-man-yy
+      - TASK: managed
+        bump: major
+
+  - name: sn-al-ship-release-ddc-yy-2
+    type: release
+    steps:
+      - IN: sn-al-ship-release-ddc-yy-1
+      - TASK: managed
+        bump: alpha
+
+  - name: sn-al-ship-release-ddc-yy-3
+    type: release
+    steps:
+      - IN: sn-al-ship-release-ddc-yy-2
+      - TASK: managed
+        bump: beta
+
   # - name: sn-al-ship-beta-ddc
   #   type: deploy
   #   steps:
