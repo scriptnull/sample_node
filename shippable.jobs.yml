@@ -75,7 +75,7 @@ jobs:
   - name: sn-al-ship-ddc-dep-xx
     type: deploy
     steps:
-      - IN: sn-al-ship-ddc-man-xx
+      - IN: sn-al-ship-release-man-xx
       - IN: sn-al-ship-ddc-cluster
 
   - name: sn-al-ship-release-ddc-xx
@@ -83,7 +83,7 @@ jobs:
     steps:
       - IN: sn-al-ship-ddc-dep-xx
       - TASK: managed
-        bump: major
+        bump: beta
 
   # - name: sn-al-ship-beta-ddc
   #   type: deploy
