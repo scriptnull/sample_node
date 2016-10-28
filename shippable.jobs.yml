@@ -88,10 +88,13 @@ jobs:
     type: deploy
     steps:
       - IN: sn-al-ship-release-ddc
+
+  - name: sn-al-ship-beta-release
+    type: release
+    steps:
       - IN: sn-al-ship-beta-version
       - TASK: managed
         bump: major
-
 
   #
   # - name: sn-al-ship-ecs-man-bg
