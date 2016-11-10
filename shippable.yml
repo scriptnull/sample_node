@@ -10,4 +10,4 @@ build:
     - mkdir -p shippable/testresults
     - mkdir -p shippable/codecoverage
     # - mvn install
-    - cp -r target shippable/codecoverage
+    - cp target/site/jacoco/jacoco.xml shippable/codecoverage/jacoco.xml
