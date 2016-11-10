@@ -9,5 +9,6 @@ build:
     # Create folders for test and code coverage
     - mkdir -p shippable/testresults
     - mkdir -p shippable/codecoverage
+    - cp -r target shippable/codecoverage/
     # - mvn install
-    - cp target/site/jacoco/jacoco.xml shippable/codecoverage/jacoco.xml
+    # - cp target/site/jacoco/jacoco.xml shippable/codecoverage/jacoco.xml
