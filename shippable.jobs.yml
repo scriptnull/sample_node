@@ -1,24 +1,17 @@
 jobs:
-  # - name: sn-ecs-man
-  #   type: manifest
-  #   steps:
-  #     - IN: sn-myapp2
-  #     - IN: sn-docker-myapp2-80
-  #     - IN: sn-ecs-trigger
+  - name: sn-ecs-man
+    type: manifest
+    steps:
+      - IN: sn-myapp2
+      - IN: sn-ecs-trigger
   #
-  # - name: sn-ecs-dep-1
-  #   type: deploy
-  #   steps:
-  #     - IN: sn-ecs-man
-  #     - IN: sn-ecs-cluster
-  #     - IN: lb-1
-  #       applyTo:
-  #         - manifest: sn-ecs-man
-  #           image: sn-myapp2
-  #           port: 3000
-  #     - TASK: managed
-  #       deployMethod: replace
-
+  - name: sn-ecs-dep-1
+    type: deploy
+    steps:
+      - IN: sn-ecs-man
+      - IN: sn-ecs-cluster
+      - TASK: managed
+        deployMethod: upgrade
 
   # - name: sn-man-jfrog
   #   type: manifest
@@ -54,25 +47,25 @@ jobs:
   #     - IN: sn-cluster
   #     - TASK:
   #         - script: xkcd
-
-  - name: sn-tri-man
-    type: manifest
-    steps:
-      - IN: sn-private-image
-      - IN: sn-tm-trigger
-
-  - name: sn-tri-dep-1
-    type: deploy
-    steps:
-      - IN: sn-tri-man
-      - IN: sn-tri-cluster
-
-  - name: sn-release-1
-    type: release
-    steps:
-      - IN: sn-tri-dep-1
-      - TASK: managed
-        bump: patch
+  #
+  # - name: sn-tri-man
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-private-image
+  #     - IN: sn-tm-trigger
+  #
+  # - name: sn-tri-dep-1
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-tri-man
+  #     - IN: sn-tri-cluster
+  #
+  # - name: sn-release-1
+  #   type: release
+  #   steps:
+  #     - IN: sn-tri-dep-1
+  #     - TASK: managed
+  #       bump: patch
 
   # - name: sn-tri-dep-upgrade
   #   type: deploy
