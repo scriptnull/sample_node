@@ -83,7 +83,7 @@ resources:
   - name: sn-al-ship-do
     type: dockerOptions
     version:
-      memory: 50
+      memory: 60
       portMappings:
         - "80:3000"
 
