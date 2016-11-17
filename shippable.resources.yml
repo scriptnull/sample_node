@@ -122,6 +122,12 @@ resources:
       portMappings:
         - "8080:3000"
 
+  - name: sn-docker-opts
+    type: dockerOptions
+    version:
+      memory: 50
+
+
   #
   # - name: sn-secure-params
   #   type: params
