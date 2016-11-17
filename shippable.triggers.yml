@@ -32,7 +32,7 @@ triggers:
   - name: sn-ecs-trigger
     type: trigger
     version:
-      counter: 28
+      counter: 29
 
   # - name: sn-ecs-lb-trigger
   #   type: trigger
