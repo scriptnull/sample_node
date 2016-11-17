@@ -1,23 +1,18 @@
 jobs:
-  # - name: sn-al-ship-man
-  #   type: manifest
-  #   steps:
-  #     - IN: sn-al-ship-myapp3
-  #     - IN: sn-al-ship-docker-opts-2
-  #     - IN: sn-al-ship-trigger-1
-  #
-  # - name: sn-al-ship-ecs-dep-2
-  #   type: deploy
-  #   steps:
-  #     - IN: sn-al-ship-man
-  #     - IN: sn-al-ship-ecs-cluster
-  #     - IN: sn-al-ship-lb-1
-  #       applyTo:
-  #         - manifest: sn-al-ship-man
-  #           image: sn-al-ship-myapp3
-  #           port: 80
-  #     - TASK: managed
-  #       deployMethod: replace
+  - name: sn-al-ship-man
+    type: manifest
+    steps:
+      - IN: sn-al-ship-myapp2
+      - IN: sn-al-ship-do
+      - IN: sn-al-ship-trigger-1
+
+  - name: sn-al-ship-ecs-dep-2
+    type: deploy
+    steps:
+      - IN: sn-al-ship-man
+      - IN: sn-al-ship-ecs-cluster
+      - TASK: managed
+        deployMethod: upgrade
 
   # - name: sn-al-ship-tri-man
   #   type: manifest
@@ -58,101 +53,101 @@ jobs:
   #     - IN: sn-al-ship-gke-cluster
   #
   #
-  - name: sn-al-ship-ddc-man-xx
-    type: manifest
-    steps:
-      - IN: sn-al-ship-ep
-      - IN: sn-al-ship-ddc-trigger
+  # - name: sn-al-ship-ddc-man-xx
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-al-ship-ep
+  #     - IN: sn-al-ship-ddc-trigger
+  #
+  # - name: sn-al-ship-release-man-xx
+  #   type: release
+  #   steps:
+  #     - IN: sn-al-ship-version
+  #     - IN: sn-al-ship-ddc-man-xx
+  #     - TASK: managed
+  #       bump: patch
 
-  - name: sn-al-ship-release-man-xx
-    type: release
-    steps:
-      - IN: sn-al-ship-version
-      - IN: sn-al-ship-ddc-man-xx
-      - TASK: managed
-        bump: patch
-
-  - name: sn-al-ship-ddc-dep-xx
-    type: deploy
-    steps:
-      - IN: sn-al-ship-release-man-xx
-      - IN: sn-al-ship-ddc-cluster
-
-  - name: sn-al-ship-release-ddc-xx
-    type: release
-    steps:
-      - IN: sn-al-ship-ddc-dep-xx
-      - TASK: managed
-        bump: beta
-
-  - name: sn-al-ship-ddc-man-yy
-    type: manifest
-    steps:
-      - IN: sn-al-ship-dk
-
-  - name: sn-al-ship-release-ddc-yy-1
-    type: release
-    steps:
-      - IN: sn-al-ship-version
-      - IN: sn-al-ship-ddc-man-yy
-      - TASK: managed
-        bump: major
-
-  - name: sn-al-ship-release-ddc-yy-2
-    type: release
-    steps:
-      - IN: sn-al-ship-release-ddc-yy-1
-      - TASK: managed
-        bump: alpha
-
-  - name: sn-al-ship-release-ddc-yy-3
-    type: release
-    steps:
-      - IN: sn-al-ship-release-ddc-yy-2
-      - TASK: managed
-        bump: beta
-
-  - name: sn-al-ship-ddc-man-zz
-    type: manifest
-    steps:
-      - IN: sn-al-ship-ep
-
-  - name: sn-al-ship-ddc-dep-zz
-    type: deploy
-    steps:
-      - IN: sn-al-ship-ddc-man-zz
-      - IN: sn-al-ship-ddc-cluster
-
-  - name: sn-al-ship-release-zz-2
-    type: release
-    steps:
-      - IN: sn-al-ship-ddc-dep-zz
-      - IN: sn-al-ship-version
-      - TASK: managed
-        bump: major
-
-  - name: sn-al-ship-ddc-dep-zz-3
-    type: deploy
-    steps:
-      - IN: sn-al-ship-release-zz-2
-      - IN: sn-al-ship-ddc-cluster
-
-  - name: sn-al-ship-release-zz-3
-    type: release
-    steps:
-      - IN: sn-al-ship-ddc-dep-zz-3
-      - TASK: managed
-        bump: beta
-
-
-  - name: sn-al-ship-release-star-wars
-    type: release
-    steps:
-      - IN: sn-al-ship-release-ddc-yy-3
-      - IN: sn-al-ship-release-zz-3
-      - IN: sn-al-ship-version
-      - TASK: managed
-        bump: major
+  # - name: sn-al-ship-ddc-dep-xx
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-al-ship-release-man-xx
+  #     - IN: sn-al-ship-ddc-cluster
+  #
+  # - name: sn-al-ship-release-ddc-xx
+  #   type: release
+  #   steps:
+  #     - IN: sn-al-ship-ddc-dep-xx
+  #     - TASK: managed
+  #       bump: beta
+  #
+  # - name: sn-al-ship-ddc-man-yy
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-al-ship-dk
+  #
+  # - name: sn-al-ship-release-ddc-yy-1
+  #   type: release
+  #   steps:
+  #     - IN: sn-al-ship-version
+  #     - IN: sn-al-ship-ddc-man-yy
+  #     - TASK: managed
+  #       bump: major
+  #
+  # - name: sn-al-ship-release-ddc-yy-2
+  #   type: release
+  #   steps:
+  #     - IN: sn-al-ship-release-ddc-yy-1
+  #     - TASK: managed
+  #       bump: alpha
+  #
+  # - name: sn-al-ship-release-ddc-yy-3
+  #   type: release
+  #   steps:
+  #     - IN: sn-al-ship-release-ddc-yy-2
+  #     - TASK: managed
+  #       bump: beta
+  #
+  # - name: sn-al-ship-ddc-man-zz
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-al-ship-ep
+  #
+  # - name: sn-al-ship-ddc-dep-zz
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-al-ship-ddc-man-zz
+  #     - IN: sn-al-ship-ddc-cluster
+  #
+  # - name: sn-al-ship-release-zz-2
+  #   type: release
+  #   steps:
+  #     - IN: sn-al-ship-ddc-dep-zz
+  #     - IN: sn-al-ship-version
+  #     - TASK: managed
+  #       bump: major
+  #
+  # - name: sn-al-ship-ddc-dep-zz-3
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-al-ship-release-zz-2
+  #     - IN: sn-al-ship-ddc-cluster
+  #
+  # - name: sn-al-ship-release-zz-3
+  #   type: release
+  #   steps:
+  #     - IN: sn-al-ship-ddc-dep-zz-3
+  #     - TASK: managed
+  #       bump: beta
+  #
+  #
+  # - name: sn-al-ship-release-star-wars
+  #   type: release
+  #   steps:
+  #     - IN: sn-al-ship-release-ddc-yy-3
+  #     - IN: sn-al-ship-release-zz-3
+  #     - IN: sn-al-ship-version
+  #     - TASK: managed
+  #       bump: major
 
   # - name: sn-al-ship-beta-ddc
   #   type: deploy

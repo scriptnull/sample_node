@@ -80,26 +80,26 @@ resources:
   #     sourceName : "small-cluster" #name of the cluster we are deploying
   #     region : "us-east1-d"
 
-  # - name: sn-al-ship-do
-  #   type: dockerOptions
-  #   version:
-  #     memory: 1000
-  #     portMappings:
-  #       - "80:8080"
+  - name: sn-al-ship-do
+    type: dockerOptions
+    version:
+      memory: 50
+      portMappings:
+        - "80:3000"
   #
-  - name: sn-al-ship-ddc-cluster
-    type: cluster
-    integration: scriptnull-ddc
-    pointer:
-      sourceName : "something" #name of the cluster we are deploying
-      region: "us-west-2"
-
-  # - name: sn-al-ship-ecs-cluster
+  # - name: sn-al-ship-ddc-cluster
   #   type: cluster
-  #   integration: scriptnull-aws
+  #   integration: scriptnull-ddc
   #   pointer:
-  #     sourceName : "default" #name of the cluster we are deploying
+  #     sourceName : "something" #name of the cluster we are deploying
   #     region: "us-west-2"
+
+  - name: sn-al-ship-ecs-cluster
+    type: cluster
+    integration: scriptnull-aws
+    pointer:
+      sourceName : "default" #name of the cluster we are deploying
+      region: "us-west-2"
   #
   # - name: sn-al-ship-lb-1
   #   type: loadBalancer
@@ -140,13 +140,3 @@ resources:
   #   version:
   #     user:
   #       - "abcd"
-
-  - name: sn-al-ship-version
-    type: version
-    seed:
-      versionName: 0.0.0
-
-  - name: sn-al-ship-beta-version
-    type: version
-    seed:
-      versionName: 0.0.0
