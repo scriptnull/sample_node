@@ -4,6 +4,7 @@ jobs:
     steps:
       - IN: sn-al-ship-myapp2
       - IN: sn-al-ship-do
+      - IN: sn-al-ship-scaler
       - IN: sn-al-ship-trigger-1
 
   - name: sn-al-ship-ecs-dep-2
