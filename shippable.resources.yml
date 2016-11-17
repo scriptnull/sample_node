@@ -205,12 +205,12 @@ resources:
   #     sourceName : "something" #name of the cluster we are deploying
   #     region: "us-west-2"
   #
-  # - name: sn-scaler
-  #   type: replicas
-  #   version:
-  #     count: 2
-  #   flags:
-  #     - replicas
+  - name: sn-scaler
+    type: replicas
+    version:
+      count: 2
+    flags:
+      - replicas
 
   # - name: sn-version
   #   type: version
