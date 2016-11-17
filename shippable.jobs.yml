@@ -7,7 +7,7 @@ jobs:
       - IN: sn-scaler
       - IN: sn-ecs-trigger
 
-  - name: sn-ecs-dep-2
+  - name: sn-ecs-dep-3
     type: deploy
     steps:
       - IN: sn-ecs-man
