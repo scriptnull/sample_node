@@ -94,40 +94,40 @@ resources:
     seed:
       versionName: "latest"
 
-  - name: sn-docker-myapp3-80
-    type: dockerOptions
-    version:
-      portMappings:
-        - "80:80"
-      labels:
-        hi: baby
+  # - name: sn-docker-myapp3-80
+  #   type: dockerOptions
+  #   version:
+  #     portMappings:
+  #       - "80:80"
+  #     labels:
+  #       hi: baby
 
-  - name: sn-docker-myapp3-8080
-    type: dockerOptions
-    version:
-      portMappings:
-        - "8080:80"
+  # - name: sn-docker-myapp3-8080
+  #   type: dockerOptions
+  #   version:
+  #     portMappings:
+  #       - "8080:80"
 
-  - name: sn-docker-myapp2-80
-    type: dockerOptions
-    version:
-      portMappings:
-        - "80:3000"
-      labels:
-        hi: handsome
+  # - name: sn-docker-myapp2-80
+  #   type: dockerOptions
+  #   version:
+  #     portMappings:
+  #       - "80:3000"
+  #     labels:
+  #       hi: handsome
 
-  - name: sn-docker-myapp2-8080
-    type: dockerOptions
-    version:
-      portMappings:
-        - "8080:3000"
+  # - name: sn-docker-myapp2-8080
+  #   type: dockerOptions
+  #   version:
+  #     portMappings:
+  #       - "8080:3000"
 
-  - name: sn-docker-opts
-    type: dockerOptions
-    version:
-      memory: 60
-      portMappings:
-        - "80:3000"
+  # - name: sn-docker-opts
+  #   type: dockerOptions
+  #   version:
+  #     memory: 60
+  #     portMappings:
+  #       - "80:3000"
 
   #
   # - name: sn-secure-params
@@ -155,12 +155,12 @@ resources:
   #       # # CAT="name is \" tom" MOUSE= name is jerry DOG="name is tommy" CATS=" tom and jerry"
   #       # secure: KUrYEAgmSe0lbOfodyrWOecDiz2JzDGSE6ZVYFQVpwgcrG8+beO8ZJ8lCxL+LnkusON40xZvvfmr9CqbVZtBogtnFVxMioX14pKWrpqk8JGkL7Oe2DICbuhGg/xNzw9LpsFeg/EdF8GzjQfKnX8biB7CdefN79VorkipnlSrYFXjjd48emzc42G7rrxcsYuJSJJ5NDCAcJbBfGvd0z43u76kkcw8tTbcZysEb0pBsEolcUSBFcHrkgT8je4dAaiVoigp0LLFvTuEQ70x22Y/YxqqZ5J1AN0TaFrGvJ+XoZ6b6lCUCte3jz1Uf58PrQQ/tf7+pgGFHmm32zGoBXtwyQ==
   #
-  - name: sn-ecs-cluster
-    type: cluster
-    integration: scriptnull-aws
-    pointer:
-      sourceName : "default" #name of the cluster we are deploying
-      region: "us-west-2"
+  # - name: sn-ecs-cluster
+  #   type: cluster
+  #   integration: scriptnull-aws
+  #   pointer:
+  #     sourceName : "default" #name of the cluster we are deploying
+  #     region: "us-west-2"
   #
   # - name: lb-1
   #   type: loadBalancer
@@ -205,12 +205,12 @@ resources:
   #     sourceName : "something" #name of the cluster we are deploying
   #     region: "us-west-2"
   #
-  - name: sn-scaler
-    type: replicas
-    version:
-      count: 2
-    flags:
-      - replicas
+  # - name: sn-scaler
+  #   type: replicas
+  #   version:
+  #     count: 2
+  #   flags:
+  #     - replicas
 
   # - name: sn-version
   #   type: version
