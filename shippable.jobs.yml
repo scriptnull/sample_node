@@ -3,6 +3,7 @@ jobs:
     type: manifest
     steps:
       - IN: sn-myapp2
+      - IN: sn-ecs-trigger
       # - IN: sn-docker-opts
       # - IN: sn-scaler
       # - IN: sn-ecs-trigger
@@ -11,6 +12,14 @@ jobs:
     type: manifest
     steps:
       - IN: sn-myapp2
+
+  # - name: sn-ecs-dep
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-ecs-man
+  #     - IN: sn-ecs-cluster
+  #     - TASK: managed
+  #       deployMethod: upgraded
 
   # - name: sn-ecs-dep-4
   #   type: deploy
