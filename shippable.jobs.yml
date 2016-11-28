@@ -3,7 +3,7 @@ jobs:
     type: manifest
     steps:
       - IN: sn-myapp2
-      - IN: sn-ecs-trigger
+      # - IN: sn-ecs-trigger
       # - IN: sn-docker-opts
       # - IN: sn-scaler
       # - IN: sn-ecs-trigger
