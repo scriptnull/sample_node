@@ -5,7 +5,7 @@ jobs:
       - IN: sn-myapp2
       # - IN: sn-ecs-trigger
       # - IN: sn-docker-opts
-      # - IN: sn-scaler
+      - IN: sn-scaler-aaaaaa
       # - IN: sn-ecs-trigger
   #
   - name: sn-ecs-man-3
