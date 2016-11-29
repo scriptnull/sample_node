@@ -95,12 +95,12 @@ resources:
   #     - replicas
 
   #
-  # - name: sn-al-ship-ddc-cluster
-  #   type: cluster
-  #   integration: scriptnull-ddc
-  #   pointer:
-  #     sourceName : "something" #name of the cluster we are deploying
-  #     region: "us-west-2"
+  - name: sn-al-ship-ddc-cluster
+    type: cluster
+    integration: scriptnull-ddc
+    pointer:
+      sourceName : "something" #name of the cluster we are deploying
+      region: "us-west-2"
 
   # - name: sn-al-ship-ecs-cluster
   #   type: cluster

@@ -181,3 +181,20 @@ jobs:
   #         - manifest: sn-al-ship-ecs-man-bg
   #           image: sn-al-ship-myapp3
   #           port: 80
+
+
+  - name: sn-al-ship-ddc-man
+    type: manifest
+    steps:
+      - IN: sn-al-ship-ddc-trigger
+
+  - name: sn-al-ship-ddc-man-1
+    type: manifest
+    steps:
+      - IN: sn-al-ship-ddc-trigger
+  #
+  - name: sn-al-ship-ddc-dep
+    type: deploy
+    steps:
+      - IN: sn-al-ship-ddc-man
+      - IN: sn-al-ship-ddc-cluster
