@@ -212,11 +212,11 @@ jobs:
     type: manifest
     steps:
       # - IN: sn-dk
-      - IN: sn-dcl-trigger
+      - IN: sn-al-ship-dcl-trigger
 
   - name: sn-al-ship-dcl-dep
     type: deploy
     steps:
       - IN: sn-al-ship-dcl-man
       - IN: sn-al-ship-dcl-man-1
-      - IN: sn-dcl-cluster
+      - IN: sn-al-ship-dcl-cluster
