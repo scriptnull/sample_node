@@ -43,7 +43,7 @@ resources:
       isPull: true
     seed:
       versionName: "latest"
-  #
+
   # - name: sn-al-ship-docker-opts-2
   #   type: dockerOptions
   #   version:
@@ -101,6 +101,13 @@ resources:
     pointer:
       sourceName : "something" #name of the cluster we are deploying
       region: "us-west-2"
+
+
+  - name: sn-al-ship-dcl-cluster
+    type: cluster
+    integration: scriptnull-dcl
+    pointer:
+      sourceName : "default" #name of the cluster we are deploying
 
   # - name: sn-al-ship-ecs-cluster
   #   type: cluster

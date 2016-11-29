@@ -39,6 +39,11 @@ triggers:
     version:
       counter: 6
 
+  - name: sn-al-ship-dcl-trigger
+    type: trigger
+    version:
+      counter: 1
+
   - name: sn-al-ship-ecs-trigger
     type: trigger
     version:
