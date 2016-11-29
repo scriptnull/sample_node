@@ -43,14 +43,14 @@ resources:
       isPull: true
     seed:
       versionName: "latest"
-
-  - name: sn-al-ship-docker-opts-2
-    type: dockerOptions
-    version:
-      portMappings:
-        - "80:80"
-      labels:
-        hi: world
+  #
+  # - name: sn-al-ship-docker-opts-2
+  #   type: dockerOptions
+  #   version:
+  #     portMappings:
+  #       - "80:80"
+  #     labels:
+  #       hi: world
 
   # - name: sn-al-ship-docker-opts-3
   #   type: dockerOptions
@@ -80,19 +80,19 @@ resources:
   #     sourceName : "small-cluster" #name of the cluster we are deploying
   #     region : "us-east1-d"
 
-  - name: sn-al-ship-do
-    type: dockerOptions
-    version:
-      memory: 60
-      portMappings:
-        - "80:3000"
-
-  - name: sn-al-ship-scaler
-    type: replicas
-    version:
-      count: 2
-    flags:
-      - replicas
+  # - name: sn-al-ship-do
+  #   type: dockerOptions
+  #   version:
+  #     memory: 60
+  #     portMappings:
+  #       - "80:3000"
+  #
+  # - name: sn-al-ship-scaler
+  #   type: replicas
+  #   version:
+  #     count: 2
+  #   flags:
+  #     - replicas
 
   #
   # - name: sn-al-ship-ddc-cluster
@@ -102,12 +102,12 @@ resources:
   #     sourceName : "something" #name of the cluster we are deploying
   #     region: "us-west-2"
 
-  - name: sn-al-ship-ecs-cluster
-    type: cluster
-    integration: scriptnull-aws
-    pointer:
-      sourceName : "default" #name of the cluster we are deploying
-      region: "us-west-2"
+  # - name: sn-al-ship-ecs-cluster
+  #   type: cluster
+  #   integration: scriptnull-aws
+  #   pointer:
+  #     sourceName : "default" #name of the cluster we are deploying
+  #     region: "us-west-2"
   #
   # - name: sn-al-ship-lb-1
   #   type: loadBalancer
