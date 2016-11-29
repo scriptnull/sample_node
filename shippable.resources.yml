@@ -204,6 +204,13 @@ resources:
     pointer:
       sourceName : "something" #name of the cluster we are deploying
       region: "us-west-2"
+
+  - name: sn-dcl-cluster
+    type: cluster
+    integration: scriptnull-ddc
+    pointer:
+      sourceName : "something" #name of the cluster we are deploying
+      region: "us-west-2"
   #
   # - name: sn-scaler
   #   type: replicas
