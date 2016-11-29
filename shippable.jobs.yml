@@ -217,6 +217,6 @@ jobs:
   - name: sn-al-ship-dcl-dep
     type: deploy
     steps:
-      - IN: sn-dcl-man
-      - IN: sn-dcl-man-1
+      - IN: sn-al-ship-dcl-man
+      - IN: sn-al-ship-dcl-man-1
       - IN: sn-dcl-cluster
