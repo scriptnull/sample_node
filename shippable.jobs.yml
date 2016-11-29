@@ -115,13 +115,13 @@ jobs:
   - name: sn-ddc-man
     type: manifest
     steps:
-      - IN: sn-docker-opts-1
+      - IN: sn-dk
       - IN: sn-ddc-trigger
 
   - name: sn-ddc-man-1
     type: manifest
     steps:
-      - IN: sn-docker-opts-1
+      - IN: sn-dk
       - IN: sn-ddc-trigger
   #
   - name: sn-ddc-dep
