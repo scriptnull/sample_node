@@ -205,13 +205,13 @@ jobs:
   - name: sn-al-ship-dcl-man
     type: manifest
     steps:
-      # - IN: sn-al-ship-dk
+      - IN: sn-al-ship-dk
       - IN: sn-al-ship-dcl-trigger
 
   - name: sn-al-ship-dcl-man-1
     type: manifest
     steps:
-      # - IN: sn-dk
+      - IN: sn-al-ship-dk
       - IN: sn-al-ship-dcl-trigger
 
   - name: sn-al-ship-dcl-dep
