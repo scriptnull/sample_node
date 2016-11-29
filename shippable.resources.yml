@@ -209,8 +209,7 @@ resources:
     type: cluster
     integration: scriptnull-dcl
     pointer:
-      sourceName : "something" #name of the cluster we are deploying
-      region: "us-west-2"
+      sourceName : "default" #name of the cluster we are deploying
   #
   # - name: sn-scaler
   #   type: replicas

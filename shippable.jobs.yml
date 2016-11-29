@@ -137,7 +137,7 @@ jobs:
       # - IN: sn-dk
       - IN: sn-dcl-trigger
 
-  - name: sn-ddc-man-1
+  - name: sn-dcl-man-1
     type: manifest
     steps:
       # - IN: sn-dk
