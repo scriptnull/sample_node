@@ -117,11 +117,18 @@ jobs:
     steps:
       - IN: sn-docker-opts-1
       - IN: sn-ddc-trigger
+
+  - name: sn-ddc-man-1
+    type: manifest
+    steps:
+      - IN: sn-docker-opts-1
+      - IN: sn-ddc-trigger
   #
   - name: sn-ddc-dep
     type: deploy
     steps:
       - IN: sn-ddc-man
+      - IN: sn-ddc-man-1
       - IN: sn-ddc-cluster
 
   # - name: sn-ecs-lb-man
