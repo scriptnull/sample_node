@@ -207,7 +207,7 @@ resources:
 
   - name: sn-dcl-cluster
     type: cluster
-    integration: scriptnull-ddc
+    integration: scriptnull-dcl
     pointer:
       sourceName : "something" #name of the cluster we are deploying
       region: "us-west-2"
