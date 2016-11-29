@@ -192,6 +192,7 @@ jobs:
   - name: sn-al-ship-ddc-man-1
     type: manifest
     steps:
+      - IN: sn-al-ship-myapp2
       - IN: sn-al-ship-ddc-trigger
   #
   - name: sn-al-ship-ddc-dep
