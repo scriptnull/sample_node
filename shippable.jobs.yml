@@ -112,42 +112,41 @@ jobs:
   #     - IN: sn-gke-man
   #     - IN: sn-gke-cluster
   #
-  - name: sn-ddc-man
-    type: manifest
-    steps:
-      - IN: sn-dk
-      - IN: sn-ddc-trigger
-
-  - name: sn-ddc-man-1
-    type: manifest
-    steps:
-      - IN: sn-dk
-      - IN: sn-ddc-trigger
+  # - name: sn-ddc-man
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-dk
+  #     - IN: sn-ddc-trigger
   #
-  - name: sn-ddc-dep
-    type: deploy
-    steps:
-      - IN: sn-ddc-man
-      - IN: sn-ddc-man-1
-      - IN: sn-ddc-cluster
-
+  # - name: sn-ddc-man-1
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-dk
+  #     - IN: sn-ddc-trigger
+  # #
+  # - name: sn-ddc-dep
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-ddc-man
+  #     - IN: sn-ddc-man-1
+  #     - IN: sn-ddc-cluster
+  #
   - name: sn-dcl-man
     type: manifest
     steps:
       - IN: sn-dk
       - IN: sn-dcl-trigger
 
-  - name: sn-dcl-man-1
-    type: manifest
-    steps:
-      - IN: sn-dk
-      - IN: sn-dcl-trigger
+  # - name: sn-dcl-man-1
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-dk
+  #     - IN: sn-dcl-trigger
 
   - name: sn-dcl-dep
     type: deploy
     steps:
       - IN: sn-dcl-man
-      - IN: sn-dcl-man-1
       - IN: sn-dcl-cluster
 
   # - name: sn-ecs-lb-man
