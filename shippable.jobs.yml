@@ -143,7 +143,7 @@ jobs:
   #     - IN: sn-dk
   #     - IN: sn-dcl-trigger
 
-  - name: sn-dcl-dep-3
+  - name: sn-dcl-dep-4
     type: deploy
     steps:
       - IN: sn-dcl-man
