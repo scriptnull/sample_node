@@ -207,16 +207,15 @@ jobs:
     steps:
       - IN: sn-al-ship-dk
       - IN: sn-al-ship-dcl-trigger
+  #
+  # - name: sn-al-ship-dcl-man-1
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-al-ship-dk
+  #     - IN: sn-al-ship-dcl-trigger
 
-  - name: sn-al-ship-dcl-man-1
-    type: manifest
-    steps:
-      - IN: sn-al-ship-dk
-      - IN: sn-al-ship-dcl-trigger
-
-  - name: sn-al-ship-dcl-dep
+  - name: sn-al-ship-dcl-1
     type: deploy
     steps:
       - IN: sn-al-ship-dcl-man
-      - IN: sn-al-ship-dcl-man-1
       - IN: sn-al-ship-dcl-cluster
