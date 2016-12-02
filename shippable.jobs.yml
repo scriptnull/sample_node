@@ -221,10 +221,10 @@ jobs:
       - IN: sn-al-ship-scaler
       - IN: sn-al-ship-dcl-trigger
 
-  - name: sn-al-ship-dcl-r-01
+  - name: sn-al-ship-dcl-r-02
     type: deploy
     steps:
       - IN: sn-al-ship-dcl-r-man
       - IN: sn-al-ship-dcl-cluster
       - TASK: managed
-        deployMethod: replace
+        deployMethod: upgrade
