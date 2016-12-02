@@ -214,7 +214,7 @@ resources:
   - name: sn-scaler
     type: replicas
     version:
-      count: 1
+      count: 2
     flags:
       - replicas
 
