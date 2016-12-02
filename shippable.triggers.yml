@@ -27,7 +27,7 @@ triggers:
   - name: sn-dcl-trigger
     type: trigger
     version:
-      counter: 16
+      counter: 17
   # #
   # - name: sn-gke-trigger
   #   type: trigger
