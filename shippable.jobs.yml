@@ -144,14 +144,13 @@ jobs:
   #     - IN: sn-dk
   #     - IN: sn-dcl-trigger
 
-  - name: sn-dcl-dep-10
+  - name: sn-dcl-dep-11
     type: deploy
     steps:
       - IN: sn-dcl-man
       - IN: sn-dcl-cluster
       - TASK: managed
         deployMethod: replace
-
 
   # - name: sn-ecs-lb-man
   #   type: manifest
