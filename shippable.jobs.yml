@@ -220,7 +220,7 @@ jobs:
       - IN: sn-al-ship-ep
       - IN: sn-al-ship-dcl-trigger
 
-  - name: sn-al-ship-dcl-rep
+  - name: sn-al-ship-dcl-r-01
     type: deploy
     steps:
       - IN: sn-al-ship-dcl-r-man
