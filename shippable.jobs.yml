@@ -134,7 +134,7 @@ jobs:
   - name: sn-dcl-man
     type: manifest
     steps:
-      - IN: sn-dk
+      - IN: sn-ep
       - IN: sn-scaler
       - IN: sn-dcl-trigger
 
