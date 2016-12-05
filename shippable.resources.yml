@@ -1,4 +1,29 @@
 resources:
+  - name: sn-img-1
+    type: image
+    integration: scriptnull-docker
+    pointer:
+      sourceName: "scriptnull/sample_node"
+      isPull: true
+    seed:
+      versionName: "myapp3"
+
+  - name: sn-img-2
+    type: image
+    integration: scriptnull-docker
+    pointer:
+      sourceName: "scriptnull/sample_node"
+      isPull: true
+    seed:
+      versionName: "myapp2"
+
+  - name: sn-dockerOpts
+    type: image
+    version:
+      memory: 400
+      taskRoleArn: "someOption"
+
+
   # - name: sn-file
   #   type: file
   #   pointer:
@@ -42,41 +67,41 @@ resources:
   #     recipients:
   #       - "#scriptnull-test"
 
-  - name: sn-myapp3
-    type: image
-    integration: scriptnull-docker
-    pointer:
-      sourceName: "scriptnull/sample_node"
-      isPull: true
-    seed:
-      versionName: "myapp3" # exposes server in port 80
+  # - name: sn-myapp3
+  #   type: image
+  #   integration: scriptnull-docker
+  #   pointer:
+  #     sourceName: "scriptnull/sample_node"
+  #     isPull: true
+  #   seed:
+  #     versionName: "myapp3" # exposes server in port 80
+  # #
+  # - name: sn-myapp2
+  #   type: image
+  #   integration: scriptnull-docker
+  #   pointer:
+  #     sourceName: "scriptnull/sample_node"
+  #     isPull: true
+  #   seed:
+  #     versionName: "myapp2" # exposes server in port 3000
   #
-  - name: sn-myapp2
-    type: image
-    integration: scriptnull-docker
-    pointer:
-      sourceName: "scriptnull/sample_node"
-      isPull: true
-    seed:
-      versionName: "myapp2" # exposes server in port 3000
+  # - name: sn-dk
+  #   type: image
+  #   integration: scriptnull-docker
+  #   pointer:
+  #     sourceName: "scriptnull/debian"
+  #     isPull: true
+  #   seed:
+  #     versionName: "driftking"
 
-  - name: sn-dk
-    type: image
-    integration: scriptnull-docker
-    pointer:
-      sourceName: "scriptnull/debian"
-      isPull: true
-    seed:
-      versionName: "driftking"
-
-  - name: sn-ep
-    type: image
-    integration: scriptnull-docker
-    pointer:
-      sourceName: "scriptnull/debian"
-      isPull: true
-    seed:
-      versionName: "entrypoint"
+  # - name: sn-ep
+  #   type: image
+  #   integration: scriptnull-docker
+  #   pointer:
+  #     sourceName: "scriptnull/debian"
+  #     isPull: true
+  #   seed:
+  #     versionName: "entrypoint"
 
   # - name: sn-no-integration-2
   #   type: image
@@ -86,13 +111,13 @@ resources:
   #   seed:
   #     versionName: "entrypoint"
 
-  - name: sn-private-image
-    type: image
-    integration: scriptnull-docker
-    pointer:
-      sourceName: "scriptnull/vb-docker-app-img"
-    seed:
-      versionName: "latest"
+  # - name: sn-private-image
+  #   type: image
+  #   integration: scriptnull-docker
+  #   pointer:
+  #     sourceName: "scriptnull/vb-docker-app-img"
+  #   seed:
+  #     versionName: "latest"
 
   # - name: sn-docker-myapp3-80
   #   type: dockerOptions
@@ -122,12 +147,12 @@ resources:
   #     portMappings:
   #       - "8080:3000"
 
-  - name: sn-docker-opts-1
-    type: dockerOptions
-    version:
-      memory: 60
-      portMappings:
-        - "80:3000"
+  # - name: sn-docker-opts-1
+  #   type: dockerOptions
+  #   version:
+  #     memory: 60
+  #     portMappings:
+  #       - "80:3000"
 
   #
   # - name: sn-secure-params
@@ -204,19 +229,19 @@ resources:
   #   pointer:
   #     sourceName : "something" #name of the cluster we are deploying
   #     region: "us-west-2"
-
-  - name: sn-dcl-cluster
-    type: cluster
-    integration: scriptnull-dcl
-    pointer:
-      sourceName : "default" #name of the cluster we are deploying
   #
-  - name: sn-scaler
-    type: replicas
-    version:
-      count: 1
-    flags:
-      - replicas
+  # - name: sn-dcl-cluster
+  #   type: cluster
+  #   integration: scriptnull-dcl
+  #   pointer:
+  #     sourceName : "default" #name of the cluster we are deploying
+  # #
+  # - name: sn-scaler
+  #   type: replicas
+  #   version:
+  #     count: 1
+  #   flags:
+  #     - replicas
 
   # - name: sn-version
   #   type: version
