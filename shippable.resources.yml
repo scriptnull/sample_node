@@ -18,7 +18,7 @@ resources:
       versionName: "myapp2"
 
   - name: sn-dockerOpts
-    type: image
+    type: dockerOptions
     version:
       memory: 400
       taskRoleArn: "someOption"
