@@ -3,14 +3,14 @@ jobs:
     type: manifest
     steps:
       - IN: sn-img-1
-      - IN: sn-img-2
       - IN: sn-dockerOpts
+      - IN: sn-ecs-trigger
 
-  # - name: sn-aws-deploy
-  #   type: deploy
-  #   steps:
-  #     - IN: sn-aws-man
-  #     - IN: sn-aws-cluster
+  - name: sn-aws-deploy
+    type: deploy
+    steps:
+      - IN: sn-aws-man
+      - IN: sn-ecs-cluster
 
   # - name: sn-ecs-man
   #   type: manifest
