@@ -80,12 +80,12 @@ resources:
   #     sourceName : "small-cluster" #name of the cluster we are deploying
   #     region : "us-east1-d"
 
-  # - name: sn-al-ship-do
-  #   type: dockerOptions
-  #   version:
-  #     memory: 60
-  #     portMappings:
-  #       - "80:3000"
+  - name: sn-al-ship-do
+    type: dockerOptions
+    version:
+      memory: 100
+      taskRoleArn: "somearn"
+
   #
   - name: sn-al-ship-scaler
     type: replicas
