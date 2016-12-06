@@ -2,7 +2,7 @@ jobs:
   - name: sn-aws-man
     type: manifest
     steps:
-      - IN: sn-img-1
+      - IN: sn-img-2
       - IN: sn-dockerOpts
       - IN: sn-ecs-trigger
 
