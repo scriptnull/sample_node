@@ -86,6 +86,12 @@ resources:
       memory: 100
       taskRoleArn: "somearn"
 
+  - name: sn-al-ship-do-1
+    type: dockerOptions
+    version:
+      user: driftking
+      clientToken: 'aaaaaaaaaaaa'
+
   #
   - name: sn-al-ship-scaler
     type: replicas

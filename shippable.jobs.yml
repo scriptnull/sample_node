@@ -8,6 +8,10 @@ jobs:
       # - IN: sn-al-ship-scaler
       # - IN: sn-al-ship-trigger-1
 
+  - name: sn-override-man
+    type: manifest
+    steps:
+      - IN: sn-al-ship-man
   # - name: sn-al-ship-ecs-dep-2
   #   type: deploy
   #   steps:
