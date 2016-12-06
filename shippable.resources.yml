@@ -20,7 +20,7 @@ resources:
   - name: sn-dockerOpts
     type: dockerOptions
     version:
-      memory: 200
+      memory: 300
       taskRoleArn: "yoyooyoy"
 
 
