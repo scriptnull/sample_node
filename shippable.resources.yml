@@ -83,8 +83,8 @@ resources:
   - name: sn-al-ship-do
     type: dockerOptions
     version:
-      memory: 100
-      # taskRoleArn: "somearn"
+      # memory: 100
+      taskRoleArn: "somearn"
 
   - name: sn-al-ship-do-1
     type: dockerOptions
