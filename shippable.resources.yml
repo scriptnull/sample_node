@@ -24,6 +24,11 @@ resources:
       service:
         clientToken: '1111'
 
+  - name: sn-dockerOpts-2
+    type: dockerOptions
+    version:
+      memory: 80
+
   - name: sn-dockerOpts
     type: dockerOptions
     version:

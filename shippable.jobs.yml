@@ -11,6 +11,7 @@ jobs:
     steps:
       - IN: sn-aws-man
       - IN: sn-dockerOpts-1
+      - IN: sn-dockerOpts-2
 
   # - name: sn-aws-deploy
   #   type: deploy
