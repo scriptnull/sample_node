@@ -12,6 +12,14 @@ jobs:
       - IN: sn-aws-man
       - IN: sn-ecs-cluster
 
+  - name: sn-aws-deploy-up
+    type: deploy
+    steps:
+      - IN: sn-aws-man
+      - IN: sn-ecs-cluster
+      - TASK: managed
+        deployMethod: upgrade
+
   # - name: sn-ecs-man
   #   type: manifest
   #   steps:
