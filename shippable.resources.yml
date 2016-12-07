@@ -20,17 +20,17 @@ resources:
   - name: sn-dockerOpts
     type: dockerOptions
     version:
-      memory: 300
-      hostName: "abc"
-      networkDisabled: true
-      extraHosts:
-        - "friedd.xyz:127.0.0.1"
-        - "microplan.xyz:127.0.0.2"
-      memoryReservation: 300
-      essential: true
+      memory: 50
+      # hostName: "abc"
+      # networkDisabled: true
+      # extraHosts:
+      #   - "friedd.xyz:127.0.0.1"
+      #   - "microplan.xyz:127.0.0.2"
+      # memoryReservation: 300
+      # essential: true
       service:
         clientToken: '12345'
-        desiredCount: 3
+        desiredCount: 2
       # essential: true
       # securityOptions:
       #   - "SELinux"
