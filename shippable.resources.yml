@@ -29,7 +29,7 @@ resources:
       # memoryReservation: 300
       # essential: true
       service:
-        clientToken: '12345'
+        clientToken: '12'
         desiredCount: 2
       # essential: true
       # securityOptions:
