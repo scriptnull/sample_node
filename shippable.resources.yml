@@ -23,6 +23,9 @@ resources:
       memory: 300
       hostName: "abc"
       networkDisabled: true
+      extraHosts:
+        - "friedd.xyz:127.0.0.1"
+        - "microplan.xyz:127.0.0.2"
       taskRoleArn: "yoyooyoy"
 
   # - name: sn-file
