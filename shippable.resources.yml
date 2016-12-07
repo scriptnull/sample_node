@@ -84,6 +84,9 @@ resources:
     type: dockerOptions
     version:
       memory: 50
+      service:
+        clientToken: "1234"
+        desiredCount: 2
       # hostName: "abc"
       # networkDisabled: true
       # extraHosts:
