@@ -27,8 +27,11 @@ resources:
         - "friedd.xyz:127.0.0.1"
         - "microplan.xyz:127.0.0.2"
       taskRoleArn: "yoyooyoy"
-      securityOptions:
-        - "SELinux"
+      memoryReservation: 300
+      essential: true
+      # securityOptions:
+      #   - "SELinux"
+
 
   # - name: sn-file
   #   type: file
