@@ -12,6 +12,7 @@ jobs:
       - IN: sn-aws-man
       - IN: sn-dockerOpts-1
       - IN: sn-dockerOpts-2
+        applyTo: sn-aws-man
 
   # - name: sn-aws-deploy
   #   type: deploy
