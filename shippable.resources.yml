@@ -30,6 +30,7 @@ resources:
       memory: 60
       service:
         clientToken: '0000'
+        something: 'xxxxx'
       # hostName: "abc"
       # networkDisabled: true
       # extraHosts:
