@@ -22,6 +22,7 @@ resources:
     version:
       memory: 300
       hostName: "abc"
+      networkDisabled: true
       taskRoleArn: "yoyooyoy"
 
   # - name: sn-file
