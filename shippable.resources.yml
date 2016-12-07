@@ -114,12 +114,12 @@ resources:
     pointer:
       sourceName : "default" #name of the cluster we are deploying
 
-  # - name: sn-al-ship-ecs-cluster
-  #   type: cluster
-  #   integration: scriptnull-aws
-  #   pointer:
-  #     sourceName : "default" #name of the cluster we are deploying
-  #     region: "us-west-2"
+  - name: sn-al-ship-ecs-cluster
+    type: cluster
+    integration: scriptnull-aws
+    pointer:
+      sourceName : "default" #name of the cluster we are deploying
+      region: "us-west-2"
   #
   # - name: sn-al-ship-lb-1
   #   type: loadBalancer
