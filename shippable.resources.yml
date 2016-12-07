@@ -28,7 +28,7 @@ resources:
         - "microplan.xyz:127.0.0.2"
       taskRoleArn: "yoyooyoy"
       memoryReservation: 300
-      essential: true
+      # essential: true
       # securityOptions:
       #   - "SELinux"
 
