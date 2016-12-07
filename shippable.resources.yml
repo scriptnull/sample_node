@@ -24,6 +24,12 @@ resources:
       service:
         clientToken: '1111'
 
+  - name: sn-dockerOpts-man
+    type: dockerOptions
+    version:
+      taskDefinition:
+        family: xyz
+
   - name: sn-dockerOpts-2
     type: dockerOptions
     version:

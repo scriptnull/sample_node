@@ -3,17 +3,13 @@ jobs:
     type: manifest
     steps:
       - IN: sn-img-2
-      - IN: sn-img-1
-      - IN: sn-dockerOpts-2
-        applyTo:
-          - sn-img-2
       - IN: sn-ecs-trigger
 
   - name: sn-aws-man-chain
     type: manifest
     steps:
-      - IN: sn-aws-man
-      # - IN: sn-dockerOpts-1
+      - IN: sn-img-1
+      - IN: sn-ecs-trigger
 
   # - name: sn-aws-deploy
   #   type: deploy
@@ -32,7 +28,11 @@ jobs:
   - name: sn-aws-deploy-rep-ll
     type: deploy
     steps:
+      - IN: sn-aws-man
       - IN: sn-aws-man-chain
+      - IN: sn-dockerOpts-man
+        applyTo:
+          - sn-aws-man
       - IN: sn-ecs-cluster
       - TASK: managed
         deployMethod: replace
