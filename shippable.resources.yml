@@ -30,6 +30,7 @@ resources:
       essential: true
       service:
         clientToken: '12345'
+        desiredCount: 3
       # essential: true
       # securityOptions:
       #   - "SELinux"
