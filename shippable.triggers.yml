@@ -47,7 +47,7 @@ triggers:
   - name: sn-al-ship-ecs-trigger
     type: trigger
     version:
-      counter: 7
+      counter: 8
 
   - name: sn-al-ship-mix-a-trigger
     type: trigger
