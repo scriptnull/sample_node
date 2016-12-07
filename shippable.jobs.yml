@@ -10,6 +10,7 @@ jobs:
     type: manifest
     steps:
       - IN: sn-aws-man
+      - IN: sn-dockerOpts-1
 
   # - name: sn-aws-deploy
   #   type: deploy

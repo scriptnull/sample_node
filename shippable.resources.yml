@@ -17,6 +17,11 @@ resources:
     seed:
       versionName: "myapp2"
 
+  - name: sn-dockerOpts-1
+    type: dockerOptions
+    version:
+      memory: 70
+
   - name: sn-dockerOpts
     type: dockerOptions
     version:
