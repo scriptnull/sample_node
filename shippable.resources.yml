@@ -26,9 +26,10 @@ resources:
       extraHosts:
         - "friedd.xyz:127.0.0.1"
         - "microplan.xyz:127.0.0.2"
-      taskRoleArn: "yoyooyoy"
       memoryReservation: 300
       essential: true
+      service:
+        clientToken: '12345'
       # essential: true
       # securityOptions:
       #   - "SELinux"
