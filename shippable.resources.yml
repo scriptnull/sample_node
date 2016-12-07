@@ -21,11 +21,15 @@ resources:
     type: dockerOptions
     version:
       memory: 70
+      service:
+        clientToken: '1111'
 
   - name: sn-dockerOpts
     type: dockerOptions
     version:
       memory: 60
+      service:
+        clientToken: '0000'
       # hostName: "abc"
       # networkDisabled: true
       # extraHosts:
