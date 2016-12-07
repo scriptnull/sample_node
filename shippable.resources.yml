@@ -20,7 +20,7 @@ resources:
   - name: sn-dockerOpts
     type: dockerOptions
     version:
-      memory: 50
+      memory: 60
       # hostName: "abc"
       # networkDisabled: true
       # extraHosts:
