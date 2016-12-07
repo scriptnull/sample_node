@@ -28,9 +28,9 @@ resources:
       #   - "microplan.xyz:127.0.0.2"
       # memoryReservation: 300
       # essential: true
-      service:
-        clientToken: '122341231'
-        desiredCount: 2
+      # service:
+      #   clientToken: '122341231'
+      #   desiredCount: 2
       # essential: true
       # securityOptions:
       #   - "SELinux"
