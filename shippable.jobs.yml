@@ -5,7 +5,8 @@ jobs:
       - IN: sn-img-2
       - IN: sn-dockerOpts
       - IN: sn-dockerOpts-2
-        applyTo: sn-img-2
+        applyTo:
+          - sn-img-2
       - IN: sn-ecs-trigger
 
   - name: sn-aws-man-chain
