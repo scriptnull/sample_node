@@ -23,7 +23,6 @@ resources:
       memory: 300
       taskRoleArn: "yoyooyoy"
 
-
   # - name: sn-file
   #   type: file
   #   pointer:
