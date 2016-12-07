@@ -84,6 +84,13 @@ resources:
     type: dockerOptions
     version:
       memory: 50
+      hostName: "abc"
+      networkDisabled: true
+      extraHosts:
+        - "friedd.xyz:127.0.0.1"
+        - "microplan.xyz:127.0.0.2"
+      memoryReservation: 300
+      essential: true
 
   - name: sn-al-ship-do-1
     type: dockerOptions
