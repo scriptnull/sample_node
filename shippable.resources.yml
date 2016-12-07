@@ -21,6 +21,7 @@ resources:
     type: dockerOptions
     version:
       memory: 300
+      hostName: "abc"
       taskRoleArn: "yoyooyoy"
 
   # - name: sn-file
