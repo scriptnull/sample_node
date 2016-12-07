@@ -28,6 +28,7 @@ resources:
     type: dockerOptions
     version:
       memory: 60
+      networkDisabled: true
       service:
         clientToken: '0000'
         something: 'xxxxx'
