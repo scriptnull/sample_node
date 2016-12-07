@@ -89,7 +89,7 @@ resources:
       extraHosts:
         - "friedd.xyz:127.0.0.1"
         - "microplan.xyz:127.0.0.2"
-      memoryReservation: 300
+      memoryReservation: 50
       essential: true
 
   - name: sn-al-ship-do-1
