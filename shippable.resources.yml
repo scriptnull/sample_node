@@ -28,7 +28,7 @@ resources:
     type: dockerOptions
     version:
       taskDefinition:
-        family: xyz
+        family: top
 
   - name: sn-dockerOpts-2
     type: dockerOptions
@@ -40,9 +40,8 @@ resources:
     version:
       memory: 60
       networkDisabled: true
-      service:
-        clientToken: '0000'
-        something: 'xxxxx'
+      taskDefinition:
+        family: bottom
       # hostName: "abc"
       # networkDisabled: true
       # extraHosts:
