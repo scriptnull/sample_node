@@ -87,8 +87,8 @@ resources:
       # service:
       #   clientToken: "1234"
       #   desiredCount: 2
-      # taskDefinition:
-      #   family: 'abc'
+      taskDefinition:
+        family: 'xx'
       # hostName: "abc"
       # networkDisabled: true
       # extraHosts:
