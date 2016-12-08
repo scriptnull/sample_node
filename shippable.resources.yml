@@ -84,11 +84,11 @@ resources:
     type: dockerOptions
     version:
       memory: 50
-      service:
-        clientToken: "1234"
-        desiredCount: 2
-      taskDefinition:
-        family: 'abc'
+      # service:
+      #   clientToken: "1234"
+      #   desiredCount: 2
+      # taskDefinition:
+      #   family: 'abc'
       # hostName: "abc"
       # networkDisabled: true
       # extraHosts:
