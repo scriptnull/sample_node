@@ -97,6 +97,12 @@ resources:
       # memoryReservation: 50
       # essential: true
 
+  - name: sn-al-ship-do-over
+    type: dockerOptions
+    version:
+      taskDefinition:
+        family: 'over'
+
   - name: sn-al-ship-do-1
     type: dockerOptions
     version:

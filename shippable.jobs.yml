@@ -12,6 +12,7 @@ jobs:
     type: deploy
     steps:
       - IN: sn-al-ship-man
+      - IN: sn-al-ship-do-over
       - IN: sn-al-ship-ecs-cluster
 
   # - name: sn-al-ship-ecs-dep-upx
