@@ -30,7 +30,7 @@ jobs:
     type: deploy
     steps:
       - IN: sn-aws-man
-      - IN: sn-dockerOpts-man
+      # - IN: sn-dockerOpts-man
       # - IN: sn-dockerOpts-man
       #   applyTo:
       #     - sn-aws-man
