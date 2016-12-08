@@ -40,8 +40,8 @@ resources:
     version:
       memory: 60
       networkDisabled: true
-      taskDefinition:
-        family: bottom-little-up
+      # taskDefinition:
+      #   family: bottom-little-up
       # hostName: "abc"
       # networkDisabled: true
       # extraHosts:
