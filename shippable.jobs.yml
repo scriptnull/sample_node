@@ -1,9 +1,9 @@
 jobs:
-  - name: sn-aws-man
-    type: manifest
-    steps:
-      - IN: sn-img-2
-      - IN: sn-ecs-trigger
+  # - name: sn-aws-man
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-img-2
+  #     - IN: sn-ecs-trigger
 
   # - name: sn-aws-man-chain
   #   type: manifest
