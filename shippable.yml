@@ -1,6 +1,28 @@
-language: node_js
+language: java
+
+jdk:
+   - openjdk7
 
 build:
-  ci:
-    - echo "Hello world"
-    - docker ps 
+   advancedReporting: true
+   #cache: true
+   ci:
+      #- apt-get update
+      - apt-get install tree
+      - env
+      - which mvn
+      - ls -al /usr/bin/mvn
+      - mvn --version
+#      - apt-get install -y maven
+     # - mvn clean package
+     # - mvn test
+   on_success:
+     - pwd
+     - ls
+     - mkdir -p shippable/codecoverage/target/site/jacoco
+     - wget https://gist.githubusercontent.com/trriplejay/e2cb33fc15299d603d1a4e52bac44a2b/raw/39f434a3097386805b6cf51a017ba5980fcac7ff/combinedJacoco.xml -O shippable/codecoverage/target/site/jacoco/jacoco.xml
+     - tree shippable/codecoverage
+     #- cp -r target shippable/codecoverage
+     #- cp target/site/jacoco/jacoco.xml shippable/codecoverage/target/site/jacoco/jacoco.xml
+     #- mvn clean cobertura:cobertura 
+
