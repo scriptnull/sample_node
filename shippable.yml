@@ -12,21 +12,21 @@ env:
     - FO1=BUBU
     - BOO=GUBU
 
-  matrix:
-    - M1=ONE
-    - M2=TWO
+#  matrix:
+#    - M1=ONE
+#    - M2=TWO
 
 build:
-  pre_ci:
-    - echo "Good morning 2"
-    - echo "testing"
-    - export IMAGE_TAG="latest"
+  #pre_ci:
+  #  - echo "Good morning 2"
+  #  - echo "testing"
+  #  - export IMAGE_TAG="latest"
 
-  pre_ci_boot:
-    image_name: kanthchandra/sample_node
-    image_tag: $IMAGE_TAG
-    pull: false
-    options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
+  #pre_ci_boot:
+  #  image_name: kanthchandra/sample_node
+  #  image_tag: $IMAGE_TAG
+  #  pull: false
+  #  options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
 
   ci:
     - ps -eax
@@ -38,7 +38,3 @@ build:
   smoke_test:
     - sudo ls /
 
-deploy:
-  pre_build:
-    - ls
-    - ls -al
