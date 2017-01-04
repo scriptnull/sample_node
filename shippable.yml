@@ -17,10 +17,10 @@ env:
 #    - M2=TWO
 
 build:
-  pre_ci:
-    - echo "Good morning 2"
-    - echo "testing"
-    - export IMAGE_TAG="latest"
+#  pre_ci:
+#    - echo "Good morning 2"
+#    - echo "testing"
+#    - export IMAGE_TAG="latest"
 #    - export FOO="latest.1"
 #    - echo $FOO
 
