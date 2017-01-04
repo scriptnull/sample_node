@@ -20,10 +20,11 @@ build:
   pre_ci:
     - echo "Good morning 2"
     - echo "testing"
+    - export IMAGE_TAG="latest"
 
   pre_ci_boot:
     image_name: kanthchandra/sample_node
-    image_tag: latest
+    image_tag: $IMAGE_TAG
     pull: false
     options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
 
