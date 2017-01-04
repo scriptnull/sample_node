@@ -8,7 +8,7 @@ node_js:
 
 env:
   global:
-    - FOO=FUBU
+    - FOO=latest
     - FO1=BUBU
     - BOO=GUBU
 
@@ -21,11 +21,11 @@ build:
     - echo "Good morning 2"
     - echo "testing"
     - export IMAGE_TAG="latest"
-    - echo "foo value is $FOO"
+    - export FOO="latest.1"
 
   pre_ci_boot:
     image_name: kanthchandra/sample_node
-    image_tag: $IMAGE_TAG
+    image_tag: $FOO
     pull: false
     options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
 
