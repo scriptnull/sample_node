@@ -17,17 +17,15 @@ env:
 #    - M2=TWO
 
 build:
-#  pre_ci:
-#    - echo "Good morning 2"
-#    - echo "testing"
-#    - export IMAGE_TAG="latest"
-#    - export FOO="latest.1"
-#    - echo $FOO
+  pre_ci:
+    - echo "Good morning 2"
+    - echo "testing"
+    - export HELLO_PULL=true
 
   pre_ci_boot:
     image_name: kanthchandra/sample_node
-    image_tag: $FOO
-    pull: false
+    image_tag: latest
+    pull: $HELLO_PULL
     options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
 
   ci:
