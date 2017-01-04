@@ -20,12 +20,13 @@ build:
   pre_ci:
     - echo "Good morning 2"
     - echo "testing"
+    - export HELLO_IMAGE="kanthchandra/sample_node"
     - export HELLO_PULL=true
     - export HELLO_OPTS="--privileged=true --net=bridge -e YO=helloman -e BOO=false"
 
   pre_ci_boot:
-    image_name: kanthchandra/sample_node
-    image_tag: latest
+    image_name: $HELLO_IMAGE
+    image_tag: $FOO
     pull: $HELLO_PULL
     options: $HELLO_OPTS
 
