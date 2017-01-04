@@ -21,8 +21,8 @@ build:
     - echo "Good morning 2"
     - echo "testing"
     - export IMAGE_TAG="latest"
-    - export FOO="latest.1"
-    - echo $FOO
+#    - export FOO="latest.1"
+#    - echo $FOO
 
   pre_ci_boot:
     image_name: kanthchandra/sample_node
