@@ -1,4 +1,9 @@
 triggers:
+  - name: sn-kube-trigger
+    type: trigger
+    version:
+      counter: 2
+
   # - name: sn-file-trigger
   #   type: trigger
   #   version:
@@ -19,25 +24,25 @@ triggers:
   #   version:
   #     counter: 24
   #
-  - name: sn-ddc-trigger
-    type: trigger
-    version:
-      counter: 2
+  # - name: sn-ddc-trigger
+  #   type: trigger
+  #   version:
+  #     counter: 2
 
-  - name: sn-dcl-trigger
-    type: trigger
-    version:
-      counter: 29
+  # - name: sn-dcl-trigger
+  #   type: trigger
+  #   version:
+  #     counter: 29
   # #
   # - name: sn-gke-trigger
   #   type: trigger
   #   version:
   #     counter: 10
   # #
-  - name: sn-ecs-trigger
-    type: trigger
-    version:
-      counter: 7
+  # - name: sn-ecs-trigger
+  #   type: trigger
+  #   version:
+  #     counter: 7
 
   # - name: sn-ecs-lb-trigger
   #   type: trigger

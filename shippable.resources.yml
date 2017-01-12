@@ -17,29 +17,29 @@ resources:
     seed:
       versionName: "myapp2"
 
-  - name: sn-dockerOpts-1
-    type: dockerOptions
-    version:
-      memory: 70
-      service:
-        clientToken: '1111'
+  # - name: sn-dockerOpts-1
+  #   type: dockerOptions
+  #   version:
+  #     memory: 70
+  #     service:
+  #       clientToken: '1111'
+  #
+  # - name: sn-dockerOpts-man
+  #   type: dockerOptions
+  #   version:
+  #     taskDefinition:
+  #       family: top
+  #
+  # - name: sn-dockerOpts-2
+  #   type: dockerOptions
+  #   version:
+  #     memory: 80
 
-  - name: sn-dockerOpts-man
-    type: dockerOptions
-    version:
-      taskDefinition:
-        family: top
-
-  - name: sn-dockerOpts-2
-    type: dockerOptions
-    version:
-      memory: 80
-
-  - name: sn-dockerOpts
-    type: dockerOptions
-    version:
-      memory: 60
-      networkDisabled: true
+  # - name: sn-dockerOpts
+  #   type: dockerOptions
+  #   version:
+  #     memory: 60
+  #     networkDisabled: true
       # taskDefinition:
       #   family: bottom-little-up
       # hostName: "abc"
@@ -280,3 +280,7 @@ resources:
   #   type: version
   #   seed:
   #     versionName: 0.0.0
+
+  - name: sn-kube-cluster
+    type: cluster
+    # integration: scriptnull-tri
