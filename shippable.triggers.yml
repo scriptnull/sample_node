@@ -2,7 +2,7 @@ triggers:
   - name: sn-kube-trigger
     type: trigger
     version:
-      counter: 2
+      counter: 3
 
   # - name: sn-file-trigger
   #   type: trigger
