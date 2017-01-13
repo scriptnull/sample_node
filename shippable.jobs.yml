@@ -271,3 +271,14 @@ jobs:
       - IN: sn-al-ship-kube-cluster
       - TASK: managed
         deployMethod: upgrade
+
+  - name: sn-al-ship-kube-bg-man
+    type: manifest
+    steps:
+      - IN: sn-al-ship-bb
+
+  - name: sn-al-ship-kube-bg
+    type: deploy
+    steps:
+      - IN: sn-al-ship-kube-bg-man
+      - IN: sn-al-ship-kube-cluster
