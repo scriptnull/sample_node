@@ -275,7 +275,7 @@ jobs:
   - name: sn-al-ship-kube-bg-man
     type: manifest
     steps:
-      - IN: sn-al-ship-bb
+      - IN: sn-al-ship-dk
 
   - name: sn-al-ship-kube-bg
     type: deploy
