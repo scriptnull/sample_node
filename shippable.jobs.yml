@@ -256,7 +256,7 @@ jobs:
   - name: sn-al-ship-kube-man
     type: manifest
     steps:
-      - IN: sn-al-ship-ep
+      - IN: sn-al-ship-bb
       - IN: sn-al-ship-kube-trigger
 
   - name: sn-al-ship-kube-depx
