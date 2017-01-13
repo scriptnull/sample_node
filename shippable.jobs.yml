@@ -291,8 +291,14 @@ jobs:
       # - TASK: managed
       #   deployMethod: upgrade
 
+  - name: sn-al-ship-kube-rm-man-2
+    type: manifest
+    steps:
+      - IN: sn-al-ship-ep
+
   - name: sn-al-ship-kube-rm
     type: deploy
     steps:
       - IN: sn-al-ship-kube-rm-man
+      - IN: sn-al-ship-kube-rm-man-2
       - IN: sn-al-ship-kube-cluster
