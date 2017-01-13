@@ -287,9 +287,9 @@ jobs:
     type: manifest
     steps:
       - IN: sn-al-ship-dk
-      - IN: sn-al-ship-ep
-      - TASK: managed
-        deployMethod: upgrade
+      # - IN: sn-al-ship-ep
+      # - TASK: managed
+      #   deployMethod: upgrade
 
   - name: sn-al-ship-kube-rm
     type: deploy
