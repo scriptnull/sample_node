@@ -283,4 +283,4 @@ resources:
 
   - name: sn-kube-cluster
     type: cluster
-    # integration: scriptnull-tri
+    integration: scriptnull-kube
