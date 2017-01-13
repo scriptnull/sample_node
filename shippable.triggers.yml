@@ -58,3 +58,8 @@ triggers:
     type: trigger
     version:
       counter: 3
+
+  - name: sn-al-ship-kube-trigger
+    type: trigger
+    version:
+      counter: 4
