@@ -5,11 +5,13 @@ jobs:
       - IN: sn-img-2
       - IN: sn-kube-trigger
 
-  - name: sn-kube-deploy-1
+  - name: sn-kube-deploy-2
     type: deploy
     steps:
       - IN: sn-kube-man
       - IN: sn-kube-cluster
+      - TASK: managed
+        deployMethod: upgrade
 
   # - name: sn-aws-man-chain
   #   type: manifest
