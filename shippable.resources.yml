@@ -17,6 +17,16 @@ resources:
     seed:
       versionName: "myapp2"
 
+  - name: sn-img-busybox
+    type: image
+    integration: scriptnull-docker
+    pointer:
+      sourceName: "busybox"
+      isPull: true
+    seed:
+      versionName: "latest"
+
+
   # - name: sn-dockerOpts-1
   #   type: dockerOptions
   #   version:

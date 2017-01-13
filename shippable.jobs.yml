@@ -2,7 +2,7 @@ jobs:
   - name: sn-kube-man
     type: manifest
     steps:
-      - IN: sn-img-1
+      - IN: sn-img-busybox
       - IN: sn-kube-trigger
 
   - name: sn-kube-deploy-3
