@@ -11,7 +11,7 @@ jobs:
       - IN: sn-kube-man
       - IN: sn-kube-cluster
       - TASK: managed
-        deployMethod: upgrade
+        deployMethod: blueGreen
 
   # - name: sn-aws-man-chain
   #   type: manifest
