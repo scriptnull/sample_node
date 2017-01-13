@@ -252,3 +252,15 @@ jobs:
       - IN: sn-al-ship-dcl-cluster
       - TASK: managed
         deployMethod: upgrade
+
+  - name: sn-al-ship-kube-man
+    type: manifest
+    steps:
+      - IN: sn-al-ship-dk
+      - IN: sn-al-ship-kube-trigger
+
+  - name: sn-al-ship-kube-dep
+    type: manifest
+    steps:
+      - IN: sn-al-ship-kube-man
+      - IN: sn-al-ship-kube-cluster

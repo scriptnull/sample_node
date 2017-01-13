@@ -138,6 +138,11 @@ resources:
     pointer:
       sourceName : "default" #name of the cluster we are deploying
       region: "us-west-2"
+
+  - name: sn-al-ship-kube-cluster
+    type: cluster
+    integration: scriptnull-kube
+
   #
   # - name: sn-al-ship-lb-1
   #   type: loadBalancer
