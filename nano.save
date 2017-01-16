@@ -1,0 +1,22 @@
+'use strict';
+
+var self = upgrade;
+module.exports = self;
+
+var async = require('async');
+var fs = require('fs-extra');
+var path = require('path');
+var uuid = require('node-uuid');
+
+function upgrade(payload, callback) {
+  console.log('Executing deploy type: upgrade');
+
+  var bag = {
+    clusterDependency: payload.clusterDependency,
+    manifest: payload.manifest,
+    previousStateDir: payload.previousStateDir,
+    stateDir: payload.stateDir,
+    jobName: payload.jobName,
+    kubeAdapter: payload.kubeAdapter,
+    containerSpecs: []
+  };

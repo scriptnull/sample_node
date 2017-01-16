@@ -1,0 +1,202 @@
+'use strict';
+
+var self = upgrade;
+module.exports = self;
+
+var async = require('async');
+var fs = require('fs-extra');
+var path = require('path');
+var uuid = require('node-uuid');
+
+function upgrade(payload, callback) {
+  console.log('Executing deploy type: upgrade');
+
+  var bag = {
+    clusterDependency: payload.clusterDependency,
+    manifest: payload.manifest,
+    previousStateDir: payload.previousStateDir,
+    stateDir: payload.stateDir,
+    jobName: payload.jobName,
+    kubeAdapter: payload.kubeAdapter,
+    containerSpecs: []
+  };
+
+  async.series([
+      _getPreviousDeploymentSpec.bind(null, bag),
+      _generateContainerSpec.bind(null, bag),
+      _generateDeploymentSpec.bind(null, bag),
+      _upgrade.bind(null, bag),
+      _waitUntilSteady.bind(null, bag)
+    ],
+    function (err) {
+      async.series([
+          _writeDeploymentSpecToFile.bind(null, bag)
+        ],
+        function (error) {
+          return callback(err || error || !bag.deploymentStable);
+        }
+      );
+    }
+  );
+}
+
+function _getPreviousDeploymentSpec(bag, next) {
+  console.log('getting previous deployment spec.');
+
+  var previousDeploymentSpecPath = util.format(
+    '%s/%s/kube-deployment-spec.json',
+    bag.previousStateDir, bag.manifest.name
+  );
+
+  fs.readJson(previousDeploymentSpecPath,
+    function (err, deploymentSpec) {
+      if (!_.isEmpty(deploymentSpec)) {
+        console.log('Found previous deployment spec.' +
+          deploymentSpec.metadata.name);
+        bag.previousDeploymentSpec = deploymentSpec;
+      }
+
+      return next();
+    }
+  );
+}
+
+function _generateContainerSpec(bag, next) {
+  console.log('Creating container definitions');
+
+  _.each(bag.manifest.images,
+    function (image, imageIndex) {
+      var templateObj = {};
+
+      templateObj.containerName = util.format('%s-%s',
+        bag.manifest.name, imageIndex);
+
+      templateObj.image = util.format('%s:%s', image.image, image.tag);
+
+      var filePath = path.resolve(__dirname,
+        '../templates/containerSpec.json');
+      var templateFile = fs.readFileSync(filePath).toString();
+      var template = _.template(templateFile,  {variable : 'data'});
+      bag.containerSpecs.push(
+        JSON.parse(template(templateObj)));
+    }
+  );
+
+  return next();
+}
+
+function _generateDeploymentSpec(bag, next) {
+  var deploymentName;
+
+  if (_.isEmpty(bag.previousDeploymentSpec))
+    deploymentName = util.format('%s-%s', bag.jobName, uuid.v4());
+  else
+    deploymentName = bag.previousDeploymentSpec.metadata.name;
+
+  var templateObj = {
+    deploymentName: deploymentName,
+    replicas: bag.manifest.replicas,
+    labels: [
+      {
+        key: 'shippable.jobName',
+        value: bag.jobName
+      }
+    ],
+    containers: JSON.stringify(bag.containerSpecs)
+  };
+
+  var filePath = path.resolve(__dirname,
+    '../templates/deploymentSpec.json');
+  var templateFile = fs.readFileSync(filePath).toString();
+  var template = _.template(templateFile,  {variable : 'data'});
+  bag.deploymentSpec = JSON.parse(template(templateObj));
+
+  return next();
+}
+
+function _upgrade(bag, next) {
+  bag.kubeAdapter.apply(JSON.stringify(bag.deploymentSpec),
+    function (err, stdout, stderr) {
+      if (err) {
+        console.log('Failed to apply deploymentSpec: ' + err);
+        return next(true);
+      }
+
+      console.log(stdout);
+      console.log(stderr);
+      return next();
+    }
+  );
+}
+
+function _waitUntilSteady(bag, next) {
+  bag.deploymentStable = false;
+
+  var rolloutObject = util.format('deployment/%s',
+    bag.deploymentSpec.metadata.name);
+
+  bag.kubeAdapter.rolloutStatus(rolloutObject,
+    function (err, stdout, stderr) {
+      if (err) {
+        console.log('Status check failed: ' + err);
+        return next(true);
+      }
+
+      console.log(stdout);
+      console.log(stderr);
+      bag.deploymentStable = true;
+      return next();
+    }
+  );
+}
+
+function _writeDeploymentSpecToFile(bag, next) {
+  if (!bag.deploymentSpec) return next();
+
+  var innerBag = {
+    path: bag.stateDir + '/' + bag.manifest.name + '/',
+    fileName: 'kube-deployment-spec.json',
+    object: bag.deploymentSpec
+  };
+  async.series([
+      __createDir.bind(null, innerBag),
+      __saveFile.bind(null, innerBag)
+    ],
+    function (err) {
+      if (err) {
+        console.log('Failed to write deployment spec to file');
+        return next(true);
+      }
+      return next();
+    }
+  );
+}
+
+function __createDir(bag, next) {
+  fs.mkdirs(bag.path,
+    function (err) {
+      if (err) {
+        console.log('Failed to create folder ' + bag.path + ' due to ' + err);
+        return next(true);
+      }
+
+      console.log('Successfully created folder ' + bag.path);
+      return next();
+    }
+  );
+}
+
+function __saveFile(bag, next) {
+  var path = bag.path + '/' + bag.fileName;
+  fs.writeFile(path, JSON.stringify(bag.object), [],
+    function (err) {
+      if (err) {
+        console.log('Failed to save file ' + bag.fileName + ' due to ' + err);
+        return next(true);
+      }
+
+      console.log('Successfully saved file ' + bag.fileName);
+      return next();
+    }
+  );
+
