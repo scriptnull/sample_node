@@ -272,6 +272,32 @@ jobs:
       - TASK: managed
         deployMethod: upgrade
 
+  - name: sn-al-ship-kube-bg
+    type: manifest
+    steps:
+      - IN: sn-al-ship-ep
+
+  - name: sn-al-ship-kube-bg
+    type: deploy
+    steps:
+      - IN: sn-al-ship-kube-man-bg
+      - IN: sn-al-ship-kube-cluster
+      - TASK: managed
+        deployMethod: blueGreen
+
+  - name: sn-al-ship-kube-rep
+    type: manifest
+    steps:
+      - IN: sn-al-ship-ep
+
+  - name: sn-al-ship-kube-rep
+    type: deploy
+    steps:
+      - IN: sn-al-ship-kube-man-rep
+      - IN: sn-al-ship-kube-cluster
+      - TASK: managed
+        deployMethod: replace
+
   - name: sn-al-ship-kube-bg-man
     type: manifest
     steps:
