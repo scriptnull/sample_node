@@ -5,7 +5,7 @@ jobs:
       - IN: sn-img-1
       - IN: sn-kube-trigger
 
-  - name: sn-kube-deploy
+  - name: sn-kube-deploy-12314324231234555555555555555555555555555555555555555555555555555555555
     type: deploy
     steps:
       - IN: sn-kube-man
