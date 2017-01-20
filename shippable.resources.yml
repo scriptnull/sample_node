@@ -161,3 +161,7 @@ resources:
     integration: scriptnull-dcl
     pointer:
       sourceName : "cluster-dcl" #name of the cluster we are deploying
+
+  - name: sn-rc-ship-kube-cluster
+    type: cluster
+    integration: scriptnull-kube

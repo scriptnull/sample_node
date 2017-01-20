@@ -63,3 +63,8 @@ triggers:
     type: trigger
     version:
       counter: 4
+
+  - name: sn-rc-ship-kube-trigger
+    type: trigger
+    version:
+      counter: 15

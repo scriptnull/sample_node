@@ -126,3 +126,15 @@ jobs:
   #         - manifest: sn-rc-ship-ecs-man-bg
   #           image: sn-rc-ship-myapp3
   #           port: 80
+
+  - name: sn-rc-ship-kube-man
+    type: manifest
+    steps:
+      - IN: sn-rc-ship-myapp2
+      - IN: sn-rc-ship-kube-trigger
+
+  - name: sn-rc-ship-kube-dep
+    type: deploy
+    steps:
+      - IN: sn-rc-ship-kube-man
+      - IN: sn-rc-ship-kube-cluster
