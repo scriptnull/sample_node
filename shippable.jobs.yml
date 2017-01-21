@@ -310,3 +310,19 @@ jobs:
       - IN: sn-al-ship-kube-rm-man
       # - IN: sn-al-ship-kube-rm-man-2
       - IN: sn-al-ship-kube-cluster
+
+
+  - name: shipdemo-manifest
+    type: manifest
+    steps:
+     - IN: shipdemo-img
+     - IN: shipdemo-img-options
+     - TASK: managed
+
+  - name: kube-deploy
+    type: deploy
+    steps:
+      - IN: shipdemo-manifest
+      - IN: kube-cluster
+      - TASK: managed
+        deployMethod: upgrade

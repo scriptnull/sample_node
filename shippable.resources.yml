@@ -183,3 +183,23 @@ resources:
   #   version:
   #     user:
   #       - "abcd"
+
+  - name: shipdemo-img
+    type: image
+    integration: scriptnull-docker
+    pointer:
+      sourceName: "manishas/sample-shipdemo"
+      isPull: false
+    seed:
+      versionName: "master.4"  #replace with your image tag on Amazon ECR
+
+  - name: shipdemo-img-options
+    type: dockerOptions
+    version:
+      portMappings:
+        - 80:80
+
+#kubernetes cluster
+  - name: kube-cluster
+    type: cluster
+    integration: scriptnull-kube
