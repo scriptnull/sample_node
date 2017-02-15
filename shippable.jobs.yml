@@ -146,17 +146,17 @@ jobs:
   #     - TASK: managed
   #       deployMethod: replace
 
-  - name: sn-gke-man
-    type: manifest
-    steps:
-      - IN: sn-dk
-      - IN: sn-gke-trigger
-
-  - name: sn-gke-dep
-    type: deploy
-    steps:
-      - IN: sn-gke-man
-      - IN: sn-gke-cluster
+  # - name: sn-gke-man
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-dk
+  #     - IN: sn-gke-trigger
+  #
+  # - name: sn-gke-dep
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-gke-man
+  #     - IN: sn-gke-cluster
   #
   # - name: sn-ddc-man
   #   type: manifest
@@ -244,3 +244,8 @@ jobs:
   #     - TASK: managed
   #       deployOptions:
   #         - parallel
+
+  - name: sn-provision
+    type: provision
+    steps:
+      - IN: sn-img-1
