@@ -327,7 +327,7 @@ jobs:
       - TASK: managed
         deployMethod: upgrade
 
-  - name: sn-al-ship-provision
-    type: provision
-    steps:
-      - IN: sn-al-ship-myapp3
+  # - name: sn-al-ship-provision
+  #   type: provision
+  #   steps:
+  #     - IN: sn-al-ship-myapp3
