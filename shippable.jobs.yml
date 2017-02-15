@@ -219,12 +219,12 @@ jobs:
       - IN: sn-al-ship-myapp2
       - IN: sn-al-ship-ddc-trigger
   #
-  - name: sn-al-ship-ddc-dep
-    type: deploy
-    steps:
-      - IN: sn-al-ship-ddc-man-1
-      - IN: sn-al-ship-ddc-man
-      - IN: sn-al-ship-ddc-cluster
+  # - name: sn-al-ship-ddc-dep
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-al-ship-ddc-man-1
+  #     - IN: sn-al-ship-ddc-man
+  #     - IN: sn-al-ship-ddc-cluster
 
   - name: sn-al-ship-dcl-man
     type: manifest
