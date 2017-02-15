@@ -1,17 +1,17 @@
 jobs:
-  - name: sn-kube-man
-    type: manifest
-    steps:
-      - IN: sn-img-1
-      - IN: sn-kube-trigger
+  # - name: sn-kube-man
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-img-1
+  #     - IN: sn-kube-trigger
 
-  - name: sn-kube-deploy-12314324231234555555555555555555555555555555555555555555555555555555555
-    type: deploy
-    steps:
-      - IN: sn-kube-man
-      - IN: sn-kube-cluster
-      - TASK: managed
-        deployMethod: upgrade
+  # - name: sn-kube-deploy-12314324231234555555555555555555555555555555555555555555555555555555555
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-kube-man
+  #     - IN: sn-kube-cluster
+  #     - TASK: managed
+  #       deployMethod: upgrade
 
   # - name: sn-aws-man-chain
   #   type: manifest
@@ -146,17 +146,17 @@ jobs:
   #     - TASK: managed
   #       deployMethod: replace
 
-  # - name: sn-gke-man
-  #   type: manifest
-  #   steps:
-  #     - IN: sn-dk
-  #     - IN: sn-gke-trigger
-  #
-  # - name: sn-gke-dep
-  #   type: deploy
-  #   steps:
-  #     - IN: sn-gke-man
-  #     - IN: sn-gke-cluster
+  - name: sn-gke-man
+    type: manifest
+    steps:
+      - IN: sn-dk
+      - IN: sn-gke-trigger
+
+  - name: sn-gke-dep
+    type: deploy
+    steps:
+      - IN: sn-gke-man
+      - IN: sn-gke-cluster
   #
   # - name: sn-ddc-man
   #   type: manifest
