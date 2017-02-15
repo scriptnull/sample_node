@@ -298,7 +298,7 @@ resources:
 
   - name: sn-gke-service-lb                               #required
     type: loadBalancer                          #required
-    integration: gke  #Required for use in provision jobs
+    integration: scriptnull-gke  #Required for use in provision jobs
     pointer:
       sourceName: "xyz-scriptnull-local"  # the service name (metadata.name)
       method: ClusterIP # the service type Kubernetes default: ClusterIP
