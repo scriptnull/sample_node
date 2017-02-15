@@ -326,3 +326,8 @@ jobs:
       - IN: kube-cluster
       - TASK: managed
         deployMethod: upgrade
+
+  - name: sn-al-ship-provision
+    type: provision
+    steps:
+      - IN: sn-al-ship-myapp3
