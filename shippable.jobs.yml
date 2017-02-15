@@ -245,7 +245,7 @@ jobs:
   #       deployOptions:
   #         - parallel
 
-  # - name: sn-provision
-  #   type: provision
-  #   steps:
-  #     - IN: sn-img-1
+  - name: sn-provision
+    type: provision
+    steps:
+      - IN: sn-img-1
