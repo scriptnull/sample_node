@@ -1,30 +1,30 @@
 resources:
-  - name: sn-img-1
-    type: image
-    integration: scriptnull-docker
-    pointer:
-      sourceName: "scriptnull/sample_node"
-      isPull: true
-    seed:
-      versionName: "myapp3"
-
-  - name: sn-img-2
-    type: image
-    integration: scriptnull-docker
-    pointer:
-      sourceName: "scriptnull/sample_node"
-      isPull: true
-    seed:
-      versionName: "myapp2"
-
-  - name: sn-img-busybox
-    type: image
-    integration: scriptnull-docker
-    pointer:
-      sourceName: "busybox"
-      isPull: true
-    seed:
-      versionName: "latest"
+  # - name: sn-img-1
+  #   type: image
+  #   integration: scriptnull-docker
+  #   pointer:
+  #     sourceName: "scriptnull/sample_node"
+  #     isPull: true
+  #   seed:
+  #     versionName: "myapp3"
+  #
+  # - name: sn-img-2
+  #   type: image
+  #   integration: scriptnull-docker
+  #   pointer:
+  #     sourceName: "scriptnull/sample_node"
+  #     isPull: true
+  #   seed:
+  #     versionName: "myapp2"
+  #
+  # - name: sn-img-busybox
+  #   type: image
+  #   integration: scriptnull-docker
+  #   pointer:
+  #     sourceName: "busybox"
+  #     isPull: true
+  #   seed:
+  #     versionName: "latest"
 
 
   # - name: sn-dockerOpts-1
@@ -296,9 +296,28 @@ resources:
   #   integration: scriptnull-kube
 
 
-  - name: sn-gke-service-lb                               #required
+  # - name: sn-gke-service-lb                               #required
+  #   type: loadBalancer                          #required
+  #   integration: scriptnull-gke  #Required for use in provision jobs
+  #   pointer:
+  #     sourceName: "xyz-scriptnull-local"  # the service name (metadata.name)
+  #     method: ClusterIP # the service type Kubernetes default: ClusterIP
+  #     clusterName: "small-cluster" # The namespace for the service
+  #     region: "europe-west1-b"
+  #   version:
+  #     ports:
+  #       - name: scriptnull-local-port  # Required for multiple ports, must be a DNS_LABEL
+  #         protocol: TCP  # Kubernetes default: TCP
+  #         port: 8001     # Required.
+  #         targetPort: 8002 # A number in 1-65535 or an "IANA_SVC_NAME"  This is the port to access the pod.
+  #         # nodePort: <integer> # Port exposed on the node.  Kubernetes will auto-allocate by default.
+  #     selector:
+  #       new: scriptnull-local # Required. Labels to match the pod
+
+
+  - name: sn-kube-service-lb                               #required
     type: loadBalancer                          #required
-    integration: scriptnull-gke  #Required for use in provision jobs
+    integration: scriptnull-kube  #Required for use in provision jobs
     pointer:
       sourceName: "xyz-scriptnull-local"  # the service name (metadata.name)
       method: ClusterIP # the service type Kubernetes default: ClusterIP
@@ -312,4 +331,4 @@ resources:
           targetPort: 8002 # A number in 1-65535 or an "IANA_SVC_NAME"  This is the port to access the pod.
           # nodePort: <integer> # Port exposed on the node.  Kubernetes will auto-allocate by default.
       selector:
-        new: scriptnull-local # Required. Labels to match the pod
+        new: scriptnull-local

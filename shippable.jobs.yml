@@ -250,7 +250,7 @@ jobs:
   #   steps:
   #     - IN: sn-img-1
 
-  # - name: deployService
-  #   type: provision
-  #   steps:
-  #     - IN: sn-gke-service-lb
+  - name: deployService
+    type: provision
+    steps:
+      - IN: sn-kube-service-lb
