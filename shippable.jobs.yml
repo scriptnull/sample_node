@@ -250,12 +250,12 @@ jobs:
   #   steps:
   #     - IN: sn-img-1
 
-  # - name: deployService
-  #   type: provision
-  #   steps:
-  #     - IN: sn-kube-service-lb
-
-  - name: deployService-2
+  - name: deployService
     type: provision
     steps:
       - IN: sn-kube-service-lb
+
+  # - name: deployService-2
+  #   type: provision
+  #   steps:
+  #     - IN: sn-kube-service-lb
