@@ -323,7 +323,7 @@ resources:
       method: ClusterIP # the service type Kubernetes default: ClusterIP
       clusterName: "small-cluster" # The namespace for the service
       region: "europe-west1-b"
-      namespace: "temp-namespace-e"
+      namespace: "temp-namespace-f"
     version:
       ports:
         - name: scriptnull-local-port  # Required for multiple ports, must be a DNS_LABEL
