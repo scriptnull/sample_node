@@ -245,12 +245,12 @@ jobs:
   #       deployOptions:
   #         - parallel
 
-  - name: sn-provision
-    type: provision
-    steps:
-      - IN: sn-img-1
-
-  # - name: deployService-2
+  # - name: sn-provision
   #   type: provision
   #   steps:
-  #     - IN: sn-kube-service-lb
+  #     - IN: sn-img-1
+
+  - name: deployService-2
+    type: provision
+    steps:
+      - IN: sn-kube-service-lb
