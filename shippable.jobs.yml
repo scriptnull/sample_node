@@ -139,7 +139,7 @@ jobs:
       - IN: sn-rc-ship-kube-man
       - IN: sn-rc-ship-kube-cluster
 
-  - name: sn-rc-ship-provision-kube
-    type: provision
-    steps:
-      - IN: sn-rc-kube-service-lb
+  # - name: sn-rc-ship-provision-kube
+  #   type: provision
+  #   steps:
+  #     - IN: sn-rc-kube-service-lb
