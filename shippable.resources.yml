@@ -291,9 +291,9 @@ resources:
   #   seed:
   #     versionName: 0.0.0
 
-  # - name: sn-kube-cluster
-  #   type: cluster
-  #   integration: scriptnull-kube
+  - name: sn-kube-cluster
+    type: cluster
+    integration: scriptnull-kube
 
 
   # - name: sn-gke-service-lb                               #required
