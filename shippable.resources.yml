@@ -1,21 +1,21 @@
 resources:
-  # - name: sn-img-1
-  #   type: image
-  #   integration: scriptnull-docker
-  #   pointer:
-  #     sourceName: "scriptnull/sample_node"
-  #     isPull: true
-  #   seed:
-  #     versionName: "myapp3"
-  #
-  # - name: sn-img-2
-  #   type: image
-  #   integration: scriptnull-docker
-  #   pointer:
-  #     sourceName: "scriptnull/sample_node"
-  #     isPull: true
-  #   seed:
-  #     versionName: "myapp2"
+  - name: sn-img-1
+    type: image
+    integration: scriptnull-docker
+    pointer:
+      sourceName: "scriptnull/sample_node"
+      isPull: true
+    seed:
+      versionName: "myapp3"
+
+  - name: sn-img-2
+    type: image
+    integration: scriptnull-docker
+    pointer:
+      sourceName: "scriptnull/sample_node"
+      isPull: true
+    seed:
+      versionName: "myapp2"
   #
   # - name: sn-img-busybox
   #   type: image
