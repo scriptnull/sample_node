@@ -296,6 +296,19 @@ resources:
     integration: scriptnull-kube
 
 
+  - name: sn-kube-pod-opts
+    type: dockerOptions
+    version:
+      pod:
+        terminationGracePeriodSeconds: 1002
+        activeDeadlineSeconds: 1001
+        # dnsPolicy: <string>
+        # serviceAccountName: <string>
+        # serviceAccount: <string>
+        # nodeName: <string>
+        # hostNetwork: <boolean>
+        # hostPID: <boolean>
+
   # - name: sn-gke-service-lb                               #required
   #   type: loadBalancer                          #required
   #   integration: scriptnull-gke  #Required for use in provision jobs

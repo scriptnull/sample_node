@@ -4,6 +4,7 @@ jobs:
     steps:
       - IN: sn-img-1
       - IN: sn-kube-trigger
+      - IN: sn-kube-pod-opts
 
   - name: sn-kube-deploy
     type: deploy
