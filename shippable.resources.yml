@@ -299,7 +299,7 @@ resources:
   - name: sn-kube-pod-opts
     type: dockerOptions
     version:
-      podSpec:
+      pod:
         terminationGracePeriodSeconds: 1002
         activeDeadlineSeconds: 1001
         # dnsPolicy: <string>
