@@ -149,8 +149,8 @@ jobs:
 #############################################
 ##### serialization testing
 #############################################
-  # 
-  # - name: sn-rc-st-man
-  #   type: manifest
-  #   steps:
-  #     - IN: sn-rc-st-img-myapp2
+  
+  - name: sn-rc-st-man
+    type: manifest
+    steps:
+      - IN: sn-rc-st-img-myapp2
