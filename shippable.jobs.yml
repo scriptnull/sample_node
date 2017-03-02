@@ -159,3 +159,8 @@ jobs:
     type: manifest
     steps:
       - IN: sn-rc-st-img-myapp2
+
+  - name: sn-rc-st-man-2
+    type: manifest
+    steps:
+      - IN: sn-rc-st-img-myapp2
