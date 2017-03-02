@@ -143,3 +143,14 @@ jobs:
     type: provision
     steps:
       - IN: sn-rc-kube-service-lb
+
+
+
+#############################################
+##### serialization testing
+#############################################
+  # 
+  # - name: sn-rc-st-man
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-rc-st-img-myapp2

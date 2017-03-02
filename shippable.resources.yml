@@ -184,3 +184,16 @@ resources:
           # nodePort: <integer> # Port exposed on the node.  Kubernetes will auto-allocate by default.
       selector:
         new: scriptnull-local
+
+#############################################
+##### serialization testing
+#############################################
+
+  - name: sn-rc-st-img-myapp2
+    type: image
+    integration: scriptnull-docker
+    pointer:
+      sourceName: "scriptnull/sample_node"
+      isPull: true
+    seed:
+      versionName: "myapp2" # exposes server in port 3000
