@@ -27,10 +27,10 @@ resources:
   #     versionName: "latest"
 
 
-  # - name: sn-dockerOpts-1
-  #   type: dockerOptions
-  #   version:
-  #     memory: 70
+  - name: sn-dockerOpts-1
+    type: dockerOptions
+    version:
+      memory: 70
   #     service:
   #       clientToken: '1111'
   #
@@ -40,10 +40,10 @@ resources:
   #     taskDefinition:
   #       family: top
   #
-  # - name: sn-dockerOpts-2
-  #   type: dockerOptions
-  #   version:
-  #     memory: 80
+  - name: sn-dockerOpts-2
+    type: dockerOptions
+    version:
+      memory: 80
 
   # - name: sn-dockerOpts
   #   type: dockerOptions
