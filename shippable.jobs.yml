@@ -177,7 +177,7 @@ jobs:
       - IN: sn-ddc-man
       - IN: sn-dockerOpts-2
         applyTo:
-          - manifest: sn-ddc-man
+          - sn-ddc-man
       - IN: sn-ddc-cluster
 
   # - name: sn-dcl-man
