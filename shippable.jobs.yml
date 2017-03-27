@@ -162,8 +162,7 @@ jobs:
   - name: sn-ddc-man
     type: manifest
     steps:
-      - IN: sn-dk
-      - IN: sn-ddc-trigger
+      - IN: sn-img-1
   #
   # - name: sn-ddc-man-1
   #   type: manifest
