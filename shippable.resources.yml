@@ -162,13 +162,13 @@ resources:
   #   seed:
   #     versionName: "latest"
 
-  # - name: sn-docker-myapp3-80
-  #   type: dockerOptions
-  #   version:
-  #     portMappings:
-  #       - "80:80"
-  #     labels:
-  #       hi: baby
+  - name: sn-docker-myapp3-80
+    type: dockerOptions
+    version:
+      portMappings:
+        - "80:80"
+      labels:
+        hi: baby
 
   # - name: sn-docker-myapp3-8080
   #   type: dockerOptions

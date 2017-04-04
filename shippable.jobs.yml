@@ -50,6 +50,7 @@ jobs:
     type: manifest
     steps:
       - IN: sn-myapp3
+      - IN: sn-docker-myapp3-80
 
   - name: sn-ecs-dep
     type: deploy
