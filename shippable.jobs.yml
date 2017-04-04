@@ -60,6 +60,7 @@ jobs:
         applyTo:
           - manifest: sn-ecs-man
             image: sn-myapp3
+            port: 80
 
   # - name: sn-ecs-dep-4
   #   type: deploy
