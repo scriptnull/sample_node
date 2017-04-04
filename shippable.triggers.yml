@@ -1,8 +1,8 @@
 triggers:
-  - name: sn-kube-trigger
-    type: trigger
-    version:
-      counter: 3
+  # - name: sn-kube-trigger
+  #   type: trigger
+  #   version:
+  #     counter: 3
 
   # - name: sn-file-trigger
   #   type: trigger
@@ -39,10 +39,10 @@ triggers:
   #   version:
   #     counter: 1
   # #
-  # - name: sn-ecs-trigger
-  #   type: trigger
-  #   version:
-  #     counter: 7
+  - name: sn-ecs-trigger
+    type: trigger
+    version:
+      counter: 1
 
   # - name: sn-ecs-lb-trigger
   #   type: trigger
