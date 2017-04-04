@@ -166,7 +166,7 @@ resources:
     type: dockerOptions
     version:
       portMappings:
-        - "8080:80"
+        - "80:80"
       labels:
         hi: baby
 
