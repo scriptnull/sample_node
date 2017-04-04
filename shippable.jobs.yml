@@ -61,7 +61,7 @@ jobs:
       - IN: sn-ecs-lb
         applyTo:
           - manifest: sn-ecs-man
-            image: sn-myapp3
+            image: sn-myapp2
             port: 80
 
   # - name: sn-ecs-dep-4
