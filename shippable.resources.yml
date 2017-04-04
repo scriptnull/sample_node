@@ -229,11 +229,11 @@ resources:
     pointer:
       sourceName : "default" #name of the cluster we are deploying
       region: "us-west-2"
-  #
-  # - name: lb-1
-  #   type: loadBalancer
-  #   pointer:
-  #     sourceName: EC2Contai-EcsElast-GPCOXIIKWPUJ
+
+  - name: sn-ecs-lb
+    type: loadBalancer
+    pointer:
+      sourceName: EC2Contai-EcsElast-1LV6VA3K7C8MY
 
   # - name: sn-ecs-lb-cluster
   #   type: cluster

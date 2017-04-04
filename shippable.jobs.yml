@@ -49,13 +49,17 @@ jobs:
   - name: sn-ecs-man
     type: manifest
     steps:
-      - IN: sn-myapp2
+      - IN: sn-myapp3
 
   - name: sn-ecs-dep
     type: deploy
     steps:
       - IN: sn-ecs-man
       - IN: sn-ecs-cluster
+      - IN: sn-ecs-lb
+        applyTo:
+          - manifest: sn-ecs-man
+            image: sn-myapp3
 
   # - name: sn-ecs-dep-4
   #   type: deploy
