@@ -49,7 +49,7 @@ jobs:
   - name: sn-ecs-man
     type: manifest
     steps:
-      - IN: sn-myapp3
+      - IN: sn-myapp2
       - IN: sn-docker-myapp3-80
       - IN: sn-ecs-trigger
 
@@ -61,7 +61,7 @@ jobs:
       - IN: sn-ecs-lb
         applyTo:
           - manifest: sn-ecs-man
-            image: sn-myapp3
+            image: sn-myapp2
             port: 80
 
   # - name: sn-ecs-dep-4
