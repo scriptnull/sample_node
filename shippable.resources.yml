@@ -233,7 +233,7 @@ resources:
   - name: sn-ecs-lb
     type: loadBalancer
     pointer:
-      sourceName: EC2Contai-EcsElast-1LV6VA3K7C8MY
+      sourceName: EC2Contai-EcsElast-10GSDTAIICOXE
 
   # - name: sn-ecs-lb-cluster
   #   type: cluster
