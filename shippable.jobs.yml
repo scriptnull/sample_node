@@ -46,23 +46,23 @@ jobs:
   #     - TASK: managed
   #       deployMethod: replace
 
-  - name: sn-ecs-man
-    type: manifest
-    steps:
-      - IN: sn-myapp2
-      - IN: sn-docker-myapp3-80
-      - IN: sn-ecs-trigger
-
-  - name: sn-ecs-dep
-    type: deploy
-    steps:
-      - IN: sn-ecs-man
-      - IN: sn-ecs-cluster
-      - IN: sn-ecs-lb
-        applyTo:
-          - manifest: sn-ecs-man
-            image: sn-myapp2
-            port: 80
+  # - name: sn-ecs-man
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-myapp2
+  #     - IN: sn-docker-myapp3-80
+  #     - IN: sn-ecs-trigger
+  #
+  # - name: sn-ecs-dep
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-ecs-man
+  #     - IN: sn-ecs-cluster
+  #     - IN: sn-ecs-lb
+  #       applyTo:
+  #         - manifest: sn-ecs-man
+  #           image: sn-myapp2
+  #           port: 80
 
   # - name: sn-ecs-dep-4
   #   type: deploy
@@ -258,3 +258,11 @@ jobs:
   #   type: provision
   #   steps:
   #     - IN: sn-kube-service-lb
+
+  - name: sn-try-ans
+    type: runCLI
+    steps:
+      - IN: sn-aws-cliConfig
+      - TASK:
+          - script: printenv
+          - script: echo "hello world"
