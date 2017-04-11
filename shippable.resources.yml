@@ -347,3 +347,5 @@ resources:
   - name: sn-aws-cliConfig
     type: cliConfig
     integration: scriptnull-aws
+    pointer:
+      region: us-west-2
