@@ -259,10 +259,11 @@ jobs:
   #   steps:
   #     - IN: sn-kube-service-lb
 
-  - name: sn-try-ans
-    type: runCLI
-    steps:
-      - IN: sn-aws-cliConfig
-      - TASK:
-          - script: printenv
-          - script: echo "hello world"
+  # - name: sn-try-ans
+  #   type: runCLI
+  #   steps:
+  #     - IN: sn-aws-cliConfig
+  #     - IN: sn-params
+  #     - TASK:
+  #         - script: printenv
+  #         - script: echo "hello world"

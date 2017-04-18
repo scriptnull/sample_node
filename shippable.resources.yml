@@ -100,8 +100,7 @@ resources:
   #   type: params
   #   version:
   #     params:
-  #       MONGO_API_URL: "abc:28017"
-  #       HELLO: "world"
+  #       EC2_REGION: "us-west-2"
 
   # - name: slackNotification
   #   type: notification
@@ -344,8 +343,8 @@ resources:
   #     selector:
   #       new: scriptnull-local
 
-  - name: sn-aws-cliConfig
-    type: cliConfig
-    integration: scriptnull-aws
-    pointer:
-      region: us-west-2
+  # - name: sn-aws-cliConfig
+  #   type: cliConfig
+  #   integration: scriptnull-aws
+  #   pointer:
+  #     region: us-west-2
