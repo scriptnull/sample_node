@@ -41,6 +41,14 @@ jobs:
       - TASK: managed
         deployMethod: upgrade
 
+  - name: sn-aws-deploy-up-2
+    type: deploy
+    steps:
+      - IN: sn-aws-deploy-up
+      - IN: sn-ecs-cluster
+      - TASK: managed
+        deployMethod: upgrade
+
   # - name: sn-aws-deploy-rep-ll
   #   type: deploy
   #   steps:
