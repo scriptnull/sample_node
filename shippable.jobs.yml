@@ -36,6 +36,7 @@ jobs:
     type: deploy
     steps:
       - IN: sn-aws-man
+        deployName: api-app
       - IN: sn-ecs-cluster
       - TASK: managed
         deployMethod: upgrade
