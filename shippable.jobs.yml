@@ -25,14 +25,20 @@ jobs:
   #   steps:
   #     - IN: sn-aws-man
   #     - IN: sn-ecs-cluster
-  #
-  # - name: sn-aws-deploy-up
-  #   type: deploy
-  #   steps:
-  #     - IN: sn-aws-man
-  #     - IN: sn-ecs-cluster
-  #     - TASK: managed
-  #       deployMethod: upgrade
+
+  - name: sn-aws-man
+    type: manifest
+    steps:
+      - IN: sn-img-1
+      - IN: sn-dockerOpts-1
+
+  - name: sn-aws-deploy-up
+    type: deploy
+    steps:
+      - IN: sn-aws-man
+      - IN: sn-ecs-cluster
+      - TASK: managed
+        deployMethod: upgrade
 
   # - name: sn-aws-deploy-rep-ll
   #   type: deploy

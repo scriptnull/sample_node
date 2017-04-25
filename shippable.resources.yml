@@ -1,21 +1,21 @@
 resources:
-  # - name: sn-img-1
-  #   type: image
-  #   integration: scriptnull-docker
-  #   pointer:
-  #     sourceName: "scriptnull/sample_node"
-  #     isPull: true
-  #   seed:
-  #     versionName: "myapp3"
+  - name: sn-img-1
+    type: image
+    integration: scriptnull-docker
+    pointer:
+      sourceName: "scriptnull/sample_node"
+      isPull: true
+    seed:
+      versionName: "myapp3"
 
-  # - name: sn-img-2
-  #   type: image
-  #   integration: scriptnull-docker
-  #   pointer:
-  #     sourceName: "scriptnull/sample_node"
-  #     isPull: true
-  #   seed:
-  #     versionName: "myapp2"
+  - name: sn-img-2
+    type: image
+    integration: scriptnull-docker
+    pointer:
+      sourceName: "scriptnull/sample_node"
+      isPull: true
+    seed:
+      versionName: "myapp2"
   #
   # - name: sn-img-busybox
   #   type: image
@@ -27,13 +27,11 @@ resources:
   #     versionName: "latest"
 
 
-  # - name: sn-dockerOpts-1
-  #   type: dockerOptions
-  #   version:
-  #     memory: 70
-  #     service:
-  #       clientToken: '1111'
-  #
+  - name: sn-dockerOpts-1
+    type: dockerOptions
+    version:
+      memory: 50
+
   # - name: sn-dockerOpts-man
   #   type: dockerOptions
   #   version:
@@ -222,12 +220,12 @@ resources:
   #       # # CAT="name is \" tom" MOUSE= name is jerry DOG="name is tommy" CATS=" tom and jerry"
   #       # secure: KUrYEAgmSe0lbOfodyrWOecDiz2JzDGSE6ZVYFQVpwgcrG8+beO8ZJ8lCxL+LnkusON40xZvvfmr9CqbVZtBogtnFVxMioX14pKWrpqk8JGkL7Oe2DICbuhGg/xNzw9LpsFeg/EdF8GzjQfKnX8biB7CdefN79VorkipnlSrYFXjjd48emzc42G7rrxcsYuJSJJ5NDCAcJbBfGvd0z43u76kkcw8tTbcZysEb0pBsEolcUSBFcHrkgT8je4dAaiVoigp0LLFvTuEQ70x22Y/YxqqZ5J1AN0TaFrGvJ+XoZ6b6lCUCte3jz1Uf58PrQQ/tf7+pgGFHmm32zGoBXtwyQ==
   #
-  # - name: sn-ecs-cluster
-  #   type: cluster
-  #   integration: scriptnull-aws
-  #   pointer:
-  #     sourceName : "default" #name of the cluster we are deploying
-  #     region: "us-west-2"
+  - name: sn-ecs-cluster
+    type: cluster
+    integration: scriptnull-aws
+    pointer:
+      sourceName : "default" #name of the cluster we are deploying
+      region: "us-west-2"
   #
   # - name: sn-ecs-lb
   #   type: loadBalancer
