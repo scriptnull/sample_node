@@ -216,7 +216,7 @@ jobs:
       - IN: sn-img-1
       - IN: sn-dockerOpts-1
 
-  - name: sn-aws-deploy
+  - name: sn-aws-dep
     type: deploy
     steps:
       - IN: sn-aws-man
