@@ -220,7 +220,7 @@ jobs:
     type: deploy
     steps:
       - IN: sn-aws-man
-        deployName: api-app
+        deployName: www-app
       - IN: sn-ecs-cluster
       - TASK: managed
         deployMethod: replace
