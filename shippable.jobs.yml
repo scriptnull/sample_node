@@ -26,28 +26,34 @@ jobs:
   #     - IN: sn-aws-man
   #     - IN: sn-ecs-cluster
 
-  - name: sn-aws-man
-    type: manifest
-    steps:
-      - IN: sn-img-1
-      - IN: sn-dockerOpts-1
+  # - name: sn-aws-man
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-img-1
+  #     - IN: sn-dockerOpts-1
 
-  - name: sn-aws-deploy-up
-    type: deploy
-    steps:
-      - IN: sn-aws-man
-        deployName: api-app
-      - IN: sn-ecs-cluster
-      - TASK: managed
-        deployMethod: upgrade
-
-  - name: sn-aws-deploy-up-2
-    type: deploy
-    steps:
-      - IN: sn-aws-deploy-up
-      - IN: sn-ecs-cluster
-      - TASK: managed
-        deployMethod: upgrade
+  # - name: sn-aws-deploy-up
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-aws-man
+  #       deployName: api-app
+  #     - IN: sn-ecs-cluster
+  #     - TASK: managed
+  #       deployMethod: upgrade
+  #
+  # - name: sn-aws-deploy-up-2
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-aws-deploy-up
+  #     - IN: sn-ecs-cluster
+  #     - TASK: managed
+  #       deployMethod: upgrade
+  #
+  # - name: sn-aws-man-1
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-img-1
+  #     - IN: sn-dockerOpts-1
 
   # - name: sn-aws-deploy-rep-ll
   #   type: deploy
