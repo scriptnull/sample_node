@@ -14,85 +14,6 @@ jobs:
   #     - TASK: managed
   #       deployMethod: upgrade
 
-  # - name: sn-aws-man-chain
-  #   type: manifest
-  #   steps:
-  #     - IN: sn-img-1
-  #     - IN: sn-ecs-trigger
-
-  # - name: sn-aws-deploy
-  #   type: deploy
-  #   steps:
-  #     - IN: sn-aws-man
-  #     - IN: sn-ecs-cluster
-
-  # - name: sn-aws-man
-  #   type: manifest
-  #   steps:
-  #     - IN: sn-img-1
-  #     - IN: sn-dockerOpts-1
-
-  # - name: sn-aws-deploy-up
-  #   type: deploy
-  #   steps:
-  #     - IN: sn-aws-man
-  #       deployName: api-app
-  #     - IN: sn-ecs-cluster
-  #     - TASK: managed
-  #       deployMethod: upgrade
-  #
-  # - name: sn-aws-deploy-up-2
-  #   type: deploy
-  #   steps:
-  #     - IN: sn-aws-deploy-up
-  #     - IN: sn-ecs-cluster
-  #     - TASK: managed
-  #       deployMethod: upgrade
-  #
-  # - name: sn-aws-man-1
-  #   type: manifest
-  #   steps:
-  #     - IN: sn-img-1
-  #     - IN: sn-dockerOpts-1
-
-  # - name: sn-aws-deploy-rep-ll
-  #   type: deploy
-  #   steps:
-  #     - IN: sn-aws-man
-  #     # - IN: sn-dockerOpts-man
-  #     # - IN: sn-dockerOpts-man
-  #     #   applyTo:
-  #     #     - sn-aws-man
-  #     - IN: sn-ecs-cluster
-  #     - TASK: managed
-  #       deployMethod: replace
-
-  # - name: sn-ecs-man
-  #   type: manifest
-  #   steps:
-  #     - IN: sn-myapp2
-  #     - IN: sn-docker-myapp3-80
-  #     - IN: sn-ecs-trigger
-  #
-  # - name: sn-ecs-dep
-  #   type: deploy
-  #   steps:
-  #     - IN: sn-ecs-man
-  #     - IN: sn-ecs-cluster
-  #     - IN: sn-ecs-lb
-  #       applyTo:
-  #         - manifest: sn-ecs-man
-  #           image: sn-myapp2
-  #           port: 80
-
-  # - name: sn-ecs-dep-4
-  #   type: deploy
-  #   steps:
-  #     - IN: sn-ecs-man
-  #     - IN: sn-ecs-cluster
-  #     - TASK: managed
-  #       deployMethod: upgrade
-
   # - name: sn-man-jfrog
   #   type: manifest
   #   steps:
@@ -288,3 +209,18 @@ jobs:
   #     - TASK:
   #         - script: printenv
   #         - script: echo "hello world"
+
+  - name: sn-aws-man
+    type: manifest
+    steps:
+      - IN: sn-img-1
+      - IN: sn-dockerOpts-1
+
+  - name: sn-aws-deploy
+    type: deploy
+    steps:
+      - IN: sn-aws-man
+        deployName: api-app
+      - IN: sn-ecs-cluster
+      - TASK: managed
+        deployMethod: replace
