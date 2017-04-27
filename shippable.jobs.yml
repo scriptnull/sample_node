@@ -216,7 +216,7 @@ jobs:
       - IN: sn-img-1
       - IN: sn-dockerOpts-1
 
-  - name: sn-aws-dep
+  - name: sn-aws-dep-1
     type: deploy
     steps:
       - IN: sn-aws-man
@@ -225,10 +225,10 @@ jobs:
       - TASK: managed
         deployMethod: replace
 
-  - name: sn-aws-dep-from-dep
-    type: deploy
-    steps:
-      - IN: sn-aws-dep
-      - IN: sn-ecs-cluster
-      - TASK: managed
-        deployMethod: replace
+  # - name: sn-aws-dep-from-dep
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-aws-dep
+  #     - IN: sn-ecs-cluster
+  #     - TASK: managed
+  #       deployMethod: replace
