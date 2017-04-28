@@ -239,21 +239,21 @@ jobs:
       - IN: sn-img-1
       - IN: sn-dockerOpts-1
 
-  - name: sn-aws-replace-d2
-    type: deploy
-    steps:
-      - IN: sn-aws-man
-      - IN: sn-ecs-cluster
-      - TASK: managed
-        deployMethod: replace
-
-  - name: sn-aws-replace-d3
-    type: deploy
-    steps:
-      - IN: sn-aws-man
-      - IN: sn-ecs-cluster
-      - TASK: managed
-        deployMethod: replace
+  # - name: sn-aws-replace-d2
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-aws-man
+  #     - IN: sn-ecs-cluster
+  #     - TASK: managed
+  #       deployMethod: replace
+  #
+  # - name: sn-aws-replace-d3
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-aws-man
+  #     - IN: sn-ecs-cluster
+  #     - TASK: managed
+  #       deployMethod: replace
 
   - name: sn-aws-replace-d4
     type: deploy
