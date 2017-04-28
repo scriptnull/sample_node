@@ -271,3 +271,11 @@ jobs:
   #     - IN: sn-ecs-cluster
   #     - TASK: managed
   #       deployMethod: replace
+
+  - name: sn-aws-bluegreen-d1
+    type: deploy
+    steps:
+      - IN: sn-aws-man
+      - IN: sn-ecs-cluster
+      - TASK: managed
+        deployMethod: blueGreen
