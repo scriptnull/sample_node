@@ -210,20 +210,19 @@ jobs:
   #         - script: printenv
   #         - script: echo "hello world"
 
-  - name: sn-aws-man
-    type: manifest
-    steps:
-      - IN: sn-img-1
-      - IN: sn-dockerOpts-1
-
-  - name: sn-aws-dep-1
-    type: deploy
-    steps:
-      - IN: sn-aws-man
-        deployName: hello-app
-      - IN: sn-ecs-cluster
-      - TASK: managed
-        deployMethod: replace
+  # - name: sn-aws-man
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-img-1
+  #     - IN: sn-dockerOpts-1
+  #
+  # - name: sn-aws-dep-1
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-aws-man
+  #     - IN: sn-ecs-cluster
+  #     - TASK: managed
+  #       deployMethod: replace
 
   # - name: sn-aws-dep-from-dep
   #   type: deploy
@@ -232,3 +231,18 @@ jobs:
   #     - IN: sn-ecs-cluster
   #     - TASK: managed
   #       deployMethod: replace
+
+
+  - name: sn-aws-man
+    type: manifest
+    steps:
+      - IN: sn-img-1
+      - IN: sn-dockerOpts-1
+
+  - name: sn-aws-replace-d1
+    type: deploy
+    steps:
+      - IN: sn-aws-man
+      - IN: sn-ecs-cluster
+      - TASK: managed
+        deployMethod: replace
