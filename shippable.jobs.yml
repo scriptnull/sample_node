@@ -254,3 +254,20 @@ jobs:
       - IN: sn-ecs-cluster
       - TASK: managed
         deployMethod: replace
+
+  - name: sn-aws-replace-d4
+    type: deploy
+    steps:
+      - IN: sn-aws-man
+      - IN: sn-ecs-cluster
+      - TASK: managed
+        deployMethod: replace
+
+  - name: sn-aws-replace-d5
+    type: deploy
+    steps:
+      - IN: sn-aws-replace-d4
+        switch: off
+      - IN: sn-ecs-cluster
+      - TASK: managed
+        deployMethod: replace
