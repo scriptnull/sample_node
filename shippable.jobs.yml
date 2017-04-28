@@ -239,7 +239,7 @@ jobs:
       - IN: sn-img-1
       - IN: sn-dockerOpts-1
 
-  - name: sn-aws-replace-d1
+  - name: sn-aws-replace-d2
     type: deploy
     steps:
       - IN: sn-aws-man
