@@ -286,3 +286,11 @@ jobs:
   #     - IN: sn-ecs-cluster
   #     - TASK: managed
   #       deployMethod: blueGreen
+
+  - name: sn-aws-upgrade-d1
+    type: deploy
+    steps:
+      - IN: sn-aws-man
+      - IN: sn-ecs-cluster
+      - TASK: managed
+        deployMethod: upgrade
