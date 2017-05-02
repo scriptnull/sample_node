@@ -346,3 +346,8 @@ resources:
   #   integration: scriptnull-aws
   #   pointer:
   #     region: us-west-2
+
+  - name: sn-man-version
+    type: version
+    seed:
+      versionName: "0.0.1"

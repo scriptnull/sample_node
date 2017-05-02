@@ -239,6 +239,14 @@ jobs:
       - IN: sn-dockerOpts-1
       - IN: sn-ecs-trigger
 
+  - name: sn-aws-rel
+    type: release
+    steps:
+      - IN: sn-man-version
+      - IN: sn-aws-man
+      - TASK: managed
+        bump: minor
+
   # - name: sn-aws-bluegreen-d1-rel
   #   type: deploy
   #   steps:
