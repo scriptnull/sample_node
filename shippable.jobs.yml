@@ -244,7 +244,6 @@ jobs:
     steps:
       - IN: sn-img-2
       - IN: sn-dockerOpts-1
-      - IN: sn-ecs-trigger
 
   - name: sn-aws-bluegreen-d1-new
     type: deploy
