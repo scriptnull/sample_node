@@ -253,6 +253,14 @@ jobs:
       - TASK: managed
         deployMethod: blueGreen
 
+  - name: sn-aws-bluegreen-d2
+    type: deploy
+    steps:
+      - IN: sn-aws-bluegreen-d1-new
+      - IN: sn-ecs-cluster
+      - TASK: managed
+        deployMethod: blueGreen
+
   # - name: sn-aws-bluegreen-d1-b4
   #   type: deploy
   #   steps:
