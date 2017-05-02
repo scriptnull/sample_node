@@ -247,14 +247,13 @@ jobs:
       - TASK: managed
         bump: minor
 
-  # - name: sn-aws-bluegreen-d1-rel
-  #   type: deploy
-  #   steps:
-  #     - IN: sn-aws-man
-  #     - IN: sn-aws-man-aa
-  #     - IN: sn-ecs-cluster
-  #     - TASK: managed
-  #       deployMethod: blueGreen
+  - name: sn-aws-bluegreen-d1-rel
+    type: deploy
+    steps:
+      - IN: sn-aws-rel
+      - IN: sn-ecs-cluster
+      - TASK: managed
+        deployMethod: blueGreen
 
   # - name: sn-aws-bluegreen-d1-b4
   #   type: deploy
