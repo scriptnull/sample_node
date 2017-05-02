@@ -30,7 +30,7 @@ resources:
   - name: sn-dockerOpts-1
     type: dockerOptions
     version:
-      memory: 50
+      memory: 55
 
   # - name: sn-dockerOpts-man
   #   type: dockerOptions
