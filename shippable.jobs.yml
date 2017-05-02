@@ -246,6 +246,14 @@ jobs:
       - IN: sn-dockerOpts-1
       - IN: sn-ecs-trigger
 
+  - name: sn-aws-bluegreen-d1-new
+    type: deploy
+    steps:
+      - IN: sn-aws-man
+      - IN: sn-ecs-cluster
+      - TASK: managed
+        deployMethod: blueGreen
+
   # - name: sn-aws-bluegreen-d1-b4
   #   type: deploy
   #   steps:
