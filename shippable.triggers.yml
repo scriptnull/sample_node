@@ -39,10 +39,10 @@ triggers:
   #   version:
   #     counter: 1
   # #
-  # - name: sn-ecs-trigger
-  #   type: trigger
-  #   version:
-  #     counter: 8
+  - name: sn-ecs-trigger
+    type: trigger
+    version:
+      counter: 1
 
   # - name: sn-ecs-lb-trigger
   #   type: trigger
