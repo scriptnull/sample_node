@@ -237,12 +237,14 @@ jobs:
     steps:
       - IN: sn-img-1
       - IN: sn-dockerOpts-1
+      - IN: sn-ecs-trigger
 
   - name: sn-aws-man-aa
     type: manifest
     steps:
       - IN: sn-img-2
       - IN: sn-dockerOpts-1
+      - IN: sn-ecs-trigger
 
   - name: sn-aws-bluegreen-d1-b4
     type: deploy
