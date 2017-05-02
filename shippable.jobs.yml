@@ -248,6 +248,7 @@ jobs:
     type: deploy
     steps:
       - IN: sn-aws-man
+      - IN: sn-aws-man-aa
       - IN: sn-ecs-cluster
       - TASK: managed
         deployMethod: blueGreen
