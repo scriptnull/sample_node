@@ -239,11 +239,19 @@ jobs:
       - IN: sn-dockerOpts-1
       - IN: sn-ecs-trigger
 
+  - name: sn-aws-man-aa
+    type: manifest
+    steps:
+      - IN: sn-img-2
+      - IN: sn-dockerOpts-1
+      - IN: sn-ecs-trigger
+
   - name: sn-aws-rel
     type: release
     steps:
       - IN: sn-man-version
       - IN: sn-aws-man
+      - IN: sn-aws-man-aa
       - TASK: managed
         bump: minor
 
