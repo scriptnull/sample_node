@@ -239,28 +239,14 @@ jobs:
       - IN: sn-dockerOpts-1
       - IN: sn-ecs-trigger
 
-  - name: sn-aws-man-aa
-    type: manifest
-    steps:
-      - IN: sn-img-2
-      - IN: sn-dockerOpts-1
-
-  - name: sn-aws-bluegreen-d1-new
-    type: deploy
-    steps:
-      - IN: sn-aws-man
-      - IN: sn-aws-man-aa
-      - IN: sn-ecs-cluster
-      - TASK: managed
-        deployMethod: blueGreen
-
-  - name: sn-aws-bluegreen-d2
-    type: deploy
-    steps:
-      - IN: sn-aws-bluegreen-d1-new
-      - IN: sn-ecs-cluster
-      - TASK: managed
-        deployMethod: blueGreen
+  # - name: sn-aws-bluegreen-d1-rel
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-aws-man
+  #     - IN: sn-aws-man-aa
+  #     - IN: sn-ecs-cluster
+  #     - TASK: managed
+  #       deployMethod: blueGreen
 
   # - name: sn-aws-bluegreen-d1-b4
   #   type: deploy
@@ -270,52 +256,3 @@ jobs:
   #     - IN: sn-ecs-cluster
   #     - TASK: managed
   #       deployMethod: blueGreen
-
-  # - name: sn-aws-replace-d2
-  #   type: deploy
-  #   steps:
-  #     - IN: sn-aws-man
-  #     - IN: sn-ecs-cluster
-  #     - TASK: managed
-  #       deployMethod: replace
-  #
-  # - name: sn-aws-replace-d3
-  #   type: deploy
-  #   steps:
-  #     - IN: sn-aws-man
-  #     - IN: sn-ecs-cluster
-  #     - TASK: managed
-  #       deployMethod: replace
-
-  # - name: sn-aws-replace-d4
-  #   type: deploy
-  #   steps:
-  #     - IN: sn-aws-man
-  #     - IN: sn-ecs-cluster
-  #     - TASK: managed
-  #       deployMethod: replace
-  #
-  # - name: sn-aws-replace-d5
-  #   type: deploy
-  #   steps:
-  #     - IN: sn-aws-replace-d4
-  #       switch: off
-  #     - IN: sn-ecs-cluster
-  #     - TASK: managed
-  #       deployMethod: replace
-
-  # - name: sn-aws-upgrade-d1
-  #   type: deploy
-  #   steps:
-  #     - IN: sn-aws-man
-  #     - IN: sn-ecs-cluster
-  #     - TASK: managed
-  #       deployMethod:
-
-  # - name: sn-aws-upgrade-d1
-  #   type: deploy
-  #   steps:
-  #     - IN: sn-aws-man
-  #     - IN: sn-ecs-cluster
-  #     - TASK: managed
-  #       deployMethod: upgrade
