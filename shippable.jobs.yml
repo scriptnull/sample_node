@@ -238,6 +238,14 @@ jobs:
       - IN: sn-img-1
       - IN: sn-dockerOpts-1
 
+  - name: sn-aws-bluegreen-d1-b4
+    type: deploy
+    steps:
+      - IN: sn-aws-man
+      - IN: sn-ecs-cluster
+      - TASK: managed
+        deployMethod: blueGreen
+
   # - name: sn-aws-replace-d2
   #   type: deploy
   #   steps:
@@ -278,14 +286,6 @@ jobs:
   #     - IN: sn-ecs-cluster
   #     - TASK: managed
   #       deployMethod:
-
-  # - name: sn-aws-bluegreen-d1
-  #   type: deploy
-  #   steps:
-  #     - IN: sn-aws-man
-  #     - IN: sn-ecs-cluster
-  #     - TASK: managed
-  #       deployMethod: blueGreen
 
   # - name: sn-aws-upgrade-d1
   #   type: deploy
