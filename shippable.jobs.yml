@@ -264,15 +264,15 @@ jobs:
   #     - TASK: managed
   #       deployMethod: blueGreen
 
-  - name: sn-aws-bluegreen-d1-b4
-    type: deploy
-    steps:
-      - IN: sn-aws-man
-      - IN: sn-ecs-cluster
-      - IN: sn-ecs-lb
-        applyTo:
-          - manifest: sn-aws-man
-            image: sn-img-1
-            port: 80
-      - TASK: managed
-        deployMethod: blueGreen
+  # - name: sn-aws-bluegreen-d1-b4
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-aws-man
+  #     - IN: sn-ecs-cluster
+  #     - IN: sn-ecs-lb
+  #       applyTo:
+  #         - manifest: sn-aws-man
+  #           image: sn-img-1
+  #           port: 80
+  #     - TASK: managed
+  #       deployMethod: blueGreen
