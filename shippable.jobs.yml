@@ -240,7 +240,7 @@ jobs:
       - IN: sn-docker-myapp3-80
       - IN: sn-ecs-trigger
 
-  - name: sn-aws-upgrade-d3
+  - name: sn-aws-upgrade-d4
     type: deploy
     steps:
       - IN: sn-aws-man
