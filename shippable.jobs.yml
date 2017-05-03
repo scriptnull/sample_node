@@ -237,8 +237,9 @@ jobs:
     steps:
       - IN: sn-img-1
       - IN: sn-dockerOpts-1
+      - IN: sn-docker-myapp3-80
       - IN: sn-ecs-trigger
-  # 
+
   # - name: sn-aws-man-aa
   #   type: manifest
   #   steps:
@@ -263,11 +264,15 @@ jobs:
   #     - TASK: managed
   #       deployMethod: blueGreen
 
-  # - name: sn-aws-bluegreen-d1-b4
-  #   type: deploy
-  #   steps:
-  #     - IN: sn-aws-man
-  #     - IN: sn-aws-man-aa
-  #     - IN: sn-ecs-cluster
-  #     - TASK: managed
-  #       deployMethod: blueGreen
+  - name: sn-aws-bluegreen-d1-b4
+    type: deploy
+    steps:
+      - IN: sn-aws-man
+      - IN: sn-ecs-cluster
+      - IN: sn-ecs-lb
+        applyTo:
+          - manifest: sn-aws-man
+            image: sn-img-1
+            port: 80
+      - TASK: managed
+        deployMethod: blueGreen
