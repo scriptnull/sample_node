@@ -259,6 +259,7 @@ jobs:
     type: release
     steps:
       - IN: sn-man-version
+      - IN: sn-aws-man-aa
       - IN: sn-aws-man
       - TASK: managed
         bump: minor
