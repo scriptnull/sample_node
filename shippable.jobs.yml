@@ -247,23 +247,21 @@ jobs:
       - IN: sn-dockerOpts-1
       - IN: sn-ecs-trigger
 
-  - name: sn-aws-upgrade-d3
+  - name: sn-aws-upgrade-d5
     type: deploy
     steps:
-      - IN: sn-aws-man
-      - IN: sn-aws-man-aa
+      - IN: sn-aws-rel
       - IN: sn-ecs-cluster
       - TASK: managed
         deployMethod: upgrade
 
-  # - name: sn-aws-rel
-  #   type: release
-  #   steps:
-  #     - IN: sn-man-version
-  #     - IN: sn-aws-man
-  #     - IN: sn-aws-man-aa
-  #     - TASK: managed
-  #       bump: minor
+  - name: sn-aws-rel
+    type: release
+    steps:
+      - IN: sn-man-version
+      - IN: sn-aws-man
+      - TASK: managed
+        bump: minor
   #
   # - name: sn-aws-bluegreen-d1-rel
   #   type: deploy
