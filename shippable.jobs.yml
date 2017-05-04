@@ -240,13 +240,13 @@ jobs:
       - IN: sn-docker-myapp3-80
       - IN: sn-ecs-trigger
 
-  # - name: sn-aws-upgrade-d5
-  #   type: deploy
-  #   steps:
-  #     - IN: sn-aws-man
-  #     - IN: sn-ecs-cluster
-  #     - TASK: managed
-  #       deployMethod: upgrade
+  - name: sn-aws-upgrade-d1
+    type: deploy
+    steps:
+      - IN: sn-aws-man
+      - IN: sn-ecs-cluster
+      - TASK: managed
+        deployMethod: upgrade
 
   # - name: sn-aws-man-aa
   #   type: manifest
