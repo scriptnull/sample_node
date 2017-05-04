@@ -236,6 +236,7 @@ jobs:
     type: manifest
     steps:
       - IN: sn-img-1
+      - IN: sn-img-2
       - IN: sn-dockerOpts-1
       # - IN: sn-docker-myapp3-80
       - IN: sn-ecs-trigger
@@ -255,14 +256,6 @@ jobs:
       - TASK: managed
         deployMethod: upgrade
 
-  - name: sn-aws-upgrade-d2
-    type: deploy
-    steps:
-      - IN: sn-aws-man
-      - IN: sn-aws-man-aa
-      - IN: sn-ecs-cluster
-      - TASK: managed
-        deployMethod: upgrade
 
   #
   # - name: sn-aws-rel
