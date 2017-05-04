@@ -247,7 +247,7 @@ jobs:
       - IN: sn-dockerOpts-1
       - IN: sn-ecs-trigger
 
-  - name: sn-aws-upgrade-d6
+  - name: sn-aws-upgrade-d8
     type: deploy
     steps:
       - IN: sn-aws-man
@@ -257,6 +257,8 @@ jobs:
           - manifest: sn-aws-man
             image: sn-img-1
             port: 80
+      - TASK: managed
+        deployMethod: upgrade
 
   # - name: sn-aws-rel
   #   type: release
