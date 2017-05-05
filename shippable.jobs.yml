@@ -237,7 +237,7 @@ jobs:
     steps:
       - IN: sn-img-1
       - IN: sn-dockerOpts-1
-      - IN: sn-docker-myapp3-80
+      # - IN: sn-docker-myapp3-80
       - IN: sn-ecs-trigger
 
   - name: sn-aws-man-aa
@@ -247,18 +247,18 @@ jobs:
       - IN: sn-dockerOpts-1
       - IN: sn-ecs-trigger
 
-  - name: sn-aws-upgrade-d8
-    type: deploy
-    steps:
-      - IN: sn-aws-man
-      - IN: sn-ecs-cluster
-      - IN: sn-ecs-lb
-        applyTo:
-          - manifest: sn-aws-man
-            image: sn-img-1
-            port: 80
-      - TASK: managed
-        deployMethod: upgrade
+  # - name: sn-aws-upgrade-d8
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-aws-man
+  #     - IN: sn-ecs-cluster
+  #     - IN: sn-ecs-lb
+  #       applyTo:
+  #         - manifest: sn-aws-man
+  #           image: sn-img-1
+  #           port: 80
+  #     - TASK: managed
+  #       deployMethod: upgrade
 
   # - name: sn-aws-rel
   #   type: release
@@ -269,13 +269,13 @@ jobs:
   #     - TASK: managed
   #       bump: minor
   #
-  # - name: sn-aws-bluegreen-d1-rel
-  #   type: deploy
-  #   steps:
-  #     - IN: sn-aws-rel
-  #     - IN: sn-ecs-cluster
-  #     - TASK: managed
-  #       deployMethod: blueGreen
+  - name: sn-aws-deploy
+    type: deploy
+    steps:
+      - IN: sn-aws-man
+      - IN: sn-ecs-cluster
+      - TASK: managed
+        deployMethod: blueGreen
 
   # - name: sn-aws-bluegreen-d1-b4
   #   type: deploy
