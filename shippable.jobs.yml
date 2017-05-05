@@ -275,7 +275,7 @@ jobs:
       - IN: sn-aws-man
       - IN: sn-ecs-cluster
       - TASK: managed
-        deployMethod: blueGreen
+        deployMethod: upgrade
 
   # - name: sn-aws-bluegreen-d1-b4
   #   type: deploy
