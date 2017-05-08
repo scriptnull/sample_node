@@ -274,7 +274,6 @@ jobs:
     type: deploy
     steps:
       - IN: sn-aws-man
-        deployName: "hello-deploy"
       - IN: sn-ecs-cluster
       - TASK: managed
         deployMethod: upgrade
