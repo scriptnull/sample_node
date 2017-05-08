@@ -279,6 +279,14 @@ jobs:
       - TASK: managed
         deployMethod: upgrade
 
+  - name: sn-aws-pipe
+    type: deploy
+    steps:
+      - IN: sn-aws-deploy
+      - IN: sn-ecs-cluster
+      - TASK: managed
+        deployMethod: upgrade
+
   # - name: sn-aws-bluegreen-d1-b4
   #   type: deploy
   #   steps:
