@@ -176,6 +176,6 @@ jobs:
     type: deploy
     steps:
       - IN: sn-aws-man
-      - IN: sn-ecs-cluster
+      - IN: sn-rc-ship-ecs-cluster
       - TASK: managed
         deployMethod: upgrade
