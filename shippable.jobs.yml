@@ -195,4 +195,4 @@ jobs:
       - IN: sn-aws-man
       - IN: sn-rc-ship-ecs-cluster
       - TASK: managed
-        deployMethod: replace
+        deployMethod: upgrade
