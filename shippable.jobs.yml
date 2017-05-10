@@ -272,8 +272,6 @@ jobs:
     steps:
       - IN: sn-aws-man
       - IN: sn-ecs-cluster
-      - TASK: managed
-        deployMethod: upgrade
 
 ### New deployments
 
