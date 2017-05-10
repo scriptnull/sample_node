@@ -277,13 +277,13 @@ jobs:
 
 ### New deployments
 
-  # - name: sn-aws-new-deploy
-  #   type: deploy
-  #   steps:
-  #     - IN: sn-aws-man
-  #     - IN: sn-ecs-cluster
-  #     - TASK: managed
-  #       deployMethod: replace
+  - name: sn-aws-new-deploy-re
+    type: deploy
+    steps:
+      - IN: sn-aws-man
+      - IN: sn-ecs-cluster
+      - TASK: managed
+        deployMethod: replace
   #
   # - name: sn-aws-new-deploy-up
   #   type: deploy
