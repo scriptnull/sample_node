@@ -180,3 +180,11 @@ jobs:
   #     - IN: sn-rc-ship-ecs-cluster
   #     - TASK: managed
   #       deployMethod: upgrade
+
+  - name: sn-aws-xxold-deploy-rep
+    type: deploy
+    steps:
+      - IN: sn-aws-man
+      - IN: sn-rc-ship-ecs-cluster
+      - TASK: managed
+        deployMethod: replace
