@@ -249,15 +249,15 @@ jobs:
   #     - IN: sn-ecs-cluster
   #     - TASK: managed
   #       deployMethod: replace
-  #
-  # - name: sn-aws-old-deploy
-  #   type: deploy
-  #   steps:
-  #     - IN: sn-aws-man
-  #     - IN: sn-ecs-cluster
-  #     - TASK: managed
-  #       deployMethod: upgrade
-  #
+
+  - name: sn-aws-old-deploy-up
+    type: deploy
+    steps:
+      - IN: sn-aws-man
+      - IN: sn-ecs-cluster
+      - TASK: managed
+        deployMethod: upgrade
+
   # - name: sn-aws-old-deploy
   #   type: deploy
   #   steps:
