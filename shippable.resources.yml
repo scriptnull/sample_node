@@ -65,7 +65,7 @@ resources:
   - name: sn-rc-ship-docker-opts-3
     type: dockerOptions
     version:
-      memory: 30
+      memory: 32
 
   # - name: sn-rc-ship-ecs-cluster-testCl
   #   type: cluster

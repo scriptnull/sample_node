@@ -171,6 +171,7 @@ jobs:
     steps:
       - IN: sn-rc-ship-myapp3
       - IN: sn-rc-ship-docker-opts-3
+      - IN: sn-rc-ship-ecs-trigger
 
   - name: sn-aws-xxold-deploy-up
     type: deploy
