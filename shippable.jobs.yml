@@ -273,7 +273,7 @@ jobs:
       - IN: sn-aws-man
       - IN: sn-ecs-cluster
       - TASK: managed
-        deployMethod: blueGreen
+        deployMethod: upgrade
 
 ### New deployments
 
