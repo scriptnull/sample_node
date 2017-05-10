@@ -42,7 +42,7 @@ triggers:
   - name: sn-rc-ship-ecs-trigger
     type: trigger
     version:
-      counter: 1
+      counter: 2
 
   - name: sn-rc-ship-mix-a-trigger
     type: trigger
