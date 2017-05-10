@@ -240,6 +240,15 @@ jobs:
       # - IN: sn-docker-myapp3-80
       - IN: sn-ecs-trigger
 
+
+  - name: sn-aws-new-man
+    type: manifest
+    steps:
+      - IN: sn-img-1
+      - IN: sn-dockerOpts-1
+      # - IN: sn-docker-myapp3-80
+      - IN: sn-ecs-trigger
+
 ### old deployments
 
   # - name: sn-aws-old-deploy
@@ -276,13 +285,13 @@ jobs:
   #     - TASK: managed
   #       deployMethod: replace
   #
-  # - name: sn-aws-new-deploy
-  #   type: deploy
-  #   steps:
-  #     - IN: sn-aws-man
-  #     - IN: sn-ecs-cluster
-  #     - TASK: managed
-  #       deployMethod: upgrade
+  - name: sn-aws-new-deploy-up
+    type: deploy
+    steps:
+      - IN: sn-aws-new-man
+      - IN: sn-ecs-cluster
+      - TASK: managed
+        deployMethod: upgrade
   #
   # - name: sn-aws-new-deploy
   #   type: deploy
