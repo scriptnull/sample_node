@@ -189,10 +189,10 @@ jobs:
       - TASK: managed
         deployMethod: replace
 
-  - name: sn-aws-xxnew-deploy-rep
-    type: deploy
-    steps:
-      - IN: sn-aws-man
-      - IN: sn-rc-ship-ecs-cluster
-      - TASK: managed
-        deployMethod: replace
+  # - name: sn-aws-xxnew-deploy-rep
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-aws-man
+  #     - IN: sn-rc-ship-ecs-cluster
+  #     - TASK: managed
+  #       deployMethod: replace
