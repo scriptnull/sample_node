@@ -267,13 +267,13 @@ jobs:
   #     - TASK: managed
   #       deployMethod: upgrade
 
-  # - name: sn-aws-old-deploy
-  #   type: deploy
-  #   steps:
-  #     - IN: sn-aws-man
-  #     - IN: sn-ecs-cluster
-  #     - TASK: managed
-  #       deployMethod: blueGreen
+  - name: sn-aws-old-deploy-bg
+    type: deploy
+    steps:
+      - IN: sn-aws-man
+      - IN: sn-ecs-cluster
+      - TASK: managed
+        deployMethod: blueGreen
 
 ### New deployments
 
