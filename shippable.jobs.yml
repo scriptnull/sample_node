@@ -251,13 +251,13 @@ jobs:
 
 ### old deployments
 
-  - name: sn-aws-old-deploy-re
-    type: deploy
-    steps:
-      - IN: sn-aws-man
-      - IN: sn-ecs-cluster
-      - TASK: managed
-        deployMethod: replace
+  # - name: sn-aws-old-deploy-re
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-aws-man
+  #     - IN: sn-ecs-cluster
+  #     - TASK: managed
+  #       deployMethod: replace
 
   # - name: sn-aws-old-deploy-up
   #   type: deploy
@@ -277,13 +277,13 @@ jobs:
 
 ### New deployments
 
-  - name: sn-aws-new-deploy-re
-    type: deploy
-    steps:
-      - IN: sn-aws-man
-      - IN: sn-ecs-cluster
-      - TASK: managed
-        deployMethod: replace
+  # - name: sn-aws-new-deploy-re
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-aws-man
+  #     - IN: sn-ecs-cluster
+  #     - TASK: managed
+  #       deployMethod: replace
   #
   # - name: sn-aws-new-deploy-up
   #   type: deploy
