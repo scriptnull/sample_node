@@ -196,3 +196,19 @@ jobs:
   #     - IN: sn-rc-ship-ecs-cluster
   #     - TASK: managed
   #       deployMethod: replace
+
+  - name: sn-aws-xxold-deploy-bg
+    type: deploy
+    steps:
+      - IN: sn-aws-man
+      - IN: sn-rc-ship-ecs-cluster
+      - TASK: managed
+        deployMethod: blueGreen
+
+  # - name: sn-aws-xxnew-deploy-bg
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-aws-man
+  #     - IN: sn-rc-ship-ecs-cluster
+  #     - TASK: managed
+  #       deployMethod: replace
