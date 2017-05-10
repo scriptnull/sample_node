@@ -164,3 +164,18 @@ jobs:
     type: manifest
     steps:
       - IN: sn-rc-st-img-myapp2
+
+
+  - name: sn-aws-man
+    type: manifest
+    steps:
+      - IN: sn-rc-ship-myapp3
+      - IN: sn-rc-ship-docker-opts-3
+
+  - name: sn-aws-xxold-deploy-up
+    type: deploy
+    steps:
+      - IN: sn-aws-man
+      - IN: sn-ecs-cluster
+      - TASK: managed
+        deployMethod: upgrade
