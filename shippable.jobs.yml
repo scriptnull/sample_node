@@ -240,6 +240,57 @@ jobs:
       # - IN: sn-docker-myapp3-80
       - IN: sn-ecs-trigger
 
+### old deployments
+
+  # - name: sn-aws-old-deploy
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-aws-man
+  #     - IN: sn-ecs-cluster
+  #     - TASK: managed
+  #       deployMethod: replace
+  #
+  # - name: sn-aws-old-deploy
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-aws-man
+  #     - IN: sn-ecs-cluster
+  #     - TASK: managed
+  #       deployMethod: upgrade
+  #
+  # - name: sn-aws-old-deploy
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-aws-man
+  #     - IN: sn-ecs-cluster
+  #     - TASK: managed
+  #       deployMethod: blueGreen
+
+### New deployments
+
+  # - name: sn-aws-new-deploy
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-aws-man
+  #     - IN: sn-ecs-cluster
+  #     - TASK: managed
+  #       deployMethod: replace
+  #
+  # - name: sn-aws-new-deploy
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-aws-man
+  #     - IN: sn-ecs-cluster
+  #     - TASK: managed
+  #       deployMethod: upgrade
+  #
+  # - name: sn-aws-new-deploy
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-aws-man
+  #     - IN: sn-ecs-cluster
+  #     - TASK: managed
+  #       deployMethod: blueGreen
 
   # - name: sn-aws-man-aa
   #   type: manifest
@@ -261,30 +312,6 @@ jobs:
   #     - TASK: managed
   #       deployMethod: upgrade
 
-  # - name: sn-aws-rel
-  #   type: release
-  #   steps:
-  #     - IN: sn-man-version
-  #     - IN: sn-aws-man-aa
-  #     - IN: sn-aws-man
-  #     - TASK: managed
-  #       bump: minor
-  #
-  - name: sn-aws-deploy
-    type: deploy
-    steps:
-      - IN: sn-aws-man
-      - IN: sn-ecs-cluster
-      - TASK: managed
-        deployMethod: upgrade
-
-  - name: sn-aws-pipe
-    type: deploy
-    steps:
-      - IN: sn-aws-deploy
-      - IN: sn-ecs-cluster
-      - TASK: managed
-        deployMethod: upgrade
 
   # - name: sn-aws-bluegreen-d1-b4
   #   type: deploy
