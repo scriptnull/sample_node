@@ -304,6 +304,7 @@ jobs:
     type: deploy
     steps:
       - IN: sn-aws-man
+        deployName: will-change-bg
       - IN: sn-ecs-cluster
       - TASK: managed
         deployMethod: blueGreen
