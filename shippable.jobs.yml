@@ -286,6 +286,7 @@ jobs:
     type: deploy
     steps:
       - IN: sn-aws-man
+        deployName: not-show-replace
       - IN: sn-ecs-cluster
       - TASK: managed
         deployMethod: replace
