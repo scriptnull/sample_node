@@ -282,59 +282,59 @@ jobs:
 
 ### New deployments
 
-  - name: sn-aws-old-deploy-re
-    type: deploy
-    steps:
-      - IN: sn-aws-man
-        deployName: not-show-replace
-      - IN: sn-ecs-cluster
-      - TASK: managed
-        deployMethod: replace
-
-  - name: sn-aws-old-deploy-up
-    type: deploy
-    steps:
-      - IN: sn-aws-man
-        deployName: not-show-upgrade
-      - IN: sn-ecs-cluster
-      - TASK: managed
-        deployMethod: upgrade
+  # - name: sn-aws-old-deploy-re
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-aws-man
+  #       deployName: not-show-replace
+  #     - IN: sn-ecs-cluster
+  #     - TASK: managed
+  #       deployMethod: replace
   #
-  - name: sn-aws-old-deploy
-    type: deploy
-    steps:
-      - IN: sn-aws-man
-        deployName: will-change-bg
-      - IN: sn-ecs-cluster
-      - TASK: managed
-        deployMethod: blueGreen
-
-  - name: sn-aws-new-deploy-re
-    type: deploy
-    steps:
-      - IN: sn-aws-man
-        deployName: yo-app-replace
-      - IN: sn-ecs-cluster
-      - TASK: managed
-        deployMethod: replace
-
-  - name: sn-aws-new-deploy-up
-    type: deploy
-    steps:
-      - IN: sn-aws-man
-        deployName: yo-app-upgrade
-      - IN: sn-ecs-cluster
-      - TASK: managed
-        deployMethod: upgrade
+  # - name: sn-aws-old-deploy-up
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-aws-man
+  #       deployName: not-show-upgrade
+  #     - IN: sn-ecs-cluster
+  #     - TASK: managed
+  #       deployMethod: upgrade
+  # #
+  # - name: sn-aws-old-deploy
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-aws-man
+  #       deployName: will-change-bg
+  #     - IN: sn-ecs-cluster
+  #     - TASK: managed
+  #       deployMethod: blueGreen
   #
-  - name: sn-aws-new-deploy
-    type: deploy
-    steps:
-      - IN: sn-aws-man
-        deployName: yo-app-bluegreen
-      - IN: sn-ecs-cluster
-      - TASK: managed
-        deployMethod: blueGreen
+  # - name: sn-aws-new-deploy-re
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-aws-man
+  #       deployName: yo-app-replace
+  #     - IN: sn-ecs-cluster
+  #     - TASK: managed
+  #       deployMethod: replace
+  #
+  # - name: sn-aws-new-deploy-up
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-aws-man
+  #       deployName: yo-app-upgrade
+  #     - IN: sn-ecs-cluster
+  #     - TASK: managed
+  #       deployMethod: upgrade
+  # #
+  # - name: sn-aws-new-deploy
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-aws-man
+  #       deployName: yo-app-bluegreen
+  #     - IN: sn-ecs-cluster
+  #     - TASK: managed
+  #       deployMethod: blueGreen
 
   # - name: sn-aws-man-aa
   #   type: manifest
