@@ -293,6 +293,7 @@ jobs:
     type: deploy
     steps:
       - IN: sn-aws-man
+        deployName: yo-app
       - IN: sn-ecs-cluster
       - TASK: managed
         deployMethod: upgrade
