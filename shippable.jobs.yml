@@ -292,7 +292,7 @@ jobs:
   - name: sn-aws-new-deploy-up
     type: deploy
     steps:
-      - IN: sn-aws-new-man
+      - IN: sn-aws-man
       - IN: sn-ecs-cluster
       - TASK: managed
         deployMethod: upgrade
