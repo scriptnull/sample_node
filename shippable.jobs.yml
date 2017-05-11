@@ -291,14 +291,14 @@ jobs:
       - TASK: managed
         deployMethod: replace
 
-  - name: sn-aws-new-deploy-up
-    type: deploy
-    steps:
-      - IN: sn-aws-man
-        deployName: yo-app-upgrade
-      - IN: sn-ecs-cluster
-      - TASK: managed
-        deployMethod: upgrade
+  # - name: sn-aws-new-deploy-up
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-aws-man
+  #       deployName: yo-app-upgrade
+  #     - IN: sn-ecs-cluster
+  #     - TASK: managed
+  #       deployMethod: upgrade
   #
   - name: sn-aws-new-deploy
     type: deploy
