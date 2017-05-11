@@ -273,31 +273,31 @@ jobs:
   #       deployMethod: upgrade
 
 
-  - name: sn-aws-old-deploy-bg
-    type: deploy
-    steps:
-      - IN: sn-aws-man
-        deployName: bg-app
-      - IN: sn-ecs-cluster
+  # - name: sn-aws-old-deploy-bg
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-aws-man
+  #       deployName: bg-app
+  #     - IN: sn-ecs-cluster
 
 ### New deployments
 
-  - name: sn-aws-new-deploy-re
-    type: deploy
-    steps:
-      - IN: sn-aws-man
-      - IN: sn-ecs-cluster
-      - TASK: managed
-        deployMethod: replace
-  #
-  - name: sn-aws-new-deploy-up
-    type: deploy
-    steps:
-      - IN: sn-aws-man
-        deployName: yo-app
-      - IN: sn-ecs-cluster
-      - TASK: managed
-        deployMethod: upgrade
+  # - name: sn-aws-new-deploy-re
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-aws-man
+  #     - IN: sn-ecs-cluster
+  #     - TASK: managed
+  #       deployMethod: replace
+  # #
+  # - name: sn-aws-new-deploy-up
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-aws-man
+  #       deployName: yo-app
+  #     - IN: sn-ecs-cluster
+  #     - TASK: managed
+  #       deployMethod: upgrade
   #
   # - name: sn-aws-new-deploy
   #   type: deploy
