@@ -276,12 +276,12 @@ resources:
   #   pointer:
   #     sourceName : "default" #name of the cluster we are deploying
   # #
-  # - name: sn-scaler
-  #   type: replicas
-  #   version:
-  #     count: 1
-  #   flags:
-  #     - replicas
+  - name: sn-scaler
+    type: replicas
+    version:
+      count: 2
+    flags:
+      - replicas
 
   # - name: sn-version
   #   type: version
