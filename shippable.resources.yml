@@ -230,6 +230,11 @@ resources:
     pointer:
       sourceName: ECS-first-run-alb
 
+  - name: sn-ecs-lb-2
+    type: loadBalancer
+    pointer:
+      sourceName: hello-elb
+
   # - name: sn-ecs-lb-cluster
   #   type: cluster
   #   integration: scriptnull-aws

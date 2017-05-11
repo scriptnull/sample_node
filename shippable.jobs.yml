@@ -264,7 +264,7 @@ jobs:
     steps:
       - IN: sn-aws-man
       - IN: sn-ecs-cluster
-      - IN: sn-ecs-lb-1
+      - IN: sn-ecs-lb-2
         applyTo:
           - manifest: sn-aws-man
             image: sn-img-1
