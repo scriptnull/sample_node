@@ -285,7 +285,6 @@ jobs:
     type: deploy
     steps:
       - IN: sn-aws-man
-      - IN: sn-scaler
       - IN: sn-ecs-cluster
       - TASK: managed
         deployMethod: replace
