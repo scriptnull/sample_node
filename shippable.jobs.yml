@@ -173,21 +173,21 @@ jobs:
       - IN: sn-rc-ship-docker-opts-3
       - IN: sn-rc-ship-ecs-trigger
 
-  - name: sn-aws-xxold-deploy-up
-    type: deploy
-    steps:
-      - IN: sn-aws-man
-      - IN: sn-rc-ship-ecs-cluster
-      - TASK: managed
-        deployMethod: upgrade
+  # - name: sn-aws-xxold-deploy-up
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-aws-man
+  #     - IN: sn-rc-ship-ecs-cluster
+  #     - TASK: managed
+  #       deployMethod: upgrade
 
-  - name: sn-aws-xxold-deploy-rep
-    type: deploy
-    steps:
-      - IN: sn-aws-man
-      - IN: sn-rc-ship-ecs-cluster
-      - TASK: managed
-        deployMethod: replace
+  # - name: sn-aws-xxold-deploy-rep
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-aws-man
+  #     - IN: sn-rc-ship-ecs-cluster
+  #     - TASK: managed
+  #       deployMethod: replace
 
   # - name: sn-aws-xxnew-deploy-rep
   #   type: deploy
@@ -197,13 +197,13 @@ jobs:
   #     - TASK: managed
   #       deployMethod: replace
 
-  - name: sn-aws-yyold-deploy-bg
-    type: deploy
-    steps:
-      - IN: sn-aws-man
-      - IN: sn-rc-ship-ecs-cluster
-      - TASK: managed
-        deployMethod: blueGreen
+  # - name: sn-aws-yyold-deploy-bg
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-aws-man
+  #     - IN: sn-rc-ship-ecs-cluster
+  #     - TASK: managed
+  #       deployMethod: blueGreen
 
   # - name: sn-aws-yynew-deploy-bg
   #   type: deploy
