@@ -295,6 +295,7 @@ jobs:
     type: deploy
     steps:
       - IN: sn-aws-man
+        deployName: not-show-upgrade
       - IN: sn-ecs-cluster
       - TASK: managed
         deployMethod: upgrade
