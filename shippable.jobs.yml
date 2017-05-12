@@ -197,6 +197,34 @@ jobs:
       - TASK: managed
         deployMethod: blueGreen
 
+
+  - name: sn-aws-rc-new-deploy-up
+    type: deploy
+    steps:
+      - IN: sn-aws-man
+        deployName: up-app-rc
+      - IN: sn-rc-ship-ecs-cluster
+      - TASK: managed
+        deployMethod: upgrade
+
+  - name: sn-aws-rc-new-deploy-rep
+    type: deploy
+    steps:
+      - IN: sn-aws-man
+        deployName: rep-app-rc
+      - IN: sn-rc-ship-ecs-cluster
+      - TASK: managed
+        deployMethod: replace
+
+  - name: sn-aws-rc-new-deploy-bg
+    type: deploy
+    steps:
+      - IN: sn-aws-man
+        deployName: bg-app-rc
+      - IN: sn-rc-ship-ecs-cluster
+      - TASK: managed
+        deployMethod: blueGreen
+
   # - name: sn-aws-xxnew-deploy-rep
   #   type: deploy
   #   steps:
