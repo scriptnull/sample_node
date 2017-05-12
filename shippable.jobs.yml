@@ -177,6 +177,7 @@ jobs:
     type: deploy
     steps:
       - IN: sn-aws-man
+        deployName: not-show-up
       - IN: sn-rc-ship-ecs-cluster
       - TASK: managed
         deployMethod: upgrade
@@ -185,6 +186,7 @@ jobs:
     type: deploy
     steps:
       - IN: sn-aws-man
+        deployName: not-show-up
       - IN: sn-rc-ship-ecs-cluster
       - TASK: managed
         deployMethod: replace
@@ -193,6 +195,7 @@ jobs:
     type: deploy
     steps:
       - IN: sn-aws-man
+        deployName: show-bg
       - IN: sn-rc-ship-ecs-cluster
       - TASK: managed
         deployMethod: blueGreen
