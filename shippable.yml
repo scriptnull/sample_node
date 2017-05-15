@@ -5,3 +5,4 @@ build:
     - echo "Hello world"
     - docker ps 
     - git clone https://github.com/scriptnull/u16.git
+    - cd u16 && ls
