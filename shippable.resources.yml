@@ -195,3 +195,9 @@ resources:
       isPull: true
     seed:
       versionName: "myapp2" # exposes server in port 3000
+
+  - name: sn-rc-aws-cli
+    type: cliConfig
+    integration: scriptnull-aws
+    pointer:
+      region: us-west-2

@@ -206,6 +206,13 @@ jobs:
       - TASK:
         - script: ansible --help
 
+  - name: sn-ansible-cli
+    type: runCLI
+    steps:
+      - IN: sn-rc-aws-cli
+      - TASK:
+        - script: ansible --help
+
   # - name: sn-aws-rc-new-deploy-up
   #   type: deploy
   #   steps:
