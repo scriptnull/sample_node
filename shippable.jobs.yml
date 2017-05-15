@@ -200,6 +200,11 @@ jobs:
       - TASK: managed
         deployMethod: blueGreen
 
+  - name: sn-ansible
+    type: runCLI
+    steps:
+      - TASK:
+        - script: ansible --help
 
   # - name: sn-aws-rc-new-deploy-up
   #   type: deploy
