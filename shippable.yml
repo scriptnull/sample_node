@@ -4,4 +4,4 @@ build:
   ci:
     - echo "Hello world"
     - docker ps 
-    - git clone git@github.com:scriptnull/u16.git
+    - git clone https://github.com/scriptnull/u16.git
