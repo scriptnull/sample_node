@@ -200,8 +200,8 @@ jobs:
       - TASK: managed
         deployMethod: blueGreen
 
-  - name: sn-ansible
-    type: runCLI
+  - name: sn-ansible-sh
+    type: runSh
     steps:
       - TASK:
         - script: ansible --help
