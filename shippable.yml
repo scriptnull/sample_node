@@ -6,3 +6,5 @@ build:
     - docker ps 
     - git clone https://github.com/scriptnull/u16.git
     - cd u16 && ls
+    - cd u16 && docker build -t="scriptnull/xx:dev" .
+    - docker run -it scriptnull/xx:dev ansible
