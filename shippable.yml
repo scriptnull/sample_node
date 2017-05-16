@@ -4,7 +4,7 @@ build:
   ci:
     - echo "Hello world"
     - docker ps 
-    - git clone https://github.com/scriptnull/u16.git
-    - cd u16 && ls
+    - git clone https://github.com/dry-dock/u16phpall.git
+    - cd u16phpall && ls
+    - sed -i 's/{{%TAG%}}/master/g' Dockerfile
     - docker build -t="scriptnull/xx:dev" .
-    - docker run scriptnull/xx:dev ansible
