@@ -218,22 +218,22 @@ resources:
   #       # # CAT="name is \" tom" MOUSE= name is jerry DOG="name is tommy" CATS=" tom and jerry"
   #       # secure: KUrYEAgmSe0lbOfodyrWOecDiz2JzDGSE6ZVYFQVpwgcrG8+beO8ZJ8lCxL+LnkusON40xZvvfmr9CqbVZtBogtnFVxMioX14pKWrpqk8JGkL7Oe2DICbuhGg/xNzw9LpsFeg/EdF8GzjQfKnX8biB7CdefN79VorkipnlSrYFXjjd48emzc42G7rrxcsYuJSJJ5NDCAcJbBfGvd0z43u76kkcw8tTbcZysEb0pBsEolcUSBFcHrkgT8je4dAaiVoigp0LLFvTuEQ70x22Y/YxqqZ5J1AN0TaFrGvJ+XoZ6b6lCUCte3jz1Uf58PrQQ/tf7+pgGFHmm32zGoBXtwyQ==
   #
-  - name: sn-ecs-cluster
-    type: cluster
-    integration: scriptnull-aws
-    pointer:
-      sourceName : "default" #name of the cluster we are deploying
-      region: "us-west-2"
+  # - name: sn-ecs-cluster
+  #   type: cluster
+  #   integration: scriptnull-aws
+  #   pointer:
+  #     sourceName : "default" #name of the cluster we are deploying
+  #     region: "us-west-2"
   #
-  - name: sn-ecs-lb-1
-    type: loadBalancer
-    pointer:
-      sourceName: ECS-first-run-alb
-
-  - name: sn-ecs-lb-2
-    type: loadBalancer
-    pointer:
-      sourceName: hello-elb
+  # - name: sn-ecs-lb-1
+  #   type: loadBalancer
+  #   pointer:
+  #     sourceName: ECS-first-run-alb
+  #
+  # - name: sn-ecs-lb-2
+  #   type: loadBalancer
+  #   pointer:
+  #     sourceName: hello-elb
 
   # - name: sn-ecs-lb-cluster
   #   type: cluster

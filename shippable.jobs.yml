@@ -232,13 +232,13 @@ jobs:
   #     - TASK: managed
   #       deployMethod: replace
 
-  - name: sn-aws-man
-    type: manifest
-    steps:
-      - IN: sn-img-1
-      - IN: sn-dockerOpts-1
-      # - IN: sn-docker-myapp3-80
-      - IN: sn-ecs-trigger
+  # - name: sn-aws-man
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-img-1
+  #     - IN: sn-dockerOpts-1
+  #     # - IN: sn-docker-myapp3-80
+  #     - IN: sn-ecs-trigger
 
 
   # - name: sn-aws-new-man
