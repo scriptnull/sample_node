@@ -208,6 +208,7 @@ jobs:
       - TASK:
           - script: printenv
           - script: echo "hello world"
+          - script: doctl compute ssh-key list
 
   # - name: sn-aws-man
   #   type: manifest
