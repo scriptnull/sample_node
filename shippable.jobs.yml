@@ -228,6 +228,14 @@ jobs:
           - script: echo "hello world"
           - script: az account list-locations
 
+  - name: sn-try-gcl
+    type: runCLI
+    steps:
+      - IN: sn-gcl-cliConfig
+      - TASK:
+          - script: printenv
+          - script: echo "hello world"
+
   # - name: sn-aws-man
   #   type: manifest
   #   steps:

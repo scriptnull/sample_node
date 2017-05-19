@@ -360,6 +360,10 @@ resources:
     type: cliConfig
     integration: scriptnull-maz
 
+  - name: sn-gcl-cliConfig
+    type: cliConfig
+    integration: scriptnull-gcl
+
   - name: sn-man-version
     type: version
     seed:
