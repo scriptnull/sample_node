@@ -235,7 +235,7 @@ jobs:
       - TASK:
           - script: printenv
           - script: echo "hello world"
-          - script: gcloud projects list
+          - script: gcloud compute instances list
 
   # - name: sn-aws-man
   #   type: manifest
