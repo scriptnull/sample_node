@@ -219,6 +219,15 @@ jobs:
           - script: echo "hello world"
           - script: doctl compute ssh-key list
 
+  - name: sn-try-maz
+    type: runCLI
+    steps:
+      - IN: sn-maz-cliConfig
+      - TASK:
+          - script: printenv
+          - script: echo "hello world"
+          - script: az account list-locations
+
   # - name: sn-aws-man
   #   type: manifest
   #   steps:
