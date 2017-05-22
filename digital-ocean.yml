@@ -3,7 +3,7 @@
   tasks:
     - name: provision instance
       digital_ocean:
-        api_token: "{{ ans_env.SNDOCLICONFIG_INTEGRATION_APITOKEN }}"
+        api_token: "{{ ansible_env.SNDOCLICONFIG_INTEGRATION_APITOKEN }}"
         state: present
         command: droplet
         name: mydroplet_from_env
