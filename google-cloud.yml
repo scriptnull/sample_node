@@ -1,0 +1,13 @@
+- name: google provison play
+  hosts: localhost
+  tasks:
+    - name: provision instance
+      gce:
+        instance_names: testing
+        zone: us-central1-a
+        machine_type: f1-micro
+        image: debian-8
+        state: present
+        # service_account_email: {{}}
+        # credentials_file: {{}}
+        # project_id: {{}}

@@ -1,0 +1,16 @@
+- name: aws provison play
+  hosts: localhost
+  tasks:
+    - name: bring up task
+      ec2:
+        # aws_access_key: "{{ aws_access_key }}"
+        # aws_secret_key: "{{ aws_secret_key }}"
+        region: us-west-2
+        key_name: scriptnull-key
+        instance_type: t2.micro
+        image: ami-7c803d1c
+        wait: yes
+        group: launch-wizard-1
+        count: 1
+        vpc_subnet_id: subnet-08a59a7e
+        assign_public_ip: yes

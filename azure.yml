@@ -1,0 +1,27 @@
+- name: azure provison play
+  hosts: localhost
+  tasks:
+    - name: Create virtual network
+      azure_rm_virtualnetwork:
+        resource_group: Testing
+        name: testvn001
+        address_prefixes: "10.10.0.0/16"
+
+    - name: Add subnet
+      azure_rm_subnet:
+        resource_group: Testing
+        name: subnet001
+        address_prefix: "10.10.0.0/24"
+        virtual_network: testvn001
+
+    - name: provision instance
+      azure_rm_virtualmachine:
+        # admin_username: {{ }}
+        # admin_password: {{ }}
+        resource_group: Testing
+        name: testvm10
+        image:
+          offer: CentOS
+          publisher: OpenLogic
+          sku: '7.1'
+          version: latest
