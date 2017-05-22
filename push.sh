@@ -1,3 +1,3 @@
 git add . --all
 git commit -m "increment"
-git push origin master:ansible
+git push origin master:ansible-rc
