@@ -356,9 +356,9 @@ resources:
     pointer:
       region: us-west-2
 
-  # - name: sn-maz-cliConfig
-  #   type: cliConfig
-  #   integration: scriptnull-maz
+  - name: sn-maz-cliConfig
+    type: cliConfig
+    integration: scriptnull-maz
   #
   # - name: sn-gcl-cliConfig
   #   type: cliConfig
