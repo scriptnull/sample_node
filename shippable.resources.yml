@@ -368,3 +368,10 @@ resources:
   #   type: version
   #   seed:
   #     versionName: "0.0.1"
+
+  - name: sn-anisble-repo
+    type: gitRepo
+    integration: github
+    pointer:
+      sourceName: "scriptnull/sample_node"
+      branch: ansible
