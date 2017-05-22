@@ -213,6 +213,13 @@ jobs:
       - TASK:
         - script: ansible --help
 
+  - name: sn-do-cli
+    type: runCLI
+    steps:
+      - IN: sn-rc-do-cli
+      - TASK:
+        - script: doctl compute ssh-key list
+
   # - name: sn-aws-rc-new-deploy-up
   #   type: deploy
   #   steps:

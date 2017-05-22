@@ -201,3 +201,7 @@ resources:
     integration: scriptnull-aws
     pointer:
       region: us-west-2
+
+  - name: sn-rc-do-cli
+    type: cliConfig
+    integration: scriptnull-do
