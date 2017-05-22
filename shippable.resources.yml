@@ -27,10 +27,10 @@ resources:
   #     versionName: "latest"
 
 
-  - name: sn-dockerOpts-1
-    type: dockerOptions
-    version:
-      memory: 54
+  # - name: sn-dockerOpts-1
+  #   type: dockerOptions
+  #   version:
+  #     memory: 54
 
   # - name: sn-dockerOpts-man
   #   type: dockerOptions
@@ -159,11 +159,11 @@ resources:
   #   seed:
   #     versionName: "latest"
 
-  - name: sn-docker-myapp3-80
-    type: dockerOptions
-    version:
-      portMappings:
-        - "80:80"
+  # - name: sn-docker-myapp3-80
+  #   type: dockerOptions
+  #   version:
+  #     portMappings:
+  #       - "80:80"
 
   # - name: sn-docker-myapp3-8080
   #   type: dockerOptions
@@ -276,12 +276,12 @@ resources:
   #   pointer:
   #     sourceName : "default" #name of the cluster we are deploying
   # #
-  - name: sn-scaler
-    type: replicas
-    version:
-      count: 2
-    flags:
-      - replicas
+  # - name: sn-scaler
+  #   type: replicas
+  #   version:
+  #     count: 2
+  #   flags:
+  #     - replicas
 
   # - name: sn-version
   #   type: version
@@ -356,15 +356,15 @@ resources:
     pointer:
       region: us-west-2
 
-  - name: sn-maz-cliConfig
-    type: cliConfig
-    integration: scriptnull-maz
+  # - name: sn-maz-cliConfig
+  #   type: cliConfig
+  #   integration: scriptnull-maz
+  #
+  # - name: sn-gcl-cliConfig
+  #   type: cliConfig
+  #   integration: scriptnull-gcl
 
-  - name: sn-gcl-cliConfig
-    type: cliConfig
-    integration: scriptnull-gcl
-
-  - name: sn-man-version
-    type: version
-    seed:
-      versionName: "0.0.1"
+  # - name: sn-man-version
+  #   type: version
+  #   seed:
+  #     versionName: "0.0.1"
