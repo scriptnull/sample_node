@@ -2,4 +2,4 @@
   hosts: dev
   tasks:
     - name: list all files in root
-      command: ls -a
+      command: touch yo-"{{ ansible_env.BUILD_NUMBER }}"
