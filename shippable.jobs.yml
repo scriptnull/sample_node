@@ -231,7 +231,9 @@ jobs:
           - script: printenv
           - script: echo "hello world"
           - script: az account list-locations
+          - script: echo "executing pip install msrestazure"
           - script: pip install msrestazure
+          - script: echo "executing pip install azure>=2.0.0rc5"
           - script: pip install 'azure>=2.0.0rc5' --upgrade
           - script: ansible-playbook $SNANISBLEREPO_STATE/azure.yml
 
