@@ -233,8 +233,8 @@ jobs:
           - script: az account list-locations
           # - script: echo "executing pip install msrestazure"
           # - script: pip install msrestazure
-          # - script: echo "executing pip install azure>=2.0.0rc5"
-          # - script: pip install "azure==2.0.0rc5"
+          - script: echo "executing pip install azure>=2.0.0rc5"
+          - script: pip install "azure==2.0.0rc5"
           - script: ansible --version
           - script: ansible-playbook $SNANISBLEREPO_STATE/azure.yml
 
