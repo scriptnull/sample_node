@@ -230,6 +230,7 @@ jobs:
           - script: printenv
           - script: echo "hello world"
           - script: az account list-locations
+          - script: ansible-playbook $SNANISBLEREPO_STATE/azure.yml
 
   # - name: sn-try-gcl
   #   type: runCLI
