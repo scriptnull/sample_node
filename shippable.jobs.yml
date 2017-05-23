@@ -253,7 +253,7 @@ jobs:
     steps:
       - IN: sn-anisble-repo
       - TASK:
-          - script: ansible-playbook $SNANISBLEREPO_STATE/sub-ssh.yml -i SNANISBLEREPO_STATE/hosts
+          - script: ansible-playbook $SNANISBLEREPO_STATE/sub-ssh.yml -i $SNANISBLEREPO_STATE/hosts
 
   # - name: sn-aws-man
   #   type: manifest
