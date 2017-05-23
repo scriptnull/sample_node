@@ -26,7 +26,7 @@
         password: "{{ ansible_env.SNMAZCLICONFIG_INTEGRATION_PASSWORD }}"
         subscription_id: "{{ ansible_env.SNMAZCLICONFIG_INTEGRATION_SUBSCRIPTIONID }}"
         admin_username: ship
-        admin_password: shipship
+        admin_password: Ship()Ship1
         resource_group: Testing
         name: testvm10
         image:
