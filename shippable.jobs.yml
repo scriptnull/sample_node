@@ -221,7 +221,7 @@ jobs:
   #         - script: printenv
   #         - script: echo "hello world"
   #         - script: doctl compute ssh-key list
-  # 
+  #
   # - name: sn-try-maz
   #   type: runCLI
   #   steps:
@@ -253,7 +253,7 @@ jobs:
     steps:
       - IN: sn-anisble-repo
       - TASK:
-          - script: ansible-playbook $SNANISBLEREPO_STATE/sub-ssh.yml
+          - script: ansible-playbook $SNANISBLEREPO_STATE/sub-ssh.yml -i SNANISBLEREPO_STATE/hosts
 
   # - name: sn-aws-man
   #   type: manifest
