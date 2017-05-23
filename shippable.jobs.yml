@@ -221,32 +221,32 @@ jobs:
   #         - script: printenv
   #         - script: echo "hello world"
   #         - script: doctl compute ssh-key list
-
-  - name: sn-try-maz
-    type: runCLI
-    steps:
-      - IN: sn-maz-cliConfig
-      - TASK:
-          - script: printenv
-          - script: echo "hello world"
-          - script: az account list-locations
-          # - script: echo "executing pip install msrestazure"
-          # - script: pip install msrestazure
-          - script: echo "executing pip install azure>=2.0.0rc5"
-          - script: pip install "azure==2.0.0rc5"
-          - script: ansible --version
-          - script: ansible-playbook $SNANISBLEREPO_STATE/azure.yml
-
-  - name: sn-try-gcl
-    type: runCLI
-    steps:
-      - IN: sn-gcl-cliConfig
-      - IN: sn-anisble-repo
-      - TASK:
-          - script: printenv
-          - script: echo "hello world"
-          - script: gcloud compute instances list
-          - script: ansible-playbook $SNANISBLEREPO_STATE/google-cloud.yml
+  # 
+  # - name: sn-try-maz
+  #   type: runCLI
+  #   steps:
+  #     - IN: sn-maz-cliConfig
+  #     - TASK:
+  #         - script: printenv
+  #         - script: echo "hello world"
+  #         - script: az account list-locations
+  #         # - script: echo "executing pip install msrestazure"
+  #         # - script: pip install msrestazure
+  #         - script: echo "executing pip install azure>=2.0.0rc5"
+  #         - script: pip install "azure==2.0.0rc5"
+  #         - script: ansible --version
+  #         - script: ansible-playbook $SNANISBLEREPO_STATE/azure.yml
+  #
+  # - name: sn-try-gcl
+  #   type: runCLI
+  #   steps:
+  #     - IN: sn-gcl-cliConfig
+  #     - IN: sn-anisble-repo
+  #     - TASK:
+  #         - script: printenv
+  #         - script: echo "hello world"
+  #         - script: gcloud compute instances list
+  #         - script: ansible-playbook $SNANISBLEREPO_STATE/google-cloud.yml
 
   - name: sn-try-sub-ssh
     type: runSh
