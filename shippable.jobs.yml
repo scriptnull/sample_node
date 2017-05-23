@@ -238,14 +238,14 @@ jobs:
           - script: ansible --version
           - script: ansible-playbook $SNANISBLEREPO_STATE/azure.yml
 
-  # - name: sn-try-gcl
-  #   type: runCLI
-  #   steps:
-  #     - IN: sn-gcl-cliConfig
-  #     - TASK:
-  #         - script: printenv
-  #         - script: echo "hello world"
-  #         - script: gcloud compute instances list
+  - name: sn-try-gcl
+    type: runCLI
+    steps:
+      - IN: sn-gcl-cliConfig
+      - TASK:
+          - script: printenv
+          - script: echo "hello world"
+          - script: gcloud compute instances list
 
   # - name: sn-aws-man
   #   type: manifest
