@@ -1,0 +1,2 @@
+[dev]
+35.164.11.209  ansible_connection=ssh   ansible_user=ubuntu
