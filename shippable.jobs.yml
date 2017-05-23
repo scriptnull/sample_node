@@ -255,7 +255,7 @@ jobs:
       - IN: sn-ssh
       - TASK:
           - script: printenv
-          - script: ansible-playbook $SNANISBLEREPO_STATE/sub-ssh.yml -i $SNANISBLEREPO_STATE/hosts
+          - script: ansible-playbook $SNANISBLEREPO_STATE/sub-ssh.yml -i $SNANISBLEREPO_STATE/hosts --private-key $SNSSH_KEYPATH
 
   # - name: sn-aws-man
   #   type: manifest
