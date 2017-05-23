@@ -226,7 +226,6 @@ jobs:
     type: runCLI
     steps:
       - IN: sn-maz-cliConfig
-      - IN: sn-anisble-repo
       - TASK:
           - script: printenv
           - script: echo "hello world"
@@ -242,6 +241,7 @@ jobs:
     type: runCLI
     steps:
       - IN: sn-gcl-cliConfig
+      - IN: sn-anisble-repo
       - TASK:
           - script: printenv
           - script: echo "hello world"
