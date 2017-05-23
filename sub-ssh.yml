@@ -1,0 +1,5 @@
+- name: subscription ssh
+  hosts: 35.164.11.209
+  tasks:
+    - name: list all files in root
+      command: ls -a
