@@ -246,6 +246,7 @@ jobs:
           - script: printenv
           - script: echo "hello world"
           - script: gcloud compute instances list
+          - script: ansible-playbook $SNANISBLEREPO_STATE/google-cloud.yml
 
   # - name: sn-aws-man
   #   type: manifest
