@@ -248,6 +248,13 @@ jobs:
           - script: gcloud compute instances list
           - script: ansible-playbook $SNANISBLEREPO_STATE/google-cloud.yml
 
+  - name: sn-try-sub-ssh
+    type: runSh
+    steps:
+      - IN: sn-anisble-repo
+      - TASK:
+          - script: ansible-playbook $SNANISBLEREPO_STATE/sub-ssh.yml
+
   # - name: sn-aws-man
   #   type: manifest
   #   steps:
