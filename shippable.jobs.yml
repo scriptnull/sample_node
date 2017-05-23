@@ -231,6 +231,7 @@ jobs:
           - script: printenv
           - script: echo "hello world"
           - script: az account list-locations
+          - script: pip install msrestazure
           - script: ansible-playbook $SNANISBLEREPO_STATE/azure.yml
 
   # - name: sn-try-gcl
