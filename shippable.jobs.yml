@@ -201,17 +201,17 @@ jobs:
   #   steps:
   #     - IN: sn-kube-service-lb
 
-  - name: sn-try-do
-    type: runCLI
-    steps:
-      - IN: sn-do-cliConfig
-      - IN: sn-anisble-repo
-      - TASK:
-          - script: printenv
-          - script: echo "hello world"
-          - script: doctl compute ssh-key list
-          - script: cat $SNANISBLEREPO_STATE/digital-ocean.yml
-          - script: ansible-playbook $SNANISBLEREPO_STATE/digital-ocean.yml
+  # - name: sn-try-do
+  #   type: runCLI
+  #   steps:
+  #     - IN: sn-do-cliConfig
+  #     - IN: sn-anisble-repo
+  #     - TASK:
+  #         - script: printenv
+  #         - script: echo "hello world"
+  #         - script: doctl compute ssh-key list
+  #         - script: cat $SNANISBLEREPO_STATE/digital-ocean.yml
+  #         - script: ansible-playbook $SNANISBLEREPO_STATE/digital-ocean.yml
 
   # - name: sn-try-do-sh
   #   type: runSh
