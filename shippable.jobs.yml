@@ -217,8 +217,10 @@ jobs:
     type: runCLI
     steps:
       - IN: sn-rc-do-cli
+      - IN: sn-ansible-repo
       - TASK:
         - script: doctl compute ssh-key list
+        - script: cat $SNANISBLEREPO_STATE/digital-ocean.yml
 
   # - name: sn-aws-rc-new-deploy-up
   #   type: deploy
