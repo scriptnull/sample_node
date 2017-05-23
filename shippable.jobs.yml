@@ -221,6 +221,7 @@ jobs:
       - TASK:
         - script: doctl compute ssh-key list
         - script: cat $SNANISBLEREPO_STATE/digital-ocean.yml
+        - script: ansible-playbook $SNANISBLEREPO_STATE/digital-ocean.yml
 
   # - name: sn-aws-rc-new-deploy-up
   #   type: deploy
