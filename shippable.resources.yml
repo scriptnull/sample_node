@@ -205,3 +205,10 @@ resources:
   - name: sn-rc-do-cli
     type: cliConfig
     integration: scriptnull-do
+
+  - name: sn-anisble-repo
+    type: gitRepo
+    integration: github
+    pointer:
+      sourceName: "scriptnull/sample_node"
+      branch: ansible-rc
