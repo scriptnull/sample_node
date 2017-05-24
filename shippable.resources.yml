@@ -356,9 +356,9 @@ resources:
   #   pointer:
   #     region: us-west-2
 
-  - name: sn-maz-cliConfig
-    type: cliConfig
-    integration: scriptnull-maz
+  # - name: sn-maz-cliConfig
+  #   type: cliConfig
+  #   integration: scriptnull-maz
   #
   - name: sn-gcl-cliConfig
     type: cliConfig
@@ -375,7 +375,7 @@ resources:
     pointer:
       sourceName: "scriptnull/sample_node"
       branch: ansible
-
-  - name: sn-ssh
-    type: integration
-    integration: scriptnull-ssh
+  # 
+  # - name: sn-ssh
+  #   type: integration
+  #   integration: scriptnull-ssh
