@@ -223,7 +223,7 @@ jobs:
   #       - script: cat $SNANISBLEREPO_STATE/digital-ocean.yml
   #       - script: ansible-playbook $SNANISBLEREPO_STATE/digital-ocean.yml
 
-  - name: sn-do-cli
+  - name: sn-maz-cli
     type: runCLI
     steps:
       - IN: sn-rc-maz-cliConfig
