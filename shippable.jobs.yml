@@ -213,15 +213,25 @@ jobs:
       - TASK:
         - script: ansible --help
 
+  # - name: sn-do-cli
+  #   type: runCLI
+  #   steps:
+  #     - IN: sn-rc-do-cli
+  #     - IN: sn-anisble-repo
+  #     - TASK:
+  #       - script: doctl compute ssh-key list
+  #       - script: cat $SNANISBLEREPO_STATE/digital-ocean.yml
+  #       - script: ansible-playbook $SNANISBLEREPO_STATE/digital-ocean.yml
+
   - name: sn-do-cli
     type: runCLI
     steps:
-      - IN: sn-rc-do-cli
+      - IN: sn-rc-maz-cliConfig
       - IN: sn-anisble-repo
       - TASK:
-        - script: doctl compute ssh-key list
-        - script: cat $SNANISBLEREPO_STATE/digital-ocean.yml
-        - script: ansible-playbook $SNANISBLEREPO_STATE/digital-ocean.yml
+        - script: az account list-locations
+        - script: cat $SNANISBLEREPO_STATE/azure.yml
+        # - script: ansible-playbook $SNANISBLEREPO_STATE/digital-ocean.yml
 
   # - name: sn-aws-rc-new-deploy-up
   #   type: deploy

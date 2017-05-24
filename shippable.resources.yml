@@ -206,6 +206,10 @@ resources:
     type: cliConfig
     integration: scriptnull-do
 
+  - name: sn-rc-maz-cliConfig
+    type: cliConfig
+    integration: scriptnull-maz
+
   - name: sn-anisble-repo
     type: gitRepo
     integration: github
