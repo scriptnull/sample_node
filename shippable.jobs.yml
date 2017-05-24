@@ -231,7 +231,7 @@ jobs:
       - TASK:
         - script: az account list-locations
         - script: cat $SNANISBLEREPO_STATE/azure.yml
-        # - script: ansible-playbook $SNANISBLEREPO_STATE/digital-ocean.yml
+        - script: ansible-playbook $SNANISBLEREPO_STATE/azure.yml
 
   # - name: sn-aws-rc-new-deploy-up
   #   type: deploy
