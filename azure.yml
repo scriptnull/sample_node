@@ -3,23 +3,32 @@
   tasks:
     - name: Create virtual network
       azure_rm_virtualnetwork:
+        ad_user: "{{ ansible_env.SNMAZCLICONFIG_INTEGRATION_USERNAME }}"
+        password: "{{ ansible_env.SNMAZCLICONFIG_INTEGRATION_PASSWORD }}"
+        subscription_id: "{{ ansible_env.SNMAZCLICONFIG_INTEGRATION_SUBSCRIPTIONID }}"
         resource_group: Testing
-        name: testvn001
+        name: rctestvn
         address_prefixes: "10.10.0.0/16"
 
     - name: Add subnet
       azure_rm_subnet:
+        ad_user: "{{ ansible_env.SNMAZCLICONFIG_INTEGRATION_USERNAME }}"
+        password: "{{ ansible_env.SNMAZCLICONFIG_INTEGRATION_PASSWORD }}"
+        subscription_id: "{{ ansible_env.SNMAZCLICONFIG_INTEGRATION_SUBSCRIPTIONID }}"
         resource_group: Testing
         name: subnet001
         address_prefix: "10.10.0.0/24"
-        virtual_network: testvn001
+        virtual_network: rctestvn
 
     - name: provision instance
       azure_rm_virtualmachine:
-        # admin_username: {{ }}
-        # admin_password: {{ }}
+        ad_user: "{{ ansible_env.SNMAZCLICONFIG_INTEGRATION_USERNAME }}"
+        password: "{{ ansible_env.SNMAZCLICONFIG_INTEGRATION_PASSWORD }}"
+        subscription_id: "{{ ansible_env.SNMAZCLICONFIG_INTEGRATION_SUBSCRIPTIONID }}"
+        admin_username: ship
+        admin_password: Ship()Ship1
         resource_group: Testing
-        name: testvm10
+        name: rctestvm
         image:
           offer: CentOS
           publisher: OpenLogic
