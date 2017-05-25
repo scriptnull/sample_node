@@ -246,6 +246,7 @@ jobs:
       - TASK:
           - script: printenv
           - script: aws ec2 describe-regions
+          - script: cat $SNANISBLEREPO_STATE/aws.yml
 
   # - name: sn-try-gcl
   #   type: runCLI
