@@ -237,6 +237,16 @@ jobs:
   #         - script: ansible --version
   #         - script: ansible-playbook $SNANISBLEREPO_STATE/azure.yml
   #
+
+  - name: sn-try-aws
+    type: runCLI
+    steps:
+      - IN: sn-aws-cliConfig
+      - IN: sn-anisble-repo
+      - TASK:
+          - script: printenv
+          - script: aws ec2 describe-regions
+
   # - name: sn-try-gcl
   #   type: runCLI
   #   steps:
@@ -247,7 +257,7 @@ jobs:
   #         - script: echo "hello world"
   #         - script: gcloud compute instances list
   #         - script: ansible-playbook $SNANISBLEREPO_STATE/google-cloud.yml
-
+  #
   # - name: sn-try-sub-ssh
   #   type: runSh
   #   steps:
