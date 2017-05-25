@@ -1,2 +1,2 @@
 [dev]
-52.38.149.88 ansible_connection=ssh   ansible_user=ubuntu
+34.208.102.97 ansible_connection=ssh   ansible_user=ubuntu
