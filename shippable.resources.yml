@@ -220,3 +220,7 @@ resources:
     pointer:
       sourceName: "scriptnull/sample_node"
       branch: ansible-rc
+
+  - name: sn-rc-ssh
+    type: integration
+    integration: scriptnull-ssh

@@ -203,7 +203,9 @@ jobs:
   - name: sn-ansible-sh
     type: runSh
     steps:
+      - IN: sn-rc-ssh
       - TASK:
+        - script: printenv
         - script: ansible --help
 
   - name: sn-ansible-cli
