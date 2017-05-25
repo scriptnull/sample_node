@@ -264,7 +264,7 @@ jobs:
     type: runSh
     steps:
       - IN: sn-anisble-repo
-      # - IN: sn-ssh
+      - IN: sn-ssh
       - TASK:
           - script: printenv
           - script: ansible-playbook $SNANISBLEREPO_STATE/sub-ssh.yml -i $SNANISBLEREPO_STATE/hosts --private-key $SNSSH_KEYPATH
