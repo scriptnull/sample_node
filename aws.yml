@@ -3,8 +3,8 @@
   tasks:
     - name: bring up task
       ec2:
-        # aws_access_key: "{{ aws_access_key }}"
-        # aws_secret_key: "{{ aws_secret_key }}"
+        aws_access_key: "{{ ansible_env.SNAWSCLICONFIG_INTEGRATION_AWS_ACCESS_KEY_ID }}"
+        aws_secret_key: "{{ ansible_env.SNAWSCLICONFIG_INTEGRATION_AWS_SECRET_ACCESS_KEY }}"
         region: us-west-2
         key_name: scriptnull-key
         instance_type: t2.micro
