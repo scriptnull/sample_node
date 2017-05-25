@@ -238,16 +238,16 @@ jobs:
   #         - script: ansible-playbook $SNANISBLEREPO_STATE/azure.yml
   #
 
-  - name: sn-try-aws
-    type: runCLI
-    steps:
-      - IN: sn-aws-cliConfig
-      - IN: sn-anisble-repo
-      - TASK:
-          - script: printenv
-          - script: aws ec2 describe-regions
-          - script: cat $SNANISBLEREPO_STATE/aws.yml
-          - script: ansible-playbook $SNANISBLEREPO_STATE/aws.yml
+  # - name: sn-try-aws
+  #   type: runCLI
+  #   steps:
+  #     - IN: sn-aws-cliConfig
+  #     - IN: sn-anisble-repo
+  #     - TASK:
+  #         - script: printenv
+  #         - script: aws ec2 describe-regions
+  #         - script: cat $SNANISBLEREPO_STATE/aws.yml
+  #         - script: ansible-playbook $SNANISBLEREPO_STATE/aws.yml
 
   # - name: sn-try-gcl
   #   type: runCLI
@@ -260,16 +260,16 @@ jobs:
   #         - script: gcloud compute instances list
   #         - script: ansible-playbook $SNANISBLEREPO_STATE/google-cloud.yml
   #
-  # - name: sn-try-sub-ssh
-  #   type: runSh
-  #   steps:
-  #     - IN: sn-anisble-repo
-  #     - IN: sn-ssh
-  #     - TASK:
-  #         - script: printenv
-  #         - script: ansible-playbook $SNANISBLEREPO_STATE/sub-ssh.yml -i $SNANISBLEREPO_STATE/hosts --private-key $SNSSH_KEYPATH
-  #         - script: cat $SNSSH_PUBLIC_KEY_PATH
-  #         - script: cat $SNSSH_PRIVATE_KEY_PATH
+  - name: sn-try-sub-ssh
+    type: runSh
+    steps:
+      - IN: sn-anisble-repo
+      - IN: sn-ssh
+      - TASK:
+          - script: printenv
+          - script: ansible-playbook $SNANISBLEREPO_STATE/sub-ssh.yml -i $SNANISBLEREPO_STATE/hosts --private-key $SNSSH_KEYPATH
+          - script: cat $SNSSH_PUBLIC_KEY_PATH
+          - script: cat $SNSSH_PRIVATE_KEY_PATH
 
   # - name: sn-aws-man
   #   type: manifest
