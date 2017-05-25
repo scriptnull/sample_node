@@ -223,15 +223,24 @@ jobs:
   #       - script: cat $SNANISBLEREPO_STATE/digital-ocean.yml
   #       - script: ansible-playbook $SNANISBLEREPO_STATE/digital-ocean.yml
 
-  - name: sn-maz-cli
+  # - name: sn-maz-cli
+  #   type: runCLI
+  #   steps:
+  #     - IN: sn-rc-maz-cliConfig
+  #     - IN: sn-anisble-repo
+  #     - TASK:
+  #       - script: az account list-locations
+  #       - script: cat $SNANISBLEREPO_STATE/azure.yml
+  #       - script: ansible-playbook $SNANISBLEREPO_STATE/azure.yml
+
+  - name: sn-gcl-cli
     type: runCLI
     steps:
-      - IN: sn-rc-maz-cliConfig
-      - IN: sn-anisble-repo
+      - IN: sn-rc-gcl-cliConfig
       - TASK:
-        - script: az account list-locations
-        - script: cat $SNANISBLEREPO_STATE/azure.yml
-        - script: ansible-playbook $SNANISBLEREPO_STATE/azure.yml
+        - script: gcloud compute instances list
+        # - script: cat $SNANISBLEREPO_STATE/azure.yml
+        # - script: ansible-playbook $SNANISBLEREPO_STATE/azure.yml
 
   # - name: sn-aws-rc-new-deploy-up
   #   type: deploy

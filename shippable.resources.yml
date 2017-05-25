@@ -210,6 +210,10 @@ resources:
     type: cliConfig
     integration: scriptnull-maz
 
+  - name: sn-rc-gcl-cliConfig
+    type: cliConfig
+    integration: scriptnull-gcl
+
   - name: sn-anisble-repo
     type: gitRepo
     integration: github
