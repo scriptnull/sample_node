@@ -264,12 +264,13 @@ jobs:
     type: runSh
     steps:
       - IN: sn-anisble-repo
-      - IN: sn-ssh
+      - IN: sn-aws-cliConfig
+      # - IN: sn-ssh
       - TASK:
           - script: printenv
-          - script: ansible-playbook $SNANISBLEREPO_STATE/sub-ssh.yml -i $SNANISBLEREPO_STATE/hosts --private-key $SNSSH_KEYPATH
-          - script: cat $SNSSH_PUBLIC_KEY_PATH
-          - script: cat $SNSSH_PRIVATE_KEY_PATH
+          # - script: ansible-playbook $SNANISBLEREPO_STATE/sub-ssh.yml -i $SNANISBLEREPO_STATE/hosts --private-key $SNSSH_KEYPATH
+          # - script: cat $SNSSH_PUBLIC_KEY_PATH
+          # - script: cat $SNSSH_PRIVATE_KEY_PATH
 
   # - name: sn-aws-man
   #   type: manifest
