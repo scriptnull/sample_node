@@ -233,16 +233,16 @@ jobs:
   #       - script: cat $SNANISBLEREPO_STATE/azure.yml
   #       - script: ansible-playbook $SNANISBLEREPO_STATE/azure.yml
 
-  - name: sn-gcl-cli
-    type: runCLI
-    steps:
-      - IN: sn-rc-gcl-cliConfig
-      - IN: sn-anisble-repo
-      - TASK:
-        - script: gcloud compute instances list
-        - script: cat $SNANISBLEREPO_STATE/google-cloud.yml
-        - script: ansible-playbook $SNANISBLEREPO_STATE/google-cloud.yml
-        - script: gcloud compute instances list
+# - name: sn-gcl-cli
+#   type: runCLI
+#   steps:
+#     - IN: sn-rc-gcl-cliConfig
+#     - IN: sn-anisble-repo
+#     - TASK:
+#       - script: gcloud compute instances list
+#       - script: cat $SNANISBLEREPO_STATE/google-cloud.yml
+#       - script: ansible-playbook $SNANISBLEREPO_STATE/google-cloud.yml
+#       - script: gcloud compute instances list
 
   # - name: sn-aws-rc-new-deploy-up
   #   type: deploy
