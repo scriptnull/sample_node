@@ -237,15 +237,15 @@ jobs:
   #         - script: ansible --version
   #         - script: ansible-playbook $SNANISBLEREPO_STATE/azure.yml
   #
-  - name: sn-try-gcl
-    type: runCLI
-    steps:
-      - IN: sn-gcl-cliConfig
-      - IN: sn-anisble-repo
-      - TASK:
-          - script: printenv
-          - script: echo "hello world"
-          - script: gcloud compute instances list
+  # - name: sn-try-gcl
+  #   type: runCLI
+  #   steps:
+  #     - IN: sn-gcl-cliConfig
+  #     - IN: sn-anisble-repo
+  #     - TASK:
+  #         - script: printenv
+  #         - script: echo "hello world"
+  #         - script: gcloud compute instances list
   #         - script: ansible-playbook $SNANISBLEREPO_STATE/google-cloud.yml
 
   # - name: sn-try-sub-ssh
