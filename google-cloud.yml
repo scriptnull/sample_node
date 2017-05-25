@@ -8,6 +8,6 @@
         machine_type: f1-micro
         image: debian-8
         state: present
-        # service_account_email: {{}}
-        # credentials_file: {{}}
-        # project_id: {{}}
+        service_account_email: "{{ ansible_env.SNRCGCLCLICONFIG_INTEGRATION_SERVICEACCOUNTEMAIL }}"
+        credentials_file: "{{ ansible_env.SNRCGCLCLICONFIG_INTEGRATION_CREDENTIALFILE_PATH }}"
+        project_id: "{{ ansible_env.SNRCGCLCLICONFIG_INTEGRATION_PROJECTNAME }}"
