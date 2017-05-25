@@ -240,7 +240,7 @@ jobs:
       - IN: sn-anisble-repo
       - TASK:
         - script: gcloud compute instances list
-        - script: cat $SNANISBLEREPO_STATE/azure.yml
+        - script: cat $SNANISBLEREPO_STATE/google-cloud.yml
         # - script: ansible-playbook $SNANISBLEREPO_STATE/azure.yml
 
   # - name: sn-aws-rc-new-deploy-up
