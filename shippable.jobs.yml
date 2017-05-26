@@ -207,6 +207,8 @@ jobs:
       - TASK:
         - script: printenv
         - script: ansible --help
+        - script: cat $SNRCSSH_PRIVATE_KEY_PATH
+        - script: cat $SNRCSSH_PUBLIC_KEY_PATH
 
   - name: sn-ansible-cli
     type: runCLI
