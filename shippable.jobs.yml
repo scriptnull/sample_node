@@ -235,8 +235,8 @@ jobs:
       - TASK:
         - script: az account list-locations
         - script: cat $SNANISBLEREPO_STATE/azure.yml
+        - script: docker ps -a
         - script: ansible-playbook $SNANISBLEREPO_STATE/azure.yml
-        - script: docker ps -a 
 
 # - name: sn-gcl-cli
 #   type: runCLI
