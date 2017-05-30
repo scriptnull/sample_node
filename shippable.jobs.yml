@@ -236,6 +236,8 @@ jobs:
         - script: az account list-locations
         - script: cat $SNANISBLEREPO_STATE/azure.yml
         - script: pip list
+        - script: pip install msrestazure
+        - script: pip list
         - script: docker ps -a
         - script: ansible-playbook $SNANISBLEREPO_STATE/azure.yml
 
