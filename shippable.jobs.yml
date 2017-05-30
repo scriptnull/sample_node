@@ -235,7 +235,6 @@ jobs:
       - TASK:
         - script: az account list-locations
         - script: cat $SNANISBLEREPO_STATE/azure.yml
-        - script: /usr/local/opt/python/bin/python2.7 -c "import msrestazure; print(msrestazure.__version__)"
         - script: pip list
         - script: docker ps -a
         - script: ansible-playbook $SNANISBLEREPO_STATE/azure.yml
