@@ -344,11 +344,11 @@ resources:
   #     selector:
   #       new: scriptnull-local
 
-  - name: sn-aws-cliConfig
-    type: cliConfig
-    integration: scriptnull-aws
-    pointer:
-      region: us-west-2
+  # - name: sn-aws-cliConfig
+  #   type: cliConfig
+  #   integration: scriptnull-aws
+  #   pointer:
+  #     region: us-west-2
 
   # - name: sn-do-cliConfig
   #   type: cliConfig
