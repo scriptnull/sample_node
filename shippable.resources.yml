@@ -369,13 +369,13 @@ resources:
   #   seed:
   #     versionName: "0.0.1"
 
-  - name: sn-anisble-repo
-    type: gitRepo
-    integration: github
-    pointer:
-      sourceName: "scriptnull/sample_node"
-      branch: ansible
+  # - name: sn-anisble-repo
+  #   type: gitRepo
+  #   integration: github
+  #   pointer:
+  #     sourceName: "scriptnull/sample_node"
+  #     branch: ansible
   #
-  - name: sn-ssh
-    type: integration
-    integration: scriptnull-ssh
+  # - name: sn-ssh
+  #   type: integration
+  #   integration: scriptnull-ssh
