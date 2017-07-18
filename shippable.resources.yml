@@ -31,6 +31,9 @@ resources:
     type: dockerOptions
     version:
       memory: 54
+      volumeMounts:
+        - name: config-volumes
+          mountPath: /usr/appdata/config
       pod:
         volumes:
           - name: config-volumes
