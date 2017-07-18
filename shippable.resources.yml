@@ -1,13 +1,13 @@
 resources:
-  # - name: sn-img-1
-  #   type: image
-  #   integration: scriptnull-docker
-  #   pointer:
-  #     sourceName: "scriptnull/sample_node"
-  #     isPull: true
-  #   seed:
-  #     versionName: "myapp3"
-  #
+  - name: sn-img-1
+    type: image
+    integration: scriptnull-docker
+    pointer:
+      sourceName: "scriptnull/sample_node"
+      isPull: true
+    seed:
+      versionName: "myapp3"
+
   # - name: sn-img-2
   #   type: image
   #   integration: scriptnull-docker
@@ -288,10 +288,10 @@ resources:
   #   seed:
   #     versionName: 0.0.0
 
-  # - name: sn-kube-cluster
-  #   type: cluster
-  #   integration: scriptnull-kube
-  #
+  - name: sn-kube-cluster
+    type: cluster
+    integration: scriptnull-kube
+
   #
   # - name: sn-kube-pod-opts
   #   type: dockerOptions

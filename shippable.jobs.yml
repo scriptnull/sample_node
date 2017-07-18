@@ -1,18 +1,17 @@
 jobs:
-  # - name: sn-kube-man
-  #   type: manifest
-  #   steps:
-  #     - IN: sn-img-1
-  #     - IN: sn-kube-trigger
-  #     - IN: sn-kube-pod-opts
-  #
-  # - name: sn-kube-deploy
-  #   type: deploy
-  #   steps:
-  #     - IN: sn-kube-man
-  #     - IN: sn-kube-cluster
-  #     - TASK: managed
-  #       deployMethod: upgrade
+  - name: sn-kube-man
+    type: manifest
+    steps:
+      - IN: sn-img-1
+      - IN: sn-kube-trigger
+  
+  - name: sn-kube-deploy
+    type: deploy
+    steps:
+      - IN: sn-kube-man
+      - IN: sn-kube-cluster
+      - TASK: managed
+        deployMethod: replace
 
   # - name: sn-man-jfrog
   #   type: manifest
