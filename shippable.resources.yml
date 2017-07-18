@@ -31,6 +31,9 @@ resources:
     type: dockerOptions
     version:
       memory: 54
+      env:
+        - name: "MY_VAR"
+          value: "hello"
 
   # - name: sn-dockerOpts-man
   #   type: dockerOptions
