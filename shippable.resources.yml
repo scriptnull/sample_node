@@ -32,8 +32,11 @@ resources:
     version:
       memory: 54
       env:
-        - name: "MY_VAR"
-          value: "hello"
+        - name: "MY_PASSWORD"
+          valueFrom:
+            secretRef:
+              name: db-user-pass
+              key: password.txt
 
   # - name: sn-dockerOpts-man
   #   type: dockerOptions
