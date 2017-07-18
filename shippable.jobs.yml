@@ -4,6 +4,7 @@ jobs:
     steps:
       - IN: sn-img-1
       - IN: sn-kube-trigger
+      - IN: sn-dockerOpts-1
   
   - name: sn-kube-deploy
     type: deploy
