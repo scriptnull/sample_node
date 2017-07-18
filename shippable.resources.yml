@@ -34,12 +34,12 @@ resources:
       volumeMounts:
         - name: config-volume
           mountPath: /usr/appdata/config
-          # subPath: settings.yml
+          # subPath: ui.yml
       pod:
         volumes:
           - name: config-volume
             configMap:
-              name: settings-config
+              name: app-config
       env:
         - name: "MY_PASSWORD"
           valueFrom:
