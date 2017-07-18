@@ -33,8 +33,8 @@ resources:
       memory: 54
       volumeMounts:
         - name: config-volume
-          mountPath: /usr/appdata/config/
-          subPath: settings.yml
+          mountPath: /usr/appdata/config
+          # subPath: settings.yml
       pod:
         volumes:
           - name: config-volume
