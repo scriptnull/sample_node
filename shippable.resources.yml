@@ -34,7 +34,7 @@ resources:
       env:
         - name: "MY_PASSWORD"
           valueFrom:
-            secretRef:
+            secretKeyRef:
               name: db-user-pass
               key: password.txt
 
