@@ -6,13 +6,13 @@ jobs:
       - IN: sn-kube-trigger
       - IN: sn-dockerOpts-1
   
-  - name: sn-kube-deploy
+  - name: sn-kube-deploy-2
     type: deploy
     steps:
       - IN: sn-kube-man
       - IN: sn-kube-cluster
       - TASK: managed
-        deployMethod: replace
+        deployMethod: upgrade
 
   # - name: sn-man-jfrog
   #   type: manifest
