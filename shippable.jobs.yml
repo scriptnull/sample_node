@@ -242,7 +242,7 @@ jobs:
         - script: ansible-playbook $SNANISBLEREPO_STATE/azure.yml
 
   - name: sn-rituraj-maz-cli
-    type: runSH
+    type: runSh
     steps:
       - IN: sn-rc-maz-cliConfig
       - TASK:
