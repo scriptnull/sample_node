@@ -241,6 +241,13 @@ jobs:
         - script: docker ps -a
         - script: ansible-playbook $SNANISBLEREPO_STATE/azure.yml
 
+  - name: sn-rituraj-maz-cli
+    type: runSH
+    steps:
+      - IN: sn-rc-maz-cliConfig
+      - TASK:
+        - script: az account list-locations
+
 # - name: sn-gcl-cli
 #   type: runCLI
 #   steps:
