@@ -1,43 +1,27 @@
-# Language setting
-language: node_js
-
-
-# Version number
-node_js:
-  - 0.12
-
-env:
-  global:
-    - FOO=FUBU
-    - FO1=BUBU
-    - BOO=GUBU
-
-  matrix:
-    - M1=ONE
-    - M2=TWO
-
-build:
-  pre_ci:
-    - echo "Good morning 2"
-    - echo "testing"
-
-  pre_ci_boot:
-    image_name: kanthchandra/sample_node
-    image_tag: latest
-    pull: false
-    options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
-
-  ci:
-    - ps -eax
-    - ls -al
-
-  post_ci:
-    - echo "post ci stage. Finished ! yo"
-
-  smoke_test:
-    - sudo ls /
-
-deploy:
-  pre_build:
-    - ls
-    - ls -al
+pipelines:
+  - name: test_pipeline_1
+    setup:
+      environmentVariables:
+        normal:
+          - ENV1: value-pipe-1
+          - ENV2: value-pipe-2
+        encrypted:
+          - SECURE_ENV1: test_value-pipe-1
+          - SECURE_ENV2: test_value-pipe-2
+      runtime: onHost-pipe
+    steps:
+      - name: in_trigger_step
+        type: runSh
+        setup:
+          environmentVariables:
+            normal:
+              - ENV1: value1
+              - ENV2: value2
+            encrypted:
+              - SECURE_ENV1: test_value
+              - SECURE_ENV2: test_value
+          runtime: onHost
+        execution:
+          onExecute:
+            - echo "executing task command 1"
+            - echo "executing task command 2"
