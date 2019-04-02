@@ -43,7 +43,7 @@ resources:
    - name: sample_java_webhook_test
      type: webhook
      configuration:
-       integrationName: github-subint
+       integrationName: github
      initialVersion:
        payload: test_payload
 
