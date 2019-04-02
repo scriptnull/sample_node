@@ -21,6 +21,8 @@ pipelines:
               - SECURE_ENV1: test_value
               - SECURE_ENV2: test_value
           runtime: onHost
+        configuration:
+          affinityGroup: test_group 
         execution:
           onExecute:
             - echo "executing task command 1"
