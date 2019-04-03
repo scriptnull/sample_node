@@ -112,6 +112,7 @@ pipelines:
         execution:
           onStart:
             - echo "Prepping build environment"
+            - echo "on start"
           onExecute:
             - echo "executing task command 1"
             - echo "executing task command 2"
