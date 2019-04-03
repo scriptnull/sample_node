@@ -167,5 +167,4 @@ pipelines:
           onCancel:
             - echo "Someone cancelled the job"
         outputResources:
-          - sample_java_file_test
           - sample_java_webhook_test
