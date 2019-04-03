@@ -109,7 +109,6 @@ pipelines:
             - sample_java_repo_test
           steps:
             - in_trigger_step
-            - sample_java_file_test
         execution:
           onStart:
             - echo "Prepping build environment"
