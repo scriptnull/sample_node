@@ -25,6 +25,9 @@ pipelines:
               - ENV1: value1
               - ENV2: value2
           runtime: onHost
+        triggeredBy:
+          resources:
+            - sample-w
         execution:
           onExecute:
             - echo "executing task command 1"
