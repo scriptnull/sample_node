@@ -46,6 +46,13 @@ resources:
        integrationName: github
      initialVersion:
        payload: test_payload
+       
+   - name: sample-w
+     type: webhook
+     configuration:
+       integrationName: sample-webhook
+     initialVersion:
+       payload: test_payload
 
    - name: sample_java_kube_test
      type: cluster
