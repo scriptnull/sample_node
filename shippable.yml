@@ -1,9 +1,9 @@
-resources:
-  - name: sample_img
-    type: image
-    imageName: scriptnull/sample_node
-    initialVersion:
-      imageTag: latest
+# resources:
+#   - name: sample_img
+#     type: image
+#     imageName: scriptnull/sample_node
+#     initialVersion:
+#       imageTag: latest
     
 pipelines:
   - name: test_pipeline
@@ -16,9 +16,6 @@ pipelines:
 
       - name: say_hello
         type: bash
-        requires:
-          resources:
-            - sample_img
         execution:
           onExecute:
             - echo "executing task command 1"
