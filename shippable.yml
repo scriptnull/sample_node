@@ -8,6 +8,12 @@ resources:
 pipelines:
   - name: test_pipeline
     steps:
+      - name: say_hi
+        type: bash
+        execution:
+          onExecute:
+            - echo "hi"
+
       - name: say_hello
         type: bash
         requires:
