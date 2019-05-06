@@ -17,4 +17,3 @@ pipelines:
           onExecute:
             - echo "executing task command 1"
             - echo "executing task command 2"
-        
