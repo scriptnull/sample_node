@@ -1,13 +1,4 @@
-resources:
-  - name: sample_img
-    type: image
-    imageName: scriptnull/sample_node
-    configuration:
-      integrationName: dockerint
-    initialVersion:
-      imageTag: latest
-    
-pipelines:
+ pipelines:
   - name: test_pipeline
     steps:
       - name: say_hi
@@ -15,13 +6,3 @@ pipelines:
         execution:
           onExecute:
             - echo "hi"
-
-      - name: say_hello
-        type: bash
-        triggeredBy:
-          resources:
-            - sample_img
-        execution:
-          onExecute:
-            - echo "executing task command 1"
-            - echo "executing task command 2"
