@@ -1,4 +1,13 @@
- pipelines:
+resources:
+  - name: sample_img	
+    type: image	
+    imageName: scriptnull/sample_node	
+    configuration:	
+      integrationName: dockerint	
+    initialVersion:	
+      imageTag: latest
+
+pipelines:
   - name: test_pipeline
     steps:
       - name: say_hi
