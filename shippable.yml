@@ -12,6 +12,9 @@ pipelines:
     steps:
       - name: say_hi
         type: bash
+        triggeredBy:	
+          resources:	
+            - sample_img
         execution:
           onExecute:
             - echo "hi"
