@@ -8,7 +8,7 @@ resources:
       imageTag: latest
 
 pipelines:
-  - name: test_pipeline
+  - name: temp_test_pipeline
     steps:
       - name: say_hi
         type: bash
