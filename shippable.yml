@@ -1,8 +1,11 @@
 pipelines:
-  - name: test_pipeline
+  - name: fail_pipeline
     steps:
-      - name: test_basic_execute
+      - name: test_default_requires_invalid_resource
         type: powershell
+        requires:
+          resources:
+            - invalid-resource-1
         execution:
           onExecute:
-            - Write-Output "hi"
+            - Get-ChildItem env:
