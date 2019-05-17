@@ -8,4 +8,4 @@ pipelines:
             - invalid-resource-1
         execution:
           onExecute:
-            - Get-ChildItem env:
+            - Get-ChildItem env:*
