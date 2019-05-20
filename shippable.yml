@@ -12,6 +12,8 @@ pipelines:
     steps:
       - name: say_hi
         type: bash
+        configuration:
+          nodePool: u16
         triggeredBy:	
           resources:	
             - sample_img
