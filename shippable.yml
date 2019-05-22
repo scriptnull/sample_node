@@ -20,5 +20,10 @@ pipelines:
         execution:
           onComplete:
             - echo "this is on complete"
+            - echo "CURRENT_SCRIPT_SECTION = $CURRENT_SCRIPT_SECTION"
+          onSuccess:
+            - echo "this is on success"
+            - echo "CURRENT_SCRIPT_SECTION = $CURRENT_SCRIPT_SECTION"
           onExecute:
             - echo "hi"
+            - echo "CURRENT_SCRIPT_SECTION = $CURRENT_SCRIPT_SECTION"
