@@ -18,6 +18,9 @@ pipelines:
           resources:	
             - sample_img
         execution:
+          onStart:
+            - echo "this is on start"
+            - echo "CURRENT_SCRIPT_SECTION = $CURRENT_SCRIPT_SECTION"
           onComplete:
             - echo "this is on complete"
             - echo "CURRENT_SCRIPT_SECTION = $CURRENT_SCRIPT_SECTION"
@@ -25,5 +28,5 @@ pipelines:
             - echo "this is on success"
             - echo "CURRENT_SCRIPT_SECTION = $CURRENT_SCRIPT_SECTION"
           onExecute:
-            - echo "hi"
+            - echo "this is on execute"
             - echo "CURRENT_SCRIPT_SECTION = $CURRENT_SCRIPT_SECTION"
