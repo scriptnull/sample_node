@@ -21,12 +21,38 @@ pipelines:
           onStart:
             - echo "this is on start"
             - echo "CURRENT_SCRIPT_SECTION = $CURRENT_SCRIPT_SECTION"
-          onComplete:
-            - echo "this is on complete"
+          onExecute:
+            - echo "this is on execute"
             - echo "CURRENT_SCRIPT_SECTION = $CURRENT_SCRIPT_SECTION"
           onSuccess:
             - echo "this is on success"
             - echo "CURRENT_SCRIPT_SECTION = $CURRENT_SCRIPT_SECTION"
+          onComplete:
+            - echo "this is on complete"
+            - echo "CURRENT_SCRIPT_SECTION = $CURRENT_SCRIPT_SECTION"
+
+
+      - name: test_bash_failure
+        type: bash
+        configuration:
+          nodePool: u16
+        triggeredBy:	
+          resources:	
+            - sample_img
+        execution:
+          onStart:
+            - echo "this is on start"
+            - echo "CURRENT_SCRIPT_SECTION = $CURRENT_SCRIPT_SECTION"
           onExecute:
             - echo "this is on execute"
+            - echo "CURRENT_SCRIPT_SECTION = $CURRENT_SCRIPT_SECTION"
+            - cat invalid-file.txt
+          onSuccess:
+            - echo "this is on success"
+            - echo "CURRENT_SCRIPT_SECTION = $CURRENT_SCRIPT_SECTION"
+          onFailure:
+            - echo "this is on failure"
+            - echo "CURRENT_SCRIPT_SECTION = $CURRENT_SCRIPT_SECTION"
+          onComplete:
+            - echo "this is on complete"
             - echo "CURRENT_SCRIPT_SECTION = $CURRENT_SCRIPT_SECTION"
