@@ -37,4 +37,25 @@ pipelines:
           onComplete:
             - Write-Output "starting onComplete"
             - Write-Output "CURRENT_SCRIPT_SECTION = $env:CURRENT_SCRIPT_SECTION"
+            
+      - name: test_basic_execute_failure
+        type: powershell
+        execution:
+          onStart:
+            - Write-Output "starting onStart"
+            - Write-Output "CURRENT_SCRIPT_SECTION = $env:CURRENT_SCRIPT_SECTION"
+          onExecute:
+            - Write-Output "starting onExecute"
+            - Write-Output "CURRENT_SCRIPT_SECTION = $env:CURRENT_SCRIPT_SECTION"
+            - cat invalid-file.txt
+            - Write-Output "this should not be executed"
+          onSuccess:
+            - Write-Output "starting onSuccess"
+            - Write-Output "CURRENT_SCRIPT_SECTION = $env:CURRENT_SCRIPT_SECTION"
+          onFailure:
+            - Write-Output "starting onFailure"
+            - Write-Output "CURRENT_SCRIPT_SECTION = $env:CURRENT_SCRIPT_SECTION"
+          onComplete:
+            - Write-Output "starting onComplete"
+            - Write-Output "CURRENT_SCRIPT_SECTION = $env:CURRENT_SCRIPT_SECTION"
 
