@@ -28,6 +28,9 @@ pipelines:
           onComplete:
             - Write-Output "starting onComplete"
             - Write-Output "CURRENT_SCRIPT_SECTION = $env:CURRENT_SCRIPT_SECTION"
+          onSuccess:
+            - Write-Output "starting onSuccess"
+            - Write-Output "CURRENT_SCRIPT_SECTION = $env:CURRENT_SCRIPT_SECTION"
           onExecute:
             - Write-Output "starting onExecute"
             - Write-Output "CURRENT_SCRIPT_SECTION = $env:CURRENT_SCRIPT_SECTION"
