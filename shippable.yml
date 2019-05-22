@@ -6,3 +6,10 @@ pipelines:
         execution:
           onExecute:
             - Write-Output "hi"
+
+      - name: test_basic_multicmd_execute
+        type: powershell
+        execution:
+          onExecute:
+            - Write-Output "hi"
+            - Write-Output "hello"
