@@ -13,3 +13,11 @@ pipelines:
           onExecute:
             - Write-Output "hi"
             - Write-Output "hello"
+
+      - name: test_basic_throw_execute
+        type: powershell
+        execution:
+          onExecute:
+            - Write-Output "starting"
+            - Throw "sample_error"
+            - Write-Output "after error
