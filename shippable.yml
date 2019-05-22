@@ -18,5 +18,7 @@ pipelines:
           resources:	
             - sample_img
         execution:
+          onComplete:
+            - echo "this is on complete"
           onExecute:
             - echo "hi"
