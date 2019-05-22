@@ -21,3 +21,13 @@ pipelines:
             - Write-Output "starting"
             - Throw "sample_error"
             - Write-Output "after error
+
+      - name: test_basic_full_execute
+        type: powershell
+        execution:
+          onComplete:
+            - Write-Output "starting onComplete"
+            - Write-Output "CURRENT_SCRIPT_SECTION = $env:CURRENT_SCRIPT_SECTION"
+          onExecute:
+            - Write-Output "starting onExecute"
+            - Write-Output "CURRENT_SCRIPT_SECTION = $env:CURRENT_SCRIPT_SECTION"
