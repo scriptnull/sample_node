@@ -23,6 +23,9 @@ pipelines:
 
       - name: test_basic_execute
         type: powershell
+        requires:
+          steps:
+            - start
         execution:
           onExecute:
             - Write-Output "hi"
