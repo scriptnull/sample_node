@@ -1,6 +1,12 @@
 pipelines:
   - name: test_pipeline
     steps:
+      - name: start
+        type: powershell
+        execution:
+          onExecute:
+            - Write-Output "hi"
+
       - name: test_basic_execute
         type: powershell
         execution:
@@ -9,6 +15,9 @@ pipelines:
 
       - name: test_basic_multicmd_execute
         type: powershell
+        requires:
+          steps:
+            - start
         execution:
           onExecute:
             - Write-Output "hi"
@@ -16,6 +25,9 @@ pipelines:
 
       - name: test_basic_throw_execute
         type: powershell
+        requires:
+          steps:
+            - start
         execution:
           onExecute:
             - Write-Output "starting"
@@ -24,6 +36,9 @@ pipelines:
 
       - name: test_basic_full_execute
         type: powershell
+        requires:
+          steps:
+            - start
         execution:
           onStart:
             - Write-Output "starting onStart"
@@ -40,6 +55,9 @@ pipelines:
             
       - name: test_basic_execute_failure
         type: powershell
+        requires:
+          steps:
+            - start
         execution:
           onStart:
             - Write-Output "starting onStart"
