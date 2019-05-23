@@ -1,8 +1,20 @@
+resources:
+  - name: git_resource
+    type: gitRepo
+    repoPath: scriptnull/sample_node
+    configuration:
+      integrationName: github
+      branches:
+        only: j-gitRepo
+
 pipelines:
   - name: test_pipeline
     steps:
       - name: start
         type: powershell
+        requires:
+          resources:
+            - git_resource
         execution:
           onExecute:
             - Write-Output "hi"
