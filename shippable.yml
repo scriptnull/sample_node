@@ -1,13 +1,13 @@
 resources:
-  - name: git_resource
+  - name: w_git_resource
     type: gitRepo
     repoPath: scriptnull/sample_node
     configuration:
       integrationName: github
       branches:
-        only: j-gitRepo
+        only: j-gitrepo
     initialVersion:
-      sha: j-gitRepo
+      sha: j-gitrepo
 
 pipelines:
   - name: test_pipeline
@@ -16,7 +16,7 @@ pipelines:
         type: powershell
         requires:
           resources:
-            - git_resource
+            - w_git_resource
         execution:
           onExecute:
             - Write-Output "hi"
