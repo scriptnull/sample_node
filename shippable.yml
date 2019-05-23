@@ -6,6 +6,8 @@ resources:
       integrationName: github
       branches:
         only: j-gitRepo
+    initialVersion:
+      sha: j-gitRepo
 
 pipelines:
   - name: test_pipeline
