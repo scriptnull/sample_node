@@ -111,4 +111,5 @@ pipelines:
         execution:
           onExecute:
             - Write-Output "hi"
+            - Get-ChildItem env:*
 
