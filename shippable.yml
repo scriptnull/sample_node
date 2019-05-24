@@ -106,7 +106,8 @@ pipelines:
         requires:
           steps:
             - start
-        outputResources: "w_out_webhook"
+        outputResources:
+          - w_out_webhook
         execution:
           onExecute:
             - Write-Output "hi"
