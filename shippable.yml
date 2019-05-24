@@ -8,6 +8,13 @@ resources:
         only: j-gitrepo
     initialVersion:
       sha: j-gitrepo
+      
+  - name: w_out_webhook
+    type: webhook
+    configuration:
+      integrationName: out-webhook-int
+    initialVersion:
+      payload: "hello"
 
 pipelines:
   - name: test_pipeline
@@ -93,4 +100,13 @@ pipelines:
           onComplete:
             - Write-Output "starting onComplete"
             - Write-Output "CURRENT_SCRIPT_SECTION = $env:CURRENT_SCRIPT_SECTION"
+            
+      - name: test_output_external_webhook
+        type: powershell
+        outputResources:
+          resources:
+            - w_out_webhook
+        execution:
+          onExecute:
+            - Write-Output "hi"
 
