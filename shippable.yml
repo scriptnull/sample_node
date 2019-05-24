@@ -103,6 +103,9 @@ pipelines:
             
       - name: test_output_external_webhook
         type: powershell
+        requires:
+          steps:
+            - start
         outputResources:
           resources:
             - w_out_webhook
