@@ -46,6 +46,7 @@ pipelines:
           onExecute:
             - Write-Output "hi"
             - Write-Output "hello"
+            - Get-ChildItem env:*
 
       - name: test_basic_throw_execute
         type: powershell
