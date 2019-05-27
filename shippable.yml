@@ -321,3 +321,24 @@ pipelines:
             - assert $env:res_w_w19node_img_imageName 'drydock/w19node'
             - assert $env:res_w_w19node_img_int_name "dockerint"
             - assert $env:res_w_w19node_img_imageTag "master"
+            
+      - name: test_default_env_out_resource
+        type: powershell
+        triggeredBy:
+          steps:
+            - start_env
+        outputResources:
+          - w_out_webhook
+        execution:
+          onExecute:
+            - Get-ChildItem env:*
+            - Get-ChildItem env:res_w_out_webhook_*
+            - |
+              Function global:assert([string]$value, [string]$expected) {
+                if ($value -ne $expected) {
+                  echo "Value = $value"
+                  echo "Expected = $expected"
+                  throw "Assert mismatch"
+                }
+                return $value
+              }
