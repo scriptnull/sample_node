@@ -176,8 +176,10 @@ pipelines:
         execution:
           onExecute:
             - Get-ChildItem env:*
-            - "$env:key1" -eq "value1" -or throw "Environment variable mismatch"
-            - "$env:key2" -eq "value2" -or throw "Environment variable mismatch"
+            - |
+              "$env:key1" -eq "value1" -or throw "Environment variable mismatch"
+            - |
+              "$env:key2" -eq "value2" -or throw "Environment variable mismatch"
             
       # Checks all builtin environment variables provided by JFrog step
       - name: test_default_env_builtin
