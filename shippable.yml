@@ -15,6 +15,14 @@ resources:
       integrationName: out-webhook-int
     initialVersion:
       payload: "hello"
+      
+  - name: imageName
+    type: image
+    imageName: drydock/w19node
+    configuration:
+      integrationName: dockerint
+    initialVersion:
+      imageTag: master
 
 pipelines:
   - name: test_pipeline
