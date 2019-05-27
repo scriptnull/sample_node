@@ -291,4 +291,5 @@ pipelines:
             - echo "env:key2 = $env:key2"
             - echo "global:key1 = $global:key1"
             - echo "global:key2 = $global:key2"
+            - C:\Users\vagrant\print_env.ps1
             - powershell -File C:\Users\vagrant\print_env.ps1
