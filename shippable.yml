@@ -284,12 +284,15 @@ pipelines:
         execution:
           onExecute:
             - Get-ChildItem env:*
-            - Get-Variable -scope Global
-            - echo "key1 = $key1"
-            - echo "key2 = $key2"
             - echo "env:key1 = $env:key1"
             - echo "env:key2 = $env:key2"
-            - echo "global:key1 = $global:key1"
-            - echo "global:key2 = $global:key2"
-            - C:\Users\vagrant\print_env.ps1
-            - powershell -File C:\Users\vagrant\print_env.ps1
+            - $env:child_file = "$HOME/child_file.ps1"
+            - |
+              if (Test-Path -Path $env:child_file) {
+                Remove-Item -Force $env:child_file
+              }
+            - |
+              $content = '$key1 -eq "value1" -or $(throw "Environment variable mismatch")';
+              $content | Out-File $env:child_file
+            - $HOME/child_file.ps1
+            - powershell -File $env:child_file
