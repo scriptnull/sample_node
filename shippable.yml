@@ -158,8 +158,10 @@ pipelines:
         execution:
           onExecute:
             - Get-ChildItem env:*
-            - $key1 -eq "value1" -or $(throw "Environment variable mismatch")
-            - $key2 -eq "value2" -or $(throw "Environment variable mismatch")
+            - |
+              "$env:key1" -eq "value1" -or throw "Environment variable mismatch"
+            - |
+              "$env:key2" -eq "value2" -or throw "Environment variable mismatch"
 
       - name: test_host_env_normal
         type: powershell
