@@ -298,9 +298,10 @@ pipelines:
             
       - name: test_default_env_in_resource
         type: powershell
-        requires:
+        triggeredBy:
           steps:
-            - start
+            - start_env
+        requires:
           resources:
             - w_w19node_img
         execution:
