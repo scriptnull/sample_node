@@ -196,7 +196,7 @@ pipelines:
             - Get-ChildItem env:*
             - |
               Function non_empty([string]$arg) {
-                if (!$env:$(Get-Variable -Name $arg)) {
+                if (!$(Get-Variable -Name $arg)) {
                   throw "expected non-empty value for $arg";
                 }
               }
