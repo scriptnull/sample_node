@@ -139,8 +139,8 @@ pipelines:
       - name: start_env
         type: powershell
         requires:
-          resources:
-            - w_git_resource
+          steps:
+            - start
         execution:
           onExecute:
             - Write-Output "this job should trigger all the env testing jobs"
