@@ -16,7 +16,7 @@ resources:
     initialVersion:
       payload: "hello"
       
-  - name: imageName
+  - name: w_w19node_img
     type: image
     imageName: drydock/w19node
     configuration:
@@ -117,6 +117,18 @@ pipelines:
             - start
         outputResources:
           - w_out_webhook
+        execution:
+          onExecute:
+            - Write-Output "hi"
+            - Get-ChildItem env:*
+            
+      - name: test_requires_img
+        type: powershell
+        requires:
+          steps:
+            - start
+          resources:
+            - w_w19node_img
         execution:
           onExecute:
             - Write-Output "hi"
