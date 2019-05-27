@@ -184,6 +184,21 @@ pipelines:
               "$env:key1" -eq "value1" -or throw "Environment variable mismatch"
             - |
               "$env:key2" -eq "value2" -or throw "Environment variable mismatch"
+
+      - name: test_default_env_encrypted
+        type: powershell
+        setup:
+          environmentVariables:
+            encrypted:
+              securekey1: zTQ+mkwrvKaDP8ozGxR0Mi9OHccDqTkyduk/w724A7uMzQoIbjwNKnTcqXwAycZvpYXDI6TCi3iGt7wK5c/dbAKVqgBmbp/2WOPbbNnhj833FPgYJBDbYuGmVIF4+FRbhATAH0LKW7DJEekI1I6GV7qIoxGhiJ5sNfcgflxoDKePqh28tArB4Xaf4aOWpKiOXHumpyV8Sf6kwuZy7//obByXpW10lM7pNXU1y3zcqrJ9Lhj+MrcjFrjJWS2aJtTejKy41bTH9OeJJXP/VDzaGGAJfE/8mPNri6KexcbGaz5fuewk9JeLjisv6H7Se9WH4GJ+HXph7D531OJKdS6hvg==
+              securekey2: RRCaomeCh1+kh0hcVE5U3oHe4zW7/Q1aRvGhaJSg4M8PZwFoCIqsxXse6pjPo9z7nluic4m8XVOrp9eSaE7JoYL/G9kwiUNVKhrBv7squ3HwF/uxq41gSWemqUvckLKspwPbiMMOwL5+tZOJ+he+woOLAYlFdDIO/TVs6gKGXc/QXL3TBHsgZrr+rHprErJXYknDD1t+PADokLQaM1rdu2XuvKB0/NG0M847UOSiZmIfO0rG8SXZQ1z5YQ8rEjlp9pPqL0b03DKiyOljuPui762r8433D+mfuxwJpHQmdaTSjLh39gIyDRw1G8qPnafrr0zz0nHUlcUM2V6NvsZm+A==
+        execution:
+          onExecute:
+            - Get-ChildItem env:*
+            - |
+              $env:securekey1 -eq "securevalue1" -or $(throw "Environment variable mismatch")
+            - |
+              $env:securekey2 -eq "securevalue2" -or $(throw "Environment variable mismatch")
             
       # Checks all builtin environment variables provided by JFrog step
       - name: test_default_env_builtin
@@ -227,3 +242,5 @@ pipelines:
             - non_empty "PIPELINE_NAME"
             # Get all things inside step propertyBag
             - Get-ChildItem env:step_*
+
+
