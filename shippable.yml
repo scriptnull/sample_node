@@ -195,7 +195,14 @@ pipelines:
           onExecute:
             - Get-ChildItem env:*
             - |
-              echo "STATUS_DIR = $STATUS_DIR";
-              if (-not (Test-Path -Path "$STATUS_DIR")) {
+              Function non_empty([string]$arg) {
+                if (!"$env:${arg}") {
+                  throw "expected non-empty value for $arg";
+                }
+              }
+            - non_empty "STATUS_DIR"
+            - |
+              echo "STATUS_DIR = $env:STATUS_DIR";
+              if (-not (Test-Path -Path "$env:STATUS_DIR")) {
                 throw "STATUS_DIR path does not exist"
               }
