@@ -187,6 +187,9 @@ pipelines:
 
       - name: test_default_env_encrypted
         type: powershell
+        triggeredBy:
+          steps:
+            - start_env
         setup:
           environmentVariables:
             encrypted:
