@@ -164,7 +164,9 @@ pipelines:
               "$env:key1" -eq "value1" -or $(throw "Environment variable mismatch")
             - |
               "$env:key2" -eq "value2" -or $(throw "Environment variable mismatch")
+              
 
+      # Place holder job for testing on Host
       - name: test_host_env_normal
         type: powershell
         triggeredBy:
@@ -184,6 +186,28 @@ pipelines:
               "$env:key1" -eq "value1" -or throw "Environment variable mismatch"
             - |
               "$env:key2" -eq "value2" -or throw "Environment variable mismatch"
+              
+      # Place holder job for testing on Image
+      - name: test_img_env_normal
+        type: powershell
+        triggeredBy:
+          steps:
+            - start_env
+        setup:
+          environmentVariables:
+            normal:
+              key1: value1
+              key2: value2
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - Get-ChildItem env:*
+            - |
+              "$env:key1" -eq "value1" -or throw "Environment variable mismatch"
+            - |
+              "$env:key2" -eq "value2" -or throw "Environment variable mismatch"
+
 
       - name: test_default_env_encrypted
         type: powershell
@@ -247,3 +271,24 @@ pipelines:
             - Get-ChildItem env:step_*
 
 
+      - name: test_default_env_export
+        type: powershell
+        triggeredBy:
+          steps:
+            - start_env
+        setup:
+          environmentVariables:
+            normal:
+              key1: value1
+              key2: value2
+        execution:
+          onExecute:
+            - Get-ChildItem env:*
+            - Get-Variable -scope Global
+            - echo "key1 = $key1"
+            - echo "key2 = $key2"
+            - echo "env:key1 = $env:key1"
+            - echo "env:key2 = $env:key2"
+            - echo "global:key1 = $global:key1"
+            - echo "global:key2 = $global:key2"
+            - & C:\Users\vagrant\print_env.ps1
