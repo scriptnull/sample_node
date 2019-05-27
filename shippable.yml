@@ -286,7 +286,7 @@ pipelines:
             - Get-ChildItem env:*
             - echo "env:key1 = $env:key1"
             - echo "env:key2 = $env:key2"
-            - $env:child_file = "$HOME/child_file.ps1"
+            - $env:child_file = "C:/Users/vagrant/child_file.ps1"
             # contents of $env:child_file is
             # "$key1" -eq "value1" -or $(throw "Environment variable mismatch")
             - |
