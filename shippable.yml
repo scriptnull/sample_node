@@ -201,21 +201,21 @@ pipelines:
                 }
                 return $True;
               }
-            - non_empty 'STATUS_DIR'
-            - non_empty 'STEPLET_ID'
-            - non_empty 'STEP_JSON_PATH'
-            - non_empty 'STEPLET_SCRIPT_PATH'
-            - non_empty 'REQEXEC_BIN_PATH'
-            - non_empty 'RUN_DIR'
-            - non_empty 'STEP_DEPENDENCY_STATE_DIR'
-            - non_empty 'STEP_OUTPUT_DIR'
-            - non_empty 'STEP_WORKSPACE_DIR'
-            - non_empty 'PIPELINE_WORKSPACE_DIR'
-            - non_empty 'STEP_TMP_DIR'
-            - non_empty 'OPERATING_SYSTEM'
-            - non_empty 'ARCHITECTURE'
-            - non_empty 'REQEXEC_DIR'
-            - non_empty 'SHIPPABLE_API_URL'
-            - non_empty 'BUILDER_API_TOKEN'
-            - non_empty 'NO_VERIFY_SSL'
-            - non_empty 'STEP_DOCKER_CONTAINER_NAME'
+            - non_empty "STATUS_DIR"
+            - non_empty "STEPLET_ID"
+            - non_empty "STEP_JSON_PATH"
+            - non_empty "STEPLET_SCRIPT_PATH"
+            - non_empty "REQEXEC_BIN_PATH"
+            - non_empty "RUN_DIR"
+            - non_empty "STEP_DEPENDENCY_STATE_DIR"
+            - non_empty "STEP_OUTPUT_DIR"
+            - non_empty "STEP_WORKSPACE_DIR"
+            - non_empty "PIPELINE_WORKSPACE_DIR"
+            - non_empty "STEP_TMP_DIR"
+            - non_empty "OPERATING_SYSTEM"
+            - non_empty "ARCHITECTURE"
+            - non_empty "REQEXEC_DIR"
+            - non_empty "SHIPPABLE_API_URL"
+            - non_empty "BUILDER_API_TOKEN"
+            - non_empty "NO_VERIFY_SSL"
+            - non_empty "STEP_DOCKER_CONTAINER_NAME" 
