@@ -136,11 +136,20 @@ pipelines:
 
 
 ########################### Environment Variable Checking ########################
-      - name: test_default_env_normal
+      - name: start_env
         type: powershell
         requires:
+          resources:
+            - w_git_resource
+        execution:
+          onExecute:
+            - Write-Output "this job should trigger all the env testing jobs"
+
+      - name: test_default_env_normal
+        type: powershell
+        triggeredBy:
           steps:
-            - start
+            - start_env
         setup:
           environmentVariables:
             normal:
@@ -154,9 +163,9 @@ pipelines:
 
       - name: test_host_env_normal
         type: powershell
-        requires:
+        triggeredBy:
           steps:
-            - start
+            - start_env
         setup:
           environmentVariables:
             normal:
