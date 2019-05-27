@@ -220,3 +220,10 @@ pipelines:
             - non_empty "BUILDER_API_TOKEN"
             - non_empty "NO_VERIFY_SSL"
             - non_empty "STEP_DOCKER_CONTAINER_NAME" 
+            - non_empty "STEP_ID"
+            - non_empty "STEP_NAME"
+            - non_empty "STEP_TYPE"
+            - non_empty "STEP_URL"
+            - non_empty "PIPELINE_NAME"
+            # Get all things inside step propertyBag
+            - Get-ChildItem env:step_*
