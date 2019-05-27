@@ -196,10 +196,11 @@ pipelines:
             - Get-ChildItem env:*
             - |
               Function global:non_empty([string]$arg) {
-                if (!$(Get-ChildItem "env:$arg").value) {
+                $value = $(Get-ChildItem "env:$arg").value
+                if (!$value) {
                   throw "expected non-empty value for $arg";
                 }
-                return $True;
+                return $value;
               }
             - non_empty "STATUS_DIR"
             - non_empty "STEPLET_ID"
