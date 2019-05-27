@@ -295,3 +295,24 @@ pipelines:
               }
             - C:/Users/vagrant/child_file.ps1
             - powershell -File $env:child_file
+            
+      - name: test_default_env_in_resource
+        type: powershell
+        requires:
+          steps:
+            - start
+          resources:
+            - w_w19node_img
+        execution:
+          onExecute:
+            - Get-ChildItem env:*
+            - |
+              Function global:assert([string]$value, [string]$expected) {
+                if ($value -ne $expected) {
+                  echo "Value = $value"
+                  echo "Expected = $expected"
+                  throw "Assert mismatch"
+                }
+                return $value
+              }
+            - assert "a" "a"
