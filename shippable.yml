@@ -287,14 +287,7 @@ pipelines:
             - echo "env:key1 = $env:key1"
             - echo "env:key2 = $env:key2"
             - $env:child_file = "$HOME/child_file.ps1"
-            - |
-              if (Test-Path -Path $env:child_file) {
-                Remove-Item -Force $env:child_file
-              }
-            - |
-              $env:content = @'
-              "$key1" -eq "value1" -or $(throw "Environment variable mismatch")
-              '@
-            - $env:content | Out-File $env:child_file
+            # contents of $env:child_file is
+            # "$key1" -eq "value1" -or $(throw "Environment variable mismatch")
             - $HOME/child_file.ps1
             - powershell -File $env:child_file
