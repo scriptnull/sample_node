@@ -134,3 +134,38 @@ pipelines:
             - Write-Output "hi"
             - Get-ChildItem env:*
 
+
+########################### Environment Variable Checking ########################
+      - name: test_default_env_normal
+        type: powershell
+        requires:
+          steps:
+            - start
+        setup:
+          environmentVariables:
+            normal:
+              key1: value1
+              key2: value2
+        execution:
+          onExecute:
+            - Get-ChildItem env:*
+            - $key1 -eq "value1" -or $(throw "Environment variable mismatch")
+            - $key2 -eq "value2" -or $(throw "Environment variable mismatch")
+
+      - name: test_host_env_normal
+        type: powershell
+        requires:
+          steps:
+            - start
+        setup:
+          environmentVariables:
+            normal:
+              key1: value1
+              key2: value2
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - Get-ChildItem env:*
+            - $key1 -eq "value1" -or $(throw "Environment variable mismatch")
+            - $key2 -eq "value2" -or $(throw "Environment variable mismatch")
