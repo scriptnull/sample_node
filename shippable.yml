@@ -317,7 +317,7 @@ pipelines:
                 }
                 return $value
               }
-            - assert $env:res_w_w19node_img_imageName "drydock/w19node"
+            - echo $env:res_w_w19node_img_resourcePath
+            - assert $env:res_w_w19node_img_imageName 'drydock/w19node'
             - assert $env:res_w_w19node_img_int_name "dockerint"
             - assert $env:res_w_w19node_img_imageTag "master"
-            - echo $env:res_w_w19node_img_resourcePath
