@@ -289,5 +289,9 @@ pipelines:
             - $env:child_file = "$HOME/child_file.ps1"
             # contents of $env:child_file is
             # "$key1" -eq "value1" -or $(throw "Environment variable mismatch")
+            - |
+              if (-not (Test-Path -Path $env:child_file)) {
+                throw "create $env:child_file file with contents in YML comments"
+              }
             - $HOME/child_file.ps1
             - powershell -File $env:child_file
