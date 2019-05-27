@@ -342,3 +342,6 @@ pipelines:
                 }
                 return $value
               }
+            - echo $env:res_w_out_webhook_resourcePath
+            - assert $env:res_w_out_webhook_int_name "out-webhook-int"
+            - assert $env:res_w_out_webhook_url "abb7b5d5.ngrok.io"
