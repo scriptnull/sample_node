@@ -307,6 +307,7 @@ pipelines:
         execution:
           onExecute:
             - Get-ChildItem env:*
+            - Get-ChildItem env:res_w_w19node_img_*
             - |
               Function global:assert([string]$value, [string]$expected) {
                 if ($value -ne $expected) {
@@ -316,4 +317,4 @@ pipelines:
                 }
                 return $value
               }
-            - assert "a" "a"
+            - assert "a" "b"
