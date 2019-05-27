@@ -194,4 +194,8 @@ pipelines:
         execution:
           onExecute:
             - Get-ChildItem env:*
-            - $key1 -eq "value1" -or $(throw "Environment variable mismatch")
+            - |
+              echo "STATUS_DIR = $STATUS_DIR";
+              if (-not (Test-Path -Path "$STATUS_DIR")) {
+                throw "STATUS_DIR path does not exist"
+              }
