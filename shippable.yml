@@ -293,5 +293,5 @@ pipelines:
               if (-not (Test-Path -Path $env:child_file)) {
                 throw "create $env:child_file file with contents in YML comments"
               }
-            - $HOME/child_file.ps1
+            - C:/Users/vagrant/child_file.ps1
             - powershell -File $env:child_file
