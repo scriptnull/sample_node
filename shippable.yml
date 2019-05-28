@@ -1,20 +1,20 @@
 resources:
-  - name: w_git_resource
-    type: gitRepo
-    repoPath: scriptnull/sample_node
-    configuration:
-      integrationName: github
-      branches:
-        only: j-gitrepo
-    initialVersion:
-      sha: j-gitrepo
+#   - name: u_git_resource
+#     type: gitRepo
+#     repoPath: scriptnull/sample_node
+#     configuration:
+#       integrationName: github
+#       branches:
+#         only: j-gitrepo
+#     initialVersion:
+#       sha: j-gitrepo
       
-  - name: w_out_webhook
-    type: webhook
-    configuration:
-      integrationName: out-webhook-int
-    initialVersion:
-      payload: "hello"
+#   - name: u_out_webhook
+#     type: webhook
+#     configuration:
+#       integrationName: out-webhook-int
+#     initialVersion:
+#       payload: "hello"
       
   - name: w_w19node_img
     type: image
@@ -25,322 +25,22 @@ resources:
       imageTag: master
 
 pipelines:
-  - name: test_pipeline
+  - name: test_u16_pipeline
     steps:
-      - name: start
-        type: powershell
-        requires:
-          resources:
-            - w_git_resource
-        execution:
-          onExecute:
-            - Write-Output "hi"
-
-      - name: test_basic_execute
-        type: powershell
-        requires:
-          steps:
-            - start
-        execution:
-          onExecute:
-            - Write-Output "hi"
-
-      - name: test_basic_multicmd_execute
-        type: powershell
-        requires:
-          steps:
-            - start
-        execution:
-          onExecute:
-            - Write-Output "hi"
-            - Write-Output "hello"
-            - Get-ChildItem env:*
-
-      - name: test_basic_throw_execute
-        type: powershell
-        requires:
-          steps:
-            - start
-        execution:
-          onExecute:
-            - Write-Output "starting"
-            - Throw "sample_error"
-            - Write-Output "after error
-
-      - name: test_basic_full_execute
-        type: powershell
-        requires:
-          steps:
-            - start
-        execution:
-          onStart:
-            - Write-Output "starting onStart"
-            - Write-Output "CURRENT_SCRIPT_SECTION = $env:CURRENT_SCRIPT_SECTION"
-          onExecute:
-            - Write-Output "starting onExecute"
-            - Write-Output "CURRENT_SCRIPT_SECTION = $env:CURRENT_SCRIPT_SECTION"
-          onSuccess:
-            - Write-Output "starting onSuccess"
-            - Write-Output "CURRENT_SCRIPT_SECTION = $env:CURRENT_SCRIPT_SECTION"
-          onComplete:
-            - Write-Output "starting onComplete"
-            - Write-Output "CURRENT_SCRIPT_SECTION = $env:CURRENT_SCRIPT_SECTION"
-            
-      - name: test_basic_execute_failure
-        type: powershell
-        requires:
-          steps:
-            - start
-        execution:
-          onStart:
-            - Write-Output "starting onStart"
-            - Write-Output "CURRENT_SCRIPT_SECTION = $env:CURRENT_SCRIPT_SECTION"
-          onExecute:
-            - Write-Output "starting onExecute"
-            - Write-Output "CURRENT_SCRIPT_SECTION = $env:CURRENT_SCRIPT_SECTION"
-            - cat invalid-file.txt
-            - Write-Output "this should not be executed"
-          onSuccess:
-            - Write-Output "starting onSuccess"
-            - Write-Output "CURRENT_SCRIPT_SECTION = $env:CURRENT_SCRIPT_SECTION"
-          onFailure:
-            - Write-Output "starting onFailure"
-            - Write-Output "CURRENT_SCRIPT_SECTION = $env:CURRENT_SCRIPT_SECTION"
-          onComplete:
-            - Write-Output "starting onComplete"
-            - Write-Output "CURRENT_SCRIPT_SECTION = $env:CURRENT_SCRIPT_SECTION"
-            
-      - name: test_output_external_webhook
-        type: powershell
-        requires:
-          steps:
-            - start
-        outputResources:
-          - w_out_webhook
-        execution:
-          onExecute:
-            - Write-Output "hi"
-            - Get-ChildItem env:*
-            
-      - name: test_requires_img
-        type: powershell
-        requires:
-          steps:
-            - start
-          resources:
-            - w_w19node_img
-        execution:
-          onExecute:
-            - Write-Output "hi"
-            - Get-ChildItem env:*
-
-
-########################### Environment Variable Checking ########################
-      - name: start_env
-        type: powershell
-        requires:
-          steps:
-            - start
-        execution:
-          onExecute:
-            - Write-Output "this job should trigger all the env testing jobs"
-
-      - name: test_default_env_normal
-        type: powershell
-        triggeredBy:
-          steps:
-            - start_env
-        setup:
-          environmentVariables:
-            normal:
-              key1: value1
-              key2: value2
-        execution:
-          onExecute:
-            - Get-ChildItem env:*
-            - echo "key1 = $env:key1"
-            - echo "key2 = $env:key2"
-            - |
-              "$env:key1" -eq "value1" -or $(throw "Environment variable mismatch")
-            - |
-              "$env:key2" -eq "value2" -or $(throw "Environment variable mismatch")
-              
-
-      # Place holder job for testing on Host
-      - name: test_host_env_normal
-        type: powershell
-        triggeredBy:
-          steps:
-            - start_env
-        setup:
-          environmentVariables:
-            normal:
-              key1: value1
-              key2: value2
-          runtime:
-            type: host
-        execution:
-          onExecute:
-            - Get-ChildItem env:*
-            - |
-              "$env:key1" -eq "value1" -or $(throw "Environment variable mismatch")
-            - |
-              "$env:key2" -eq "value2" -or $(throw "Environment variable mismatch")
-              
-      # Place holder job for testing on Image
-      - name: test_img_env_normal
-        type: powershell
-        triggeredBy:
-          steps:
-            - start_env
-        setup:
-          environmentVariables:
-            normal:
-              key1: value1
-              key2: value2
-          runtime:
-            type: host
-        execution:
-          onExecute:
-            - Get-ChildItem env:*
-            - |
-              "$env:key1" -eq "value1" -or $(throw "Environment variable mismatch")
-            - |
-              "$env:key2" -eq "value2" -or $(throw "Environment variable mismatch")
-
-
-      - name: test_default_env_encrypted
-        type: powershell
-        triggeredBy:
-          steps:
-            - start_env
-        setup:
-          environmentVariables:
-            encrypted:
-              securekey1: zTQ+mkwrvKaDP8ozGxR0Mi9OHccDqTkyduk/w724A7uMzQoIbjwNKnTcqXwAycZvpYXDI6TCi3iGt7wK5c/dbAKVqgBmbp/2WOPbbNnhj833FPgYJBDbYuGmVIF4+FRbhATAH0LKW7DJEekI1I6GV7qIoxGhiJ5sNfcgflxoDKePqh28tArB4Xaf4aOWpKiOXHumpyV8Sf6kwuZy7//obByXpW10lM7pNXU1y3zcqrJ9Lhj+MrcjFrjJWS2aJtTejKy41bTH9OeJJXP/VDzaGGAJfE/8mPNri6KexcbGaz5fuewk9JeLjisv6H7Se9WH4GJ+HXph7D531OJKdS6hvg==
-              securekey2: RRCaomeCh1+kh0hcVE5U3oHe4zW7/Q1aRvGhaJSg4M8PZwFoCIqsxXse6pjPo9z7nluic4m8XVOrp9eSaE7JoYL/G9kwiUNVKhrBv7squ3HwF/uxq41gSWemqUvckLKspwPbiMMOwL5+tZOJ+he+woOLAYlFdDIO/TVs6gKGXc/QXL3TBHsgZrr+rHprErJXYknDD1t+PADokLQaM1rdu2XuvKB0/NG0M847UOSiZmIfO0rG8SXZQ1z5YQ8rEjlp9pPqL0b03DKiyOljuPui762r8433D+mfuxwJpHQmdaTSjLh39gIyDRw1G8qPnafrr0zz0nHUlcUM2V6NvsZm+A==
-        execution:
-          onExecute:
-            - Get-ChildItem env:*
-            - |
-              $env:securekey1 -eq "securevalue1" -or $(throw "Environment variable mismatch")
-            - |
-              $env:securekey2 -eq "securevalue2" -or $(throw "Environment variable mismatch")
-            
-      # Checks all builtin environment variables provided by JFrog step
-      - name: test_default_env_builtin
-        type: powershell
-        triggeredBy:
-          steps:
-            - start_env
-        execution:
-          onExecute:
-            - Get-ChildItem env:*
-            - |
-              Function global:non_empty([string]$arg) {
-                $value = $(Get-ChildItem "env:$arg").value
-                if (!$value) {
-                  throw "expected non-empty value for $arg";
-                }
-                return $value;
-              }
-            - non_empty "STATUS_DIR"
-            - non_empty "STEPLET_ID"
-            - non_empty "STEP_JSON_PATH"
-            - non_empty "STEPLET_SCRIPT_PATH"
-            - non_empty "REQEXEC_BIN_PATH"
-            - non_empty "RUN_DIR"
-            - non_empty "STEP_DEPENDENCY_STATE_DIR"
-            - non_empty "STEP_OUTPUT_DIR"
-            - non_empty "STEP_WORKSPACE_DIR"
-            - non_empty "PIPELINE_WORKSPACE_DIR"
-            - non_empty "STEP_TMP_DIR"
-            - non_empty "OPERATING_SYSTEM"
-            - non_empty "ARCHITECTURE"
-            - non_empty "REQEXEC_DIR"
-            - non_empty "SHIPPABLE_API_URL"
-            - non_empty "BUILDER_API_TOKEN"
-            - non_empty "NO_VERIFY_SSL"
-            - non_empty "STEP_DOCKER_CONTAINER_NAME" 
-            - non_empty "STEP_ID"
-            - non_empty "STEP_NAME"
-            - non_empty "STEP_TYPE"
-            - non_empty "STEP_URL"
-            - non_empty "PIPELINE_NAME"
-            # Get all things inside step propertyBag
-            - Get-ChildItem env:step_*
-
-
-      - name: test_default_env_export
-        type: powershell
-        triggeredBy:
-          steps:
-            - start_env
-        setup:
-          environmentVariables:
-            normal:
-              key1: value1
-              key2: value2
-        execution:
-          onExecute:
-            - Get-ChildItem env:*
-            - echo "env:key1 = $env:key1"
-            - echo "env:key2 = $env:key2"
-            - $env:child_file = "C:/Users/vagrant/child_file.ps1"
-            # contents of $env:child_file is
-            # "$env:key1" -eq "value1" -or $(throw "Environment variable mismatch")
-            - |
-              if (-not (Test-Path -Path $env:child_file)) {
-                throw "create $env:child_file file with contents in YML comments"
-              }
-            - C:/Users/vagrant/child_file.ps1
-            - powershell -File $env:child_file
-            
-      - name: test_default_env_in_resource
-        type: powershell
-        triggeredBy:
-          steps:
-            - start_env
+      - name: start_u16
+        type: bash
         requires:
           resources:
             - w_w19node_img
         execution:
           onExecute:
-            - Get-ChildItem env:*
-            - Get-ChildItem env:res_w_w19node_img_*
-            - |
-              Function global:assert([string]$value, [string]$expected) {
-                if ($value -ne $expected) {
-                  echo "Value = $value"
-                  echo "Expected = $expected"
-                  throw "Assert mismatch"
-                }
-                return $value
-              }
-            - echo $env:res_w_w19node_img_resourcePath
-            - assert $env:res_w_w19node_img_imageName 'drydock/w19node'
-            - assert $env:res_w_w19node_img_int_name "dockerint"
-            - assert $env:res_w_w19node_img_imageTag "master"
-            
-      - name: test_default_env_out_resource
-        type: powershell
-        triggeredBy:
+            - echo "hi
+
+      - name: start_u16_env
+        type: bash
+        requires:
           steps:
-            - start_env
-        outputResources:
-          - w_out_webhook
+            - start_u16
         execution:
           onExecute:
-            - Get-ChildItem env:*
-            - Get-ChildItem env:res_w_out_webhook_*
-            - |
-              Function global:assert([string]$value, [string]$expected) {
-                if ($value -ne $expected) {
-                  echo "Value = $value"
-                  echo "Expected = $expected"
-                  throw "Assert mismatch"
-                }
-                return $value
-              }
-            - echo $env:res_w_out_webhook_resourcePath
-            - assert $env:res_w_out_webhook_int_name "out-webhook-int"
+            - echo "TODO"
