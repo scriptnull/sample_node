@@ -21,7 +21,7 @@ resources:
     imageName: drydock/w19node
     configuration:
       integrationName: dockerint
-    version:
+    initialVersion:
       imageTag: master.1
 
 pipelines:
