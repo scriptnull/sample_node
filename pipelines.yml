@@ -22,7 +22,7 @@ resources:
     configuration:
       integrationName: dockerint
     version:
-      imageTag: latest.2
+      imageTag: master
 
 pipelines:
   - name: test_u16_pipeline
