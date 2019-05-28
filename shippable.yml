@@ -183,9 +183,9 @@ pipelines:
           onExecute:
             - Get-ChildItem env:*
             - |
-              "$env:key1" -eq "value1" -or throw "Environment variable mismatch"
+              "$env:key1" -eq "value1" -or $(throw "Environment variable mismatch")
             - |
-              "$env:key2" -eq "value2" -or throw "Environment variable mismatch"
+              "$env:key2" -eq "value2" -or $(throw "Environment variable mismatch")
               
       # Place holder job for testing on Image
       - name: test_img_env_normal
@@ -204,9 +204,9 @@ pipelines:
           onExecute:
             - Get-ChildItem env:*
             - |
-              "$env:key1" -eq "value1" -or throw "Environment variable mismatch"
+              "$env:key1" -eq "value1" -or $(throw "Environment variable mismatch")
             - |
-              "$env:key2" -eq "value2" -or throw "Environment variable mismatch"
+              "$env:key2" -eq "value2" -or $(throw "Environment variable mismatch")
 
 
       - name: test_default_env_encrypted
