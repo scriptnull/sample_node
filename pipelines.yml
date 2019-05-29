@@ -34,7 +34,7 @@ pipelines:
             - u_u16node_img
         execution:
           onExecute:
-            - echo "hi
+            - echo "hi"
 
       - name: start_u16_env
         type: bash
