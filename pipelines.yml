@@ -16,9 +16,9 @@ resources:
 #     initialVersion:
 #       payload: "hello"
       
-  - name: w_w19node_img
+  - name: u_u16node_img
     type: image
-    imageName: drydock/w19node
+    imageName: drydock/u16node
     configuration:
       integrationName: dockerint
     version:
@@ -31,7 +31,7 @@ pipelines:
         type: bash
         requires:
           resources:
-            - w_w19node_img
+            - u_u16node_img
         execution:
           onExecute:
             - echo "hi
