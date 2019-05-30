@@ -91,3 +91,19 @@ pipelines:
             - echo "$STEP_ID"
             - STEP_ID=50
             - echo "step above this should fail"
+            
+            
+      - name: restricted_envs_in_setup_env_yml
+        type: bash
+        triggeredBy:
+          steps:
+            - start_u16_env
+        setup:
+          environmentVariables:
+            normal:
+              STEP_TYPE: update
+              STEP_NAME: update
+              PIPELINE_NAME: update
+        execution:
+          onExecute:
+            - printenv
