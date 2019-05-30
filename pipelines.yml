@@ -44,3 +44,37 @@ pipelines:
         execution:
           onExecute:
             - echo "TODO"
+            
+      - name: restricted_envs
+        type: bash
+        requires:
+          steps:
+            - start_u16_env
+        execution:
+          onExecute:
+            - printenv
+            - echo "$STEP_ID"
+            - echo "$STEP_NAME"
+            - echo "$STEP_TYPE"
+            - echo "$STEP_URL"
+            - echo "$PIPELINE_NAME"
+            - echo "$RUN_ID"
+            - echo "$RUN_NUMBER"
+            - echo "$STATUS_DIR"
+            - echo "$STEPLET_ID"
+            - echo "$STEP_JSON_PATH"
+            - echo "$STEPLET_SCRIPT_PATH"
+            - echo "$REQEXEC_BIN_PATH"
+            - echo "$RUN_DIR"
+            - echo "$STEP_DEPENDENCY_STATE_DIR"
+            - echo "$STEP_OUTPUT_DIR"
+            - echo "$STEP_WORKSPACE_DIR"
+            - echo "$PIPELINE_WORKSPACE_DIR"
+            - echo "$STEP_TMP_DIR"
+            - echo "$OPERATING_SYSTEM"
+            - echo "$ARCHITECTURE"
+            - echo "$REQEXEC_DIR"
+            - echo "$SHIPPABLE_API_URL"
+            - echo "$BUILDER_API_TOKEN"
+            - echo "$NO_VERIFY_SSL"
+            - echo "$STEP_DOCKER_CONTAINER_NAME"
