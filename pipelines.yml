@@ -78,3 +78,16 @@ pipelines:
             - echo "$BUILDER_API_TOKEN"
             - echo "$NO_VERIFY_SSL"
             - echo "$STEP_DOCKER_CONTAINER_NAME"
+
+
+      - name: restricted_envs_in_step_exection
+        type: bash
+        triggeredBy:
+          steps:
+            - start_u16_env
+        execution:
+          onExecute:
+            - printenv
+            - echo "$STEP_ID"
+            - STEP_ID=50
+            - echo "step above this should fail"
