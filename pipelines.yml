@@ -124,9 +124,9 @@ pipelines:
             
       - name: basic_custom_img
         type: bash
-        requires:
+        triggeredBy:
           steps:
-            - start_u16
+            - start_u16_img
         setup:
           runtime:
             type: image
