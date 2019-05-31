@@ -35,6 +35,9 @@ pipelines:
         execution:
           onExecute:
             - echo "hi"
+            
+            
+############### Environment variable testing ########################
 
       - name: start_u16_env
         type: bash
@@ -107,3 +110,32 @@ pipelines:
         execution:
           onExecute:
             - printenv
+
+############### Running build on image testing ########################
+
+      - name: start_u16_img
+        type: bash
+        requires:
+          steps:
+            - start_u16
+        execution:
+          onExecute:
+            - echo "TODO"
+            
+      - name: basic_custom_img
+        type: bash
+        requires:
+          steps:
+            - start_u16
+        setup:
+          runtime:
+            type: image
+            image:
+              custom:
+                name: scriptnull/custom
+                tag: latest
+        execution:
+          onExecute:
+            - echo "hi"
+            - printenv
+
