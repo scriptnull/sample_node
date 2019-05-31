@@ -122,7 +122,7 @@ pipelines:
           onExecute:
             - echo "TODO"
             
-      - name: basic_custom_img
+      - name: basic_custom_img_u1804
         type: bash
         triggeredBy:
           steps:
@@ -133,9 +133,60 @@ pipelines:
             image:
               custom:
                 name: scriptnull/custom
-                tag: latest
+                tag: ubuntu-18.04
+        execution:
+          onExecute:
+            - echo "hi"
+            - printenv
+            
+      - name: basic_custom_img_u1604
+        type: bash
+        triggeredBy:
+          steps:
+            - start_u16_img
+        setup:
+          runtime:
+            type: image
+            image:
+              custom:
+                name: scriptnull/custom
+                tag: ubuntu-16.04
         execution:
           onExecute:
             - echo "hi"
             - printenv
 
+
+      - name: basic_custom_img_c7
+        type: bash
+        triggeredBy:
+          steps:
+            - start_u16_img
+        setup:
+          runtime:
+            type: image
+            image:
+              custom:
+                name: scriptnull/custom
+                tag: centos-7
+        execution:
+          onExecute:
+            - echo "hi"
+            - printenv
+            
+      - name: basic_custom_img_alpine39
+        type: bash
+        triggeredBy:
+          steps:
+            - start_u16_img
+        setup:
+          runtime:
+            type: image
+            image:
+              custom:
+                name: scriptnull/custom
+                tag: alpine-3.9
+        execution:
+          onExecute:
+            - echo "hi"
+            - printenv
